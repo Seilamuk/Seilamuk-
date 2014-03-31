@@ -173,7 +173,7 @@ StartAppAd.showSplash(this, savedInstanceState,
 ```
 > **NOTE:** for optimal appearance of your Splash screen on all device densities, provide a logo of 360x360px and place it in the __drawable__ folder of your project. If this folder does not exist, then create it.
 
-> <img src="./images/drawable.png" /><br></br>
+> <img src="./Android/images/drawable.png" /><br></br>
 > If you do not provide a logo, then StartApp In-App uses the default application icon (as declared in the Manifest) and stretches it to 360x360px.
 
 ####Adding a User-Defined Splash Screen 
