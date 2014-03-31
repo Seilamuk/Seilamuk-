@@ -12,12 +12,12 @@
 
 [**Sample Project**](iOS-InApp-Documentation#SampleProject)
 
-[**Advanced Usage**](advanced-usage)<br></br>
-[Controlling the size of your banner](advanced-usage#ControllingBannerSize)<br></br> 
-[Using banner delegates](advanced-usage#UsingBannerDelegates)<br></br> 
-[Using a fixed origin for your banner](advanced-usage#UsingFixedOriginBanner)<br></br> 
-[Changing the banner size and origin upon rotation](advanced-usage#ChangingBanner)<br></br> 
-[Using Interstitial delegates](advanced-usage#UsingInterstitialDelegate)<br></br> 
-[Explicitly selecting the type of interstitial ad to load](advanced-usage#SelectInterstitialType)<br></br> 
+[**Advanced Usage**](ios-advanced-usage)<br></br>
+[Controlling the size of your banner](ios-advanced-usage#ControllingBannerSize)<br></br> 
+[Using banner delegates](ios-advanced-usage#UsingBannerDelegates)<br></br> 
+[Using a fixed origin for your banner](ios-advanced-usage#UsingFixedOriginBanner)<br></br> 
+[Changing the banner size and origin upon rotation](ios-advanced-usage#ChangingBanner)<br></br> 
+[Using Interstitial delegates](ios-advanced-usage#UsingInterstitialDelegate)<br></br> 
+[Explicitly selecting the type of interstitial ad to load](ios-advanced-usage#SelectInterstitialType)<br></br> 
 
 
