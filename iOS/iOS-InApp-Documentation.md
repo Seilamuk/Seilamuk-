@@ -12,14 +12,14 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 ##Step 1, Add the StartApp SDK to your project
 ####Add the StartApp SDK files to your application project directory
 1. Right-click on you project and choose "Add Files to…"
-<br></br>[[/images/AddFilesTo.png]]
+<br></br>[[/ios/images/AddFilesTo.png]]
 2. Add the StartApp SDK files:
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> libStartAppAdSDK.a
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> STAStartAppAd.h
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> STABannerSize.h
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> STABannerView.h
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> StartAppAdSDK-resources.bundle
-<br></br><br></br>[[/images/SdkFiles.png]]
+<br></br><br></br>[[/ios/images/SdkFiles.png]]
 
 ####Add the libStartAppAdSDK.a to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
@@ -27,7 +27,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 3.	Select the Build Phases tab
 4.	Disclose the "Link Binary With Libraries" phase
 5.	Make sure "libStartAppAdSDK.a" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "libStartAppAdSDK.a" file 
-<br></br><br></br>[[/images/libStartAppAdSDK.png]]
+<br></br><br></br>[[/ios/images/libStartAppAdSDK.png]]
 
 ####Add the Bundle to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
@@ -35,7 +35,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 3.	Select the Build Phases tab
 4.	Disclose the "Copy Bundle Resources" phase 
 5.	Make sure "StartAppAdSDK-resources.bundle" exists. if not, click the plus button in that phase, then click "Add Other…" and select the " StartAppAdSDK-resources.bundle" file 
-<br></br><br></br>[[/images/StartAppAdSDK-resources.bundle.png]]
+<br></br><br></br>[[/ios/images/StartAppAdSDK-resources.bundle.png]]
 
 <a name="step2" />
 ##Step 2, Add frameworks
