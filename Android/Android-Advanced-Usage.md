@@ -70,7 +70,7 @@ protected void onSaveInstanceState (Bundle outState){
 
 **2**    Override the ``onRestoreInstanceState(Bundle savedInstanceState)`` method and add a call to ``startAppAd.onRestoreInstanceState(savedInstanceState)``.
 
-> **NOTE** 
+> **NOTE:** 
 > Add this method immediately before the method ``super.onRestoreInstanceState(savedInstanceState)``.
 
 **Example**
@@ -88,7 +88,7 @@ protected void onRestoreInstanceState (Bundle savedInstanceState){
 ##Explicitly Closing an Interstitial Ad
 You can explicitly close an interstitial Ad by calling ``startAppAd.close()``. This closes the Ad and returns control to the calling Activity. You can use this when implementing a timeout for an Ad.
 
-> **NOTE** 
+> **NOTE:** 
 > Keep in mind that the user can close the Ad before timeout expires
 
 [Back to top](#top)
