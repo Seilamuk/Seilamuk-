@@ -49,7 +49,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> CoreGraphics.framework 
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> StoreKit.framework 
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> AdSupport.framework 
-<br></br><br></br>[[/images/frameworks.png]]
+<br></br><br></br>[[/ios/images/frameworks.png]]
 
 <a name="step3" />
 ##Step 3, Initialization
