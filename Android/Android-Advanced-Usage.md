@@ -178,8 +178,11 @@ StartAppAd.showSplash(this, savedInstanceState,
 
 ####Adding a User-Defined Splash Screen 
 Use the following option if you already have a Splash screen for your application or if you want to design your own custom layout for your Splash screen.
+
 **1** 	Set a **SplashConfig** object with a specific layout resource ID.
+
 **2** 	Pass on the **SplashConfig** object to the ```showSplash``` static function. 
+
 For a full description of the SplashConfig API, please refer to [SplashConfig API](SplashConfig-API).
 
 **Example**
