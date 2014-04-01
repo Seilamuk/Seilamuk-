@@ -179,6 +179,8 @@ If you would like the Slider to appear in additional activities, repeat this ste
 > **NOTE:**
 > for better user experience, and in order to avoid reload of the Slider when rotating the phone, it is recommended to go back to your manifest file and add the following attribute to any activity that you added the Slider to:  ```android:configChanges="orientation|screenSize"```
 
+[Back to top](#top)
+
 <a name="step8" />
 ##Step 8, Obfuscation (Optional)
 Obfuscation protects an application from reverse-engineering or modification by making it harder for a third-party to access your source (decompiled) code.
@@ -203,6 +205,8 @@ Obfuscation protects an application from reverse-engineering or modification by 
 -dontwarn com.startapp.**
 ```
 
+[Back to top](#top)
+
 <a name="Demographic" />
 ##Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
@@ -219,7 +223,6 @@ AdPreferences adPreferences = new AdPreferences();
 **1**	In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Use ``setAge()`` with your user's real age, and ``setGender()`` with your user's real gender – *"Male"* or *"Female"*.
 
 **2** 	Do the same for each ``loadAd()`` call in your project.
-
 
 [Back to top](#top)
 
