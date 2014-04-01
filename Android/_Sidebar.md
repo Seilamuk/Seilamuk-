@@ -1,8 +1,8 @@
 [**HOME**](Android-InApp-Documentation)
 
-[**Step 1, Adding the SDK JAR to Your Eclipse Project**](Android-InApp-Documentation#step1)
+[**Step 1, Adding the SDK to Your Project**](Android-InApp-Documentation#step1)
 
-[**Step 2, Updating Your AndroidManifest.xml File**](Android-InApp-Documentation#step2)
+[**Step 2, Updating Your Manifest File**](Android-InApp-Documentation#step2)
 
 [**Step 3, Initialization**](Android-InApp-Documentation#step3)
 
