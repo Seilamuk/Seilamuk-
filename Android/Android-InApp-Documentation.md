@@ -168,16 +168,16 @@ Apply the following parameters:
 [Back to top](#top)
 
 <a name="step7" />
-##Step 7, Integrating the Search Box
+##Step 7, Integrating the Slider
 After calling ```setContentView()```, in the ```OnCreate()``` method of your main activity, call the static function:
 ```java
-StartAppSearch.showSearchBox(this);
+StartAppSearch.showSlider(this);
 ```
 
-If you would like the Search Box to appear in additional activities, repeat this step in each one of the activities you would like it to show in. The search box cannot be implemented in activities with a _Dialog Theme_: ```(android:theme="@android:style/Theme.Dialog")```
+If you would like the Slider to appear in additional activities, repeat this step in each one of the activities you would like it to show in. The Slider cannot be implemented in activities with a _Dialog Theme_: ```(android:theme="@android:style/Theme.Dialog")```
 
 > **NOTE:**
-> for better user experience, and in order to avoid reload of the search box when rotating the phone, it is recommended to go back to your manifest file and add the following attribute to any activity that you added the Search Box to:  ```android:configChanges="orientation|screenSize"```
+> for better user experience, and in order to avoid reload of the Slider when rotating the phone, it is recommended to go back to your manifest file and add the following attribute to any activity that you added the Slider to:  ```android:configChanges="orientation|screenSize"```
 
 <a name="step8" />
 ##Step 8, Obfuscation (Optional)
