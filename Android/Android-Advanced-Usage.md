@@ -1,5 +1,5 @@
 <a name="top" />
-######This section describes advanced usage and personal customization and is not mandatory for the integration.
+######This section describes advanced usage and personal customization options and is not mandatory for the integration.
 
 <a name="SelectBanner" />
 ##Selecting Banner Type
