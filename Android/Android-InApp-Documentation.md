@@ -154,7 +154,7 @@ StartApp In-Ad provides two modes for displaying Splash screens:
 Template Mode          | StartApp In-Ad provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation.
 User-Defined Mode      | Please refer to the [Advanced Usage](AdvancedUsage)
 
-####Adding Splash Screen 
+####Adding the Splash Screen 
 In the ```OnCreate``` method of your Activity, after calling ```StartAppAd.init``` and before ```setContentView```, call the following static function:
 ```java
 StartAppAd.showSplash(this, savedInstanceState);
