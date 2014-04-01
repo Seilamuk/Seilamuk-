@@ -3,7 +3,7 @@
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
-> - If you have any questions, contact us via [support@startapp.com](mailto://support@startapp.com)
+> - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
 <br></br>
 <a name="step1" />
