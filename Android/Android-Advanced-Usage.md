@@ -317,11 +317,9 @@ startAppNativeAd.loadAd(new NativeAdPreferences()
 Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
 Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` method.
 
+####NativeAdPreferences API:
 
-####Native Ad API
-#####NativeAdPreferences API:
-
-####► Set the number of Native ads to retrieve
+#####► Set the number of Native ads to retrieve
 > **```public NativeAdPreferences setAdsNumber(int adsNumber)```**<br></br>
 
 set number of native ads to be received from the server.
@@ -333,7 +331,7 @@ set number of native ads to be received from the server.
 *NatvieAdPreferences* – current object
 
 
-####► Ad's image configuration
+#####► Ad's image configuration
 > **``public NativeAdPreferences setAutoBitmapDownload(boolean autoBitmapDownload)``**<br></br>
 
 Set configuration for pre-caching the ad's image bitmap, or just get its image URL.
@@ -347,7 +345,7 @@ Set configuration for pre-caching the ad's image bitmap, or just get its image U
 *NatvieAdPreferences* – current object
 
 
-####► Set Ad's image size
+#####► Set Ad's image size
 > **``public NativeAdPreferences setImageSize(NativeAdBitmapSize bitmapSize)``**<br></br>
 
 Set the image size of the ad to be retrieved.
@@ -363,20 +361,20 @@ Set the image size of the ad to be retrieved.
 *NatvieAdPreferences* – current object
 
 
-#####NativeAdDetails API:
-####► Get the Ad's title
+####NativeAdDetails API:
+#####► Get the Ad's title
 > **``public String getTitle()``**<br></br>
 
 **Return Value**<br></br>
 String
 
-####► Get the Ad's description
+#####► Get the Ad's description
 > **``public String getDescription()``**<br></br>
 
 **Return Value**<br></br>
 String
 
-####► Get the Ad's rating
+#####► Get the Ad's rating
 > **``public String getDescription()``**<br></br>
 
 Get the rating of the ad in the Google Play store. The rating range is 1-5.
@@ -384,7 +382,7 @@ Get the rating of the ad in the Google Play store. The rating range is 1-5.
 **Return Value**<br></br>
 Float
 
-####► Get the Ad's image URL
+#####► Get the Ad's image URL
 > **``public String getImageUrl()``**<br></br>
 
 Get the image URL of the ad, according to the selected size.
@@ -393,7 +391,7 @@ Get the image URL of the ad, according to the selected size.
 String
 
 
-####► Get the Ad's image URL
+#####► Get the Ad's image URL
 > **``public Bitmap getImageBitmap()``**<br></br>
 
 Get the image of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
@@ -401,7 +399,7 @@ Get the image of the ad as a pre-cached bitmap, if requested using the NativeAdP
 **Return Value**<br></br>
 Bitmap
 
-####► Get the Ad's installs numbers
+#####► Get the Ad's installs numbers
 > **``public String getInstalls()``**<br></br>
 
 Get the amount of installs in Google Play store.
@@ -410,7 +408,7 @@ Get the amount of installs in Google Play store.
 String
 
 
-####► Get the Ad's category
+#####► Get the Ad's category
 > **``public String getCategory()``**<br></br>
 
 Get the category of the ad in the Google Play store.
@@ -418,7 +416,7 @@ Get the category of the ad in the Google Play store.
 **Return Value**<br></br>
 String
 
-####► Get the Ad's category
+#####► Get the Ad's category
 > **``public String getPackacgeName()``**<br></br>
 
 Get the ad's package name in the Google Play store (for example, "com.startapp.quicksearchbox").
@@ -427,7 +425,7 @@ Get the ad's package name in the Google Play store (for example, "com.startapp.q
 String
 
 
-####► To be called when the user clicks on the ad
+#####► To be called when the user clicks on the ad
 > **``public void sendClick(Context context)``**<br></br>
 
 Call this method when the user clicks on the ad.  
@@ -435,14 +433,13 @@ Call this method when the user clicks on the ad.
 **Parameters**<br></br>
 *this* - the context of the host app 
 
-####► To be called when you actually show the ad 
+#####► To be called when you actually show the ad 
 > **``public void sendImpression(Context context)``**<br></br>
 
 Call this method when the you show the ad in your application. 
 
 **Parameters**<br></br>
 *this* - the context of the host app 
-
 
 
 
