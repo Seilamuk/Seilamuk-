@@ -324,10 +324,10 @@ Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` me
 
 set number of native ads to be received from the server.
 
-**Parameters**<br></br>
+######Parameters<br></br>
 *adsNumber* - integer of the ads number<br></br>
 
-**Return Value**<br></br>
+######Return Value<br></br>
 *NatvieAdPreferences* – current object
 
 
@@ -336,12 +336,12 @@ set number of native ads to be received from the server.
 
 Set configuration for pre-caching the ad's image bitmap, or just get its image URL.
 
-**Parameters**<br></br>
+######Parameters<br></br>
 *autoBitmapDownload* - Boolean:
 + true – native ad object will be loaded automatically with bitmap object
 + false – native ad wont load the image automatically
 
-**Return Value**<br></br>
+######Return Value<br></br>
 *NatvieAdPreferences* – current object
 
 
@@ -350,14 +350,14 @@ Set configuration for pre-caching the ad's image bitmap, or just get its image U
 
 Set the image size of the ad to be retrieved.
 
-**Parameters**<br></br>
+######Parameters<br></br>
 *bitmapSize* - NativeAdBitmapSize for selecting image size. The NativeAdBitmapSize can get the following values: <br></br>
 + SIZE72X72 – for image size 72px X 72px <br></br>
 + SIZE100X100 – for image size 100px X 100px <br></br>
 + SIZE150X150 – for image size 150px X 150px <br></br>
 + SIZE340X340 – for image size 340px X 340px <br></br>
 
-**Return Value**<br></br>
+######Return Value<br></br>
 *NatvieAdPreferences* – current object
 
 
@@ -365,30 +365,26 @@ Set the image size of the ad to be retrieved.
 #####► Get the Ad's title
 > **``public String getTitle()``**<br></br>
 
-######Return Value<br></br>
-String
+######Return Value: String
 
 #####► Get the Ad's description
 > **``public String getDescription()``**<br></br>
 
-######Return Value<br></br>
-String
+######Return Value: String
 
 #####► Get the Ad's rating
 > **``public String getDescription()``**<br></br>
 
 Get the rating of the ad in the Google Play store. The rating range is 1-5.
 
-######Return Value<br></br>
-Float
+######Return Value: Float
 
 #####► Get the Ad's image URL
 > **``public String getImageUrl()``**<br></br>
 
 Get the image URL of the ad, according to the selected size.
 
-######Return Value<br></br>
-String
+######Return Value: String
 
 
 #####► Get the Ad's image URL
@@ -396,16 +392,14 @@ String
 
 Get the image of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
 
-######Return Value<br></br>
-Bitmap
+######Return Value: Bitmap
 
 #####► Get the Ad's installs numbers
 > **``public String getInstalls()``**<br></br>
 
 Get the amount of installs in Google Play store.
 
-######Return Value<br></br>
-String
+######Return Value: String
 
 
 #####► Get the Ad's category
@@ -413,16 +407,14 @@ String
 
 Get the category of the ad in the Google Play store.
 
-######Return Value<br></br>
-String
+######Return Value: String
 
 #####► Get the Ad's category
 > **``public String getPackacgeName()``**<br></br>
 
 Get the ad's package name in the Google Play store (for example, "com.startapp.quicksearchbox").
 
-######Return Value<br></br>
-String
+######Return Value: String
 
 
 #####► To be called when the user clicks on the ad
@@ -440,5 +432,4 @@ Call this method when the you show the ad in your application.
 
 ######Parameters<br></br>
 *this* - the context of the host app 
-
 
