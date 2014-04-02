@@ -51,7 +51,6 @@ Before calling ```setContentView()```, in the ```OnCreate``` method of your main
 
 ```java
 StartAppAd.init(this, "Your Developer Id", "Your App ID");
-StartAppSearch.init(this, "Your Developer Id", "Your App ID");
 ```
 
 Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
@@ -171,7 +170,7 @@ Apply the following parameters:
 ##Step 7, Integrating the Slider
 After calling ```setContentView()```, in the ```OnCreate()``` method of your main activity, call the static function:
 ```java
-StartAppSearch.showSlider(this);
+StartAppAd.showSlider(this);
 ```
 
 If you would like the Slider to appear in additional activities, repeat this step in each one of the activities you would like it to show in. The Slider cannot be implemented in activities with a _Dialog Theme_: ```(android:theme="@android:style/Theme.Dialog")```
@@ -187,21 +186,13 @@ Obfuscation protects an application from reverse-engineering or modification by 
 
 **StartApp In-Ad is already obfuscated!** Therefore, if you did not obfuscate your application using ProGuard™, then you can skip this step. If you have obfuscated your application using ProGuard, then use the following in the ProGuard configuration file:
 ```
--optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
--keep class com.searchboxsdk.** { 
-	*; 
-}
--keep class com.startapp.android.eula.** { 
-	*; 
-}
--keep class com.startapp.** { 
-      *; 
+-keep class com.startapp.** {
+      *;
 }
 
--keepattributes Exceptions, InnerClasses, Signature, Deprecated,  SourceFile,    
- LineNumberTable, *Annotation*, EnclosingMethod
+-keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile,
+LineNumberTable, *Annotation*, EnclosingMethod
 -dontwarn android.webkit.JavascriptInterface
--dontwarn com.searchboxsdk.android.**
 -dontwarn com.startapp.**
 ```
 
@@ -210,19 +201,25 @@ Obfuscation protects an application from reverse-engineering or modification by 
 <a name="Demographic" />
 ##Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
+
+**Example**
 ```java
 @Override
 public void onResume() {
-super.onResume();
-AdPreferences adPreferences = new AdPreferences();
-    adPreferences.setAge(18);
-    adPreferences.setGender("Male");
-    startAppAd.loadAd(adPreferences);
+    super.onResume();
+    startAppAd.loadAd(new AdPreferences()
+                      .setAge(18)
+                      .setGender("Male"));
 }
 ```
 **1**	In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Use ``setAge()`` with your user's real age, and ``setGender()`` with your user's real gender – *"Male"* or *"Female"*.
 
 **2** 	Do the same for each ``loadAd()`` call in your project.
+
+[Back to top](#top)
+
+<a name="Native" />
+##Native Ads
 
 [Back to top](#top)
 
