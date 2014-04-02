@@ -280,3 +280,71 @@ startAppNativeAd.loadAd(new NativeAdPreferences(), new AdEventListener() {
 });
 ```
 
+####Using the Native Ad Object
+After initializing and  loading your  **startAppNativeAd** object, use the ``getNativeAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, icon, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](NativeAdDetails).
+
+**Example:** the following is an example of how to load 3 native ad with a pre-cached icons of 150x150 pixels size, and logging their details once ready (using callbacks)
+
+```java
+startAppNativeAd.loadAd(new NativeAdPreferences()
+							  .setAdsNumber(3)              // Load 3 Ads
+							  .setAutoBitmapDownload(true) // Retrieve Images object
+							  .setImageSize(NativeAdBitmapSize.SIZE150X150), // Images of 150X150
+						new AdEventListener() {       // Callback Listener
+							  @Override
+							  public void onReceiveAd(Ad arg0) {              
+									// Native Ad received
+									ArrayList<NativeAdDetails> ads = startAppNativeAd.getNativeAds();    // get NativeAds list
+									
+									// Print all ads details to log
+									Iterator<NativeAdDetails> iterator = ads.iterator();
+									while(iterator.hasNext()){
+										  Log.d("MyApplication", iterator.next().toString());
+									}
+							  }
+							  
+							  @Override
+							  public void onFailedToReceiveAd(Ad arg0) {
+									// Native Ad failed to receive
+									Log.e("MyApplication", "Error while loading Ad");
+							  }
+						});
+```
+
+> **Note:** It is possible to get less ads than you requested. It is also possible that no ad will returned. In this case you will receive an empty array.
+
+####Showing and Clicking a Native Ad
+Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
+Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` method.
+
+
+####Native Ad API
+#####NativeAdPreferences API:
+
+####► Set the number of Native ads to retrieve
+> **```public NativeAdPreferences setAdsNumber(int adsNumber)```**<br></br>
+
+set number of native ads to be received from the server.
+
+**Parameters**<br></br>
+*adsNumber* - integer of the ads number<br></br>
+
+**Return Value**<br></br>
+*NatvieAdPreferences* – current object
+
+
+####► Ad's icon configuration
+> **``public NativeAdPreferences setAutoBitmapDownload(boolean autoBitmapDownload)``**<br></br>
+
+Set configuration for pre-caching the ad's icon bitmap, or just get its icon URL.
+
+**Parameters**<br></br>
+*autoBitmapDownload* - Boolean:
++ true – native ad object will be loaded automatically with bitmap object
++ false – native ad wont load the image automatically
+
+**Return Value**<br></br>
+*NatvieAdPreferences* – current object
+
+
+
