@@ -263,7 +263,7 @@ To load your native ad, call the loadAd() method with a NativeAdPreferences obje
 startAppNativeAd.loadAd(new NativeAdPreferences());
 ```
 
-**NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferences API](NativeAdPreferencesAPI).
+**NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferences API](#NativeAdPreferencesAPI).
 
 You can register your **startAppNativeAd** object for callbacks by passing an **AdEventListener** object to the ``loadAd()`` method:
 ```java
@@ -281,7 +281,7 @@ startAppNativeAd.loadAd(new NativeAdPreferences(), new AdEventListener() {
 ```
 
 ####Using the Native Ad Object
-After initializing and  loading your  **startAppNativeAd** object, use the ``getNativeAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, image, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](NativeAdDetailsAPI).
+After initializing and  loading your  **startAppNativeAd** object, use the ``getNativeAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, image, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
 
 **Example:** the following is an example of how to load 3 native ad with a pre-cached images of 150x150 pixels size, and logging their details once ready (using callbacks)
 
