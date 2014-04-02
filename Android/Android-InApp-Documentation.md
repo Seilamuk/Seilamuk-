@@ -76,7 +76,7 @@ Add the following View inside your Activity layout XML:
 > **NOTE:**
 > This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
 
-**If you wish to add a specific type of banner, please refer to the [Advanced Usage](AdvancedUsage)**.
+**If you wish to add a specific type of banner, please refer to the [Advanced Usage](android-advanced-usage)**.
 
 [Back to top](#top)
 
@@ -151,7 +151,7 @@ StartApp In-Ad provides two modes for displaying Splash screens:
 **Splash Screen Mode** | **Description**
 ---------------------- | ---------------
 Template Mode          | StartApp In-Ad provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation.
-User-Defined Mode      | Please refer to the [Advanced Usage](AdvancedUsage)
+User-Defined Mode      | Please refer to the [Advanced Usage](android-advanced-usage)
 
 ####Adding the Splash Screen 
 In the ```OnCreate``` method of your Activity, after calling ```StartAppAd.init``` and before ```setContentView```, call the following static function:
@@ -162,7 +162,7 @@ Apply the following parameters:
 - ***this***: The context (Activity)
 - ***savedInstanceState***: The Bundle parameter passed to your ```onCreate(Bundle savedInstanceState)``` method
 
-**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](AdvancedUsage).**
+**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage).**
 
 [Back to top](#top)
 
