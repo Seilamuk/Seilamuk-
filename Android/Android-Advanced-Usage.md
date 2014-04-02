@@ -341,9 +341,10 @@ set number of native ads to be received from the server.
 #####► Ad's image configuration
 > **``public NativeAdPreferences setAutoBitmapDownload(boolean autoBitmapDownload)``**<br></br>
 
-You can choose between two options to obtain the ad's image:
-+ get the image pre-cached as a BITMAP. 
-+ get the image URL only.
+You can choose between two options to obtain the ad's image: 
+
+1. get the image pre-cached as a BITMAP. <br></br>
+2. get the image URL only.<br></br>
 
 ######Parameters<br></br>
 *autoBitmapDownload* - Boolean:
