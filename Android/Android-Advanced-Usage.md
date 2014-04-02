@@ -263,7 +263,7 @@ To load your native ad, call the loadAd() method with a NativeAdPreferences obje
 startAppNativeAd.loadAd(new NativeAdPreferences());
 ```
 
-**NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the icon size of the ad, or whether the icon should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferences API](NativeAdPreferences).
+**NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferences API](NativeAdPreferences).
 
 You can register your **startAppNativeAd** object for callbacks by passing an **AdEventListener** object to the ``loadAd()`` method:
 ```java
@@ -281,9 +281,9 @@ startAppNativeAd.loadAd(new NativeAdPreferences(), new AdEventListener() {
 ```
 
 ####Using the Native Ad Object
-After initializing and  loading your  **startAppNativeAd** object, use the ``getNativeAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, icon, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](NativeAdDetails).
+After initializing and  loading your  **startAppNativeAd** object, use the ``getNativeAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, image, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](NativeAdDetails).
 
-**Example:** the following is an example of how to load 3 native ad with a pre-cached icons of 150x150 pixels size, and logging their details once ready (using callbacks)
+**Example:** the following is an example of how to load 3 native ad with a pre-cached images of 150x150 pixels size, and logging their details once ready (using callbacks)
 
 ```java
 startAppNativeAd.loadAd(new NativeAdPreferences()
@@ -333,10 +333,10 @@ set number of native ads to be received from the server.
 *NatvieAdPreferences* – current object
 
 
-####► Ad's icon configuration
+####► Ad's image configuration
 > **``public NativeAdPreferences setAutoBitmapDownload(boolean autoBitmapDownload)``**<br></br>
 
-Set configuration for pre-caching the ad's icon bitmap, or just get its icon URL.
+Set configuration for pre-caching the ad's image bitmap, or just get its image URL.
 
 **Parameters**<br></br>
 *autoBitmapDownload* - Boolean:
@@ -347,4 +347,17 @@ Set configuration for pre-caching the ad's icon bitmap, or just get its icon URL
 *NatvieAdPreferences* – current object
 
 
+####► Set Ad's image size
+> **``public NativeAdPreferences setImageSize(NativeAdBitmapSize bitmapSize)``**<br></br>
 
+Set the image size of the ad to be retrieved.
+
+**Parameters**<br></br>
+*bitmapSize* - NativeAdBitmapSize for selecting image size. The NativeAdBitmapSize can get the following values:
+1. SIZE72X72 – for image size 72px X 72px
+2. SIZE100X100 – for image size 100px X 100px
+3. SIZE150X150 – for image size 150px X 150px
+4. SIZE340X340 – for image size 340px X 340px
+
+**Return Value**<br></br>
+*NatvieAdPreferences* – current object
