@@ -263,7 +263,7 @@ To load your native ad, call the loadAd() method with a NativeAdPreferences obje
 startAppNativeAd.loadAd(new NativeAdPreferences());
 ```
 
-**NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferencesAPI](NativeAdPreferences).
+**NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferences API](NativeAdPreferencesAPI).
 
 You can register your **startAppNativeAd** object for callbacks by passing an **AdEventListener** object to the ``loadAd()`` method:
 ```java
