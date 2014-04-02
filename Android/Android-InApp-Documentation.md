@@ -25,10 +25,6 @@ Under the main manifest element, add the following permissions:
 
 Under the application element, add your new Activities:
 ```xml
-<activity android:name="com.startapp.android.eula.EULAActivity"
-          android:theme="@android:style/Theme.Translucent"
-          android:configChanges="keyboard|keyboardHidden|orientation" />
-
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
           android:taskAffinity="<package_name>.AppWall"
           android:theme="@android:style/Theme" />
@@ -39,9 +35,8 @@ Under the application element, add your new Activities:
           android:configChanges="orientation|keyboardHidden" />
 ```
 
-> **NOTES:**
-> - Replace <package_name> with your package as declared in your manifest in both Activities.
-> - Make sure that the first activity ```EULAActivity``` appears only once, even if it is required for an additional StartApp SDK.
+> **NOTE:** Replace <package_name> with your package as declared in your manifest in both Activities.
+
 
 [Back to top](#top)
 
