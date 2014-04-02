@@ -321,6 +321,7 @@ startAppNativeAd.loadAd(nativePrefs, adListener);
 
 ####Showing and Clicking a Native Ad
 Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
+
 Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` method.
 
 <a name="NativeAdPreferencesAPI" />
