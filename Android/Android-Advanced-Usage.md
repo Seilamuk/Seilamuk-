@@ -320,9 +320,8 @@ startAppNativeAd.loadAd(nativePrefs, adListener);
 > **Note:** It is possible to get less ads than you requested. It is also possible that no ad will returned. In this case you will receive an empty array.
 
 ####Showing and Clicking a Native Ad
-Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
-
-Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` method.
++ Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
++ Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` method.
 
 <a name="NativeAdPreferencesAPI" />
 ####NativeAdPreferences API:
