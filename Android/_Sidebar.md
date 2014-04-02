@@ -16,6 +16,8 @@
 
 [**Step 8, Obfuscation (Optional)**](Android-InApp-Documentation#step8)
 
+[**Native Ads**](Android-InApp-Documentation#Native)
+
 [**Enjoy Higher eCPM with Demographic-Targeted Ads**](Android-InApp-Documentation#Demographic)
 
 [**Sample Project**](Android-InApp-Documentation#SampleProject)
