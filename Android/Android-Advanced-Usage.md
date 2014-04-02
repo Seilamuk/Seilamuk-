@@ -251,3 +251,32 @@ Sets the orientation to be used in the Template or User-defined mode.
 [Back to top](#top)
 
 
+<a name="using-native-ads" />
+##Integrating Native Ads
+####Initializing and Loading a StartAppNativeAd Object
+In your Activity, create a member variable, as follows:
+```java
+private StartAppNativeAd startAppNativeAd = new StartAppNativeAd(this);
+```
+To load your native ad, call the loadAd() method with a NativeAdPreferences object:
+```java
+startAppNativeAd.loadAd(new NativeAdPreferences());
+```
+
+**NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the icon size of the ad, or whether the icon should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferences API](NativeAdPreferences).
+
+You can register your **startAppNativeAd** object for callbacks by passing an **AdEventListener** object to the ``loadAd()`` method:
+```java
+startAppNativeAd.loadAd(new NativeAdPreferences(), new AdEventListener() {
+	  @Override
+	  public void onReceiveAd(Ad arg0) {
+			// Native Ad Received
+	  }
+	  
+	  @Override
+	  public void onFailedToReceiveAd(Ad arg0) {
+			// Native Ad failed to receive
+	  }
+});
+```
+
