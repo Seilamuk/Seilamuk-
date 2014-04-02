@@ -286,29 +286,36 @@ After initializing and  loading your  **startAppNativeAd** object, use the ``get
 **Example:** the following is an example of how to load 3 native ad with a pre-cached images of 150x150 pixels size, and logging their details once ready (using callbacks)
 
 ```java
-startAppNativeAd.loadAd(new NativeAdPreferences()
-							  .setAdsNumber(3)              // Load 3 Ads
-							  .setAutoBitmapDownload(true) // Retrieve Images object
-							  .setImageSize(NativeAdBitmapSize.SIZE150X150), // Images of 150X150
-						new AdEventListener() {       // Callback Listener
-							  @Override
-							  public void onReceiveAd(Ad arg0) {              
-									// Native Ad received
-									ArrayList<NativeAdDetails> ads = startAppNativeAd.getNativeAds();    // get NativeAds list
-									
-									// Print all ads details to log
-									Iterator<NativeAdDetails> iterator = ads.iterator();
-									while(iterator.hasNext()){
-										  Log.d("MyApplication", iterator.next().toString());
-									}
-							  }
-							  
-							  @Override
-							  public void onFailedToReceiveAd(Ad arg0) {
-									// Native Ad failed to receive
-									Log.e("MyApplication", "Error while loading Ad");
-							  }
-						});
+            
+            // Declare Native Ad Preferences
+            NativeAdPreferences nativePrefs = new NativeAdPreferences()
+                                                                  .setAdsNumber(3)                    // Load 3 Ads
+                                                                  .setAutoBitmapDownload(true) // Retrieve Images object
+                                                                  .setImageSize(NativeAdBitmapSize.SIZE150X150);
+            
+            // Declare Ad Callbacks Listener
+            AdEventListener adListener = new AdEventListener() {        // Callback Listener
+                  @Override
+                  public void onReceiveAd(Ad arg0) {              
+                        // Native Ad received
+                        ArrayList<NativeAdDetails> ads = startAppNativeAd.getNativeAds();    // get NativeAds list
+                        
+                        // Print all ads details to log
+                        Iterator<NativeAdDetails> iterator = ads.iterator();
+                        while(iterator.hasNext()){
+                              Log.d("MyApplication", iterator.next().toString());
+                        }
+                  }
+                  
+                  @Override
+                  public void onFailedToReceiveAd(Ad arg0) {
+                        // Native Ad failed to receive
+                        Log.e("MyApplication", "Error while loading Ad");
+                  }
+            };
+            
+            // Load Native Ads
+            startAppNativeAd.loadAd(nativePrefs, adListener);
 ```
 
 > **Note:** It is possible to get less ads than you requested. It is also possible that no ad will returned. In this case you will receive an empty array.
