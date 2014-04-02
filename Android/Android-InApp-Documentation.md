@@ -198,6 +198,14 @@ LineNumberTable, *Annotation*, EnclosingMethod
 
 [Back to top](#top)
 
+<a name="Native" />
+##Native Ads
+A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design ads experience to perfectly fits your application's scene, content, functionality.
+
+For full integration guide, please refer to the ["Using Native Ads"](android-advanced-usage#using-native) section under the "Advanced Usage" page.
+
+[Back to top](#top)
+
 <a name="Demographic" />
 ##Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
@@ -215,11 +223,6 @@ public void onResume() {
 **1**	In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Use ``setAge()`` with your user's real age, and ``setGender()`` with your user's real gender – *"Male"* or *"Female"*.
 
 **2** 	Do the same for each ``loadAd()`` call in your project.
-
-[Back to top](#top)
-
-<a name="Native" />
-##Native Ads
 
 [Back to top](#top)
 
