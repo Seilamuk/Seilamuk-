@@ -26,12 +26,12 @@ Under the main manifest element, add the following permissions:
 Under the application element, add your new Activities:
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
-          android:taskAffinity="<package_name>.AppWall"
+          android:taskAffinity="package_name.AppWall"
           android:theme="@android:style/Theme" />
 
 <activity android:name="com.startapp.android.publish.AppWallActivity"
           android:theme="@android:style/Theme.Translucent"
-          android:taskAffinity="<package_name>.AppWall"   		  
+          android:taskAffinity="package_name.AppWall"   		  
           android:configChanges="orientation|keyboardHidden" />
 ```
 
