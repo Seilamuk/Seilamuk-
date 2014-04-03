@@ -265,7 +265,7 @@ startAppNativeAd.loadAd(new NativeAdPreferences());
 
 **NativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the **NativeAdPreferences**, please refer to [NativeAdPreferences API](#NativeAdPreferencesAPI).
 
-> **NOTE:** NativeAdPreferences is capable of auto-load the image as a BITMAP object. This feature is turned off by default. For enabling it, set autoBitmapDownload to true (please refer to [Ad's image configuration](#image-conf)).
+> **NOTE:** By default, **StartAppNativeAd** retrieves the image URL of the ad. The SDK is also capable of auto-loading the image as a BITMAP object. This feature is turned off by default. For enabling it, set _``autoBitmapDownload``_ in **NativeAdPreferences** to true (please refer to [Ad's image configuration](#image-conf)).
 
 You can register your **startAppNativeAd** object for callbacks by passing an **AdEventListener** object to the ``loadAd()`` method:
 ```java
