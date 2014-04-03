@@ -35,7 +35,7 @@ Under the application element, add your new Activities:
           android:configChanges="orientation|keyboardHidden" />
 ```
 
-> **NOTE:** Replace _**package_name**_ with your actual package name as declared in your manifest in both Activities.
+> **NOTE:** Replace _**package_name**_ with your actual package name as declared in your manifest in both Activities. For example, "com.test.example.AppWall".
 
 
 [Back to top](#top)
