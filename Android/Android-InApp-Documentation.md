@@ -213,6 +213,7 @@ public void onResume() {
     startAppAd.loadAd(new AdPreferences()
                       .setAge(18)
                       .setGender("Male"));
+    startAppAd.onResume();
 }
 ```
 **1**	In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Use ``setAge()`` with your user's real age, and ``setGender()`` with your user's real gender – *"Male"* or *"Female"*.
