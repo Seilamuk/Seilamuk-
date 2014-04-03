@@ -14,7 +14,7 @@ Copy the SDK jar file from the SDK zip to the “libs” directory of your proje
 
 <a name="step2" />
 ##Step 2, Updating Your AndroidManifest.xml File
-Under the main manifest element, add the following permissions:
+Under the main \<manifest\> element, add the following permissions:
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -23,7 +23,7 @@ Under the main manifest element, add the following permissions:
 <uses-permission android:name="android.permission.GET_TASKS"/>
 ```
 
-Under the application element, add your new Activities:
+Under the \<application\> element, add your new activities:
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
           android:taskAffinity="package_name.AppWall"
@@ -35,14 +35,14 @@ Under the application element, add your new Activities:
           android:configChanges="orientation|keyboardHidden" />
 ```
 
-> **NOTE:** Replace _**package_name**_ with your actual package name as declared in your manifest in both Activities. For example, if your package name is "com.test.example", replace _**package_name**_ with "com.test.example.AppWall".
+> **NOTE:** Replace _**package_name**_ with your actual package name as declared in your manifest in both activities. For example, if your package name is "com.test.example", replace _**package_name**_ with "com.test.example.AppWall".
 
 
 [Back to top](#top)
 
 <a name="step3" />
 ##Step 3, Initialization
-Before calling ```setContentView()```, in the ```OnCreate``` method of your main activity, call the static functions:
+In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static functions:
 
 ```java
 StartAppAd.init(this, "Your Developer Id", "Your App ID");
@@ -139,8 +139,8 @@ public void btnOpenActivity (View view){
 
 <a name="step6" />
 ##Step 6, Showing a Splash Ad
-A Splash Ad is a full-page Ad that is displayed immediately after the application is launched.
-A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page Ad. 
+A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
+A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 StartApp In-Ad provides two modes for displaying Splash screens:
 
 **Splash Screen Mode** | **Description**
@@ -171,7 +171,7 @@ StartAppAd.showSlider(this);
 If you would like the Slider to appear in additional activities, repeat this step in each one of the activities you would like it to show in. The Slider cannot be implemented in activities with a _Dialog Theme_: ```(android:theme="@android:style/Theme.Dialog")```
 
 > **NOTE:**
-> for better user experience, and in order to avoid reload of the Slider when rotating the phone, it is recommended to go back to your manifest file and add the following attribute to any activity that you added the Slider to:  ```android:configChanges="orientation|screenSize"```
+> for better user experience, and in order to avoid reload of the Slider when rotating the phone, it is recommended to go back to your manifest file and add the following attribute to any \<activity\> element that you added the Slider to:  ```android:configChanges="orientation|screenSize"```
 
 [Back to top](#top)
 
