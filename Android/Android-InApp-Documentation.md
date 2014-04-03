@@ -35,7 +35,7 @@ Under the application element, add your new Activities:
           android:configChanges="orientation|keyboardHidden" />
 ```
 
-> **NOTE:** Replace \<package_name\> with your actual package name as declared in your manifest in both Activities.
+> **NOTE:** Replace _**package_name**_ with your actual package name as declared in your manifest in both Activities.
 
 
 [Back to top](#top)
