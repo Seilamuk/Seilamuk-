@@ -195,7 +195,7 @@ LineNumberTable, *Annotation*, EnclosingMethod
 
 <a name="Native" />
 ##Native Ads
-A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design ads experience to perfectly fits your application's scene, content, functionality.
+A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design ads experience to perfectly fits your application's scene, content and functionality.
 
 For full integration guide, please refer to the ["Using Native Ads"](android-advanced-usage#using-native-ads) section under the "Advanced Usage" page.
 
