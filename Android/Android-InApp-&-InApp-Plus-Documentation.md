@@ -236,3 +236,11 @@ StartApp provides a sample integration project available on [GitHub](https://git
 For advanced usage, please refer to the ["Advanced Usage"](android-advanced-usage)
 
 [Back to top](#top)
+
+<a name="SearchBox SDK Removal Procedure" />
+##SearchBoxRemoval
+If you are upgrading from our old SearchBox SDK, please refer to the ["SearchBox SDK Removal Procedure"](SearchBox-SDK-Removal-Procedure).
+
+[Back to top](#top)
+
+
