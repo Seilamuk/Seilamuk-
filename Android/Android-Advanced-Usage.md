@@ -421,7 +421,7 @@ Get the category of the ad in the Google Play store.
 
 ######Return Value: String
 
-#####► Get the Ad's category
+#####► Get the Ad's package name
 > **``public String getPackacgeName()``**<br></br>
 
 Get the ad's package name in the Google Play store (for example, "com.startapp.quicksearchbox").
