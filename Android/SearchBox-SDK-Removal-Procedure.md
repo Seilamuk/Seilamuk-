@@ -1,6 +1,6 @@
 If you are upgrading from the old SearchBox SDK, please perform the following steps:
 
-**1** In the manifest, do the followings:
+**1** In the manifest, do the following:
 
 a.	Remove the following permission:
 ```java
@@ -14,7 +14,7 @@ b.	remove the EULA activity from the application node
 ```
 **2**	Within your main activity:
 
-a.	Remove all imports which contains the package: ``com.searchboxsdk.android``
+a.	Remove all imports which contain the package: ``com.searchboxsdk.android``
 
 b.	Remove the following static function from the ``onCreate`` method:
 ```java
