@@ -285,7 +285,7 @@ startAppNativeAd.loadAd(new NativeAdPreferences(), new AdEventListener() {
 ####Using the Native Ad Object
 After initializing and  loading your  **startAppNativeAd** object, use the ``getNativeAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, image, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
 
-**Example:** the following is an example of how to load 3 native ad with a pre-cached images of 150x150 pixels size, and logging their details once ready (using callbacks)
+**Example:** the following is an example of how to load 3 native ads with a pre-cached images of 150x150 pixels size, and logging their details once ready (using callbacks)
 
 ```java
 // Declare Native Ad Preferences
@@ -319,7 +319,7 @@ AdEventListener adListener = new AdEventListener() {     // Callback Listener
 startAppNativeAd.loadAd(nativePrefs, adListener);
 ```
 
-> **Note:** It is possible to get less ads than you requested. It is also possible that no ad will returned. In this case you will receive an empty array.
+> **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
 
 ####Showing and Clicking a Native Ad
 + Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
