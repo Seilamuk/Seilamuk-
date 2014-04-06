@@ -27,7 +27,7 @@ StartAppSearch.showSearchBox(this);
 ```
 **3**	Repeat steps 2.a, 2.c for each activity that the SearchBox had been implemented in.
 
-**4**	 If you been using Obfuscation – remove the following proguard configuration: 
+**4**	 If you are using Obfuscation – remove the following proguard configuration: 
 ```
 -optimizations !code/simplification/arithmetic,!field/*,!class/merging/* -keep class com.searchboxsdk.** { 
 *; 
