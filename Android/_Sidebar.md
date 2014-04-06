@@ -30,3 +30,4 @@
   [Customizing the Splash Screen](android-advanced-usage#CustomizingSplashScreen)<br></br> 
   [Integrating Native Ads](android-advanced-usage#using-native-ads)<br></br> 
 
+[**SearchBox SDK Removal Procedure**](SearchBox-SDK-Removal-Procedure)
