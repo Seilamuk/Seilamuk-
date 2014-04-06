@@ -12,7 +12,7 @@
 
 [**Step 6, Showing a Splash Ad**](Android-InApp-Documentation#step6)
 
-[**Step 7, Integrating the Search Box**](Android-InApp-Documentation#step7)
+[**Step 7, Integrating the Slider**](Android-InApp-Documentation#step7)
 
 [**Step 8, Obfuscation (Optional)**](Android-InApp-Documentation#step8)
 
