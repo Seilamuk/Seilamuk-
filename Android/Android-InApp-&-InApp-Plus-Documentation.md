@@ -237,10 +237,9 @@ For advanced usage, please refer to the ["Advanced Usage"](android-advanced-usag
 
 [Back to top](#top)
 
-<a name="SearchBox SDK Removal Procedure" />
-##SearchBoxRemoval
+<a name="SearchBox-SDK-Removal-Procedure" />
+##SearchBox SDK Removal Procedure
 If you are upgrading from our old SearchBox SDK, please refer to the ["SearchBox SDK Removal Procedure"](SearchBox-SDK-Removal-Procedure).
 
 [Back to top](#top)
-
 
