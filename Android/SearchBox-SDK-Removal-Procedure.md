@@ -21,7 +21,7 @@ b.	Remove the call to the following static function from the ``onCreate`` method
 StartAppSearch.init(this, "<Your Developer Id>", "<Your App ID>");
 ```
 
-c.	Remove the call to the following static function from the ``onCreate`` method after the ``setContentView`` (only if you had implemented it)
+c.	Remove the call to the following static function from the ``onCreate`` method after the ``setContentView`` (only if you had implemented it):
 ```java
 StartAppSearch.showSearchBox(this);
 ```
