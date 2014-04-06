@@ -385,7 +385,7 @@ Set the image size of the ad to be retrieved.
 ######Return Value: String
 
 #####► Get the Ad's rating
-> **``public String getDescription()``**<br></br>
+> **``public String getRating()``**<br></br>
 
 Get the rating of the ad in the Google Play store. The rating range is 1-5.
 
