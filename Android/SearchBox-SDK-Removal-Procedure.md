@@ -16,12 +16,12 @@ b.	remove the EULA activity from the application node
 
 a.	Remove all imports which contain the package: ``com.searchboxsdk.android``
 
-b.	Remove the following static function from the ``onCreate`` method:
+b.	Remove the call to the following static function from the ``onCreate`` method:
 ```java
 StartAppSearch.init(this, "<Your Developer Id>", "<Your App ID>");
 ```
 
-c.	Remove the following static function from the ``onCreate`` method after the ``setContentView`` (Only if you had implemented it)
+c.	Remove the call to the following static function from the ``onCreate`` method after the ``setContentView`` (only if you had implemented it)
 ```java
 StartAppSearch.showSearchBox(this);
 ```
