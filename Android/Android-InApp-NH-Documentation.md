@@ -20,10 +20,6 @@ Under the main \<manifest\> element, add the following permissions:
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-//These permissions are only required for showing the ad when pressing the Home button
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-<uses-permission android:name="android.permission.GET_TASKS"/>
 ```
 
 Under the \<application\> element, add your new activities:
@@ -106,15 +102,6 @@ To show an ad when pressing the 'Back' button, override the ```onBackPressed()``
 public void onBackPressed() {
     startAppAd.onBackPressed();
     super.onBackPressed();
-}
-```
-
-To show an ad when pressing the 'Home' button, override the ```onPause()``` method and add the method ```startAppAd.onPause()``` AFTER the method ```super.onPause()```:
-```java
-@Override
-public void onPause() {
-    super.onPause();
-    startAppAd.onPause();
 }
 ```
 
