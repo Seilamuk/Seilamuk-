@@ -29,5 +29,3 @@
   [Adding Interstitial Callbacks](Android-Advanced-Usage-NH#AddingInterstitialCallbacks)<br></br> 
   [Customizing the Splash Screen](Android-Advanced-Usage-NH#CustomizingSplashScreen)<br></br> 
   [Integrating Native Ads](Android-Advanced-Usage-NH#using-native-ads)<br></br> 
-
-[**SearchBox SDK Removal Procedure**](SearchBox-SDK-Removal-Procedure)
