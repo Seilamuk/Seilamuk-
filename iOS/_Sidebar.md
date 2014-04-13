@@ -10,7 +10,7 @@
 
 [**Step 5, Show banners**](iOS-InApp-Documentation#step5)
 
-[**Step 5, Enjoy Higher eCPM with Demographic-Targeted Ads**](iOS-InApp-Documentation#Demographic)
+[**Enjoy Higher eCPM with Demographic-Targeted Ads**](iOS-InApp-Documentation#Demographic)
 
 [**Sample Project**](iOS-InApp-Documentation#SampleProject)
 
