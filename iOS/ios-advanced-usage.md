@@ -1,4 +1,3 @@
-
 <a name="ControllingBannerSize" />
 ###Controlling the size of your banner
 The size of the banner is determined by the "size" parameter which can receive one of the following values
@@ -25,9 +24,9 @@ Set your view controller as a delegate so it is able to receive callbacks from t
 
 2. Implement the following functions:
  ```objectivec
- - (void) didDisplayBannerAd
- - (void) failedLoadBannerAd:(NSError *)error
- - (void) didClickBannerAd
+- (void) didDisplayBannerAd:(STABannerView*)banner;
+- (void) failedLoadBannerAd:(STABannerView*)banner withError:(NSError *)error;
+- (void) didClickBannerAd:(STABannerView*)banner;
  ```
 
 <a name="UsingFixedOriginBanner" />
@@ -70,12 +69,12 @@ Set your view controller as a delegate so it is able to receive callbacks from t
 
 2. Implement the following functions:
  ```objectivec
- - (void) didLoadAd
- - (void) failedLoadAd:(NSError *)error
- - (void) didShowAd
- - (void) failedShowAd:(NSError *)error
- - (void) didCloseAd
- ```
+- (void) didLoadAd:(STAAbstractAd*)ad;
+- (void) failedLoadAd:(STAAbstractAd*)ad withError:(NSError *)error;
+- (void) didShowAd:(STAAbstractAd*)ad;
+- (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
+- (void) didCloseAd:(STAAbstractAd*)ad;
+```
 
 <a name="SelectInterstitialType" />
 ###Explicitly selecting the type of interstitial ad to load
@@ -87,7 +86,7 @@ Constant Name | Description | Specific Ad Load Example
 --- | --- | ---
 *`STAAdType_FullScreen`* | A full-page ad | `[startAppAd loadAd:STAAdType_FullScreen ];`
 *`STAAdType_OfferWall`* | A full page offerwall | `[startAppAd loadAd:STAAdType_OfferWall ];`
-
+*`STAAdType_Overlay`* | An overlay Ad is a full page Ad that runs on top of your application  | `[startAppAd loadAd:STAAdType_Overlay ];`
 
 
 
