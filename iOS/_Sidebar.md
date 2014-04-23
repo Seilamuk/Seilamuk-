@@ -23,5 +23,5 @@
 [Changing the banner size and origin upon rotation](ios-advanced-usage#ChangingBanner)<br></br> 
 [Using Interstitial delegates](ios-advanced-usage#UsingInterstitialDelegate)<br></br> 
 [Explicitly selecting the type of interstitial ad to load](ios-advanced-usage#SelectInterstitialType)<br></br> 
-
+[Showing banners in UITableViewController](ios-advanced-usage#table-view)<br></br> 
 
