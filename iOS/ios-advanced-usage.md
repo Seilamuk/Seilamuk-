@@ -140,9 +140,9 @@ If you would like to load a banner into a UITableViewController instead of a gen
 }
 ```
 
-Use the ``addSTABannerToCell`` method to set the banner position and frequency:
+Use the ``addSTABannerToCell`` method to set the banner's position and frequency:
 + ``atIntexPathRow`` - set the cell where you want to show the banner
-+ ``repeatEach`` - set the frequency of the banner
++ ``repeatEach`` - set repetition frequency
 
 In the above example, the banner will be displayed at the second cell, and will be repeated each 8 cells.
 
