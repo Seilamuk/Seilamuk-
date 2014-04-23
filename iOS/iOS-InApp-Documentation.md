@@ -13,7 +13,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 ##Step 1, Add the StartApp SDK to your project
 ####Add the StartApp SDK files to your application project directory
 1. Right-click on you project and choose "Add Files to…"
-<br></br>[[/ios/images/AddFilesTo.png]]
+<br></br>[[/iOS/images/AddFilesTo.png]]
 2. Add the StartApp SDK files:
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _libStartAppAdSDK.a_
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _STAStartAppAd.h_
@@ -22,7 +22,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _StartAppAdSDK-resources.bundle_
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _STAAbstractAd.h_
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _STAStartAppSDK.h_
-<br></br><br></br>[[/ios/images/SdkFiles.png]]
+<br></br><br></br>[[/iOS/images/SdkFiles.png]]
 
 ####Add the libStartAppAdSDK.a to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
@@ -30,7 +30,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 3.	Select the Build Phases tab
 4.	Disclose the "Link Binary With Libraries" phase
 5.	Make sure "_libStartAppAdSDK.a_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_libStartAppAdSDK.a_" file 
-<br></br><br></br>[[/ios/images/libStartAppAdSDK.png]]
+<br></br><br></br>[[/iOS/images/libStartAppAdSDK.png]]
 
 ####Add the Bundle to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
@@ -38,7 +38,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 3.	Select the Build Phases tab
 4.	Disclose the "Copy Bundle Resources" phase 
 5.	Make sure "_StartAppAdSDK-resources.bundle_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_StartAppAdSDK-resources.bundle_" file 
-<br></br><br></br>[[/ios/images/StartAppAdSDK-resources.bundle.png]]
+<br></br><br></br>[[/iOS/images/StartAppAdSDK-resources.bundle.png]]
 
 [Back to top](#top)
 
@@ -54,7 +54,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _CoreGraphics.framework_ 
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _StoreKit.framework_ 
 <br></br><img src="http://img2.wikia.nocookie.net/__cb20100731224125/sims/images/0/06/Icon_yes_check_v.svg" width="12px"/> _AdSupport.framework_ 
-<br></br><br></br>[[/ios/images/frameworks.png]]
+<br></br><br></br>[[/iOS/images/frameworks.png]]
 
 [Back to top](#top)
 
@@ -80,10 +80,10 @@ In your application delegate class (_AppDelegate.m_), import the StartApp SDK an
 
 Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
 After logging in, your developer ID will be at the top right-hand corner of the page:
-<img src="./ios/images/android-devId.png" />
+<img src="./iOS/images/android-devId.png" />
 
-To find your application ID, click on the <img src="./ios/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
-<img src="./ios/images/android-appId.png" width="350px" />
+To find your application ID, click on the <img src="./iOS/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
+<img src="./iOS/images/android-appId.png" width="350px" />
 
 [Back to top](#top)
 
