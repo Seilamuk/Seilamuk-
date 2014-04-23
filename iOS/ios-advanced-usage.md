@@ -1,3 +1,4 @@
+<a name="top">
 <a name="ControllingBannerSize" />
 ###Controlling the size of your banner
 The size of the banner is determined by the "size" parameter which can receive one of the following values
@@ -9,6 +10,8 @@ Value | Size | Best fits for
 *`STA_LandscapeAdSize_480x50`* | 480x50 | iPhone/iPod touch in landscape mode
 *`STA_PortraitAdSize_768x90`* | 768x90 | iPad in portrait mode
 *`STA_LandscapeAdSize_1024x90`* | 1024x90 | iPad in landscape mode
+
+[Back to top](#top)
 
 <a name="UsingBannerDelegates" />
 ###Using banner delegates
@@ -29,6 +32,8 @@ Set your view controller as a delegate so it is able to receive callbacks from t
 - (void) didClickBannerAd:(STABannerView*)banner;
  ```
 
+[Back to top](#top)
+
 <a name="UsingFixedOriginBanner" />
 ###Using a fixed origin for your banner
 If you choose to locate the banner in a fixed origin rather than the view's top or bottom, simply pass the required origin point (x,y) upon initialization as explain in the following example
@@ -41,6 +46,8 @@ bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize
                                     withDelegate:nil];
 ```
 To use a different banner origin in a specific layout, call the "setOrigin"/"setStartAppAutoOrigin" with the new origin value.
+
+[Back to top](#top)
 
 <a name="ChangingBanner" />
 ###Changing the banner size and origin upon rotation
@@ -60,6 +67,8 @@ Example:
 }
 ```
 
+[Back to top](#top)
+
 <a name="UsingInterstitialDelegate" />
 ###Using Interstitial delegates
 Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad by adding the <STADelegateProtocol> to the header file
@@ -75,6 +84,8 @@ Set your view controller as a delegate so it is able to receive callbacks from t
 - (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
 - (void) didCloseAd:(STAAbstractAd*)ad;
 ```
+
+[Back to top](#top)
 
 <a name="SelectInterstitialType" />
 ###Explicitly selecting the type of interstitial ad to load
