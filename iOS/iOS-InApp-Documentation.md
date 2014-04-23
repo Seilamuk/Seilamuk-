@@ -4,9 +4,9 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 <img src="./iOS/images/ios-3d.png" width="600px" />
 
-> **NOTE:**
+> **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
-> - When submitting your application to the App Store,do not forget to update your "IDFA Settings" 
+> - When submitting your application to the App Store,do not forget to update your ["IDFA Settings"](#IDFA) 
 > - If you have any questions, contact us via [support@startapp.com](http://support@startapp.com)
 
 <br></br>
@@ -249,6 +249,19 @@ The location of the user is a dynamic property which is changed constantly. Henc
     [startAppAd loadAd:withAdPreferences:[STAAdPreferences prefrencesWithLatitude:37.3190383911 andLongitude:-121.96269989]];
 }
 ```
+
+[Back to top](#top)
+
+<a name="IDFA" />
+##Updating your "Advertising Identifier" Settings
+When submitting your application to the App Store you need to update its "Advertising Identifier" settings in order to comply with Apple Advertising policy.
+
+On the "Advertising Identifier" section:
+**1** Choose "Yes" on the right pane
+**2** Opt-in the "Serve advertisements within the app" checkbox
+**3** Opt-in the confirmation checkbox under "Limit Ad tracking setting in iOS" 
+
+[[/iOS/images/idfa.jpg]]
 
 [Back to top](#top)
 
