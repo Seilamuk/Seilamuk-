@@ -254,7 +254,7 @@ The location of the user is a dynamic property which is changed constantly. Henc
 
 <a name="IDFA" />
 ##Updating your IDFA Settings
-When submitting your application to the App Store you need to update its "Advertising Identifier (IDFA)" settings in order to comply with Apple Advertising policy.
+When submitting your application to the App Store you need to update its "Advertising Identifier (IDFA)" settings in order to comply with Apple advertising policy.
 
 On the "Advertising Identifier" section: <br></br>
 **1** Choose "Yes" on the right pane <br></br>
