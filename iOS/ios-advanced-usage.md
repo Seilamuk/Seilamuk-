@@ -99,5 +99,45 @@ Constant Name | Description | Specific Ad Load Example
 *`STAAdType_OfferWall`* | A full page offerwall | `[startAppAd loadAd:STAAdType_OfferWall ];`
 *`STAAdType_Overlay`* | An overlay Ad is a full page Ad that runs on top of your application  | `[startAppAd loadAd:STAAdType_Overlay ];`
 
+[Back to top](#top)
 
+<a name="table-view" />
+###Showing banners in UITableViewController
+If you would like to load a banner into a UITableViewController instead of a general UIView, follow these instructions:
+
+**1** Declare an **STABannerView** instance variable in your UITableViewDelegate class
+
+ ```objectivec
+@interface MyTableViewController ()
+{
+    STABannerView* bannerview;
+}
+@end
+ ```
+ 
+**2** Override the ``cellForRowAtIndexPath`` method, and add the requiered code:
+
+```objectivec
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell=nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)  {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    
+    if(bannerview == nil)
+    {
+        bannerview = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top withView:cell withDelegate:self];
+    }
+    
+    [bannerview addSTABannerToCell:cell withIndexPath:indexPath atIntexPathRow:2 repeatEach:8];
+    
+    return cell;
+}
+```
+
+[Back to top](#top)
 
