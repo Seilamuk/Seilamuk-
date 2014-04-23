@@ -115,7 +115,7 @@ If you would like to load a banner into a UITableViewController instead of a gen
 @end
  ```
  
-**2** Override the ``cellForRowAtIndexPath`` method, and add the requiered code:
+**2** Override the ``cellForRowAtIndexPath`` method, and add the required code:
 
 ```objectivec
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -128,6 +128,7 @@ If you would like to load a banner into a UITableViewController instead of a gen
     }
     
     
+    // ADD THE FOLLOWING LINES
     if(bannerview == nil)
     {
         bannerview = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top withView:cell withDelegate:self];
@@ -138,6 +139,12 @@ If you would like to load a banner into a UITableViewController instead of a gen
     return cell;
 }
 ```
+
+Use the ``addSTABannerToCell`` method to set the banner position and frequency:
++ ``atIntexPathRow`` - set the cell where you want to show the banner
++ ``repeatEach`` - set the frequency of the banner
+
+In the above example, the banner will be displayed at the second cell, and will be repeated each 8 cells.
 
 [Back to top](#top)
 
