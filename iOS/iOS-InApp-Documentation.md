@@ -17,13 +17,13 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 1. Right-click on you project and choose "Add Files to…"
 <br></br>[[/iOS/images/AddFilesTo.png]]
 2. Add the StartApp SDK files:
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _libStartAppAdSDK.a_
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _STAStartAppAd.h_
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _STABannerSize.h_
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _STABannerView.h_
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _StartAppAdSDK-resources.bundle_
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _STAAbstractAd.h_
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _STAStartAppSDK.h_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _libStartAppAdSDK.a_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _STAStartAppAd.h_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _STABannerSize.h_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _STABannerView.h_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppAdSDK-resources.bundle_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _STAAbstractAd.h_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _STAStartAppSDK.h_
 <br></br><br></br>[[/iOS/images/SdkFiles.png]]
 
 ####Add the libStartAppAdSDK.a to the Build Phases of the desired target
@@ -51,11 +51,11 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab and disclose the "Link Binary with Libraries" phase and click the plus button in that phase
 4.	Add the following frameworks:
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _CoreTelephony.framework_ 
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _SystemConfiguration.framework_ 
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _CoreGraphics.framework_ 
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _StoreKit.framework_ 
-<br></br><img src="<img src="./iOS/images/V.png" width="12px" />" width="12px"/> _AdSupport.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _CoreTelephony.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _SystemConfiguration.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _CoreGraphics.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _StoreKit.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _AdSupport.framework_ 
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
 [Back to top](#top)
