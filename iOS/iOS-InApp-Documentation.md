@@ -238,7 +238,7 @@ sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USE
 The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
 
 ```objectivec
-[startAppAd loadAd:STAAdType_FullScreen withDelegate:self withAdPreferences:[STAAdPreferences prefrencesWithLatitude:<Real_Latitude> andLongitude:<Real_Longitude>]];
+[startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:<Real_Longitude> andLongitude:<Real_Latitude>]];
 ```
 
 **Example**
@@ -246,7 +246,7 @@ The location of the user is a dynamic property which is changed constantly. Henc
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    [startAppAd loadAd:withAdPreferences:[STAAdPreferences prefrencesWithLatitude:37.3190383911 andLongitude:-121.96269989]];
+        [startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:37.3190383911 andLongitude:-121.96269989]];
 }
 ```
 
