@@ -17,7 +17,7 @@
 [**Sample Project**](iOS-InApp-Documentation#SampleProject)
 
 [**Advanced Usage**](ios-advanced-usage)<br></br>
-[Controlling the size of your banner](ios-advanced-usage#ControllingBannerSize)<br></br> 
+<img src="./iOS/images/V.png" width="12px" />[Controlling the size of your banner](ios-advanced-usage#ControllingBannerSize)<br></br> 
 [Using banner delegates](ios-advanced-usage#UsingBannerDelegates)<br></br> 
 [Using a fixed origin for your banner](ios-advanced-usage#UsingFixedOriginBanner)<br></br> 
 [Changing the banner size and origin upon rotation](ios-advanced-usage#ChangingBanner)<br></br> 
