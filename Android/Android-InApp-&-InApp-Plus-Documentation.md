@@ -202,6 +202,8 @@ A "Native Ad" is a raw representation of an ad without any pre-defined wrapping 
 
 For a full integration guide, please refer to the ["Using Native Ads"](android-advanced-usage#using-native-ads) section under the "Advanced Usage" page.
 
+<img src="./Android/images/native.jpg" width="640px" /><br></br>
+
 [Back to top](#top)
 
 <a name="Demographic" />
