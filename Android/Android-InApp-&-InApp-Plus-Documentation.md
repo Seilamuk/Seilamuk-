@@ -29,16 +29,16 @@ Under the main \<manifest\> element, add the following permissions:
 Under the \<application\> element, add your new activities:
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
-          android:taskAffinity="package_name.AppWall"
+          android:taskAffinity="YOUR_PACKAGE_NAME.AppWall"
           android:theme="@android:style/Theme" />
 
 <activity android:name="com.startapp.android.publish.AppWallActivity"
           android:theme="@android:style/Theme.Translucent"
-          android:taskAffinity="package_name.AppWall"   		  
+          android:taskAffinity="YOUR_PACKAGE_NAME.AppWall"   		  
           android:configChanges="orientation|keyboardHidden" />
 ```
 
-> **NOTE:** Replace _**package_name**_ with your actual package name as declared in your manifest in both activities. For example, if your package name is "com.test.example", replace _**package_name**_ with "com.test.example.AppWall".
+> **NOTE:** Replace **YOUR_PACKAGE_NAME** with your actual package name as declared in your manifest in both activities. For example, if your package name is "com.test.example", replace **YOUR_PACKAGE_NAME** with "com.test.example.AppWall".
 
 
 [Back to top](#top)
@@ -242,4 +242,3 @@ For advanced usage, please refer to the ["Advanced Usage"](android-advanced-usag
 If you are upgrading from our old SearchBox SDK, please refer to the ["SearchBox SDK Removal Procedure"](SearchBox-SDK-Removal-Procedure).
 
 [Back to top](#top)
-
