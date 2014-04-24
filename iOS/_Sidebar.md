@@ -1,4 +1,4 @@
-<img src="./iOS/images/home.png" width="24px" align="middle"/> [ **HOME**](iOS-InApp-Documentation)
+[**HOME**](iOS-InApp-Documentation)
 
 [**Step 1, Add the StartApp SDK to your project**](iOS-InApp-Documentation#step1)
 
