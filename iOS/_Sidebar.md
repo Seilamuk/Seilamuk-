@@ -17,11 +17,11 @@
 [**Sample Project**](iOS-InApp-Documentation#SampleProject)
 
 [**Advanced Usage**](ios-advanced-usage)<br></br>
-<img src="./iOS/images/V.png" width="8px" />[Controlling the size of your banner](ios-advanced-usage#ControllingBannerSize)<br></br> 
-[Using banner delegates](ios-advanced-usage#UsingBannerDelegates)<br></br> 
-[Using a fixed origin for your banner](ios-advanced-usage#UsingFixedOriginBanner)<br></br> 
-[Changing the banner size and origin upon rotation](ios-advanced-usage#ChangingBanner)<br></br> 
-[Using Interstitial delegates](ios-advanced-usage#UsingInterstitialDelegate)<br></br> 
-[Explicitly selecting the type of interstitial ad to load](ios-advanced-usage#SelectInterstitialType)<br></br> 
-[Showing banners in UITableViewController](ios-advanced-usage#table-view)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [Controlling the size of your banner](ios-advanced-usage#ControllingBannerSize)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [Using banner delegates](ios-advanced-usage#UsingBannerDelegates)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [Using a fixed origin for your banner](ios-advanced-usage#UsingFixedOriginBanner)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [Changing the banner size and origin upon rotation](ios-advanced-usage#ChangingBanner)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [Using Interstitial delegates](ios-advanced-usage#UsingInterstitialDelegate)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [Explicitly selecting the type of interstitial ad to load](ios-advanced-usage#SelectInterstitialType)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [Showing banners in UITableViewController](ios-advanced-usage#table-view)<br></br> 
 
