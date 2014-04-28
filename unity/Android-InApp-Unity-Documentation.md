@@ -115,7 +115,7 @@ If you wish to add a specific type of banner, please refer to the [Advanced Usag
 
 
 <br></br>
-<a name="step5" />
+<a name="step6" />
 ##Step 6, Showing Interstitial Ads
 
 You can choose to show the interstitial ad in several locations within your application.
