@@ -34,8 +34,8 @@ In order to add StartApp SDK to your application please follow the following ste
 ##Step 2, Updating your Manifest File
 Update the manifest.xml (in the Android folders) as follow:
 
-**1.** Under the 'manifest' node place your <YOUR_PACKAGE_NAME> within package attribute.<br></br>
-**2.** Under the 'AppWall' and 'List3DActivity' activities replace <YOUR_PACKAGE_NAME> with the name of your package as declared in your manifest.<br></br>
+**1.** Under the 'manifest' node place your \<YOUR_PACKAGE_NAME\> within package attribute.<br></br>
+**2.** Under the 'AppWall' and 'List3DActivity' activities replace \<YOUR_PACKAGE_NAME\> with the name of your package as declared in your manifest.<br></br>
 
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity" 
@@ -110,18 +110,18 @@ using StartApp;
 ```java
 void Start () {
 StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
-							StartAppWrapper.BannerPosition);
+			    StartAppWrapper.BannerPosition);
 }
 ```
 
 **Parameters:**
 
-**1.** The first parameter is the type of banner, which can receive one of the following:
+**BannerType** - type of banner. Can receive one of the following:
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.STANDARD
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.THREED
 
-**2.** Second parameter is the position of banner, which can receive one of the following:
+**BannerPosition** - position of the banner. Can receive one of the following:
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
 
