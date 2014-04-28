@@ -24,7 +24,7 @@ using StartApp;
 void Start () {
      StartAppWrapper.addBanner( 
            StartAppWrapper.BannerType,
-	   StartAppWrapper.BannerPosition);
+	       StartAppWrapper.BannerPosition);
 }
 ```
 
