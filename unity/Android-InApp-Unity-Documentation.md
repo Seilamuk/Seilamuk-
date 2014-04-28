@@ -88,17 +88,6 @@ For additional usage options, please refer to [Extended Usage](Android-InApp-Uni
 <br></br>
 <a name="step5" />
 ##Step 5, Adding a banner to your project
-
-There are 3 different types of banners:
-
-**Banner Type** | **Description**
----------------------- | ---------------
-Automatic Banner **(Recommended)**  | Automatic selects the most suitable banner of the two listed below
-Standard (2D) Banner  | A standard (two dimensional) banner
-3D Banner   | A three dimensional rotating banner
-
-We highly recommend adding an Automatic banner, which automatically selects whether to display a standard banner or a 3D banner. The banner remains displayed throughout the entire activity life-cycle. 
-
 To add a banner to your application add the following code in the appropriate place:
 
 **1.** Import the SDK namespace
@@ -109,21 +98,18 @@ using StartApp;
 **2.** Display the banner
 ```java
 void Start () {
-StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
+StartAppWrapper.addBanner ( StartAppWrapper.BannerType.AUTOMATIC,
 			    StartAppWrapper.BannerPosition);
 }
 ```
 
-**Parameters:**
-
-**BannerType** - type of banner. Can receive one of the following:
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.STANDARD
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.THREED
+**Parameters**
 
 **BannerPosition** - position of the banner. Can receive one of the following:
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
+
+If you wish to add a specific type of banner, please refer to the [Advanced Usage](unity-android-advanced-usage#banners).
 
 [Back to top](#top)
 
