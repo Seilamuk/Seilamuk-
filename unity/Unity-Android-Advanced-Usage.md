@@ -22,8 +22,9 @@ using StartApp;
 **2.** Display the banner
 ```java
 void Start () {
-StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
-			    StartAppWrapper.BannerPosition);
+     StartAppWrapper.addBanner( 
+           StartAppWrapper.BannerType,
+	   StartAppWrapper.BannerPosition);
 }
 ```
 
