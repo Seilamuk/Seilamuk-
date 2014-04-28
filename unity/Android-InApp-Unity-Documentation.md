@@ -11,20 +11,20 @@
 ##Step 1, Adding the SDK files to your Unity project
 In order to add StartApp SDK to your application please follow the following steps:
 
-*1.* Copy the _StartAppWrapper.cs_ to the Assets folder<br></br>
-*2.* Right click on your Assets folder in Unity<br></br>
+**1.** Copy the _StartAppWrapper.cs_ to the Assets folder<br></br>
+**2.** Right click on your Assets folder in Unity<br></br>
 <img src="./unity/images/assets.png" /><br></br>
-*3.* Create a Plugins folder if one does not exist<br></br>
-*4.* Right click on your Plugins folder<br></br>
-*5.* Create an Android folder if one does not exist<br></br>
-*6.* Copy the following files from the SDK zip Assets/Plugins/Android folder to the Android folder:
+**3.** Create a Plugins folder if one does not exist<br></br>
+**4.** Right click on your Plugins folder<br></br>
+**5.** Create an Android folder if one does not exist<br></br>
+**6.** Copy the following files from the SDK zip Assets/Plugins/Android folder to the Android folder:
 <br></br><img src="./iOS/images/V.png" width="12px" /> _AndroidManifest.xml_
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInApp-2.2.0.jar_
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInAppUnityWrapper-2.1.1.jar_
 <img src="./unity/images/files.png" />
 
-*7.* Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).<br></br>
-*8.* Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).<br></br>
+**7.** Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).<br></br>
+**8.** Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).<br></br>
 
 [Back to top](#top)
 
@@ -34,8 +34,8 @@ In order to add StartApp SDK to your application please follow the following ste
 ##Step 2, Updating your Manifest File
 Update the manifest.xml (in the Android folders) as follow:
 
-*1.* Under the 'manifest' node place your <YOUR_PACKAGE_NAME> within package attribute.<br></br>
-*2.* Under the 'AppWall' and 'List3DActivity' activities replace <YOUR_PACKAGE_NAME> with the name of your package as declared in your manifest.<br></br>
+**1.** Under the 'manifest' node place your <YOUR_PACKAGE_NAME> within package attribute.<br></br>
+**2.** Under the 'AppWall' and 'List3DActivity' activities replace <YOUR_PACKAGE_NAME> with the name of your package as declared in your manifest.<br></br>
 
 ```xml
 <activity
@@ -57,8 +57,8 @@ Update the manifest.xml (in the Android folders) as follow:
 ##Step 3, Updating your StartApp data file
 Update the _StartAppData.txt_ (in the Assets/Resources folders) as follows:
 
-*1.* Add your StartApp Developer ID after ``"developerId="``. <br></br>
-*2.* Add your StartApp Application ID after ``"applicationId="``. <br></br>
+**1.** Add your StartApp Developer ID after ``"developerId="``. <br></br>
+**2.** Add your StartApp Application ID after ``"applicationId="``. <br></br>
 
 You can find your Developer and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
 After logging in, your developer ID will be at the top right-hand corner of the page:
@@ -76,9 +76,9 @@ To find your application ID, click on the <img src="./Android/images/dash2.jpg" 
 
 Use the *StartAppBackAndHomePlugin* in components where you would like the user to press 'home' or 'back' to exit the application. The plugin will show an ad and then exit the application.
 
-*1.* Copy the StartAppBackAndHomePlugin.cs to the Assets folder <br></br>
-*2.* Drag the StartAppBackAndHomePlugin.cs to the components which you would like pressing 'home' or 'back' to exit the application <br></br>
-*3.* Do not implement exit on the 'back' in this components <br></br>
+**1.** Copy the StartAppBackAndHomePlugin.cs to the Assets folder <br></br>
+**2.** Drag the StartAppBackAndHomePlugin.cs to the components which you would like pressing 'home' or 'back' to exit the application <br></br>
+**3.** Do not implement exit on the 'back' in this components <br></br>
 
 > **NOTE:** there is no need to implement exit on the 'back' button in these components as the plugin will exit the application after showing the ad.
 For additional usage options, please refer to [Extended Usage](Android-InApp-Unity-Documentation#extended-usage) section.
@@ -102,12 +102,12 @@ We highly recommend adding an Automatic banner, which automatically selects whet
 
 To add a banner to your application add the following code in the appropriate place:
 
-*1.* Import the SDK namespace
+**1.** Import the SDK namespace
 ``` java
 using StartApp;
 ```
 
-*2.* Display the banner
+**2.** Display the banner
 ```java
 void Start () {
 StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
@@ -117,12 +117,12 @@ StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
 
 **Parameters:**
 
-*1.* The first parameter is the type of banner, which can receive one of the following:
+**1.** The first parameter is the type of banner, which can receive one of the following:
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.STANDARD
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.THREED
 
-*2.* Second parameter is the position of banner, which can receive one of the following:
+**2.** Second parameter is the position of banner, which can receive one of the following:
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.TOP
 
