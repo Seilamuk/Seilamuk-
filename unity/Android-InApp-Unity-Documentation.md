@@ -56,8 +56,9 @@ Update the manifest.xml (in the Android folders) as follow:
 <a name="step3" />
 ##Step 3, Updating your StartApp data file
 Update the _StartAppData.txt_ (in the Assets/Resources folders) as follows:
-1. Add your StartApp Developer ID after ``"developerId="``. <br></br>
-2. Add your StartApp Application ID after ``"applicationId="``. <br></br>
+
+*1.* Add your StartApp Developer ID after ``"developerId="``. <br></br>
+*2.* Add your StartApp Application ID after ``"applicationId="``. <br></br>
 
 You can find your Developer and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
 After logging in, your developer ID will be at the top right-hand corner of the page:
@@ -139,19 +140,19 @@ We do, however, recommend showing the ad upon exiting the application by using t
 
 Add the following code to the appropriate place or places within your activities in which you would like to show the ad:
 
-*1.* Import the sdk namespace
+**1.** Import the sdk namespace
 ```java
 using StartApp;
 ```
 
-*2.* Load the ad
+**2.** Load the ad
 ```java
 void Start () {
 StartAppWrapper.loadAd();
 }
 ```
 
-*3.* Show the ad
+**3.** Show the ad
 ```java
 StartAppWrapper.showAd();
 StartAppWrapper.loadAd();
