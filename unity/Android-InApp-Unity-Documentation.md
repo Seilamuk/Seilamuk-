@@ -98,11 +98,11 @@ using StartApp;
 **2.** Display the banner
 ```java
 void Start () {
-StartAppWrapper.addBanner ( StartAppWrapper.BannerType.AUTOMATIC,
-			    StartAppWrapper.BannerPosition);
+     StartAppWrapper.addBanner( 
+           StartAppWrapper.BannerType.AUTOMATIC,
+	       StartAppWrapper.BannerPosition);
 }
 ```
-
 **Parameters**
 
 **BannerPosition** - position of the banner. Can receive one of the following:
