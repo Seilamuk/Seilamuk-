@@ -6,9 +6,9 @@
 
 [**Step 3, Updating your StartApp data file**](Android-InApp-Unity-Documentation#step3)
 
-[**Step 4, Adding an exit ad to your project**](Android-InApp-Unity-Documentation#step4)
+[**Step 4, Showing Exit Ads**](Android-InApp-Unity-Documentation#step4)
 
-[**Step 5, Adding a banner to your project**](Android-InApp-Unity-Documentation#step5)
+[**Step 5, Showing Banners**](Android-InApp-Unity-Documentation#step5)
 
 [**Step 6, Showing Interstitial Ads**](Android-InApp-Unity-Documentation#step6)
 

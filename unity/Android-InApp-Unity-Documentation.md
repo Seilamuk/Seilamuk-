@@ -87,7 +87,7 @@ For additional usage options, please refer to [Extended Usage](Android-InApp-Uni
 
 <br></br>
 <a name="step5" />
-##Step 5, Adding a banner to your project
+##Step 5, Showing Banners
 To add a banner to your application add the following code in the appropriate place:
 
 **1.** Import the SDK namespace
