@@ -3,35 +3,35 @@
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
-> - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 > - This SDK is designed to work across all Android devices. It supports all versions but activates only on Android OS 2.1 and above. In lower versions, the SDK will not be active.
+> - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
 <br></br>
 <a name="step1" />
 ##Step 1, Adding the SDK files to your Unity project
 In order to add StartApp SDK to your application please follow the following steps:
 
-*a.* Copy the StartAppWrapper.cs to the Assets folder
-*b.* Right click on your Assets folder in Unity
-<img src="./unity/images/assets.png" />
-*c.* Create a Plugins folder if one does not exist
-*d.* Right click on your Plugins folder
-*e.* Create an Android folder if one does not exist
+*a.* Copy the StartAppWrapper.cs to the Assets folder<br></br>
+*b.* Right click on your Assets folder in Unity<br></br>
+<img src="./unity/images/assets.png" /><br></br>
+*c.* Create a Plugins folder if one does not exist<br></br>
+*d.* Right click on your Plugins folder<br></br>
+*e.* Create an Android folder if one does not exist<br></br>
 *f.* Copy the following files from the SDK zip Assets/Plugins/Android folder to the Android folder:
 <br></br><img src="./iOS/images/V.png" width="12px" /> AndroidManifest.xml
 <br></br><img src="./iOS/images/V.png" width="12px" /> StartAppInApp-2.2.0.jar
 <br></br><img src="./iOS/images/V.png" width="12px" /> StartAppInAppUnityWrapper-2.1.1.jar
 <img src="./unity/images/files.png" />
 
-*g.* Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).
-*h.* Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).
+*g.* Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).<br></br>
+*h.* Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).<br></br>
 
 [Back to top](#top)
 
 
 <br></br>
 <a name="step2" />
-##Step 1, Updating your AndroidManifest.xml File
+##Step 2, Updating your Manifest File
 Update the manifest.xml (in the Android folders) as follow:
 
 *a.* Under the 'manifest' node place your <YOUR_PACKAGE_NAME> within package attribute.
@@ -69,7 +69,7 @@ To find your application ID, click on the <img src="./Android/images/dash2.jpg" 
 
 <br></br>
 <a name="step4" />
-##Step 3, Adding an exit ad to your project
+##Step 4, Adding an exit ad to your project
 
 Use the 'StartAppBackAndHomePlugin' in components where you would like the user to press 'home' or 'back' to exit the application. The plugin will show an ad and then exit the application.
 
@@ -85,7 +85,7 @@ For additional usage options, please refer to [Extended Usage](Android-InApp-Uni
 
 <br></br>
 <a name="step5" />
-##Step 3, Adding a banner to your project
+##Step 5, Adding a banner to your project
 
 There are 3 different types of banners:
 
@@ -126,7 +126,7 @@ StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
 
 <br></br>
 <a name="step5" />
-##Step 3, Showing Interstitial Ads
+##Step 6, Showing Interstitial Ads
 
 You can choose to show the interstitial ad in several locations within your application.
 This could be upon entering (onCreate), between stages, while waiting for an action and more.
