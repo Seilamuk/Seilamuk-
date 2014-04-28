@@ -11,20 +11,20 @@
 ##Step 1, Adding the SDK files to your Unity project
 In order to add StartApp SDK to your application please follow the following steps:
 
-*a.* Copy the StartAppWrapper.cs to the Assets folder<br></br>
-*b.* Right click on your Assets folder in Unity<br></br>
+*1.* Copy the _StartAppWrapper.cs_ to the Assets folder<br></br>
+*2.* Right click on your Assets folder in Unity<br></br>
 <img src="./unity/images/assets.png" /><br></br>
-*c.* Create a Plugins folder if one does not exist<br></br>
-*d.* Right click on your Plugins folder<br></br>
-*e.* Create an Android folder if one does not exist<br></br>
-*f.* Copy the following files from the SDK zip Assets/Plugins/Android folder to the Android folder:
-<br></br><img src="./iOS/images/V.png" width="12px" /> AndroidManifest.xml
-<br></br><img src="./iOS/images/V.png" width="12px" /> StartAppInApp-2.2.0.jar
-<br></br><img src="./iOS/images/V.png" width="12px" /> StartAppInAppUnityWrapper-2.1.1.jar
+*3.* Create a Plugins folder if one does not exist<br></br>
+*4.* Right click on your Plugins folder<br></br>
+*5.* Create an Android folder if one does not exist<br></br>
+*6.* Copy the following files from the SDK zip Assets/Plugins/Android folder to the Android folder:
+<br></br><img src="./iOS/images/V.png" width="12px" /> _AndroidManifest.xml_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInApp-2.2.0.jar_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInAppUnityWrapper-2.1.1.jar_
 <img src="./unity/images/files.png" />
 
-*g.* Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).<br></br>
-*h.* Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).<br></br>
+*7.* Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).<br></br>
+*8.* Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).<br></br>
 
 [Back to top](#top)
 
@@ -34,17 +34,19 @@ In order to add StartApp SDK to your application please follow the following ste
 ##Step 2, Updating your Manifest File
 Update the manifest.xml (in the Android folders) as follow:
 
-*a.* Under the 'manifest' node place your <YOUR_PACKAGE_NAME> within package attribute.
-*b.* Under the 'AppWall' and 'List3DActivity' activities replace <YOUR_PACKAGE_NAME> with the name of your package as declared in your manifest.
+*1.* Under the 'manifest' node place your <YOUR_PACKAGE_NAME> within package attribute.<br></br>
+*2.* Under the 'AppWall' and 'List3DActivity' activities replace <YOUR_PACKAGE_NAME> with the name of your package as declared in your manifest.<br></br>
 
 ```xml
 <activity
-android:name="com.startapp.android.publish.list3d.List3DActivity" android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp"
-android:theme="@android:style/Theme" />
+   android:name="com.startapp.android.publish.list3d.List3DActivity" 
+   android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp"
+   android:theme="@android:style/Theme" />
 <activity
-android:name="com.startapp.android.publish.AppWallActivity"
-android:configChanges="orientation|keyboardHidden"
-android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp" android:theme="@android:style/Theme.Translucent" />
+   android:name="com.startapp.android.publish.AppWallActivity"
+   android:configChanges="orientation|keyboardHidden"
+   android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp" 
+   android:theme="@android:style/Theme.Translucent" />
 ```
 
 [Back to top](#top)
@@ -53,9 +55,9 @@ android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp" android:theme="@android:styl
 <br></br>
 <a name="step3" />
 ##Step 3, Updating your StartApp data file
-Update the StartAppData.txt (in the Assets/Resources folders) as follows:
-a. Add your StartApp Developer ID after "developerId="
-b. Add your StartApp Application ID after "applicationId="
+Update the _StartAppData.txt_ (in the Assets/Resources folders) as follows:
+1. Add your StartApp Developer ID after ``"developerId="``. <br></br>
+2. Add your StartApp Application ID after ``"applicationId="``. <br></br>
 
 You can find your Developer and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
 After logging in, your developer ID will be at the top right-hand corner of the page:
@@ -71,11 +73,11 @@ To find your application ID, click on the <img src="./Android/images/dash2.jpg" 
 <a name="step4" />
 ##Step 4, Adding an exit ad to your project
 
-Use the 'StartAppBackAndHomePlugin' in components where you would like the user to press 'home' or 'back' to exit the application. The plugin will show an ad and then exit the application.
+Use the *StartAppBackAndHomePlugin* in components where you would like the user to press 'home' or 'back' to exit the application. The plugin will show an ad and then exit the application.
 
-*a.* Copy the StartAppBackAndHomePlugin.cs to the Assets folder
-*b.* Drag the StartAppBackAndHomePlugin.cs to the components which you would like pressing 'home' or 'back' to exit the application
-*c.* Do not implement exit on the 'back' in this components
+*1.* Copy the StartAppBackAndHomePlugin.cs to the Assets folder <br></br>
+*2.* Drag the StartAppBackAndHomePlugin.cs to the components which you would like pressing 'home' or 'back' to exit the application <br></br>
+*3.* Do not implement exit on the 'back' in this components <br></br>
 
 > **NOTE:** there is no need to implement exit on the 'back' button in these components as the plugin will exit the application after showing the ad.
 For additional usage options, please refer to [Extended Usage](Android-InApp-Unity-Documentation#extended-usage) section.
@@ -95,15 +97,16 @@ Automatic Banner **(Recommended)**  | Automatic selects the most suitable banner
 Standard (2D) Banner  | A standard (two dimensional) banner
 3D Banner   | A three dimensional rotating banner
 
-We highly recommend adding an Automatic banner, which automatically selects whether to display a Standard banner or a 3D banner. The banner remains displayed throughout the entire Activity life-cycle. 
+We highly recommend adding an Automatic banner, which automatically selects whether to display a standard banner or a 3D banner. The banner remains displayed throughout the entire activity life-cycle. 
 
 To add a banner to your application add the following code in the appropriate place:
-*a.* Import the SDK namespace
+
+*1.* Import the SDK namespace
 ``` java
 using StartApp;
 ```
 
-*b.* Display the banner
+*2.* Display the banner
 ```java
 void Start () {
 StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
@@ -117,6 +120,7 @@ StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.STANDARD
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.THREED
+
 *2.* Second parameter is the position of banner, which can receive one of the following:
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
 <br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.TOP
@@ -135,19 +139,19 @@ We do, however, recommend showing the ad upon exiting the application by using t
 
 Add the following code to the appropriate place or places within your activities in which you would like to show the ad:
 
-*a.* Import the sdk namespace
+*1.* Import the sdk namespace
 ```java
 using StartApp;
 ```
 
-*b.* Load the ad
+*2.* Load the ad
 ```java
 void Start () {
 StartAppWrapper.loadAd();
 }
 ```
 
-*c.* Show the ad
+*3.* Show the ad
 ```java
 StartAppWrapper.showAd();
 StartAppWrapper.loadAd();
