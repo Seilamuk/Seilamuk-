@@ -21,7 +21,7 @@ In order to add StartApp SDK to your application please follow the following ste
 <br></br><img src="./iOS/images/V.png" width="12px" /> _AndroidManifest.xml_
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInApp-2.2.0.jar_
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInAppUnityWrapper-2.1.1.jar_
-<img src="./unity/images/files.png" />
+<br></br><img src="./unity/images/files.png" />
 
 **7.** Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).<br></br>
 **8.** Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).<br></br>
