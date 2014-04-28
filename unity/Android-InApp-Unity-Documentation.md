@@ -18,9 +18,9 @@ In order to add StartApp SDK to your application please follow the following ste
 **4.** Right click on your Plugins folder<br></br>
 **5.** Create an Android folder if one does not exist<br></br>
 **6.** Copy the following files from the SDK zip Assets/Plugins/Android folder to the Android folder:
-<br></br><img src="./iOS/images/V.png" width="12px" /> _AndroidManifest.xml_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInApp-2.2.0.jar_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppInAppUnityWrapper-2.1.1.jar_
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" />_AndroidManifest.xml_
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" />_StartAppInApp-2.2.0.jar_
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" />_StartAppInAppUnityWrapper-2.1.1.jar_
 <br></br><img src="./unity/images/files.png" />
 
 **7.** Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).<br></br>
@@ -57,8 +57,8 @@ Update the manifest.xml (in the Android folders) as follow:
 ##Step 3, Updating your StartApp data file
 Update the _StartAppData.txt_ (in the Assets/Resources folders) as follows:
 
-**1.** Add your StartApp Developer ID after ``"developerId="``. <br></br>
-**2.** Add your StartApp Application ID after ``"applicationId="``. <br></br>
+**1.** Add your StartApp Developer ID after ``"developerId="`` <br></br>
+**2.** Add your StartApp Application ID after ``"applicationId="`` <br></br>
 
 You can find your Developer and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
 After logging in, your developer ID will be at the top right-hand corner of the page:
@@ -118,13 +118,13 @@ StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
 **Parameters:**
 
 **1.** The first parameter is the type of banner, which can receive one of the following:
-<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
-<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.STANDARD
-<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.THREED
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.STANDARD
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.THREED
 
 **2.** Second parameter is the position of banner, which can receive one of the following:
-<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
-<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.TOP
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
 
 [Back to top](#top)
 
