@@ -38,15 +38,14 @@ Update the manifest.xml (in the Android folders) as follow:
 **2.** Under the 'AppWall' and 'List3DActivity' activities replace <YOUR_PACKAGE_NAME> with the name of your package as declared in your manifest.<br></br>
 
 ```xml
-<activity
-   android:name="com.startapp.android.publish.list3d.List3DActivity" 
-   android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp"
-   android:theme="@android:style/Theme" />
-<activity
-   android:name="com.startapp.android.publish.AppWallActivity"
-   android:configChanges="orientation|keyboardHidden"
-   android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp" 
-   android:theme="@android:style/Theme.Translucent" />
+<activity android:name="com.startapp.android.publish.list3d.List3DActivity" 
+          android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp"
+          android:theme="@android:style/Theme" />
+
+<activity android:name="com.startapp.android.publish.AppWallActivity"
+          android:configChanges="orientation|keyboardHidden"
+          android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp" 
+          android:theme="@android:style/Theme.Translucent" />
 ```
 
 [Back to top](#top)
