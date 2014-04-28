@@ -1,57 +1,63 @@
 <a name="top" />
-<img src="./Android/images/android-intro1.png" width="640px" /><br></br>
+<img src="./unity/images/unity-android-intro.png" width="640px" /><br></br>
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
-> - If you are using the "InApp Plus" SDK, you MUST integrate at least the Splash, the Slider and the Interstitial
 > - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
+> - This SDK is designed to work across all Android devices. It supports all versions but activates only on Android OS 2.1 and above. In lower versions, the SDK will not be active.
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the SDK JAR to Your Eclipse Project
-Copy the SDK jar file from the SDK zip to the “libs” directory of your project.
+##Step 1, Adding the SDK files to your Unity project
+In order to add StartApp SDK to your application please follow the following steps:
+
+*a.* Copy the StartAppWrapper.cs to the Assets folder
+*b.* Right click on your Assets folder in Unity
+<img src="./unity/images/assets.png" />
+*c.* Create a Plugins folder if one does not exist
+*d.* Right click on your Plugins folder
+*e.* Create an Android folder if one does not exist
+*f.* Copy the following files from the SDK zip Assets/Plugins/Android folder to the Android folder:
+<br></br><img src="./iOS/images/V.png" width="12px" /> AndroidManifest.xml
+<br></br><img src="./iOS/images/V.png" width="12px" /> StartAppInApp-2.2.0.jar
+<br></br><img src="./iOS/images/V.png" width="12px" /> StartAppInAppUnityWrapper-2.1.1.jar
+<img src="./unity/images/files.png" />
+
+*g.* Copy the content of the StreamingAssets from the SDK zip into the same folder in your Assets/StreamingAssets folder (create one if it does not exists).
+*h.* Copy the content of the Resources from the SDK zip into the same folder in your Assets/Resources folder (create one if it does not exists).
 
 [Back to top](#top)
 
+
+<br></br>
 <a name="step2" />
-##Step 2, Updating Your AndroidManifest.xml File
-Under the main \<manifest\> element, add the following permissions:
+##Step 1, Updating your AndroidManifest.xml File
+Update the manifest.xml (in the Android folders) as follow:
+
+*a.* Under the 'manifest' node place your <YOUR_PACKAGE_NAME> within package attribute.
+*b.* Under the 'AppWall' and 'List3DActivity' activities replace <YOUR_PACKAGE_NAME> with the name of your package as declared in your manifest.
+
 ```xml
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-//These permissions are only required for showing the ad when pressing the Home button
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-<uses-permission android:name="android.permission.GET_TASKS"/>
+<activity
+android:name="com.startapp.android.publish.list3d.List3DActivity" android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp"
+android:theme="@android:style/Theme" />
+<activity
+android:name="com.startapp.android.publish.AppWallActivity"
+android:configChanges="orientation|keyboardHidden"
+android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp" android:theme="@android:style/Theme.Translucent" />
 ```
-
-Under the \<application\> element, add your new activities:
-```xml
-<activity android:name="com.startapp.android.publish.list3d.List3DActivity"
-          android:taskAffinity="YOUR_PACKAGE_NAME.AppWall"
-          android:theme="@android:style/Theme" />
-
-<activity android:name="com.startapp.android.publish.AppWallActivity"
-          android:theme="@android:style/Theme.Translucent"
-          android:taskAffinity="YOUR_PACKAGE_NAME.AppWall"   		  
-          android:configChanges="orientation|keyboardHidden" />
-```
-
-> **NOTE:** Replace **YOUR_PACKAGE_NAME** with your actual package name as declared in your manifest in both activities. For example, if your package name is "com.test.example", replace **YOUR_PACKAGE_NAME** with "com.test.example.AppWall".
-
 
 [Back to top](#top)
 
+
+<br></br>
 <a name="step3" />
-##Step 3, Initialization
-In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static functions:
+##Step 3, Updating your StartApp data file
+Update the StartAppData.txt (in the Assets/Resources folders) as follows:
+a. Add your StartApp Developer ID after "developerId="
+b. Add your StartApp Application ID after "applicationId="
 
-```java
-StartAppAd.init(this, "Your Developer Id", "Your App ID");
-```
-
-Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
+You can find your Developer and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
 After logging in, your developer ID will be at the top right-hand corner of the page:
 <img src="./Android/images/android-devId.png" />
 
@@ -60,187 +66,98 @@ To find your application ID, click on the <img src="./Android/images/dash2.jpg" 
 
 [Back to top](#top)
 
+
+<br></br>
 <a name="step4" />
-##Step 4, Showing Banners
-Add the following View inside your Activity layout XML:
-```java
-<com.startapp.android.publish.banner.Banner 
-          android:id="@+id/startAppBanner"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"/>
-```
+##Step 3, Adding an exit ad to your project
 
-> **NOTE:**
-> This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
+Use the 'StartAppBackAndHomePlugin' in components where you would like the user to press 'home' or 'back' to exit the application. The plugin will show an ad and then exit the application.
 
-**If you wish to add a specific type of banner, please refer to the [Advanced Usage](android-advanced-usage)**.
+*a.* Copy the StartAppBackAndHomePlugin.cs to the Assets folder
+*b.* Drag the StartAppBackAndHomePlugin.cs to the components which you would like pressing 'home' or 'back' to exit the application
+*c.* Do not implement exit on the 'back' in this components
+
+> **NOTE:** there is no need to implement exit on the 'back' button in these components as the plugin will exit the application after showing the ad.
+For additional usage options, please refer to [Extended Usage](Android-InApp-Unity-Documentation#extended-usage) section.
 
 [Back to top](#top)
 
+
+<br></br>
 <a name="step5" />
-##Step 5, Showing Interstitial Ads
-Interstitial Ads are displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. 
+##Step 3, Adding a banner to your project
 
-####Initializing the StartApp Ad Object
-In your Activity, create a member variable, as follows:
-```java
-private StartAppAd startAppAd = new StartAppAd(this);
-```
+There are 3 different types of banners:
 
-Override the ```onResume()``` method and add the method ```startAppAd.onResume()``` AFTER the method ```super.onResume()```:
-```java
-@Override
-public void onResume() {
-    super.onResume();
-    startAppAd.onResume();
-}
-```
-
-####Showing Exit Ads
-Add the following code to show an ad upon exiting your application.
-
-To show an ad when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```startAppAd.onBackPressed()``` BEFORE the method ```super.onBackPressed()```:
-```java
-@Override
-public void onBackPressed() {
-    startAppAd.onBackPressed();
-    super.onBackPressed();
-}
-```
-
-To show an ad when pressing the 'Home' button, override the ```onPause()``` method and add the method ```startAppAd.onPause()``` AFTER the method ```super.onPause()```:
-```java
-@Override
-public void onPause() {
-    super.onPause();
-    startAppAd.onPause();
-}
-```
-
-####Showing Interstitials
-Add the following code to the appropriate place(s) in the activity in which you would like to show the Ad:
-```java
-startAppAd.showAd(); // show the ad
-startAppAd.loadAd(); // load the next ad
-```
-
-> **NOTE:**
-> ```loadAd()``` must be called immediately after ```showAd()```. This will load the next Ad.
-
-The following is an example of showing an Interstitial Ad between Activities:
-```java
-public void btnOpenActivity (View view){
-    startAppAd.showAd();
-    startAppAd.loadAd();
-    Intent nextActivity = new Intent(this, NextActivity.class);
-    startActivity(nextActivity);
-}
-```
-
-[Back to top](#top)
-
-<a name="step6" />
-##Step 6, Showing a Splash Ad
-A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
-A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
-StartApp In-Ad provides two modes for displaying Splash screens:
-
-**Splash Screen Mode** | **Description**
+**Banner Type** | **Description**
 ---------------------- | ---------------
-Template Mode          | StartApp In-Ad provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation.
-User-Defined Mode      | Please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen)
+Automatic Banner **(Recommended)**  | Automatic selects the most suitable banner of the two listed below
+Standard (2D) Banner  | A standard (two dimensional) banner
+3D Banner   | A three dimensional rotating banner
 
-####Adding the Splash Screen 
-In the ```OnCreate``` method of your Activity, after calling ```StartAppAd.init``` and before ```setContentView```, call the following static function:
+We highly recommend adding an Automatic banner, which automatically selects whether to display a Standard banner or a 3D banner. The banner remains displayed throughout the entire Activity life-cycle. 
+
+To add a banner to your application add the following code in the appropriate place:
+*a.* Import the SDK namespace
+``` java
+using StartApp;
+```
+
+*b.* Display the banner
 ```java
-StartAppAd.showSplash(this, savedInstanceState);
-```
-Apply the following parameters:
-- ***this***: The context (Activity)
-- ***savedInstanceState***: The Bundle parameter passed to your ```onCreate(Bundle savedInstanceState)``` method
-
-**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).**
-
-[Back to top](#top)
-
-<a name="step7" />
-##Step 7, Integrating the Slider
-After calling ```setContentView()```, in the ```OnCreate()``` method of your main activity, call the static function:
-```java
-StartAppAd.showSlider(this);
-```
-
-If you would like the Slider to appear in additional activities, repeat this step in each one of the activities you would like it to show in. The Slider cannot be implemented in activities with a _Dialog Theme_: ```(android:theme="@android:style/Theme.Dialog")```
-
-> **NOTE:**
-> for better user experience, and in order to avoid reload of the Slider when rotating the phone, it is recommended to go back to your manifest file and add the following attribute to any \<activity\> element that you added the Slider to:  ```android:configChanges="orientation|screenSize"```
-
-[Back to top](#top)
-
-<a name="step8" />
-##Step 8, Obfuscation (Optional)
-Obfuscation protects an application from reverse-engineering or modification by making it harder for a third-party to access your source (decompiled) code.
-
-**StartApp In-Ad is already obfuscated!** Therefore, if you did not obfuscate your application using ProGuard™, then you can skip this step. If you have obfuscated your application using ProGuard, then use the following in the ProGuard configuration file:
-```
--keep class com.startapp.** {
-      *;
-}
-
--keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile,
-LineNumberTable, *Annotation*, EnclosingMethod
--dontwarn android.webkit.JavascriptInterface
--dontwarn com.startapp.**
-```
-
-[Back to top](#top)
-
-<a name="Native" />
-##Native Ads
-A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design an ad experience that perfectly fits your application's scene, content and functionality.
-
-For a full integration guide, please refer to the ["Using Native Ads"](android-advanced-usage#using-native-ads) section under the ["Advanced Usage"](android-advanced-usage#using-native-ads) page.
-
-<img src="./Android/images/native.jpg" width="640px" /><br></br>
-
-[Back to top](#top)
-
-<a name="Demographic" />
-##Enjoy Higher eCPM with Demographic-Targeted Ads
-If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
-
-**Example**
-```java
-@Override
-public void onResume() {
-    super.onResume();
-    startAppAd.loadAd(new AdPreferences()
-                      .setAge(18)
-                      .setGender("Male"));
-    startAppAd.onResume();
+void Start () {
+StartAppWrapper.addBanner ( StartAppWrapper.BannerType,
+							StartAppWrapper.BannerPosition);
 }
 ```
-**1**	In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Use ``setAge()`` with your user's real age, and ``setGender()`` with your user's real gender – *"Male"* or *"Female"*.
 
-**2** 	Do the same for each ``loadAd()`` call in your project.
+**Parameters:**
+
+*1.* The first parameter is the type of banner, which can receive one of the following:
+<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
+<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.STANDARD
+<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerType.THREED
+*2.* Second parameter is the position of banner, which can receive one of the following:
+<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
+<br></br><img src="./iOS/images/V-blue.png" width="12px" /> StartAppWrapper.BannerPosition.TOP
 
 [Back to top](#top)
 
-<a name="SampleProject" />
-##Sample Project
-StartApp provides a sample integration project available on [GitHub](https://github.com/StartApp-SDK/StartApp_InApp_SDK_Example)
+
+<br></br>
+<a name="step5" />
+##Step 3, Showing Interstitial Ads
+
+You can choose to show the interstitial ad in several locations within your application.
+This could be upon entering (onCreate), between stages, while waiting for an action and more.
+
+We do, however, recommend showing the ad upon exiting the application by using the ‘Back’ button or the ‘Home’ button, as explained in step 4 above.
+
+Add the following code to the appropriate place or places within your activities in which you would like to show the ad:
+
+*a.* Import the sdk namespace
+```java
+using StartApp;
+```
+
+*b.* Load the ad
+```java
+void Start () {
+StartAppWrapper.loadAd();
+}
+```
+
+*c.* Show the ad
+```java
+StartAppWrapper.showAd();
+StartAppWrapper.loadAd();
+```
 
 [Back to top](#top)
+
 
 <a name="AdvancedUsage" />
 ##Advanced Usage
-For advanced usage, please refer to the ["Advanced Usage"](android-advanced-usage)
-
-[Back to top](#top)
-
-<a name="SearchBox-SDK-Removal-Procedure" />
-##SearchBox SDK Removal Procedure
-If you are upgrading from our old SearchBox SDK, please refer to the ["SearchBox SDK Removal Procedure"](SearchBox-SDK-Removal-Procedure).
+For advanced usage, please refer to the ["Advanced Usage"](unity-android-advanced-usage) section.
 
 [Back to top](#top)
