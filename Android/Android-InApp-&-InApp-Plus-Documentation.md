@@ -4,6 +4,7 @@
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
 > - If you are using the "InApp Plus" SDK, you MUST integrate at least the Splash, the Slider and the Interstitial
+> - Steps 1-3 are mandatory steps 
 > - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
 <br></br>
