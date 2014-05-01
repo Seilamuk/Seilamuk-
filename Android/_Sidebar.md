@@ -1,20 +1,20 @@
 [**HOME**](Android-InApp-&-InApp-Plus-Documentation)
 
-[**Step 1, Adding the SDK to Your Project**](Android-InApp-&-InApp-Plus-Documentation#step1)
+[**Step 1, Adding the SDK to Your Project (Mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step1)
 
-[**Step 2, Updating Your Manifest File**](Android-InApp-&-InApp-Plus-Documentation#step2)
+[**Step 2, Updating Your Manifest File (Mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step2)
 
-[**Step 3, Initialization**](Android-InApp-&-InApp-Plus-Documentation#step3)
+[**Step 3, Initialization (Mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step3)
 
-[**Step 4, Showing Banners**](Android-InApp-&-InApp-Plus-Documentation#step4)
+[**Showing Banners**](Android-InApp-&-InApp-Plus-Documentation#step4)
 
-[**Step 5, Showing Interstitial Ads**](Android-InApp-&-InApp-Plus-Documentation#step5)
+[**Showing Interstitial Ads**](Android-InApp-&-InApp-Plus-Documentation#step5)
 
-[**Step 6, Showing a Splash Ad**](Android-InApp-&-InApp-Plus-Documentation#step6)
+[**Showing a Splash Ad**](Android-InApp-&-InApp-Plus-Documentation#step6)
 
-[**Step 7, Integrating the Slider**](Android-InApp-&-InApp-Plus-Documentation#step7)
+[**Integrating the Slider**](Android-InApp-&-InApp-Plus-Documentation#step7)
 
-[**Step 8, Obfuscation (Optional)**](Android-InApp-&-InApp-Plus-Documentation#step8)
+[**Obfuscation**](Android-InApp-&-InApp-Plus-Documentation#step8)
 
 [**Native Ads**](Android-InApp-&-InApp-Plus-Documentation#Native)
 
