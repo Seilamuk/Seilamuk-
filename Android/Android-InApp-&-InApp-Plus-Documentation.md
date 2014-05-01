@@ -9,13 +9,13 @@
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the SDK JAR to Your Eclipse Project
+##Step 1, Adding the SDK JAR to Your Eclipse Project (mandatory)
 Copy the SDK jar file from the SDK zip to the “libs” directory of your project.
 
 [Back to top](#top)
 
 <a name="step2" />
-##Step 2, Updating Your AndroidManifest.xml File
+##Step 2, Updating Your AndroidManifest.xml File (mandatory)
 Under the main \<manifest\> element, add the following permissions:
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -45,7 +45,7 @@ Under the \<application\> element, add your new activities:
 [Back to top](#top)
 
 <a name="step3" />
-##Step 3, Initialization
+##Step 3, Initialization (mandatory)
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static functions:
 
 ```java
