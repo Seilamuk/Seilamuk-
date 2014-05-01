@@ -1,10 +1,10 @@
 [**HOME**](Android-InApp-&-InApp-Plus-Documentation)
 
-[**Step 1 - Adding the SDK to Your Project (Mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step1)
+[**Step 1 - Adding the SDK to Your Project (mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step1)
 
-[**Step 2 - Updating Your Manifest File (Mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step2)
+[**Step 2 - Updating Your Manifest File (mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step2)
 
-[**Step 3 - Initialization (Mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step3)
+[**Step 3 - Initialization (mandatory)**](Android-InApp-&-InApp-Plus-Documentation#step3)
 
 [**Showing Banners**](Android-InApp-&-InApp-Plus-Documentation#step4)
 
