@@ -62,7 +62,7 @@ To find your application ID, click on the <img src="./Android/images/dash2.jpg" 
 [Back to top](#top)
 
 <a name="step4" />
-##Step 4, Showing Banners
+##Showing Banners
 Add the following View inside your Activity layout XML:
 ```java
 <com.startapp.android.publish.banner.Banner 
@@ -80,7 +80,7 @@ Add the following View inside your Activity layout XML:
 [Back to top](#top)
 
 <a name="step5" />
-##Step 5, Showing Interstitial Ads
+##Showing Interstitial Ads
 Interstitial Ads are displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. 
 
 ####Initializing the StartApp Ad Object
@@ -142,7 +142,7 @@ public void btnOpenActivity (View view){
 [Back to top](#top)
 
 <a name="step6" />
-##Step 6, Showing a Splash Ad
+##Showing a Splash Ad
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 StartApp In-Ad provides two modes for displaying Splash screens:
@@ -166,7 +166,7 @@ Apply the following parameters:
 [Back to top](#top)
 
 <a name="step7" />
-##Step 7, Integrating the Slider
+##Integrating the Slider
 After calling ```setContentView()```, in the ```OnCreate()``` method of your main activity, call the static function:
 ```java
 StartAppAd.showSlider(this);
@@ -180,7 +180,7 @@ If you would like the Slider to appear in additional activities, repeat this ste
 [Back to top](#top)
 
 <a name="step8" />
-##Step 8, Obfuscation (Optional)
+##Obfuscation (Optional)
 Obfuscation protects an application from reverse-engineering or modification by making it harder for a third-party to access your source (decompiled) code.
 
 **StartApp In-Ad is already obfuscated!** Therefore, if you did not obfuscate your application using ProGuard™, then you can skip this step. If you have obfuscated your application using ProGuard, then use the following in the ProGuard configuration file:
