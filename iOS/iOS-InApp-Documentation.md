@@ -122,7 +122,7 @@ In your view controller init **STAStartAppAd** within the ``viewDidLoad()`` meth
 
 - (void) dealloc {
     // Don't release startAppAd if you are using ARC in your project
-    [startAppAd dealloc];  // Add this line
+    [startAppAd release];  // Add this line
     [super dealloc];
 } 
 ```
@@ -171,7 +171,7 @@ Finally, add the following lines where you want to show the ad
 - (void) dealloc
 {
     // Don't release bannerView if you are using ARC in your project
-    [bannerView dealloc];  // Add this line
+    [bannerView release];  // Add this line
     [super dealloc];
 }
 ```
