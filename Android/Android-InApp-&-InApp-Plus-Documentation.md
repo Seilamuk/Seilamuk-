@@ -237,8 +237,8 @@ The location of the user is a dynamic property which is changed constantly. Henc
 public void onResume() {
     super.onResume();
     startAppAd.loadAd(new AdPreferences()
-                           .setLatitude(35.691025)
-                           .setLongitude(51.412582));
+                           .setLatitude(31.776719)
+                           .setLongitude(35.234508));
     startAppAd.onResume();
 }
 ```
