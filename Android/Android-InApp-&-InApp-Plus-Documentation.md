@@ -220,9 +220,12 @@ If you know your user's gender or age, StartApp can use it to serve better-targe
 ####Set Age and Gender
 Upon initialization, after providing your DevId and AppId, pass the SDKAdPreferences object with its data:
 ```java
-StartAppSDK.init(this, "Your Developer Id", "Your App ID", new SDKAdPreferences()
-                                                             .setAge(35)
-                                                             .setGender(Gender.FEMALE));
+StartAppSDK.init(this, 
+                 "Your Developer Id", 
+                 "Your App ID", 
+                 new SDKAdPreferences()
+                      .setAge(35)
+                      .setGender(Gender.FEMALE));
 }
 ```
 + ``setAge`` can take an integer.
