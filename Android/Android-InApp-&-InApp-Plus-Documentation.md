@@ -217,8 +217,7 @@ For a full integration guide, please refer to the ["Using Native Ads"](android-a
 ##Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
 
-Upon initialization, after providing your DevId and AppId, use the following line:
-**Example**
+Upon initialization, after providing your DevId and AppId, pass the SDKAdPreferences object with its data:
 ```java
 StartAppSDK.init(this, "Your Developer Id", "Your App ID", new SDKAdPreferences()
                                                              .setAge(35)
