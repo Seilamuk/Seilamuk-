@@ -52,7 +52,7 @@ Under the \<application\> element, add your new activities:
 ##Step 3, Initialization
 > **IMPORTANT:** This is a mandatory step
 
-In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static functions:
+In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
 ```java
 StartAppAd.init(this, "Your Developer Id", "Your App ID");
