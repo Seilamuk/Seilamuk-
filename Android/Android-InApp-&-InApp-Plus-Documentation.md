@@ -55,7 +55,7 @@ Under the \<application\> element, add your new activities:
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
 ```java
-StartAppAd.init(this, "Your Developer Id", "Your App ID");
+StartAppAd.init(this, "Your Developer Id", "Your App ID", true);
 ```
 
 Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
@@ -64,6 +64,8 @@ After logging in, your developer ID will be at the top right-hand corner of the 
 
 To find your application ID, click on the <img src="./Android/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" width="350px" />
+
+> **NOTE:** If you don't wish your application to display ads when pressing the Home button, simply pass ``false`` in the last parameter.
 
 [Back to top](#top)
 
