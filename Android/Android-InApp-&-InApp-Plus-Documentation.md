@@ -243,9 +243,7 @@ public void onResume() {
 }
 ```
 
-**1**	In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. 
-
-**2** 	Do the same for each ``loadAd()`` call in your project.
+In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Do the same for each ``loadAd()`` call in your project.
 
 [Back to top](#top)
 
