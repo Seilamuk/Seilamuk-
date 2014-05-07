@@ -217,20 +217,16 @@ For a full integration guide, please refer to the ["Using Native Ads"](android-a
 ##Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
 
+Upon initialization, after providing your DevId and AppId, use the following line:
 **Example**
 ```java
-@Override
-public void onResume() {
-    super.onResume();
-    startAppAd.loadAd(new AdPreferences()
-                      .setAge(18)
-                      .setGender("Male"));
-    startAppAd.onResume();
+StartAppSDK.init(this, "Your Developer Id", "Your App ID", new SDKAdPreferences()
+                                                             .setAge(35)
+                                                             .setGender(Gender.FEMALE));
 }
 ```
-**1**	In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Use ``setAge()`` with your user's real age, and ``setGender()`` with your user's real gender – *"Male"* or *"Female"*.
-
-**2** 	Do the same for each ``loadAd()`` call in your project.
++ ``setAge`` can take an integer.
++ ``setGender`` can take one of the following values: Gender.FEMALE or Gender.MALE.
 
 [Back to top](#top)
 
