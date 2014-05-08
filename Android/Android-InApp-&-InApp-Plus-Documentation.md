@@ -55,7 +55,7 @@ Under the \<application\> element, add your new activities:
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
 ```java
-StartAppAd.init(this, "Your Developer Id", "Your App ID", true);
+StartAppSDK.init(this, "Your Developer Id", "Your App ID", true);
 ```
 
 Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
