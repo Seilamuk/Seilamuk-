@@ -48,7 +48,7 @@ _BannerPosition_ - position of the banner. Can receive one of the following:
 ##Using Home and Back separately
 You can use the exit ad with home or back separately, just do one of the following:
 
-<br></br><img src="./iOS/images/V.png" width="12px" /> Add the StartApp 'home' plugin to your Unity project:
+<img src="./iOS/images/V.png" width="12px" /> Add the StartApp 'home' plugin to your Unity project:
 <br></br>
 The plugin will show an ad when a user presses the 'home' button <br></br>
 
