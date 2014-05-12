@@ -32,10 +32,10 @@ In order to add StartApp SDK to your application please follow the following ste
 <br></br>
 <a name="step2" />
 ##Step 2, Updating your Manifest File
-Update the manifest.xml (in the Android folders) as follow:
+Update the _manifest.xml_ (in the _Android_ folders) as follow:
 
-**1.** Under the 'manifest' node place your \<YOUR_PACKAGE_NAME\> within package attribute.<br></br>
-**2.** Under the 'AppWall' and 'List3DActivity' activities replace \<YOUR_PACKAGE_NAME\> with the name of your package as declared in your manifest.<br></br>
+**1.** Under the 'manifest' node place your ``\<YOUR_PACKAGE_NAME\>`` within package attribute.<br></br>
+**2.** Under the 'AppWall' and 'List3DActivity' activities replace ``\<YOUR_PACKAGE_NAME\>`` with the name of your package as declared in your manifest.<br></br>
 
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity" 
