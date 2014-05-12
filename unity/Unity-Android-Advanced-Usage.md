@@ -1,5 +1,7 @@
 <a name="top" />
 
+######This section describes advanced usage and personal customization options and is not mandatory for the integration.
+
 <a name="banner-type" />
 ##Selecting Banner Type
 There are 3 different types of banners:
@@ -28,21 +30,19 @@ void Start () {
 }
 ```
 
-**Parameters:**
+**Parameters**
 
-**BannerType** - type of banner. Can receive one of the following:
+_BannerType_ - type of banner. Can receive one of the following:
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.AUTOMATIC
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.STANDARD
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerType.THREED
 
-**BannerPosition** - position of the banner. Can receive one of the following:
+_BannerPosition_ - position of the banner. Can receive one of the following:
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
 
 [Back to top](#top)
 
-
-######This section describes advanced usage and personal customization options and is not mandatory for the integration.
 
 <a name="home-back" />
 ##Using Home and Back separately
