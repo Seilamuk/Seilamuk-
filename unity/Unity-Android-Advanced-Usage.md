@@ -55,7 +55,7 @@ The plugin will show an ad when a user presses the 'home' button <br></br>
 *1.* Copy the _StartAppHomePlugin.cs_ to the Assets folder. <br></br>
 *2.* Drag the _StartAppHomePlugin.cs_ to a components in your scene. 
 
-<br></br><img src="./iOS/images/V.png" width="12px" /> Add the StartApp 'back' plugin to your Unity project: <br></br>
+<img src="./iOS/images/V.png" width="12px" /> Add the StartApp 'back' plugin to your Unity project: <br></br>
 The plugin will show an ad when a user presses the 'back' button
 
 *1.* Copy the _StartAppBackPlugin.cs_ to the Assets folder. <br></br>
