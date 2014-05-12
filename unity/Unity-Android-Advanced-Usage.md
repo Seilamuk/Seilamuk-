@@ -48,18 +48,18 @@ _BannerPosition_ - position of the banner. Can receive one of the following:
 ##Using Home and Back separately
 You can use the exit ad with home or back separately, just do one of the following:
 
-<img src="./iOS/images/V.png" width="12px" /> Add the StartApp 'home' plugin to your Unity project:
+####Add the StartApp 'home' plugin to your Unity project:
 <br></br>
 The plugin will show an ad when a user presses the 'home' button <br></br>
 
-*1.* Copy the _StartAppHomePlugin.cs_ to the Assets folder. <br></br>
-*2.* Drag the _StartAppHomePlugin.cs_ to a components in your scene. 
+<img src="./iOS/images/V.png" width="12px" />  Copy the _StartAppHomePlugin.cs_ to the Assets folder. <br></br>
+<img src="./iOS/images/V.png" width="12px" />  Drag the _StartAppHomePlugin.cs_ to a components in your scene. 
 
-<img src="./iOS/images/V.png" width="12px" /> Add the StartApp 'back' plugin to your Unity project: <br></br>
+####Add the StartApp 'back' plugin to your Unity project: <br></br>
 The plugin will show an ad when a user presses the 'back' button
 
-*1.* Copy the _StartAppBackPlugin.cs_ to the Assets folder. <br></br>
-*2.* Drag the _StartAppBackPlugin.cs_ to a components in your scene. <br></br>
+<img src="./iOS/images/V.png" width="12px" />  Copy the _StartAppBackPlugin.cs_ to the Assets folder. <br></br>
+<img src="./iOS/images/V.png" width="12px" />  Drag the _StartAppBackPlugin.cs_ to a components in your scene. <br></br>
 
 > **NOTE:**
 > There is no need to implement exit on the 'back' button in these places as the plugin will exit the application after showing the ad.
