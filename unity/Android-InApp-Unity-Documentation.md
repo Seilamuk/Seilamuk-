@@ -4,6 +4,7 @@
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
 > - This SDK is designed to work across all Android devices. It supports all versions but activates only on Android OS 2.1 and above. In lower versions, the SDK will not be active.
+> - Please notice that steps 1-3 are mandatory
 > - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
 <br></br>
