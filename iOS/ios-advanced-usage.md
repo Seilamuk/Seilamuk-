@@ -156,11 +156,11 @@ If you would like to load a banner into a UITableView instead of a general UIVie
  }
 ```
 
-Use the ``addSTABannerToCell`` method to set the banner's position and frequency:
-+ ``atIntexPathRow`` - set the cell where you want to show the banner
-+ ``repeatEach`` - set repetition frequency
+ Use the ``addSTABannerToCell`` method to set the banner's position and frequency:
+ + ``atIntexPathRow`` - set the cell where you want to show the banner
+ + ``repeatEach`` - set repetition frequency
 
-In the above example, the banner will be displayed at the second cell, and will be repeated each 8 cells.
+ In the above example, the banner will be displayed at the second cell, and will be repeated each 8 cells.
 
 [Back to top](#top)
 
