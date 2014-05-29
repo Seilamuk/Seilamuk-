@@ -63,7 +63,7 @@ If you choose to manually control the banner's size & origin upon rotation, you 
 
 Example:
 ```objectivec
-// YourViewController.h
+// YourViewController.m
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
