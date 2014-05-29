@@ -18,12 +18,12 @@ Value | Size | Best fits for
 Set your view controller as a delegate so it is able to receive callbacks from the banner ad.
 
 1. Add the STABannerDelegagteProtocol to the header file
-```objectivec
-@interface YourViewController : UIViewController <STABannerDelegagteProtocol>
-{
-    STABannerView* bannerView;  
-} 
-```
+ ```objectivec
+ @interface YourViewController : UIViewController <STABannerDelegagteProtocol>
+ {
+     STABannerView* bannerView;  
+ } 
+ ```
 
 2. Use "withDelegate:self" when initializing the STABannerView object:
  ```objectivec
