@@ -124,7 +124,7 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 1. Declare an **STABannerView** instance variable in your UITableView class
 
  ```objectivec
- @interface MyTableView ()
+ @interface YourViewController ()
  {
      STABannerView* bannerview;
  }
