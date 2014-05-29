@@ -121,39 +121,39 @@ Constant Name | Description | Specific Ad Load Example
 ###Showing banners in UITableView
 If you would like to load a banner into a UITableView instead of a general UIView, follow these instructions:
 
-**1** Declare an **STABannerView** instance variable in your UITableViewDelegate class
+1. Declare an **STABannerView** instance variable in your UITableViewDelegate class
 
  ```objectivec
-@interface MyTableViewController ()
-{
-    STABannerView* bannerview;
-}
-@end
+ @interface MyTableViewController ()
+ {
+     STABannerView* bannerview;
+ }
+ @end
  ```
  
-**2** Override the ``cellForRowAtIndexPath`` method, and add the required code:
+2. Override the ``cellForRowAtIndexPath`` method, and add the required code:
 
-```objectivec
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell=nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+ ```objectivec
+  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+     static NSString *CellIdentifier = @"Cell";
+     UITableViewCell *cell=nil;
+     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     
+     if (cell == nil)  {
+         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:CellIdentifier]; 
+     }
     
-    if (cell == nil)  {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
     
+     // ADD THE FOLLOWING LINES
+     if(bannerview == nil)
+     {
+         bannerview = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top  withView:cell withDelegate:self]; 
+     }
     
-    // ADD THE FOLLOWING LINES
-    if(bannerview == nil)
-    {
-        bannerview = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top withView:cell withDelegate:self];
-    }
+     [bannerview addSTABannerToCell:cell withIndexPath:indexPath atIntexPathRow:2 repeatEach:8];
     
-    [bannerview addSTABannerToCell:cell withIndexPath:indexPath atIntexPathRow:2 repeatEach:8];
-    
-    return cell;
-}
+     return cell;
+ }
 ```
 
 Use the ``addSTABannerToCell`` method to set the banner's position and frequency:
