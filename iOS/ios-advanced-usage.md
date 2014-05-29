@@ -15,9 +15,17 @@ Value | Size | Best fits for
 
 <a name="UsingBannerDelegates" />
 ###Using banner delegates
-Set your view controller as a delegate so it is able to receive callbacks from the banner ad by adding the <STABannerDelegateProtocol> to the header file
+Set your view controller as a delegate so it is able to receive callbacks from the banner ad.
 
-1. Use "withDelegate:self" when initializing the STABannerView object:
+1. Add the STABannerDelegagteProtocol to the header file
+```objectivec
+@interface YourViewController : UIViewController <STABannerDelegagteProtocol>
+{
+    STABannerView* bannerView;  
+} 
+```
+
+2. Use "withDelegate:self" when initializing the STABannerView object:
  ```objectivec
  bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize 
                                       autoOrigin:STAAdOrigin_Top                 
@@ -25,7 +33,7 @@ Set your view controller as a delegate so it is able to receive callbacks from t
                                       withDelegate:self];
  ```
 
-2. Implement the following functions:
+3. Implement the following functions:
  ```objectivec
 - (void) didDisplayBannerAd:(STABannerView*)banner;
 - (void) failedLoadBannerAd:(STABannerView*)banner withError:(NSError *)error;
