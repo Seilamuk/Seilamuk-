@@ -82,24 +82,24 @@ Example:
 Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad
 
 1. Add the STADelegagteProtocol to the header file
-```objectivec
-@interface YourViewController : UIViewController <STADelegagteProtocol>
-{
-    STAStartAppAd* startAppAd;    
-} 
-```
+ ```objectivec
+ @interface YourViewController : UIViewController <STADelegagteProtocol>
+ {
+     STAStartAppAd* startAppAd;    
+ } 
+ ```
 
 2. Use "withDelegate:self" when calling the loadAd function:
  ```[startAppAd loadAd:STAAdType_Automatic withDelegate:self]```
 
 3. Implement the following functions:
  ```objectivec
-- (void) didLoadAd:(STAAbstractAd*)ad;
-- (void) failedLoadAd:(STAAbstractAd*)ad withError:(NSError *)error;
-- (void) didShowAd:(STAAbstractAd*)ad;
-- (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
-- (void) didCloseAd:(STAAbstractAd*)ad;
-```
+ - (void) didLoadAd:(STAAbstractAd*)ad;
+ - (void) failedLoadAd:(STAAbstractAd*)ad withError:(NSError *)error;
+ - (void) didShowAd:(STAAbstractAd*)ad;
+ - (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
+ - (void) didCloseAd:(STAAbstractAd*)ad;
+ ```
 
 [Back to top](#top)
 
