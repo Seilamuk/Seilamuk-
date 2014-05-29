@@ -81,9 +81,9 @@ Example:
 ###Using Interstitial delegates
 Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad
 
-1. Add the STADelegagteProtocol to the header file
+1. Add the STADelegateProtocol to the header file
  ```objectivec
- @interface YourViewController : UIViewController <STADelegagteProtocol>
+ @interface YourViewController : UIViewController <STADelegateProtocol>
  {
      STAStartAppAd* startAppAd;    
  } 
