@@ -1,4 +1,7 @@
 <a name="top">
+
+**Last SDK Version: 2.1.0**
+
 <a name="ControllingBannerSize" />
 ###Controlling the size of your banner
 The size of the banner is determined by the "size" parameter which can receive one of the following values
