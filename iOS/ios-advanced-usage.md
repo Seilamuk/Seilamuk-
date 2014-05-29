@@ -121,10 +121,10 @@ Constant Name | Description | Specific Ad Load Example
 ###Showing banners in UITableView
 If you would like to load a banner into a UITableView instead of a general UIView, follow these instructions:
 
-1. Declare an **STABannerView** instance variable in your UITableViewDelegate class
+1. Declare an **STABannerView** instance variable in your UITableView class
 
  ```objectivec
- @interface MyTableViewController ()
+ @interface MyTableView ()
  {
      STABannerView* bannerview;
  }
