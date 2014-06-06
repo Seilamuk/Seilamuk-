@@ -25,10 +25,6 @@ Under the main \<manifest\> element, add the following permissions:
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-//These permissions are only required for showing the ad when pressing the Home button
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-<uses-permission android:name="android.permission.GET_TASKS"/>
 ```
 
 Under the \<application\> element, add your new activities:
@@ -55,7 +51,7 @@ Under the \<application\> element, add your new activities:
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
 ```java
-StartAppSDK.init(this, "Your Developer Id", "Your App ID", true);
+StartAppSDK.init(this, "Your Developer Id", "Your App ID");
 ```
 
 Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
@@ -64,8 +60,6 @@ After logging in, your developer ID will be at the top right-hand corner of the 
 
 To find your application ID, click on the <img src="./Android/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" width="350px" />
-
-> **NOTE:** If you don't wish your application to display ads when pressing the Home button, simply pass ``false`` in the last parameter.
 
 [Back to top](#top)
 
@@ -115,15 +109,6 @@ To show an ad when pressing the 'Back' button, override the ```onBackPressed()``
 public void onBackPressed() {
     startAppAd.onBackPressed();
     super.onBackPressed();
-}
-```
-
-To show an ad when pressing the 'Home' button, override the ```onPause()``` method and add the method ```startAppAd.onPause()``` AFTER the method ```super.onPause()```:
-```java
-@Override
-public void onPause() {
-    super.onPause();
-    startAppAd.onPause();
 }
 ```
 
