@@ -66,9 +66,8 @@ To find your application ID, click on the <img src="./Android/images/dash2.jpg" 
 
 Use the *StartAppBackPlugin* in components where you would like the user to press 'back' to exit the application. The plugin will show an ad and then exit the application.
 
-**1.** Copy the StartAppBackPlugin.cs to the Assets folder <br></br>
-**2.** Drag the StartAppBackPlugin.cs to the components which you would like pressing 'back' to exit the application <br></br>
-**3.** Do not implement exit on the 'back' in this components <br></br>
+**1.** Drag the StartAppBackPlugin.cs to the components which you would like pressing 'back' to exit the application <br></br>
+**2.** Do not implement exit on the 'back' in this components <br></br>
 
 > **NOTE:** there is no need to implement exit on the 'back' button in these components as the plugin will exit the application after showing the ad.
 
