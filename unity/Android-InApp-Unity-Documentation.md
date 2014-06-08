@@ -14,7 +14,7 @@ In order to add StartApp SDK to your application please follow the following ste
 
 **1.** Unzip all files to a temporary folder
 <img src="./unity/images/files-new.png" /><br></br>
-**2.** Select all unzipped folders and files and drag them to your project window
+**2.** From the unzipped *assets* folder, select all files and folders and drag them to your project window
 <img src="./unity/images/project-window.png" /><br></br>
 [Back to top](#top)
 
