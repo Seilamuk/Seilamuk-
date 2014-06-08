@@ -100,7 +100,7 @@ using StartApp;
 void Start () {
      StartAppWrapper.addBanner( 
            StartAppWrapper.BannerType.AUTOMATIC,
-	       StartAppWrapper.BannerPosition);
+	       StartAppWrapper.BannerPosition.BOTTOM);
 }
 ```
 **Parameters**
