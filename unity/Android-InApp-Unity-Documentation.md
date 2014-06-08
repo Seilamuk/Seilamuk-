@@ -12,21 +12,10 @@
 ##Step 1, Adding the SDK files to your Unity project
 In order to add StartApp SDK to your application please follow the following steps:
 
-**1.** Copy the _StartAppWrapper.cs_ to the Assets folder<br></br>
-**2.** Right click on your _Assets_ folder in Unity<br></br>
-<img src="./unity/images/assets.png" /><br></br>
-**3.** Create a _Plugins_ folder if one does not exist<br></br>
-**4.** Right click on your _Plugins_ folder<br></br>
-**5.** Create an _Android_ folder if one does not exist<br></br>
-**6.** Copy the following files from the SDK zip _Assets/Plugins/Android_ folder to the _Android_ folder:
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" />_AndroidManifest.xml_
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" />_StartAppInApp-2.2.0.jar_
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" />_StartAppInAppUnityWrapper-2.1.1.jar_
-<br></br><img src="./unity/images/files.png" />
-
-**7.** Copy the content of the _StreamingAssets_ from the SDK zip into the same folder in your _Assets/StreamingAssets_ folder (create one if it does not exists).<br></br>
-**8.** Copy the content of the _Resources_ from the SDK zip into the same folder in your _Assets/Resources_ folder (create one if it does not exists).<br></br>
-
+**1.** Unzip all files to a temporary folder
+<img src="./unity/images/files-new.png" /><br></br>
+**2.** Select all unzipped folders and files and drag them to your project window
+<img src="./unity/images/project-window.png" /><br></br>
 [Back to top](#top)
 
 
