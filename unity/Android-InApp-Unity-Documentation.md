@@ -12,7 +12,7 @@
 ##Step 1, Adding the SDK files to your Unity project
 In order to add StartApp SDK to your application please follow the following steps:
 
-**1.** Unzip all files to a temporary folder
+**1.** Unzip all files to a temporary folder<br></br>
 **2.** From the unzipped *assets* folder, select all files and folders and drag them to your project window
 
 <img src="./unity/images/files-new.png" /><br></br>
