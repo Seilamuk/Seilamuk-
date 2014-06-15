@@ -36,7 +36,7 @@ Under the \<application\> element, add your new activities:
 <activity android:name="com.startapp.android.publish.AppWallActivity"
           android:theme="@android:style/Theme.Translucent"
           android:taskAffinity="YOUR_PACKAGE_NAME.AppWall"   		  
-          android:configChanges="orientation|keyboardHidden" />
+          android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
 > **NOTE:** Replace **YOUR_PACKAGE_NAME** with your actual package name as declared in your manifest in both activities. For example, if your package name is "com.test.example", replace **YOUR_PACKAGE_NAME** with "com.test.example.AppWall".
