@@ -86,12 +86,12 @@ Add the following View inside your Activity layout XML:
 Interstitial Ads are displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. 
 
 ####Initializing the StartApp Ad Object
-In your Activity, create a member variable, as follows:
+**1.** In your Activity, create a member variable, as follows:
 ```java
 private StartAppAd startAppAd = new StartAppAd(this);
 ```
 
-Override the ```onResume()``` method and add the method ```startAppAd.onResume()``` AFTER the method ```super.onResume()```:
+**2.** Override the ```onResume()``` method and add the method ```startAppAd.onResume()``` AFTER the method ```super.onResume()```:
 ```java
 @Override
 public void onResume() {
@@ -99,6 +99,16 @@ public void onResume() {
     startAppAd.onResume();
 }
 ```
+
+**3.** Override the ```onPause()``` method and add the method ```startAppAd.onPause()``` AFTER the method ```super.onPause()```:
+```java
+@Override
+public void onPause() {
+    super.onPause();
+    startAppAd.onPause();
+}
+```
+
 
 ####Showing Exit Ads
 Add the following code to show an ad upon exiting your application.
