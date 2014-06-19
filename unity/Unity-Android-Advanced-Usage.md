@@ -25,8 +25,8 @@ using StartApp;
 ```java
 void Start () {
      StartAppWrapper.addBanner( 
-           StartAppWrapper.BannerType,
-	       StartAppWrapper.BannerPosition);
+           StartAppWrapper.BannerType.AUTOMATIC,
+	       StartAppWrapper.BannerPosition.BOTTOM);
 }
 ```
 
