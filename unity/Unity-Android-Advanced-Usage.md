@@ -55,7 +55,7 @@ public void onFailedToReceiveAd(){
 ```
 
 <a name="show-callback" />
-##Adding a callback when Ad has been loaded
+##Adding a callback when Ad has been displayed or hidden
 
 ``StartAppWrapper.showAd()`` can get an implementation of *AdDisplayListener* as a parameter. In case you want to get a callback for the ad show, pass the object which implements *StartAppWrapper.AdDisplayListener* as a parameter of the method. This object should implement the following methods:
 ```java
