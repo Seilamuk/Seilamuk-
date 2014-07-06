@@ -250,6 +250,15 @@ Sets the orientation to be used in the Template or User-defined mode.
 
 [Back to top](#top)
 
+<a name="return-ads" />
+##Return Ads
+The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning). Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 4th parameter of the ``StartAppSDK.init`` method:
+ ```java
+StartAppSDK.init(this, "Your Developer Id", "Your App ID", false);
+```
+
+[Back to top](#top)
+
 
 <a name="using-native-ads" />
 ##Integrating Native Ads

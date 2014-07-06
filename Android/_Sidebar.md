@@ -28,6 +28,7 @@
   [Explicitly closing an Interstitial Ad](android-advanced-usage#CloseInterstitial)<br></br> 
   [Adding Interstitial Callbacks](android-advanced-usage#AddingInterstitialCallbacks)<br></br> 
   [Customizing the Splash Screen](android-advanced-usage#CustomizingSplashScreen)<br></br> 
+  [Return Ads](android-advanced-usage#return-ads)<br></br> 
   [Integrating Native Ads](android-advanced-usage#using-native-ads)<br></br> 
 
 [**SearchBox SDK Removal Procedure**](SearchBox-SDK-Removal-Procedure)
