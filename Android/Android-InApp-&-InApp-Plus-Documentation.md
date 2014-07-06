@@ -49,7 +49,7 @@ Under the \<application\> element, add your new activities:
 ##Step 3, Initialization
 > **IMPORTANT:** 
 > - This is a mandatory step
-> - **Return Ad** is a new ad unit which is enabled by default by StartApp SDK. For more details and how to disable it, please refer to the [Advanced Usage](android-advanced-usage#return-ads)**.
+> - **Return Ad** is a new ad unit which is enabled by default by StartApp SDK. For more details and how to disable it, please refer to the [Advanced Usage](android-advanced-usage#return-ads).
 
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
