@@ -93,7 +93,9 @@ Set your view controller as a delegate so it is able to receive callbacks from t
  ```
 
 2. Use "withDelegate:self" when calling the loadAd function:
- ```[startAppAd loadAd:STAAdType_Automatic withDelegate:self]```
+ ```objectivec
+[startAppAd loadAd:STAAdType_Automatic withDelegate:self]
+```
 
 3. Implement the following functions:
  ```objectivec
