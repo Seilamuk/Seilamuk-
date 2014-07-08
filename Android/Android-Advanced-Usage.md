@@ -130,6 +130,10 @@ public void adHidden(Ad ad) {
 @Override
 public void adDisplayed(Ad ad) {
 }
+
+@Override
+public void adClicked(Ad ad) {
+}
 ```
 
 **Example**
@@ -140,6 +144,9 @@ startAppAd.showAd(new AdDisplayListener() {
     }
     @Override
     public void adDisplayed(Ad ad) {
+    }
+    @Override
+    public void adClicked(Ad ad) {
     }
 });
 ```
