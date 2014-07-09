@@ -49,7 +49,7 @@ Under the \<application\> element, add your new activities:
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
 ```java
-StartAppSDK.init(this, "Your Developer Id", "Your App ID");
+StartAppSDK.init(this, "Your Developer Id", "Your App ID", true);
 ```
 
 Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
@@ -59,9 +59,20 @@ After logging in, your developer ID will be at the top right-hand corner of the 
 To find your application ID, click on the <img src="./Android/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" width="350px" />
 
+The last parameter enables the ["Return Ads"](#step4) features as explained in the next section. If you want to disable it, simply pass ``false`` instead of ``true``.
+
 [Back to top](#top)
 
 <a name="step4" />
+##Return Ads
+The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning). Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 4th parameter of the ``StartAppSDK.init`` method:
+ ```java
+StartAppSDK.init(this, "Your Developer Id", "Your App ID", false);
+```
+
+[Back to top](#top)
+
+<a name="step5" />
 ##Showing Banners
 Add the following View inside your Activity layout XML:
 ```java
@@ -79,7 +90,7 @@ Add the following View inside your Activity layout XML:
 
 [Back to top](#top)
 
-<a name="step5" />
+<a name="step6" />
 ##Showing Interstitial Ads
 Interstitial Ads are displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. 
 
@@ -142,7 +153,7 @@ public void btnOpenActivity (View view){
 
 [Back to top](#top)
 
-<a name="step6" />
+<a name="step7" />
 ##Showing a Splash Ad
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
@@ -166,7 +177,7 @@ Apply the following parameters:
 
 [Back to top](#top)
 
-<a name="step7" />
+<a name="step8" />
 ##Integrating the Slider
 After calling ```setContentView()```, in the ```OnCreate()``` method of your main activity, call the static function:
 ```java
@@ -180,7 +191,7 @@ If you would like the Slider to appear in additional activities, repeat this ste
 
 [Back to top](#top)
 
-<a name="step8" />
+<a name="step9" />
 ##Obfuscation (Optional)
 Obfuscation protects an application from reverse-engineering or modification by making it harder for a third-party to access your source (decompiled) code.
 

@@ -6,15 +6,17 @@
 
 [**Step 3 - Initialization**](Android-InApp-&-InApp-Plus-Documentation#step3)
 
-[**Showing Banners**](Android-InApp-&-InApp-Plus-Documentation#step4)
+[**Return Ads**](Android-InApp-&-InApp-Plus-Documentation#step4)
 
-[**Showing Interstitial Ads**](Android-InApp-&-InApp-Plus-Documentation#step5)
+[**Showing Banners**](Android-InApp-&-InApp-Plus-Documentation#step5)
 
-[**Showing a Splash Ad**](Android-InApp-&-InApp-Plus-Documentation#step6)
+[**Showing Interstitial Ads**](Android-InApp-&-InApp-Plus-Documentation#step6)
 
-[**Integrating the Slider**](Android-InApp-&-InApp-Plus-Documentation#step7)
+[**Showing a Splash Ad**](Android-InApp-&-InApp-Plus-Documentation#step7)
 
-[**Obfuscation**](Android-InApp-&-InApp-Plus-Documentation#step8)
+[**Integrating the Slider**](Android-InApp-&-InApp-Plus-Documentation#step8)
+
+[**Obfuscation**](Android-InApp-&-InApp-Plus-Documentation#step9)
 
 [**Native Ads**](Android-InApp-&-InApp-Plus-Documentation#Native)
 
