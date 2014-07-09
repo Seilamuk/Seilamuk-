@@ -29,12 +29,12 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 **2.** Under the 'AppWall' and 'List3DActivity' activities replace \<YOUR_PACKAGE_NAME\> with the name of your package as declared in your manifest.<br></br>
 
 ```xml
-<activity android:name="com.startapp.android.publish.list3d.List3DActivity" 
+<activity android:name="com.startapp.android.publish.list3d.List3DActivity"
           android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
 <activity android:name="com.startapp.android.publish.AppWallActivity"
-          android:configChanges="orientation|keyboardHidden"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+          android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
 [Back to top](#top)
