@@ -31,10 +31,10 @@ Under the main \<manifest\> element, add the following permissions:
 Under the \<application\> element, add your new activities:
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
-          android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+          android:theme="@android:style/Theme" />
 
 <activity android:name="com.startapp.android.publish.AppWallActivity"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+          android:theme="@android:style/Theme.Translucent"
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
