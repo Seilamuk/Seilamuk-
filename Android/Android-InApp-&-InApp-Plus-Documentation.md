@@ -58,7 +58,7 @@ After logging in, your developer ID will be at the top right-hand corner of the 
 To find your application ID, click on the <img src="./Android/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" width="350px" />
 
-The last ``true`` parameter enables the ["Return Ads"](#step4) feature as explained in the next section. If you want to disable it, simply pass ``false`` instead.
+The last ``true`` parameter enables the ["Return Ads"](#step4) feature as explained in the next section. If you want to disable this feature, simply pass ``false`` instead.
 
 [Back to top](#top)
 
