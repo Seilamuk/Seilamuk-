@@ -30,13 +30,11 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity" 
-          android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp"
-          android:theme="@android:style/Theme" />
+          android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
 <activity android:name="com.startapp.android.publish.AppWallActivity"
           android:configChanges="orientation|keyboardHidden"
-          android:taskAffinity="<YOUR_PACKAGE_NAME>.StartApp" 
-          android:theme="@android:style/Theme.Translucent" />
+          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 ```
 
 [Back to top](#top)
