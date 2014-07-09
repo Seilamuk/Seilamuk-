@@ -34,7 +34,7 @@ Under the \<application\> element, add your new activities:
           android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
 <activity android:name="com.startapp.android.publish.AppWallActivity"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"		  
+          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
