@@ -24,9 +24,11 @@ using StartApp;
 **2.** Display the banner
 ```java
 void Start () {
+     #if UNITY_ANDROID
      StartAppWrapper.addBanner( 
            StartAppWrapper.BannerType.AUTOMATIC,
 	       StartAppWrapper.BannerPosition.BOTTOM);
+     #endif
 }
 ```
 
