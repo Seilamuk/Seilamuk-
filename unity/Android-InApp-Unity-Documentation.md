@@ -78,16 +78,18 @@ Use the *StartAppBackPlugin* in components where you would like the user to pres
 To add a banner to your application add the following code in the appropriate place:
 
 **1.** Import the SDK namespace
-``` java
+```csharp
 using StartApp;
 ```
 
 **2.** Display the banner
-```java
+```csharp
 void Start () {
+     #if UNITY_ANDROID
      StartAppWrapper.addBanner( 
            StartAppWrapper.BannerType.AUTOMATIC,
 	       StartAppWrapper.BannerPosition.BOTTOM);
+     #endif
 }
 ```
 **Parameters**
@@ -113,21 +115,25 @@ We do, however, recommend showing the ad upon exiting the application by using t
 Add the following code to the appropriate place or places within your activities in which you would like to show the ad:
 
 **1.** Import the sdk namespace
-```java
+```csharp
 using StartApp;
 ```
 
 **2.** Load the ad
-```java
+```csharp
 void Start () {
+#if UNITY_ANDROID
 StartAppWrapper.loadAd();
+#endif
 }
 ```
 
 **3.** Show the ad
-```java
+```csharp
+#if UNITY_ANDROID
 StartAppWrapper.showAd();
 StartAppWrapper.loadAd();
+#endif
 ```
 
 [Back to top](#top)
