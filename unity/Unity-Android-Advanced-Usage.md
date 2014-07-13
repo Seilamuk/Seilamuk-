@@ -17,12 +17,12 @@ We highly recommend adding an Automatic banner, which automatically selects whet
 To add a banner to your application add the following code in the appropriate place:
 
 **1.** Import the SDK namespace
-``` java
+```csharp
 using StartApp;
 ```
 
 **2.** Display the banner
-```java
+```csharp
 void Start () {
      #if UNITY_ANDROID
      StartAppWrapper.addBanner( 
@@ -49,7 +49,7 @@ _BannerPosition_ - position of the banner. Can receive one of the following:
 ##Adding a callback when Ad has been loaded
 
 ``StartAppWrapper.loadAd()`` can get an implementation of *AdEventListener* as a parameter. In case you want to get a callback for the ad load, pass the object which implements *StartAppWrapper.AdEventListener* as a parameter to the method. This object should implement the following methods:
-```java
+```csharp
 public void onReceiveAd(){
 }
 public void onFailedToReceiveAd(){
@@ -60,7 +60,7 @@ public void onFailedToReceiveAd(){
 ##Adding a callback when Ad has been shown
 
 ``StartAppWrapper.showAd()`` can get an implementation of *AdDisplayListener* as a parameter. In case you want to get a callback for the ad show, pass the object which implements *StartAppWrapper.AdDisplayListener* as a parameter of the method. This object should implement the following methods:
-```java
+```csharp
 public void adHidden(){
 }
 public void adDisplayed(){
