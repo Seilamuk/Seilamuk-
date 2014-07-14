@@ -13,6 +13,6 @@
 [**Showing Interstitial Ads**](Android-InApp-Unity-Documentation#step6)
 
 [**Advanced Usage**](unity-android-advanced-usage)<br></br>
-  [Selecting Banner Type](unity-android-advanced-usage#banner-type)<br></br> 
+  [Customizing your Banner](unity-android-advanced-usage#banner-type)<br></br> 
   [Adding Callback when Ad has loaded](unity-android-advanced-usage#load-callback)<br></br> 
   [Adding Callback when Ad has been shown](unity-android-advanced-usage#close-callback)<br></br> 

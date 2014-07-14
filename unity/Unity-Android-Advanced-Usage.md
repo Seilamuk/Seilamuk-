@@ -3,7 +3,10 @@
 ######This section describes advanced usage and personal customization options and is not mandatory for the integration.
 
 <a name="banner-type" />
-##Selecting Banner Type
+##Customizing your Banner
+You can show a specific banner type, or hide the banner in a specific screen or during a specific scene.
+
+###Selecting Banner Type
 There are 3 different types of banners:
 
 **Banner Type** | **Description**
@@ -42,6 +45,18 @@ _BannerType_ - type of banner. Can receive one of the following:
 _BannerPosition_ - position of the banner. Can receive one of the following:
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
+
+###Hiding the Banner
+In order to hide an already displayed banner, use the ``removeBanner()`` method. Simply pass the position of the banner you want to hide. 
+
+**For example:**  
+```csharp
+#if UNITY_ANDROID
+StartAppWrapper.removeBanner(StartAppWrapper.BannerPosition.BOTTOM);
+#endif
+```
+
+In order to show the banner again, simply use the addBanner() method as described in ["Showing Banners"](Android-InApp-Unity-Documentation#step5).
 
 [Back to top](#top)
 
