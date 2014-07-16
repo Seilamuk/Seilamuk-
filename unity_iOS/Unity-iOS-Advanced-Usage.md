@@ -24,7 +24,7 @@ We highly recommend using the *Automatic* type, which automatically selects the 
 ```csharp
 #if UNITY_IPHONE
 StartAppWrapperiOS.STAInterstitialProperties adProp = new StartAppWrapperiOS.STAInterstitialProperties();
-adProp.type = StartAppWrapperiOS.AdType.STAAdType_Overlay;
+adProp.type = StartAppWrapperiOS.AdType.STAAdType_OfferWall;
 StartAppWrapperiOS.loadAd(adProp);
 #endif
 ```
