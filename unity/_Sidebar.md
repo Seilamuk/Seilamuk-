@@ -15,4 +15,4 @@
 [**Advanced Usage**](unity-android-advanced-usage)<br></br>
   [Customizing your Banner](unity-android-advanced-usage#banner-type)<br></br> 
   [Adding Callback when Ad has loaded](unity-android-advanced-usage#load-callback)<br></br> 
-  [Adding Callback when Ad has been shown](unity-android-advanced-usage#close-callback)<br></br> 
+  [Adding a callback when Ad has been displayed or clicked](unity-android-advanced-usage#close-callback)<br></br> 
