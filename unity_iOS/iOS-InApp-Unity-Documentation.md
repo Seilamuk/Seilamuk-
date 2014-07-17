@@ -103,7 +103,7 @@ You can show a specific type of interstitial ad, as well as getting callbacks ev
 <a name="step5" />
 ##Step 5, Build Your Unity Project
 
-The first time you build your unity project with StartApp SDK, make sure to run a "Build" instead of "Build and Run". Once completed, load the created XCode project and follow the following steps to include additional necessary frameworks:
+The first time you build your unity project with StartApp SDK, make sure to use "Build and Run" (instead of "Build"). Once completed, Unity will create and load an XCode project. You will notice a few errors. That's ok. Please follow the following steps to include additional necessary frameworks, then re-build your project.
 
 1. Select your application project to bring up the project editor
 2. Select your application target to bring up the target editor
