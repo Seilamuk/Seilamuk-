@@ -115,7 +115,7 @@ The first time you build your unity project with StartApp SDK, make sure to use 
 
 <img src="./unity_iOS/images/frameworks.png" />
 
-> **NOTE:** from now on you can use the "Build and Run" method, as long as you use the "Append" option instead of "Replace", so all the above changes will be kept.<br></br>
+> **NOTE:** from now make sure to use the "Append" option (instead of "Replace") every time you "Build and Run" your project, so all the above changes will be kept.<br></br>
 > <br></br> <img src="./unity_iOS/images/build_append.png" />
 
 <a name="AdvancedUsage" />
