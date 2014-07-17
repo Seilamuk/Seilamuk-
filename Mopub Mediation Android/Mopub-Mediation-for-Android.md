@@ -75,7 +75,7 @@ The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's
  
  <img src="./Mopub%20Mediation%20Android/images/mopub-custom-event-data.png" />   
 
- > **NOTE:** we highly recommend using the automatic mode which selects the best ad to load.    
+ > **NOTE:** we highly recommend leaving this field empty in order to use the automatic mode which selects the best ad to load.    
 
 7. Click "Save and Continue"
 8. Click the "StartApp" network and make sure the "Run" button is active  
