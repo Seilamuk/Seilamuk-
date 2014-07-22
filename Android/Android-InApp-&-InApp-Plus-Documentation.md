@@ -145,10 +145,10 @@ startAppAd.loadAd(); // load the next ad
 The following is an example of showing an Interstitial Ad between Activities:
 ```java
 public void btnOpenActivity (View view){
-    startAppAd.showAd();
-    startAppAd.loadAd();
     Intent nextActivity = new Intent(this, NextActivity.class);
     startActivity(nextActivity);
+    startAppAd.showAd();
+    startAppAd.loadAd();
 }
 ```
 
