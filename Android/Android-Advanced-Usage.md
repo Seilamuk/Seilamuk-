@@ -12,7 +12,7 @@ Standard (2D) Banner  | A standard (two dimensional) banner
 3D Banner   | A three dimensional rotating banner
 
 We highly recommend adding an Automatic banner, which automatically selects whether to display a Standard banner or a 3D banner. The banner remains displayed throughout the entire Activity life-cycle. 
-To add the automatic banner, please refer to [Step 4, Showing Banners](Android-InApp-&-InApp-Plus-Documentation#step4). If you do not wish to add the Automatic Banner, use one of the following options:
+To add the automatic banner, please refer to [Step 4, Showing Banners](Android-InApp-Documentation#step4). If you do not wish to add the Automatic Banner, use one of the following options:
 
 ####Loading a Standard Banner
 Add the following View inside your Activity layout .XML:
@@ -42,7 +42,7 @@ Add the following View inside your Activity layout .XML:
 <a name="SelectInterstitial" />
 ##Selecting Interstitial Ad Type
 We highly recommend using our Automatic mode, which automatically selects the best Interstitial Ad to display, meaning the type of Ads that will generate the most revenue for you.  
-To add an automatic Interstitial Ad, please refer to [Step 5, Showing Interstitial Ads](Android-InApp-&-InApp-Plus-Documentation#step5). 
+To add an automatic Interstitial Ad, please refer to [Step 5, Showing Interstitial Ads](Android-InApp-Documentation#step5). 
 If you do not wish to use the automatic mode, ``startAppAd.loadAd()`` can be directed to load specific Ads to be shown later using the AdMode parameter. The options for the AdMode parameter are:
 
 **Parameter Name** | **Description** | **Specific Ad Load Example**
