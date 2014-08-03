@@ -55,6 +55,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="./iOS/images/V.png" width="12px" /> _CoreGraphics.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StoreKit.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _AdSupport.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _QuartzCore.framework_ 
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
 [Back to top](#top)
