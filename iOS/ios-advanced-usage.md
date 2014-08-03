@@ -1,6 +1,16 @@
 <a name="top">
 
-**Last SDK Version: 2.1.0**
+**Last SDK Version: 2.2.0**
+
+<a name="hide-banner" />
+###Hiding your banner
+You can hide and show your banner in run time, using ``showBanner`` and ``hideBanner`` methods:
+```objectivec
+[bannerView showBanner];
+[bannerView hideBanner];
+```
+
+[Back to top](#top)
 
 <a name="ControllingBannerSize" />
 ###Controlling the size of your banner
@@ -20,9 +30,9 @@ Value | Size | Best fits for
 ###Using banner delegates
 Set your view controller as a delegate so it is able to receive callbacks from the banner ad.
 
-1. Add the STABannerDelegagteProtocol to the header file
+1. Add the STABannerDelegateProtocol to the header file
  ```objectivec
- @interface YourViewController : UIViewController <STABannerDelegagteProtocol>
+ @interface YourViewController : UIViewController <STABannerDelegateProtocol>
  {
      STABannerView* bannerView;  
  } 
@@ -93,9 +103,7 @@ Set your view controller as a delegate so it is able to receive callbacks from t
  ```
 
 2. Use "withDelegate:self" when calling the loadAd function:
- ```objectivec
-[startAppAd loadAd:STAAdType_Automatic withDelegate:self]
-```
+ ```[startAppAd loadAd:STAAdType_Automatic withDelegate:self]```
 
 3. Implement the following functions:
  ```objectivec
@@ -169,3 +177,117 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 
 [Back to top](#top)
 
+
+<a name="CustomizingSplashScreen" />
+##Customizing your Splash Screen
+You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAdWithPreferences`` method when initializing the splash screen in your _AppDelegate_ class.
+
+For example - using splash preferences to choose template mode:
+```objectivec
+STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
+splashPreferences.splashMode = STASplashModeTemplate;
+[sdk showSplashAdWithPreferences:splashPreferences];
+```
+
+###Splash Preferences API
+The following API describes all customization options available for the splash screen.
+
+####►Splash screen mode
+Decide whether to use user-defined or template mode.
+
+**Parameter:** _splashMode_
+
+**Values:**   
+_STASplashModeUserDefined_  
+_STASplashModeTemplate_  
+
+**Usage:**  
+``splashPreferences.splashMode = STASplashModeTemplate;``
+
+####►Change splash image (for user-defined mode)
+Change the splash screen image, instead of using the default one. 
+
+**Parameter:** _splashUserDefinedImageName_  
+
+**Usage:**  
+``splashPreferences.splashUserDefinedImageName = @"MyImage";``  
+
+####►Choosing splash template (for template mode)
+Choose of of 6 pre-designed templates.
+
+**Parameter:** _splashTemplateTheme_  
+
+**Values:**   
+_STASplashTemplateThemeDeepBlue_  
+_STASplashTemplateThemeSky_  
+_STASplashTemplateThemeAshenSky_  
+_STASplashTemplateThemeBlaze_  
+_STASplashTemplateThemeGloomy_  
+_STASplashTemplateThemeOcean_  
+
+**Usage:**  
+``splashPreferences.splashTemplateTheme = STASplashTemplateThemeBlaze;``  
+
+####►Changing template's icon and title (for template mode)
+The SDK uses your default application's name and icon. You can choose however to use your own assets.
+
+**Parameters:**   
+_splashTemplateIconImageName_   
+_splashTemplateAppName_    
+
+**Usage:**  
+```objectivec
+splashPreferences.splashTemplateIconImageName = @"MyIcon";
+splashPreferences.splashTemplateAppName = @"MyAppName";
+```
+
+
+####►Enable/Disable loading indicator (for user-defined mode)
+Choose whether to display a loading indicator on the splash screen.
+
+**Parameter:** _isSplashLoadingIndicatorEnabled_  
+
+**Values:**   
+_YES_  
+_NO_  
+
+**Usage:**  
+``splashPreferences.isSplashLoadingIndicatorEnabled = YES;``  
+
+####►Choose loading indicator's type (for user-defined and template modes)
+Choose which loading indicator type to display: iOS default activity indicator or a "dots" loading indicator
+
+**Parameter:** _splashLoadingIndicatorType_  
+
+**Values:**   
+_STASplashLoadingIndicatorTypeIOS_  
+_STASplashLoadingIndicatorTypeDots_  
+
+**Usage:**  
+``splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeDots;``  
+
+####►Change loading indicator's position (for user-defined mode)
+The loading indicator is displayed by default on the center of the screen. You can choose however to set a custom position.
+
+**Parameter:** _splashLoadingIndicatorCenterPoint_  
+
+**Values:**   
+_CGPointMake(x, y)_  
+
+**Usage:**  
+``splashPreferences.splashLoadingIndicatorCenterPoint = CGPointMake(100, 100);``  
+
+
+####►Force landscape orientation (for user-defined and template modes)
+The SDK display the splash screen using the orientation supported by the application and the device real orientation. If you choose however to force landscape orientation.
+
+**Parameter:** _isLandscape_  
+
+**Values:**   
+_YES_  
+_NO_  
+
+**Usage:**  
+``splashPreferences.isLandscape = YES;``  
+
+[Back to top](#top)

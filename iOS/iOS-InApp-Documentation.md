@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Last SDK Version: 2.1.1**
+**Last SDK Version: 2.2.0**
 
 **For Swift documentation, please [click here](https://github.com/StartApp-SDK/Documentation/wiki/iOS-Swift-InApp-Documentation).**
 
@@ -11,33 +11,28 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 
 > **NOTES:**
-> - The code samples in this document can be copy/pasted into your source code
+> - The code samples in this document can be copy/paste into your source code
 > - When submitting your application to the App Store,do not forget to update your ["IDFA Settings"](#IDFA) 
 > - Please notice that steps 1-3 are mandatory
 > - If you have any questions, contact us via [support@startapp.com](http://support@startapp.com)
 
 <br></br>
 <a name="step1" />
-##Step 1, Add the StartApp SDK to your project
+##Step 1, Adding the StartApp SDK to your project
 ####Add the StartApp SDK files to your application project directory
+1. Right-click on you project and choose "Add Files to…"
 1. Right-click on you project and choose "Add Files to…"
 <br></br>[[/iOS/images/AddFilesTo.png]]
 2. Add the StartApp SDK files:
-<br></br><img src="./iOS/images/V.png" width="12px" /> _libStartAppAdSDK.a_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _STAStartAppAd.h_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _STABannerSize.h_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _STABannerView.h_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _StartAppAdSDK-resources.bundle_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _STAAbstractAd.h_
-<br></br><img src="./iOS/images/V.png" width="12px" /> _STAStartAppSDK.h_
-<br></br><br></br>[[/iOS/images/sdk-files.jpg]]
+<br></br><img src="./iOS/images/V.png" width="12px" /> _StartApp.framework_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _StartApp.bundle_
 
-####Add the libStartAppAdSDK.a to the Build Phases of the desired target
+####Add the libStartApp.a to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab
 4.	Disclose the "Link Binary With Libraries" phase
-5.	Make sure "_libStartAppAdSDK.a_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_libStartAppAdSDK.a_" file 
+5.	Make sure "_StartApp.framework_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_StartApp.framework_" file 
 <br></br><br></br>[[/iOS/images/libStartAppAdSDK.png]]
 
 ####Add the Bundle to the Build Phases of the desired target
@@ -45,13 +40,13 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab
 4.	Disclose the "Copy Bundle Resources" phase 
-5.	Make sure "_StartAppAdSDK-resources.bundle_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_StartAppAdSDK-resources.bundle_" file 
+5.	Make sure "_StartApp.bundle_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_StartApp.bundle_" file 
 <br></br><br></br>[[/iOS/images/StartAppAdSDK-resources.bundle.png]]
 
 [Back to top](#top)
 
 <a name="step2" />
-##Step 2, Add frameworks
+##Step 2, Adding frameworks
 ####Add the StartApp SDK files to your application project directory
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
@@ -73,7 +68,7 @@ In your application delegate class (_AppDelegate.m_), import the StartApp SDK an
 ```objectivec
 // AppDelegate.m
 
-#import "STAStartAppSDK.h"
+#import <StartApp/StartApp.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -95,15 +90,16 @@ To find your application ID, click on the <img src="./iOS/images/dash2.jpg" alig
 
 [Back to top](#top)
 
+
 <a name="step4" />
-##Step 4, Show Interstitial Ad
+##Showing Interstitial Ads
 ######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
 First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to show an ad
 ```objectivec
 // YourViewController.h
  
-#import "STAStartAppAd.h"    // ADD THIS LINE
+#import <StartApp/StartApp.h>
  
 @interface YourViewController : UIViewController 
 {
@@ -142,8 +138,71 @@ Finally, add the following lines where you want to show the ad
 
 [Back to top](#top)
 
+<a name="splash-ads" />
+##Showing the Splash Ad
+A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
+A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
+
+StartApp SDK provides two modes for displaying Splash screens:
+
+**Splash Screen Mode**     |     **Description**
+-------------------------- | -------------------
+User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
+Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](ios-advanced-usage#CustomizingSplashScreen)
+
+####Adding the Splash Screen 
+In your application delegate class (_AppDelegate.m_), after initializing the SDK, call the ``sdk showSplashAd`` method:
+```objectivec
+// AppDelegate.m
+
+#import <StartApp/StartApp.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // initialize the SDK with your appID and devID
+    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+    sdk.appID = @"your app Id";
+    sdk.devID = @"your developer id";
+	
+	[sdk showSplashAd];  // display the splash screen
+
+    return YES;
+}
+```
+
+**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](ios-advanced-usage#CustomizingSplashScreen).**
+
+[Back to top](#top)
+
+
+<a name="return-ads" />
+##Return Ads
+The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
+
+Return ads are enabled and activated by default. If you want to disable this feature, simply call ``[sdk disableReturnAd]`` as part of the initialization process, in your _AppDelegate.m_ file:
+ ```objectivec
+// AppDelegate.m
+
+#import <StartApp/StartApp.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // initialize the SDK with your appID and devID
+    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+    sdk.appID = @"your app Id";
+    sdk.devID = @"your developer id";
+	
+	[sdk disableReturnAd];  // disable return ads
+
+    return YES;
+}
+```
+
+[Back to top](#top)
+
+
 <a name="step5" />
-##Step 5, Show banners
+##Showing Banners
 ######To display banners in your app, add a **STABannerView** to your application according to the following steps:
 
 **1** In the header file of your view controller, import _STABannerView.h_ and _STABannerSize.h_ and declare an **STABannerView** instance variable
@@ -151,8 +210,7 @@ Finally, add the following lines where you want to show the ad
 // YourViewController.h
 
 #import <UIKit/UIKit.h>
-#import "STABannerView.h"
-#import "STABannerSize.h"
+#import <StartApp/StartApp.h>
 
 @interface YourViewController : UIViewController 
 {
@@ -226,7 +284,7 @@ sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USE
 ```objectivec
 // AppDelegate.m
 
-#import "STAStartAppSDK.h"
+#import <StartApp/StartApp.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

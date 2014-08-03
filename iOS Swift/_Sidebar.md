@@ -6,11 +6,15 @@
 
 [**Step 3, Adding the Bridging-Header file**](iOS-Swift-InApp-Documentation#step3)
 
-[**Step 4, Initialization**](iOS-Swift-InApp-Documentation#step4)
+[**Initialization**](iOS-Swift-InApp-Documentation#step4)
 
-[**Step 5, Showing Interstitial Ad**](iOS-Swift-InApp-Documentation#step5)
+[**Showing Interstitial Ads**](iOS-Swift-InApp-Documentation#step5)
 
-[**Step 6, Showing banners**](iOS-Swift-InApp-Documentation#step6)
+[**Showing the Splash Ad**](iOS-Swift-InApp-Documentation#splash-ads)
+
+[**Return Ads**](iOS-Swift-InApp-Documentation#return-ads)
+
+[**Showing banners**](iOS-Swift-InApp-Documentation#step6)
 
 [**Enjoy Higher eCPM with Demographic-Targeted Ads**](iOS-Swift-InApp-Documentation#Demographic)
 
