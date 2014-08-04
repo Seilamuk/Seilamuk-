@@ -130,54 +130,6 @@ Constant Name | Description | Specific Ad Load Example
 
 [Back to top](#top)
 
-<a name="table-view" />
-###Showing banners in UITableView
-If you would like to load a banner into a UITableView instead of a general UIView, follow these instructions:
-
-1. Declare an **STABannerView** instance variable in your UITableView class
-
- ```objectivec
- @interface YourViewController ()
- {
-     STABannerView* bannerview;
- }
- @end
- ```
- 
-2. Override the ``cellForRowAtIndexPath`` method, and add the required code:
-
- ```objectivec
-  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-     static NSString *CellIdentifier = @"Cell";
-     UITableViewCell *cell=nil;
-     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-     
-     if (cell == nil)  {
-         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:CellIdentifier]; 
-     }
-    
-    
-     // ADD THE FOLLOWING LINES
-     if(bannerview == nil)
-     {
-         bannerview = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top  withView:cell withDelegate:self]; 
-     }
-    
-     [bannerview addSTABannerToCell:cell withIndexPath:indexPath atIntexPathRow:2 repeatEach:8];
-    
-     return cell;
- }
-```
-
- Use the ``addSTABannerToCell`` method to set the banner's position and frequency:
- + ``atIntexPathRow`` - set the cell where you want to show the banner
- + ``repeatEach`` - set repetition frequency
-
- In the above example, the banner will be displayed at the second cell, and will be repeated each 8 cells.
-
-[Back to top](#top)
-
-
 <a name="CustomizingSplashScreen" />
 ##Customizing your Splash Screen
 You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAdWithPreferences`` method when initializing the splash screen in your _AppDelegate_ class.
@@ -291,3 +243,54 @@ _NO_
 ``splashPreferences.isLandscape = YES;``  
 
 [Back to top](#top)
+
+
+
+<a name="table-view" />
+###Showing banners in UITableView
+If you would like to load a banner into a UITableView instead of a general UIView, follow these instructions:
+
+1. Declare an **STABannerView** instance variable in your UITableView class
+
+ ```objectivec
+ @interface YourViewController ()
+ {
+     STABannerView* bannerview;
+ }
+ @end
+ ```
+ 
+2. Override the ``cellForRowAtIndexPath`` method, and add the required code:
+
+ ```objectivec
+  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+     static NSString *CellIdentifier = @"Cell";
+     UITableViewCell *cell=nil;
+     cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     
+     if (cell == nil)  {
+         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:CellIdentifier]; 
+     }
+    
+    
+     // ADD THE FOLLOWING LINES
+     if(bannerview == nil)
+     {
+         bannerview = [[STABannerView alloc] initWithSize:STA_AutoAdSize autoOrigin:STAAdOrigin_Top  withView:cell withDelegate:self]; 
+     }
+    
+     [bannerview addSTABannerToCell:cell withIndexPath:indexPath atIntexPathRow:2 repeatEach:8];
+    
+     return cell;
+ }
+```
+
+ Use the ``addSTABannerToCell`` method to set the banner's position and frequency:
+ + ``atIntexPathRow`` - set the cell where you want to show the banner
+ + ``repeatEach`` - set repetition frequency
+
+ In the above example, the banner will be displayed at the second cell, and will be repeated each 8 cells.
+
+[Back to top](#top)
+
+

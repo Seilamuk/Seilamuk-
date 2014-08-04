@@ -168,6 +168,8 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
     }
 ```
 
+**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](ios-advanced-usage#CustomizingSplashScreen).**
+
 [Back to top](#top)
 
 
