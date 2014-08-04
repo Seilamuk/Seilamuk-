@@ -183,7 +183,7 @@ _splashTemplateAppName_
 
 **Usage:**  
 ```objectivec
-splashPreferences.splashTemplateIconImageName = “MyIcon"
+splashPreferences.splashTemplateIconImageName = "MyIcon"
 splashPreferences.splashTemplateAppName = "MyAppName"
 ```
 
