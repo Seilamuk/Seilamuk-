@@ -130,9 +130,9 @@ You can customize the appearance of your splash screen using the ``STASplashPref
 
 For example - using splash preferences to choose template mode:
 ```objectivec
-STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
-splashPreferences.splashMode = STASplashModeTemplate;
-[sdk showSplashAdWithPreferences:splashPreferences];
+var splashPreferences: STASplashPreferences = STASplashPreferences()
+splashPreferences.splashMode = STASplashModeTemplate
+sdk.showSplashAdWithPreferences(splashPreferences)
 ```
 
 ###Splash Preferences API
