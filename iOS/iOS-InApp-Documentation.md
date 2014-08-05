@@ -21,7 +21,6 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 ##Step 1, Adding the StartApp SDK to your project
 ####Add the StartApp SDK files to your application project directory
 1. Right-click on you project and choose "Add Files to…"
-1. Right-click on you project and choose "Add Files to…"
 <br></br>[[/iOS/images/AddFilesTo.png]]
 2. Add the StartApp SDK files:
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartApp.framework_
