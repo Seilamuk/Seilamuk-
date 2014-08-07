@@ -11,7 +11,7 @@ Banner banner = (com.startapp.android.publish.banner.Banner) findViewById(R.id.s
 startAppBanner.hideBanner();
 ```
 
-Where ``R.id.startAppBanner`` is the banner's id from the manifest file.
+Where ``R.id.startAppBanner`` is the banner's id from the layout XML file.
 
 In order to show the banner again, simply use the showBanner() method.
 
@@ -57,7 +57,7 @@ Add the following View inside your Activity layout .XML:
 
 <a name="AddBannerProgrammatically" />
 ##Adding a banner programmatically 
-You can add a banner programmatically, instead of using the manifest XML.
+You can add a banner programmatically, instead of using the layout XML.
 
 For example, this is a basic example of adding a center-aligned banner to the bottom of the layout:
 ```java
@@ -74,10 +74,6 @@ bannerParameters.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 // Add to main Layout
 mainLayout.addView(startAppBanner, bannerParameters);
 ```
-
-Where ``R.id.startAppBanner`` is the banner's id from the manifest file.
-
-In order to show the banner again, simply use the showBanner() method.
 
 [Back to top](#top)
 
