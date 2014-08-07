@@ -55,6 +55,32 @@ Add the following View inside your Activity layout .XML:
 
 [Back to top](#top)
 
+<a name="AddBannerProgrammatically" />
+##Adding a banner programmatically 
+You can add a banner programmatically, instead of using the manifest XML.
+
+For example, this is a basic example of adding a center-aligned banner to the bottom of the layout:
+```java
+// Get the Main relative layout of the entire activity
+RelativeLayout mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);   
+// Define StartApp Banner
+Banner startAppBanner = new Banner(this);
+RelativeLayout.LayoutParams bannerParameters =
+			new RelativeLayout.LayoutParams(
+						RelativeLayout.LayoutParams.WRAP_CONTENT,
+						RelativeLayout.LayoutParams.WRAP_CONTENT);
+bannerParameters.addRule(RelativeLayout.CENTER_HORIZONTAL);
+bannerParameters.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);    
+// Add to main Layout
+mainLayout.addView(startAppBanner, bannerParameters);
+```
+
+Where ``R.id.startAppBanner`` is the banner's id from the manifest file.
+
+In order to show the banner again, simply use the showBanner() method.
+
+[Back to top](#top)
+
 <a name="SelectInterstitial" />
 ##Selecting Interstitial Ad Type
 We highly recommend using our Automatic mode, which automatically selects the best Interstitial Ad to display, meaning the type of Ads that will generate the most revenue for you.  
@@ -99,33 +125,6 @@ protected void onRestoreInstanceState (Bundle savedInstanceState){
 ```
 
 [Back to top](#top)
-
-<a name="AddBannerProgrammatically" />
-##Adding a banner programmatically 
-You can add a banner programmatically, instead of using the manifest XML.
-
-For example, this is a basic example of adding a center-aligned banner to the bottom of the layout:
-```java
-// Get the Main relative layout of the entire activity
-RelativeLayout mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);   
-// Define StartApp Banner
-Banner startAppBanner = new Banner(this);
-RelativeLayout.LayoutParams bannerParameters =
-			new RelativeLayout.LayoutParams(
-						RelativeLayout.LayoutParams.WRAP_CONTENT,
-						RelativeLayout.LayoutParams.WRAP_CONTENT);
-bannerParameters.addRule(RelativeLayout.CENTER_HORIZONTAL);
-bannerParameters.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);    
-// Add to main Layout
-mainLayout.addView(startAppBanner, bannerParameters);
-```
-
-Where ``R.id.startAppBanner`` is the banner's id from the manifest file.
-
-In order to show the banner again, simply use the showBanner() method.
-
-[Back to top](#top)
-
 	
 <a name="CloseInterstitial" />
 ##Explicitly Closing an Interstitial Ad
