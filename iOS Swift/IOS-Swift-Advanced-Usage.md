@@ -148,7 +148,7 @@ _STASplashModeUserDefined_
 _STASplashModeTemplate_  
 
 **Usage:**  
-``splashPreferences.splashMode = STASplashModeTemplate;``
+``splashPreferences.splashMode = STASplashModeTemplate``
 
 ####►Change splash image (for user-defined mode)
 Change the splash screen image, instead of using the default one. 
@@ -172,7 +172,7 @@ _STASplashTemplateThemeGloomy_
 _STASplashTemplateThemeOcean_  
 
 **Usage:**  
-``splashPreferences.splashTemplateTheme = STASplashTemplateThemeBlaze;``  
+``splashPreferences.splashTemplateTheme = STASplashTemplateThemeBlaze``  
 
 ####►Changing template's icon and title (for template mode)
 The SDK uses your default application's name and icon. You can choose however to use your own assets.
@@ -210,7 +210,7 @@ _STASplashLoadingIndicatorTypeIOS_
 _STASplashLoadingIndicatorTypeDots_  
 
 **Usage:**  
-``splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeDots;``  
+``splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeDots``  
 
 ####►Change loading indicator's position (for user-defined mode)
 The loading indicator is displayed by default on the center of the screen. You can choose however to set a custom position.
@@ -221,7 +221,7 @@ The loading indicator is displayed by default on the center of the screen. You c
 _CGPointMake(x, y)_  
 
 **Usage:**  
-``splashPreferences.splashLoadingIndicatorCenterPoint = CGPointMake(100, 100);``  
+``splashPreferences.splashLoadingIndicatorCenterPoint = CGPointMake(100, 100)``  
 
 
 ####►Force landscape orientation (for user-defined and template modes)
