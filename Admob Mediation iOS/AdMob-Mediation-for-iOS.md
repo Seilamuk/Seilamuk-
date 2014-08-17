@@ -33,9 +33,9 @@ For any questions or difficulties during this process, please contact us via [su
 <br></br>
 <a name="step3" />
 ##Step 3, Integrating the AdMob Mediation Adapter
-Add the required AdMob adapter classes from the zip file to your project:
-<img src="./Admob%20Mediation%20iOS/images/V.png" width="12px" />  STAAdMobCustomEventBanner 
-<img src="./Admob%20Mediation%20iOS/images/V.png" width="12px" />  STAAdMobCustomEventInterstitial
+Add the required AdMob adapter classes from the zip file to your project:  
+<img src="./Admob%20Mediation%20iOS/images/V.png" width="12px" />  STAAdMobCustomEventBanner   
+<img src="./Admob%20Mediation%20iOS/images/V.png" width="12px" />  STAAdMobCustomEventInterstitial  
 
 [Back to top](#top)
 
