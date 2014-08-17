@@ -24,7 +24,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartApp.framework_
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartApp.bundle_
 
-####Add the libStartApp.a to the Build Phases of the desired target
+####Add the StartApp.framework to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab
