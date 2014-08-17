@@ -6,4 +6,4 @@ This wiki is the main source of documentation for developers working with StartA
 
 | Android |  iOS | Support                       
 |---|---|---
-| [<img src="https://raw.githubusercontent.com/wiki/StartApp-SDK/Documentation/images/android-icon.png">](Android-InApp-Documentation) | [<img src="https://raw.githubusercontent.com/wiki/StartApp-SDK/Documentation/images/ios-icon.png">](iOS-InApp-Documentation)| [<img src="https://raw.githubusercontent.com/wiki/StartApp-SDK/Documentation/images/support-icon.png" >](https://support.startapp.com/home) 
+| [<img src="https://raw.githubusercontent.com/wiki/StartApp-SDK/Documentation/images/android-icon.png" width="117px" >](Android-InApp-Documentation) | [<img src="https://raw.githubusercontent.com/wiki/StartApp-SDK/Documentation/images/ios-icon.png" width="117px" >](iOS-InApp-Documentation)| [<img src="https://raw.githubusercontent.com/wiki/StartApp-SDK/Documentation/images/support-icon.png" width="117px">](https://support.startapp.com/home) 
