@@ -112,6 +112,7 @@ Set your view controller as a delegate so it is able to receive callbacks from t
  - (void) didShowAd:(STAAbstractAd*)ad;
  - (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
  - (void) didCloseAd:(STAAbstractAd*)ad;
+ - (void) didClickAd:(STAAbstractAd*)ad;
  ```
 
 [Back to top](#top)

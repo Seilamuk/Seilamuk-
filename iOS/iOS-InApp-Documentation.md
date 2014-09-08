@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Last SDK Version: 2.2.1**
+**Last SDK Version: 2.3.0**
 
 **For Swift documentation, please [click here](https://github.com/StartApp-SDK/Documentation/wiki/iOS-Swift-InApp-Documentation).**
 
@@ -243,7 +243,7 @@ Return ads are enabled and activated by default. If you want to disable this fea
 > - You can find your "developerId" and "appId" the same way as in step 3 above
 > - This example shows the banner at the top of the root view controller (``self.view``), but you can pass any other view where you want to show the banner
 
-**3** Finally, implement ``didRotateFromInterfaceOrientation`` in your view controller
+**3** Implement ``didRotateFromInterfaceOrientation`` in your view controller
 ```objectivec
 // YourViewController.m
 
@@ -252,6 +252,17 @@ Return ads are enabled and activated by default. If you want to disable this fea
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];    
 }
 ```
+
+**4** If your app supports iOS 8, implement ``viewWillTransitionToSize`` in your view controller
+```objectivec
+// YourViewController.m
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [bannerView viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+	[super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+}  
+```
+
 
 <a name="PositioningTheBanner" />
 ####Positioning the banner
