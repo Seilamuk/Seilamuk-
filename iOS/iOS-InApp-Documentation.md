@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Last SDK Version: 2.3.0**
+**Last SDK Version: 2.3.1**
 
 **For Swift documentation, please [click here](https://github.com/StartApp-SDK/Documentation/wiki/iOS-Swift-InApp-Documentation).**
 
@@ -238,6 +238,8 @@ Return ads are enabled and activated by default. If you want to disable this fea
     [super dealloc];
 }
 ```
+
+The ``STA_AutoAdSize`` detects the width of the device's screen in its current orientation, and provides the optimal banner for this size.
 
 > **NOTE:**
 > - You can find your "developerId" and "appId" the same way as in step 3 above
