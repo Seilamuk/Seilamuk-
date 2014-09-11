@@ -8,7 +8,7 @@ In order to hide an already displayed banner, find the banner's view and use the
 **For example:**  
 ```java
 Banner banner = (com.startapp.android.publish.banner.Banner) findViewById(R.id.startAppBanner); 
-startAppBanner.hideBanner();
+banner.hideBanner();
 ```
 
 Where ``R.id.startAppBanner`` is the banner's id from the layout XML file.
