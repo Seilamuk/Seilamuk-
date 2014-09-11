@@ -299,7 +299,7 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 1. Remove all old StartApp files (including all .h and .m files, StartApp.bundle and StartApp.framework).  
 2. Clean your project  
 
-<img src="./iOS/images/clean.png" />  
+ <img src="./iOS/images/clean.png" />  
 
 3. Continue to add the new StartApp SDK files to your project, as describes [here](iOS-InApp-Documentation#step1).  
 
