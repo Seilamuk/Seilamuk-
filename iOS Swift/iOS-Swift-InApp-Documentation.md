@@ -221,13 +221,25 @@ The ``STA_AutoAdSize`` detects the width of the device's screen in its current o
 
 > **NOTE:** this example shows the banner at the bottom of the root view controller (``self.view``), but you can pass any other view where you want to show the banner
 
-**3** Finally, implement ``didRotateFromInterfaceOrientation`` in your view controller
+**3** Implement ``didRotateFromInterfaceOrientation`` in your view controller
 ```objectivec
 // YourViewController.swift 
 override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation)  {
         // notify StartApp auto Banner orientation change           
         startAppBanner!.didRotateFromInterfaceOrientation(fromInterfaceOrientation)       
         super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
+    }
+```
+
+**4** If your app supports iOS 8, implement ``viewWillTransitionToSize`` in your view controller
+```objectivec
+// YourViewController.m
+override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        // notify StartApp auto Banner orientation change
+        startAppBannerAuto!.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        startAppBannerFixed!.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
     }
 ```
 
