@@ -232,7 +232,7 @@ _CGPointMake(x, y)_
 
 
 ####►Force landscape orientation (for user-defined and template modes)
-The SDK display the splash screen using the orientation supported by the application and the device real orientation. If you choose however to force landscape orientation.
+The SDK display the splash screen using the orientation supported by the application and the device real orientation. You can choose however to force landscape orientation.
 
 **Parameter:** _isLandscape_  
 
