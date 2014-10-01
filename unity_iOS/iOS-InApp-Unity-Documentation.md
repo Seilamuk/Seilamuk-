@@ -110,7 +110,7 @@ StartApp SDK provides two modes for displaying Splash screens:
 **Splash Screen Mode**     |     **Description**
 -------------------------- | -------------------
 User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
-Template Mode                  | StartApp SDK provides a set of pre-defined templates in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](ios-advanced-usage#CustomizingSplashScreen)
+Template Mode                  | StartApp SDK provides a set of pre-defined templates in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](unity-iOS-advanced-usage#CustomizingSplashScreen)
 
 ####Adding the Splash Screen 
 Simply call ``showSplashAd()`` in your ``Start()`` method:
