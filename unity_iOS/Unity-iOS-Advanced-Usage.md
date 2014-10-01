@@ -2,6 +2,25 @@
 
 ######This section describes advanced usage and personal customization options and is not mandatory for the integration.
 
+<a name="hide-banner" />
+###Hiding your banner
+You can hide and show your banner in run time, using ``showBanner`` and ``hideBanner`` methods:
+```csharp
+#if UNITY_IPHONE
+StartAppWrapperiOS.hideBanner();               
+StartAppWrapperiOS.showBanner();
+#endif  
+```
+
+You can check if your banner is currently visible by using the ``bannerIsVisible()`` method:
+```csharp
+#if UNITY_IPHONE
+StartAppWrapperiOS.bannerIsVisible();
+#endif  
+```
+
+[Back to top](#top)
+
 <a name="interstitial-customizations" />
 ##Customizing your Interstitial Ad
 You can choose to show a specific type of interstitial ad, as well as getting callbacks events, using the ``STAInterstitialProperties`` object.
@@ -80,7 +99,20 @@ public class StartAppGameObject : MonoBehaviour {
         Debug.Log("didCloseAd");
         #endif    
     }
+    void didClickAd() {
+        #if UNITY_IPHONE
+        Debug.Log("didClickAd");
+        #endif    
+    }
 }
+```
+
+###Checking if ad is ready
+You can check if your ad is loaded and ready to use, by using the ``isAdReady()`` method:
+```csharp
+#if UNITY_IPHONE
+StartAppWrapperiOS.isAdReady();
+#endif 
 ```
 
 [Back to top](#top)
@@ -187,3 +219,91 @@ Use one of your GameObjects as a delegate to get callbacks from the banner ad. E
  ```
 
 [Back to top](#top)
+
+
+<a name="CustomizingSplashScreen" />
+##Customizing your Splash Screen
+You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAd`` with an initialized ``STASplashPreferences`` object.
+
+For example - using splash preferences to choose a template mode with a "blaze" theme:
+```csharp
+StartAppWrapperiOS.STASplashPreferences splashPreferences = new StartAppWrapperiOS.STASplashPreferences();
+splashPreferences.mode = StartAppWrapperiOS.STASplashMode.STASplashModeTemplate;
+splashPreferences.templateTheme = StartAppWrapperiOS.STASplashTemplateTheme.STASplashTemplateThemeBlaze;
+StartAppWrapperiOS.showSplashAd(splashPreferences);
+```
+
+###Splash Preferences API
+The following API describes all customization options available for the splash screen.
+
+####►Splash screen mode
+Decide whether to use user-defined or template mode.
+
+**Parameter:** _mode_
+
+**Values:**   
+_STASplashModeUserDefined_  
+_STASplashModeTemplate_  
+
+**Usage:**  
+``splashPreferences.mode = StartAppWrapperiOS.STASplashMode.STASplashModeTemplate;``
+
+####►Choosing splash template (for template mode)
+Choose of of 6 pre-designed templates.
+
+**Parameter:** _templateTheme_  
+
+**Values:**   
+_STASplashTemplateThemeDeepBlue_  
+_STASplashTemplateThemeSky_  
+_STASplashTemplateThemeAshenSky_  
+_STASplashTemplateThemeBlaze_  
+_STASplashTemplateThemeGloomy_  
+_STASplashTemplateThemeOcean_  
+
+**Usage:**  
+``splashPreferences.templateTheme = STASplashTemplateThemeBlaze;``  
+
+
+####►Changing template's icon and title (for template mode)
+The SDK uses your default application's name and icon. You can choose however to use your own assets.
+
+**Parameters:**   
+_templateIconImageName_  
+_templateAppName_     
+
+**Usage:**  
+```objectivec
+splashPreferences.templateIconImageName = "MyIcon";
+splashPreferences.templateAppName = "MyAppName";
+```
+
+
+####►Choose loading indicator's type (for user-defined and template modes)
+Choose which loading indicator type to display: iOS default activity indicator or a "dots" loading indicator
+
+**Parameter:** _loadingIndicatorType_  
+
+**Values:**   
+_STASplashLoadingIndicatorTypeIOS_  
+_STASplashLoadingIndicatorTypeDots_  
+
+**Usage:**  
+``splashPreferences.loadingIndicatorType = STASplashLoadingIndicatorTypeDots;``  
+
+####►Change loading indicator's position (for user-defined mode)
+The loading indicator is displayed by default on the center of the screen. You can choose however to set a custom position.
+
+**Parameter:**   
+_loadingIndicatorCenterPoint.x_  
+_loadingIndicatorCenterPoint.y_  
+ 
+**Usage:**  
+```
+splashPreferences.loadingIndicatorCenterPoint.x = 30;
+splashPreferences.loadingIndicatorCenterPoint.y = 30;
+```
+
+[Back to top](#top)
+
+

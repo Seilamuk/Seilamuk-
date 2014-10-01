@@ -4,12 +4,18 @@
 
 [**Step 2, Updating your StartApp data file**](iOS-InApp-Unity-Documentation#step2)
 
-[**Step 3, Showing Banners**](iOS-InApp-Unity-Documentation#step3)
+[**Showing the Splash Ad**](iOS-InApp-Unity-Documentation#splash-ads)
 
-[**Step 4, Showing Interstitial Ads**](iOS-InApp-Unity-Documentation#step4)
+[**Return Ads**](iOS-InApp-Unity-Documentation#return-ads)
 
-[**Step 5, Build Your Unity Project**](iOS-InApp-Unity-Documentation#step5)
+[**Showing Banners**](iOS-InApp-Unity-Documentation#step3)
+
+[**Showing Interstitial Ads**](iOS-InApp-Unity-Documentation#step4)
+
+[**Build Your Unity Project**](iOS-InApp-Unity-Documentation#step5)
 
 [**Advanced Usage**](unity-iOS-advanced-usage)<br></br>
+  [Hiding your banner](unity-iOS-advanced-usage#hide-banner)<br></br> 
   [Customizing your Interstitial Ad](unity-iOS-advanced-usage#interstitial-customizations)<br></br> 
+  [Customizing your Splash Screen](unity-iOS-advanced-usage#CustomizingSplashScreen)<br></br> 
   [Customizing your Banner Ad](unity-iOS-advanced-usage#banner-customizations)<br></br> 
