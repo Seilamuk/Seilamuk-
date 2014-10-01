@@ -4,13 +4,13 @@
 
 [**Step 2, Updating your StartApp data file**](iOS-InApp-Unity-Documentation#step2)
 
+[**Showing Interstitial Ads**](iOS-InApp-Unity-Documentation#step4)
+
 [**Showing the Splash Ad**](iOS-InApp-Unity-Documentation#splash-ads)
 
 [**Return Ads**](iOS-InApp-Unity-Documentation#return-ads)
 
 [**Showing Banners**](iOS-InApp-Unity-Documentation#step3)
-
-[**Showing Interstitial Ads**](iOS-InApp-Unity-Documentation#step4)
 
 [**Build Your Unity Project**](iOS-InApp-Unity-Documentation#step5)
 
