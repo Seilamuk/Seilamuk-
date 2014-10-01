@@ -49,30 +49,6 @@ To find your application ID, click on the <img src="./Android/images/dash2.jpg" 
 
 
 <br></br>
-<a name="step3" />
-##Showing Banners
-To add a banner to your application add the following code to your `Start()` method:
-
-```csharp
-void Start () {
-        #if UNITY_IPHONE
-        StartAppWrapperiOS.addBanner(StartAppWrapperiOS.BannerPosition.BOTTOM);
-        #endif    
-    }
-```
-
-**Parameters**
-
-_BannerPosition_ - position of the banner. Can receive one of the following:
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
-<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
-
-You can change the banner position and size, as well as getting callbacks events. For detailed instructions please refer to the [Advanced Usage](unity-iOS-advanced-usage#banner-customizations).
-
-[Back to top](#top)
-
-
-<br></br>
 <a name="step4" />
 ##Showing Interstitial Ads
 
@@ -143,6 +119,30 @@ void Start () {
 ```
 
 Please note that you should attach the script to an object which is being allocated upon application's launch (for example, "Main Camera").    
+
+[Back to top](#top)
+
+
+<br></br>
+<a name="step3" />
+##Showing Banners
+To add a banner to your application add the following code to your `Start()` method:
+
+```csharp
+void Start () {
+        #if UNITY_IPHONE
+        StartAppWrapperiOS.addBanner(StartAppWrapperiOS.BannerPosition.BOTTOM);
+        #endif    
+    }
+```
+
+**Parameters**
+
+_BannerPosition_ - position of the banner. Can receive one of the following:
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
+<br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
+
+You can change the banner position and size, as well as getting callbacks events. For detailed instructions please refer to the [Advanced Usage](unity-iOS-advanced-usage#banner-customizations).
 
 [Back to top](#top)
 
