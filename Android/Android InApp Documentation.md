@@ -118,7 +118,6 @@ public void onPause() {
 }
 ```
 
-
 ####Showing Exit Ads
 Add the following code to show an ad upon exiting your application.
 
@@ -150,6 +149,9 @@ public void btnOpenActivity (View view){
     startAppAd.loadAd();
 }
 ```
+
+> **IMPORTANT:** loading an ad might take a few seconds so it's important not to show the ad immediately after loading it. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. You can use the "onReceiveAd" callback to check if an ad was loaded and ready to use (see [Adding a Callback when an Interstitial Ad is loaded](android-advanced-usage#adding-a-callback-when-an-interstitial-ad-is-loaded)).
+
 
 [Back to top](#top)
 
