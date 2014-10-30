@@ -479,7 +479,7 @@ Get the ad's package name in the Google Play store (for example, "com.startapp.q
 Call this method when you show the ad in your application. 
 
 ######Parameters<br></br>
-*this* - the context of the host app 
+*context* – the context of the host activity
 
 #####► To be called when the user clicks on the ad
 > **``public void sendClick(Context context)``**<br></br>
@@ -487,6 +487,6 @@ Call this method when you show the ad in your application.
 Call this method when the user clicks on the ad.  
 
 ######Parameters<br></br>
-*this* - the context of the host app 
+*context* – the context of the host activity
 
 [Back to top](#top)
