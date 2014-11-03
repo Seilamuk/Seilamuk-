@@ -19,7 +19,7 @@ In order to add StartApp SDK to your application please follow the following ste
 
 <img src="./unity/images/unity-android-import-package.png" />
 
-**3.** Import all the package's items by pressing "All" and then "Import"
+**3.** Import all the package's items by pressing "All" and then "Import". If you already have an AndroidManifest.xml file, uncheck it before pressing "Import". 
 <img src="./unity/images/unity-android-import-all.png" />
 
 [Back to top](#top)
@@ -29,9 +29,8 @@ In order to add StartApp SDK to your application please follow the following ste
 <a name="step2" />
 ##Step 2, Updating your Manifest File
 Update the _manifest.xml_ (in the _Android_ folders) as follow:
-
-**1.** Under the 'manifest' node replace \<package_name\> with your real package name.  
-**2.** Make sure the following activities are declared under the \<application\> element:
+  
+**1.** Make sure the following activities are declared under the \<application\> element:
 
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
@@ -44,7 +43,7 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
-**3.** Make sure the meta-data parameter named _unityplayer.ForwardNativeEventsToDalvik_ is set to **_true_**:
+**2.** Make sure the meta-data parameter named _unityplayer.ForwardNativeEventsToDalvik_ is set to **_true_**:
 ```xml
 <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
 ```
