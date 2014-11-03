@@ -73,14 +73,8 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
   *  **Label:**    
   <img src="./iOS/images/V.png" width="12px" />  *"StartApp Banner"*  (for banner ads)  
   <img src="./iOS/images/V.png" width="12px" />  *"StartApp Interstitial"*  (for interstitial ads)  
-  *  **Parameter:** leave empty for automatic mode, or use one of the following options:    
-  <img src="./iOS/images/V.png" width="12px" />  *STAAdType_Overlay*  
-  <img src="./iOS/images/V.png" width="12px" />  *STAAdType_FullScreen*  
-  <img src="./iOS/images/V.png" width="12px" />  *STAAdType_OfferWall*    
 
   <img src="./Admob%20Mediation%20iOS/images/admob-add-custom-event.png" />  
-
-  > **NOTE:** we highly recommend leaving this field empty to use the automatic mode which selects the best ad to load.    
 
 6. Click "Continue"
 

@@ -72,14 +72,6 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
  <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Banner:** ``STAMoPubCustomEventBanner``    
 
  <img src="./Mopub%20Mediation%20iOS/images/mopub-inventory.png" />   
-6. Optional - if you want to show a specific Interstitial ad type, fill in the appropriate *class data* under "CUSTOM EVENT CLASS DATA" of your Interstitial ad unit:  
- <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Overlay Ad:** ``{ "adType" : "STAAdType_Overlay" }``  
- <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Full Page:** ``{ "adType" : "STAAdType_FullScreen" }``  
- <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **App Wall:** ``{ "adType" : "STAAdType_Offerwall" }``  
- 
- <img src="./Mopub%20Mediation%20iOS/images/mopub-custom-event-data.png" />   
-
- > **NOTE:** we highly recommend leaving this field empty in order to use the automatic mode which selects the best ad to load.    
 
 7. Click "Save and Continue"
 8. Click the "StartApp" network and make sure the "Run" button is active  
