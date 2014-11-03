@@ -40,7 +40,7 @@ Copy the adapter jar file from the zip to the “Assets/Plugins/Android” direc
 <br></br>
 <a name="step4" />
 ##Step 4, Integrating StartApp In-App SDK
-Integrate the StartApp SDK by implementing steps 1-3 <a href="https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Documentation" target="_blank">from the integration manual.</a> 
+Integrate the StartApp SDK by implementing steps 1-3 <a href="https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Unity-Documentation" target="_blank">from the integration manual.</a> 
 You can ignore all the following steps unless you want to use StartApp Ads directly instead of via MoPub mediation network.
 
 After completing Step 3 of the integration, add the following line to your code. Make sure this code is executed before using Mopub API:
