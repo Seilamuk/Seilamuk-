@@ -43,7 +43,7 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
-**2.** Make sure the meta-data parameter named _unityplayer.ForwardNativeEventsToDalvik_ is set to **_true_**:
+**2.** Make sure the meta-data parameter named `unityplayer.ForwardNativeEventsToDalvik` is set to `true`:
 ```xml
 <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
 ```
