@@ -45,9 +45,8 @@ You can ignore all the following steps unless you want to use StartApp Ads direc
 
 After completing Step 3 of the integration, add the following line to your code. Make sure this code is executed before using Mopub API:
 ```java
-StartAppWrapper.init(false);
+StartAppWrapper.init();
 ```
-The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's not an integral part of MoPub mediation. You can still enjoy this attractive ad unit directly by omitting the ``false`` parameter and just call the ``init()`` method. In this case Return Ads will be activated and display StartApp direct ads, outside of the MoPub Mediation network. 
 
 [Back to top](#top)
 
