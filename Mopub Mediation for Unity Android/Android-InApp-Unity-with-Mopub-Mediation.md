@@ -2,7 +2,7 @@
 
 <img src="./images/unity+mopub.png" />   
 
-This document describes the procedure for serving StartApp Ads in your application using MoPub mediation network
+This document describes the procedure for serving StartApp Ads in your Unity Android application using MoPub mediation network
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
