@@ -1,6 +1,6 @@
 <a name="top" />
 
-<img src="./Mopub%20Mediation%20Android/images/mopub_logo.png" />   
+<img src="./images/unity+mopub.png" />   
 
 This document describes the procedure for serving StartApp Ads in your application using MoPub mediation network
 
