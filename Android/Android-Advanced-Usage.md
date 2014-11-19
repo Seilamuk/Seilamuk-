@@ -86,11 +86,9 @@ If you do not wish to use the automatic mode, ``startAppAd.loadAd()`` can be dir
 **Parameter Name** | **Description** | **Specific Ad Load Example**
 ---------------------- | ---------------------- | ---------------------- 
 AUTOMATIC **(Recommended)** | Auto-selection of the best next Interstitial Ad to display, meaning the type of Ads that will generate the most revenue for you. This is the default | ``startAppAd.loadAd(AdMode.AUTOMATIC)``
-FULLPAGE  | A full-page Interstitial Ad | ``startAppAd.loadAd(AdMode.FULLPAGE)``
 OFFERWALL | Auto-selection of a Standard 2D full screen Offer Wall or a 3D Offer Wall | ``startAppAd.loadAd(AdMode.OFFERWALL)``
-OVERLAY   | An overlay Interstitial Ad is a full page Ad that runs on top of your application | ``startAppAd.loadAd(AdMode.OVERLAY)``
 
-When using this mode, the following additional methods must be implemented in the Activity’s lifecycle:
+When using this mode, the following additional methods must be implemented in the Activity’s life-cycle:
 
 **1**     Override the ``onSaveInstanceState(Bundle outState)`` method and add a call to ``startAppAd.onSaveInstanceState(outstate)``.
 
