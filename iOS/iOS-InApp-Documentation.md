@@ -266,6 +266,15 @@ Value | Position | Behavior
 
 [Back to top](#top)
 
+<a name="Native" />
+##Native Ads
+A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design an ad experience that perfectly fits your application's scene, content and functionality.
+
+For a full integration guide, please refer to the ["Using Native Ads"](ios-advanced-usage#using-native-ads) section under the ["Advanced Usage"](ios-advanced-usage#using-native-ads) page.
+
+[Back to top](#top)
+
+
 <a name="Demographic" />
 ##Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.

@@ -304,3 +304,132 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 3. Continue to add the new StartApp SDK files to your project, as describes [here](iOS-InApp-Documentation#step1).  
 
 [Back to top](#top)
+
+<a name="using-native-ads" />
+##Integrating Native Ads
+###Initializing and Loading Native Ads  
+First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to use StartApp Native ad.
+```objectivec
+// YourViewController.h
+
+#import <StartApp/StartApp.h>
+
+@interface YourViewController : UIViewController 
+{
+    STAStartAppNativeAd *startAppNativeAd;    // ADD THIS LINE
+} 
+```
+
+In your view controller, initialize **STAStartAppNativeAd** within the ``viewDidLoad()`` method and load the ad with your selected preferences.
+```objectivec
+// YourViewController.m 
+
+- (void)viewDidLoad 
+{
+    [super viewDidLoad];
+    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
+    [startAppNativeAd loadAd];
+}
+```
+
+You can check if the ad has been loaded, using  ``startAppNativeAd.adIsLoaded;``.
+
+###Using Native Ad delegates
+Set your view controller as a delegate so it is able to receive callbacks from the native ad.
+
+1. Add the STADelegateProtocol to the header file
+ ```objectivec
+ @interface YourViewController : UIViewController <STADelegateProtocol>
+ {
+     STAStartAppNativeAd *startAppNativeAd;    
+ } 
+ ```
+
+2. Implement the following functions
+ ```objectivec
+ - (void) didLoadAd:(STAAbstractAd*)ad;
+ - (void) failedLoadAd:(STAAbstractAd*)ad withError:(NSError *)error;
+ ```
+
+3. Load an ad using ``loadAdWithDelegate``
+ ```objectivec
+ [startAppNativeAd loadAdWithDelegate:self];
+ ```
+
+###Using Native Ad Preferences
+**STANativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the NativeAdPreferences object, please refer to [NativeAdPreferences API](#NativeAdPreferencesAPI).
+
+In order to use the STANativeAdPreferences object, simply use it when loading the ad:
+```
+[startAppNativeAd loadAdWithNativeAdPreferences:pref];
+```
+
+Example: load 4 native ads with 100x100 icons, send lat/lon and register for callbacks:  
+```objectivec
+// YourViewController.m 
+
+- (void)viewDidLoad 
+{
+    [super viewDidLoad];
+    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
+    STANativeAdPreferences *pref = [[STANativeAdPreferences alloc]init];
+    pref.adsNumber = 4; // Select ads number
+    pref.bitmapSize = SIZE_100X100;     //Select image quality
+    pref.autoBitmapDownload = YES;    // When set to NO no images will be downloaded by the SDK
+	
+    // You can pass longitude/latitude if available 
+	pref.userLocation.latitude = 31.776719;
+    pref.userLocation.longitude = 35.234508;
+	
+    [startAppNativeAd loadAdWithDelegate:self withNativeAdPreferences:pref]; 
+}
+```
+
+###Using the Native Ad Object
+After initializing and loading your **STAStartAppNativeAd**  object, use the **STANativeAdDetails** object to get details of all returning ads. The STANativeAdDetails object provides access to each ad's details, such as the ad's title, description, image, etc. This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **STAStartAppNativeAd** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
+
+Example: get some details of the 3rd ad.
+```objectivec
+STANativeAdDetails *adDetails = [startAppNativeAd.adsDetails objectAtIndex:3];
+titleLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:3] title];
+descriptionLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:3] description];
+imageView.image=[[startAppNativeAd.adsDetails objectAtIndex:3] imageBitmap];
+```
+
+> **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
+
+###Showing and Clicking a Native Ad
+Once you decide to actually show a native ad, you must call the ``[adDetails sendImpression]`` method.  
+  
+Once the user clicks on the ad, you must call ``[adDetails sendClick]`` method.  
+
+<a name="NativeAdPreferencesAPI" />
+###NativeAdPreferences API
+Parameter name | Description | Values
+--- | --- | ---
+*`adsNumber `* | number of native ads to be retrieved | a number between 1-10
+*`bitmapSize `* | the size of the icon's bitmap to be retrieved | SIZE72X72, SIZE100X100, SIZE150X150, SIZE340X340
+*`autoBitmapDownload `* | Select the method for retrieving the ad's icon. You can get the icon's URL only, or pre-cache it into a bitmap object | "YES"=pre cached, "NO"=URL only
+*`userLocation.latitude`* | the device's latitude  | latitude
+*`userLocation.longitude`* | the device's longitude | longitude
+
+<a name="STANativeAdDetailsAPI" />
+###STANativeAdDetails API
+Parameter name | Description | Return value
+--- | --- | ---
+*`title`* | Get the Ad's title | NSString
+*`description`* | Get the Ad's description | NSString
+*`imageBitmap`* | Get the actual icon of the ad, according to the selected size (if autoBitmapDownload="YES") | UIImage
+*`imageUrl`* | Get the icon URL of the ad, according to the selected size (if autoBitmapDownload="NO") | NSString
+*`category`* | Get the category of the ad in the App Store | NSString 
+*`adId`* | Get the ad's package name in the App Store | NSString
+*`rating`* | Get the rating of the ad in the App Store. The rating range is 1-5 | NSNumber 
+
+
+[Back to top](#top)
+
+
+
+
+
+

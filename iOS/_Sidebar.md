@@ -14,6 +14,8 @@
 
 [**Showing banners**](iOS-InApp-Documentation#step5)
 
+[**Native Ads**](iOS-InApp-Documentation#Native)
+
 [**Enjoy Higher eCPM with Demographic-Targeted Ads**](iOS-InApp-Documentation#Demographic)
 
 [**Updating your IDFA Settings**](iOS-InApp-Documentation#IDFA)
@@ -30,4 +32,4 @@
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Explicitly selecting the type of interstitial ad to load](ios-advanced-usage#SelectInterstitialType)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Customizing your Splash Screen](ios-advanced-usage#CustomizingSplashScreen)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Showing banners in UITableView](ios-advanced-usage#table-view)<br></br> 
-
+<img src="./iOS/images/V-blue.png" width="8px" /> [ Integrating Native Ads](ios-advanced-usage#using-native-ads<br></br> 
