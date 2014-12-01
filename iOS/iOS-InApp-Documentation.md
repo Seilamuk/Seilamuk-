@@ -76,6 +76,43 @@ To find your application ID, click on the <img src="./iOS/images/dash2.jpg" alig
 
 [Back to top](#top)
 
+<a name="splash-ads" />
+##Showing the Splash Ad
+A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
+A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
+
+StartApp SDK provides two modes for displaying Splash screens:
+
+**Splash Screen Mode**     |     **Description**
+-------------------------- | -------------------
+User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
+Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](ios-advanced-usage#CustomizingSplashScreen)
+
+####Adding the Splash Screen 
+In your application delegate class (_AppDelegate.m_), after initializing the SDK, call the ``sdk showSplashAd`` method:
+```objectivec
+// AppDelegate.m
+
+#import <StartApp/StartApp.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // initialize the SDK with your appID and devID
+    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+    sdk.appID = @"your app Id";
+    sdk.devID = @"your developer id";
+	
+	[sdk showSplashAd];  // display the splash screen
+
+    return YES;
+}
+```
+
+**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](ios-advanced-usage#CustomizingSplashScreen).**
+
+[Back to top](#top)
+
+
 
 <a name="step4" />
 ##Showing Interstitial Ads
@@ -124,42 +161,6 @@ Finally, add the following lines where you want to show the ad
 
 [Back to top](#top)
 
-<a name="splash-ads" />
-##Showing the Splash Ad
-A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
-A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
-
-StartApp SDK provides two modes for displaying Splash screens:
-
-**Splash Screen Mode**     |     **Description**
--------------------------- | -------------------
-User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
-Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](ios-advanced-usage#CustomizingSplashScreen)
-
-####Adding the Splash Screen 
-In your application delegate class (_AppDelegate.m_), after initializing the SDK, call the ``sdk showSplashAd`` method:
-```objectivec
-// AppDelegate.m
-
-#import <StartApp/StartApp.h>
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // initialize the SDK with your appID and devID
-    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-    sdk.appID = @"your app Id";
-    sdk.devID = @"your developer id";
-	
-	[sdk showSplashAd];  // display the splash screen
-
-    return YES;
-}
-```
-
-**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](ios-advanced-usage#CustomizingSplashScreen).**
-
-[Back to top](#top)
-
 
 <a name="return-ads" />
 ##Return Ads
@@ -183,6 +184,15 @@ Return ads are enabled and activated by default. If you want to disable this fea
     return YES;
 }
 ```
+
+[Back to top](#top)
+
+
+<a name="Native" />
+##Native Ads
+A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design an ad experience that perfectly fits your application's scene, content and functionality.
+
+For a full integration guide, please refer to the ["Using Native Ads"](ios-advanced-usage#using-native-ads) section under the ["Advanced Usage"](ios-advanced-usage#using-native-ads) page.
 
 [Back to top](#top)
 
@@ -263,14 +273,6 @@ Value | Position | Behavior
 
 > **NOTE** <br></br>
 > If you wish to use a fixed origin for the banner, please refer to the ["Advanced Manual"](ios-advanced-usage)
-
-[Back to top](#top)
-
-<a name="Native" />
-##Native Ads
-A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design an ad experience that perfectly fits your application's scene, content and functionality.
-
-For a full integration guide, please refer to the ["Using Native Ads"](ios-advanced-usage#using-native-ads) section under the ["Advanced Usage"](ios-advanced-usage#using-native-ads) page.
 
 [Back to top](#top)
 

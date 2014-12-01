@@ -110,20 +110,6 @@ func didCloseAd(ad: STAAbstractAd)
 
 [Back to top](#top)
 
-<a name="SelectInterstitialType" />
-###Explicitly selecting the type of interstitial ad to load
-When calling an interstitial ad, the ad type with the best performance will be automatically selected. If you would like to explicitly choose the type of ad, specify it when calling loadAd. 
-
-The options for this parameter are:
-
-Constant Name | Description | Specific Ad Load Example
---- | --- | ---
-*`STAAdType_FullScreen`* | A full-page ad | `startAppAd!.loadAd(STAAdType_FullScreen)`
-*`STAAdType_OfferWall`* | A full page offerwall | `startAppAd!.loadAd(STAAdType_OfferWall)`
-*`STAAdType_Overlay`* | An overlay Ad is a full page Ad that runs on top of your application  | `startAppAd!.loadAd(STAAdType_Overlay)`
-
-[Back to top](#top)
-
 <a name="CustomizingSplashScreen" />
 ##Customizing your Splash Screen
 You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAdWithPreferences`` method when initializing the splash screen in your _AppDelegate_ class.
