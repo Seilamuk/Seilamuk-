@@ -31,4 +31,4 @@
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Using Interstitial delegates](ios-advanced-usage#UsingInterstitialDelegate)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Customizing your Splash Screen](ios-advanced-usage#CustomizingSplashScreen)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Showing banners in UITableView](ios-advanced-usage#table-view)<br></br> 
-<img src="./iOS/images/V-blue.png" width="8px" /> [ Integrating Native Ads](ios-advanced-usage#using-native-ads<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [ Integrating Native Ads](ios-advanced-usage#using-native-ads)<br></br> 
