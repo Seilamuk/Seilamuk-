@@ -77,6 +77,32 @@ mainLayout.addView(startAppBanner, bannerParameters);
 
 [Back to top](#top)
 
+
+<a name="BannerCallbacks" />
+##Adding Banner Callbacks
+If you implemented the banner via the Activity Layout XML, call the ``setBannerListener(BannerListener)`` method, and implement the following methods:
+
+```java
+@Override
+public void onReceiveAd(View banner) {
+}
+@Override
+public void onFailedToReceiveAd(View banner) {
+}
+@Override
+public void onClick(View banner) {
+}
+```
+
+If you implemented the banner programmatically, simply pass a **BannerListener** object in the banner constructor:
+```java
+Banner startAppBanner = new Banner(this, BannerListener);
+```
+
+[Back to top](#top)
+
+
+
 <a name="SelectInterstitial" />
 ##Selecting Interstitial Ad Type
 We highly recommend using our Automatic mode, which automatically selects the best Interstitial Ad to display, meaning the type of Ads that will generate the most revenue for you.  
@@ -188,30 +214,6 @@ startAppAd.showAd(new AdDisplayListener() {
 ```
 
 [Back to top](#top)
-
-<a name="BannerCallbacks" />
-##Adding Banner Callbacks
-If you implemented the banner via the Activity Layout XML, call the ``setBannerListener(BannerListener)`` method, and implement the following methods:
-
-```java
-@Override
-public void onReceiveAd(View banner) {
-}
-@Override
-public void onFailedToReceiveAd(View banner) {
-}
-@Override
-public void onClick(View banner) {
-}
-```
-
-If you implemented the banner programmatically, simply pass a **BannerListener** object in the banner constructor:
-```java
-Banner startAppBanner = new Banner(this, BannerListener);
-```
-
-[Back to top](#top)
-
 
 <a name="CustomizingSplashScreen" />
 ##Customizing the Splash Screen
