@@ -189,6 +189,30 @@ startAppAd.showAd(new AdDisplayListener() {
 
 [Back to top](#top)
 
+<a name="BannerCallbacks" />
+##Adding Banner Callbacks
+If you implemented the banner via the Activity Layout XML, call the ``setBannerListener(BannerListener)`` method, and implement the following methods:
+
+```java
+@Override
+public void onReceiveAd(View banner) {
+}
+@Override
+public void onFailedToReceiveAd(View banner) {
+}
+@Override
+public void onClick(View banner) {
+}
+```
+
+If you implemented the banner programmatically, simply pass a **BannerListener** object in the banner constructor:
+```java
+Banner startAppBanner = new Banner(this, BannerListener);
+```
+
+[Back to top](#top)
+
+
 <a name="CustomizingSplashScreen" />
 ##Customizing the Splash Screen
 StartApp In-Ad provides two modes for displaying splash screens - Template and User-defined. The template splash screen is a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation, as described below. If you want to use your own splash screen, you can provide it as a layout, using the user-defined mode.

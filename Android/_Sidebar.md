@@ -31,6 +31,7 @@
   [Selecting interstitial ad type](android-advanced-usage#SelectInterstitial)<br></br>
   [Explicitly closing an Interstitial Ad](android-advanced-usage#CloseInterstitial)<br></br>
   [Adding Interstitial Callbacks](android-advanced-usage#AddingInterstitialCallbacks)<br></br>
+  [Adding Banner Callbacks](android-advanced-usage#BannerCallbacks)<br></br>
   [Customizing the Splash Screen](android-advanced-usage#CustomizingSplashScreen)<br></br>
   [Integrating Native Ads](android-advanced-usage#using-native-ads)<br></br>
 
