@@ -64,7 +64,7 @@ For example, this is a basic example of adding a center-aligned banner to the bo
 // Get the Main relative layout of the entire activity
 RelativeLayout mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);   
 // Define StartApp Banner
-Banner startAppBanner = new Banner(this);
+Banner startAppBanner = new Banner(context);
 RelativeLayout.LayoutParams bannerParameters =
 			new RelativeLayout.LayoutParams(
 						RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -96,7 +96,7 @@ public void onClick(View banner) {
 
 If you implemented the banner programmatically, simply pass a **BannerListener** object in the banner constructor:
 ```java
-Banner startAppBanner = new Banner(this, BannerListener);
+Banner startAppBanner = new Banner(context, BannerListener);
 ```
 
 [Back to top](#top)
