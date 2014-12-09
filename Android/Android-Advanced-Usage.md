@@ -97,19 +97,16 @@ public void onClick(View banner) {
 If you implemented the banner programmatically, simply pass an implementation of a ``BannerListener`` to the banner's constructor:
 ```java
 Banner startAppBanner = new Banner(context, new BannerListener() {
-			
-			@Override
-			public void onReceiveAd(View banner) {
-			}
-			
-			@Override
-			public void onFailedToReceiveAd(View banner) {
-			}
-			
-			@Override
-			public void onClick(View banner) {
-			}
-		});
+	@Override
+	public void onReceiveAd(View banner) {
+	}
+	@Override
+	public void onFailedToReceiveAd(View banner) {
+	}
+	@Override
+	public void onClick(View banner) {
+	}
+});
 ```
 
 [Back to top](#top)
