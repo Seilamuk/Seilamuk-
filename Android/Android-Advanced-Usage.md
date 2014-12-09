@@ -80,7 +80,7 @@ mainLayout.addView(startAppBanner, bannerParameters);
 
 <a name="BannerCallbacks" />
 ##Adding Banner Callbacks
-If you implemented the banner via the Activity Layout XML, call the ``setBannerListener(BannerListener)`` method, and implement the following methods:
+If you implemented the banner via the Activity Layout XML, obtain the banner's view (using ``findViewById()``, for example) and pass an implementation of a ``BannerListener`` to its ``setBannerListener()`` method. The ``BannerListener`` must implement the following methods:
 
 ```java
 @Override
@@ -94,9 +94,22 @@ public void onClick(View banner) {
 }
 ```
 
-If you implemented the banner programmatically, simply pass a **BannerListener** object in the banner constructor:
+If you implemented the banner programmatically, simply pass an implementation of a ``BannerListener`` to the banner's constructor:
 ```java
-Banner startAppBanner = new Banner(context, BannerListener);
+Banner startAppBanner = new Banner(context, new BannerListener() {
+			
+			@Override
+			public void onReceiveAd(View banner) {
+			}
+			
+			@Override
+			public void onFailedToReceiveAd(View banner) {
+			}
+			
+			@Override
+			public void onClick(View banner) {
+			}
+		});
 ```
 
 [Back to top](#top)
