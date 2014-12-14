@@ -1,7 +1,5 @@
 <a name="top">
 
-**Last SDK Version: 2.2.0**
-
 <a name="hide-banner" />
 ###Hiding your banner
 You can hide and show your banner in run time, using ``showBanner`` and ``hideBanner`` methods:
