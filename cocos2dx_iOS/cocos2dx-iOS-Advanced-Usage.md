@@ -87,9 +87,6 @@ You can get various callbacks from StartApp Ads, by implementing a callback meth
 		...
  }
  ```
-
- Where \<CALLBACK_NAME\> is one of the supported callbacks listed in the next section.
- 
  
 3. Pass _STACallbacks_ when loading the ad:  
  **For Splash:** 
