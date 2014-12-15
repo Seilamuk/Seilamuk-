@@ -10,6 +10,11 @@ startAppBridge->showBanner();
 startAppBridge->isVisible();
 ```
 
+Call ``releaseBanner`` when you want to remove the banner and add it to a new scene/view controller:
+```cpp
+startAppBridge->releaseBanner();
+```
+
 [Back to top](#top)
 
 <a name="ControllingBannerSize" />
@@ -46,7 +51,7 @@ Locating your banner 100 pixels above the view's bottom:
 startAppBridge->setOrigin(0, self.view.frame.size.height - 100);
 ```
 
-You can change the origin of an existing banner, by using the ``setSTABannerSize``/``setSTAAutoOrigin`` methods:
+You can change the origin of an existing banner, by using the _setSTABannerSize_/_setSTAAutoOrigin_ methods:
 ```cpp
 startAppBridge->setSTAAutoOrigin(startappiOS::STAAdOrigin_Top);
 ```
@@ -71,7 +76,7 @@ You can get various callbacks from StartApp Ads, by implementing a callback meth
  ```cpp
  void HelloWorld::STACallbacks(const char *eventName , const char *eventError)
  {
-    if(0==strcmp(eventName, "\<CALLBACK_NAME\>")){
+    if(0==strcmp(eventName, "<CALLBACK_NAME>")){
         ...
     }	
  }
@@ -79,7 +84,7 @@ You can get various callbacks from StartApp Ads, by implementing a callback meth
 
  Where <CALLBACK_NAME> is one of the supported callbacks listed in the next section.
  
-3. Pass _STACallbacks_ when loading the ad:
+3. Pass _STACallbacks_ when loading the ad:  
  **For Splash:** 
  ```cpp
  startAppBridge->showSplashAd(STACallbacks);

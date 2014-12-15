@@ -171,7 +171,7 @@ Value | Position | Behaviour
 `STAAdOrigin_Bottom` | Auto Bottom | The banner will be centered and pinned to the bottom of the view.
 
 > **NOTE** <br></br>
-> If you wish to use a fixed origin for the banner, please refer to the ["Advanced Manual"](cocos2dx-ios-advanced-usage)
+> If you wish to use a fixed origin for the banner, please refer to the ["Advanced Manual"](cocos2dx-ios-advanced-usage#UsingFixedOriginBanner)
 
 [Back to top](#top)
 
