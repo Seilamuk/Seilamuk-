@@ -72,17 +72,24 @@ You can get various callbacks from StartApp Ads, by implementing a callback meth
  static void STACallbacks(const char *eventName , const char *eventError);
  ```
 
-2. Then, add the following method to the relevant cpp file:
+2. Then, implement the _STACallbacks_ callback function with all needed callbacks, in the relevant cpp file.
+ For example:
  ```cpp
  void HelloWorld::STACallbacks(const char *eventName , const char *eventError)
  {
-    if(0==strcmp(eventName, "<CALLBACK_NAME>")){
+    if(0==strcmp(eventName, "didLoadAd")){
         ...
     }	
+    else if(0==strcmp(eventName, "didShowAd")){
+        ...
+    }
+	else 
+		...
  }
  ```
 
- Where <CALLBACK_NAME> is one of the supported callbacks listed in the next section.
+ Where \<CALLBACK_NAME\> is one of the supported callbacks listed in the next section.
+ 
  
 3. Pass _STACallbacks_ when loading the ad:  
  **For Splash:** 
