@@ -41,7 +41,6 @@ In order to add StartApp SDK to your application please follow the following ste
 [Back to top](#top)
 
 
-
 <a name="step3" />
 ##Step 3, Initialization
 In your application delegate class (_AppDelegate.cpp_), include the StartApp SDK and add the following lines to your application's ``didFinishLaunchingWithOptions`` function:
@@ -78,7 +77,7 @@ StartApp SDK provides two modes for displaying Splash screens:
 **Splash Screen Mode**     |     **Description**
 -------------------------- | -------------------
 User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
-Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, contact our Support team.
+Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](cocos2dx-ios-advanced-usage#CustomizingSplashScreen)
 
 ####Adding the Splash Screen 
 In your application delegate class (_AppDelegate.cpp_), after initializing the SDK, call the ``showSplashAd`` method:
@@ -89,11 +88,13 @@ In your application delegate class (_AppDelegate.cpp_), after initializing the S
 
 bool AppDelegate::applicationDidFinishLaunching() 
 {
-    startappiOS* startAppBridge =  startappiOS().sharedInstance();
+    startappiOS* startAppBridge = startappiOS().sharedInstance();
     startAppBridge->showSplashAd();
     return true;
 }
 ```
+
+**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](cocos2dx-ios-advanced-usage#CustomizingSplashScreen).**
 
 [Back to top](#top)
 
@@ -169,6 +170,51 @@ Value | Position | Behaviour
 `STAAdOrigin_Top` | Auto Top | The banner will be centered and pinned to the top of the view. In case the view is a root view controller, the banner will be located under the status bar, if exists.
 `STAAdOrigin_Bottom` | Auto Bottom | The banner will be centered and pinned to the bottom of the view.
 
+> **NOTE** <br></br>
+> If you wish to use a fixed origin for the banner, please refer to the ["Advanced Manual"](cocos2dx-ios-advanced-usage)
+
+[Back to top](#top)
+
+
+<a name="Demographic" />
+##Enjoy Higher eCPM with Demographic-Targeted Ads
+If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
+
+####Set Age and Gender
+Upon initialization, after providing your DevId and AppId, add the age and gender:
+```cpp
+startAppBridge->STAInit("your app Id", "your developer id", "user age", "user gender");
+```
+
++ Replace "user age" with the user's real age 
++ Replace "user gender" with the user's real gender, using *STAGender_Male* or *STAGender_Female*.
+
+
+**Example** - for a 22 years male use:
+```cpp
+// AppDelegate.cpp
+
+#include "StartAppPlugin.h"
+bool AppDelegate::applicationDidFinishLaunching() 
+{
+    startappiOS* startAppBridge = startappiOS().sharedInstance();
+    startAppBridge->STAInit("1234", "5678", 22, startappiOS::STAGender_Male);
+    return true;
+}
+```
+
+(replace "1234" and "5678" with your REAL developer Id and App Id)
+
+####Set Location
+The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad, uasing the _STAAdPreferences_ object:
+
+```cpp
+startappiOS::STAAdPreferences *pref = new startappiOS::STAAdPreferences();
+pref->userLocation.longitude = 32.44444;
+pref->userLocation.latitude = 30.2222;
+
+startAppBridge->loadAd(pref, STACallbacks);
+```
 
 [Back to top](#top)
 

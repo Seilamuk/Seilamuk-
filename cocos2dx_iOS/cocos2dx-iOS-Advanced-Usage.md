@@ -58,72 +58,76 @@ startAppBridge->setOrigin(0, 50);
 
 [Back to top](#top)
 
-<a name="UsingBannerDelegates" />
+<a name="UsingDelegates" />
 ###Using banner delegates
-Set your view controller as a delegate so it is able to receive callbacks from the banner ad.
+You can get various callbacks from StartApp Ads, by implementing a callback method and pass it when loading the ad.
 
-1. Add the STABannerDelegateProtocol to the header file
- ```objectivec
- @interface YourViewController : UIViewController <STABannerDelegateProtocol>
+1. Add the following line to your header file where you would like to catch callbacks:
+ ```cpp
+ static void STACallbacks(const char *eventName , const char *eventError);
+ ```
+
+2. Then, add the following method to the relevant cpp file:
+ ```cpp
+ void HelloWorld::STACallbacks(const char *eventName , const char *eventError)
  {
-     STABannerView* bannerView;  
- } 
+    if(0==strcmp(eventName, "\<CALLBACK_NAME\>")){
+        ...
+    }	
+ }
  ```
 
-2. Use "withDelegate:self" when initializing the STABannerView object:
- ```objectivec
- bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize 
-                                      autoOrigin:STAAdOrigin_Top                 
-                                      withView:self.view 
-                                      withDelegate:self];
+ Where <CALLBACK_NAME> is one of the supported callbacks listed in the next section.
+ 
+3. Pass _STACallbacks_ when loading the ad:
+ **For Splash:** 
+ ```cpp
+ startAppBridge->showSplashAd(STACallbacks);
  ```
-
-3. Implement the following functions:
- ```objectivec
-- (void) didDisplayBannerAd:(STABannerView*)banner;
-- (void) failedLoadBannerAd:(STABannerView*)banner withError:(NSError *)error;
-- (void) didClickBannerAd:(STABannerView*)banner;
+ **For Interstitial:** 
+ ```cpp
+ startAppBridge->loadAd(STACallbacks);
  ```
-
-[Back to top](#top)
-
-
-<a name="UsingInterstitialDelegate" />
-###Using Interstitial delegates
-Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad
-
-1. Add the STADelegateProtocol to the header file
- ```objectivec
- @interface YourViewController : UIViewController <STADelegateProtocol>
- {
-     STAStartAppAd* startAppAd;    
- } 
+ **For Banner:** 
+ ```cpp
+ startAppBridge->loadBanner(startappiOS::STAAdOrigin_Bottom, 
+							startappiOS:: STA_AutoAdSize, 
+							STACallbacks);
  ```
+ 
+###Callbacks List  
+####Splash callbacks  
+<img src="./iOS/images/V.png" width="12px" /> didLoadSplashAd  
+<img src="./iOS/images/V.png" width="12px" /> failedLoadSplashAd  
+<img src="./iOS/images/V.png" width="12px" /> didShowSplashAd  
+<img src="./iOS/images/V.png" width="12px" /> failedShowSplashAd  
+<img src="./iOS/images/V.png" width="12px" /> didCloseSplashAd  
+<img src="./iOS/images/V.png" width="12px" /> didClickSplashAd  
 
-2. Use "withDelegate:self" when calling the loadAd function:
- ```[startAppAd loadAd:STAAdType_Automatic withDelegate:self]```
+####Interstitial callbacks  
+<img src="./iOS/images/V.png" width="12px" /> didLoadAd  
+<img src="./iOS/images/V.png" width="12px" /> failedLoadAd  
+<img src="./iOS/images/V.png" width="12px" /> didShowAd  
+<img src="./iOS/images/V.png" width="12px" /> failedShowAd  
+<img src="./iOS/images/V.png" width="12px" /> didCloseAd  
+<img src="./iOS/images/V.png" width="12px" /> didClickAd  
 
-3. Implement the following functions:
- ```objectivec
- - (void) didLoadAd:(STAAbstractAd*)ad;
- - (void) failedLoadAd:(STAAbstractAd*)ad withError:(NSError *)error;
- - (void) didShowAd:(STAAbstractAd*)ad;
- - (void) failedShowAd:(STAAbstractAd*)ad withError:(NSError *)error;
- - (void) didCloseAd:(STAAbstractAd*)ad;
- - (void) didClickAd:(STAAbstractAd*)ad;
- ```
+####Banner callbacks  
+<img src="./iOS/images/V.png" width="12px" /> didDisplayBannerAd  
+<img src="./iOS/images/V.png" width="12px" /> failedLoadBannerAd  
+<img src="./iOS/images/V.png" width="12px" /> didClickBannerAd  
 
 [Back to top](#top)
 
 <a name="CustomizingSplashScreen" />
 ##Customizing your Splash Screen
-You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAdWithPreferences`` method when initializing the splash screen in your _AppDelegate_ class.
+You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. After setting your required preferences, pass it to the ``showSplashAd`` method when initializing the splash screen in your _AppDelegate_ class.
 
 For example - using splash preferences to choose template mode:
-```objectivec
-STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
-splashPreferences.splashMode = STASplashModeTemplate;
-[sdk showSplashAdWithPreferences:splashPreferences];
+```cpp
+startappiOS::STASplashPreferences *splashPreferences = new startappiOS::STASplashPreferences();
+splashPreferences->splashMode = startappiOS::STASplashModeTemplate;
+startAppBridge->showSplashAd(splashPreferences);
 ```
 
 ###Splash Preferences API
@@ -139,7 +143,7 @@ _STASplashModeUserDefined_
 _STASplashModeTemplate_  
 
 **Usage:**  
-``splashPreferences.splashMode = STASplashModeTemplate;``
+``splashPreferences->splashMode = startappiOS::STASplashModeTemplate;``
 
 ####►Change splash image (for user-defined mode)
 Change the splash screen image, instead of using the default one. 
@@ -147,7 +151,7 @@ Change the splash screen image, instead of using the default one.
 **Parameter:** _splashUserDefinedImageName_  
 
 **Usage:**  
-``splashPreferences.splashUserDefinedImageName = @"MyImage";``  
+``splashPreferences->splashUserDefinedImageName = @"MyImage";``  
 
 ####►Choosing splash template (for template mode)
 Choose of of 6 pre-designed templates.
@@ -163,7 +167,7 @@ _STASplashTemplateThemeGloomy_
 _STASplashTemplateThemeOcean_  
 
 **Usage:**  
-``splashPreferences.splashTemplateTheme = STASplashTemplateThemeBlaze;``  
+``splashPreferences->splashTemplateTheme = startappiOS::STASplashTemplateThemeBlaze;``  
 
 ####►Changing template's icon and title (for template mode)
 The SDK uses your default application's name and icon. You can choose however to use your own assets.
@@ -173,11 +177,10 @@ _splashTemplateIconImageName_
 _splashTemplateAppName_    
 
 **Usage:**  
-```objectivec
-splashPreferences.splashTemplateIconImageName = @"MyIcon";
-splashPreferences.splashTemplateAppName = @"MyAppName";
+```cpp
+splashPreferences->splashTemplateIconImageName = "MyIcon";
+splashPreferences->splashTemplateAppName = "MyAppName";
 ```
-
 
 ####►Enable/Disable loading indicator (for user-defined mode)
 Choose whether to display a loading indicator on the splash screen.
@@ -189,7 +192,7 @@ _YES_
 _NO_  
 
 **Usage:**  
-``splashPreferences.isSplashLoadingIndicatorEnabled = YES;``  
+``splashPreferences->isSplashLoadingIndicatorEnabled = true;``  
 
 ####►Choose loading indicator's type (for user-defined and template modes)
 Choose which loading indicator type to display: iOS default activity indicator or a "dots" loading indicator
@@ -201,7 +204,7 @@ _STASplashLoadingIndicatorTypeIOS_
 _STASplashLoadingIndicatorTypeDots_  
 
 **Usage:**  
-``splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeDots;``  
+``splashPreferences->splashLoadingIndicatorType = startappiOS::STASplashLoadingIndicatorTypeDots;``  
 
 ####►Change loading indicator's position (for user-defined mode)
 The loading indicator is displayed by default on the center of the screen. You can choose however to set a custom position.
@@ -212,7 +215,10 @@ The loading indicator is displayed by default on the center of the screen. You c
 _CGPointMake(x, y)_  
 
 **Usage:**  
-``splashPreferences.splashLoadingIndicatorCenterPoint = CGPointMake(100, 100);``  
+```cpp
+splashPreferences->splashLoadingIndicatorCenterPoint.x = 100;
+splashPreferences->splashLoadingIndicatorCenterPoint.y = 100;
+```
 
 
 ####►Force landscape orientation (for user-defined and template modes)
@@ -225,136 +231,7 @@ _YES_
 _NO_  
 
 **Usage:**  
-``splashPreferences.isLandscape = YES;``  
+``splashPreferences->isLandscape = true;``  
 
 [Back to top](#top)
-
-
-<a name="using-native-ads" />
-##Integrating Native Ads
-###Initializing and Loading Native Ads  
-First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to use StartApp Native ad.
-```objectivec
-// YourViewController.h
-
-#import <StartApp/StartApp.h>
-
-@interface YourViewController : UIViewController 
-{
-    STAStartAppNativeAd *startAppNativeAd;    // ADD THIS LINE
-} 
-```
-
-In your view controller, initialize **STAStartAppNativeAd** within the ``viewDidLoad()`` method and load the ad with your selected preferences.
-```objectivec
-// YourViewController.m 
-
-- (void)viewDidLoad 
-{
-    [super viewDidLoad];
-    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
-    [startAppNativeAd loadAd];
-}
-```
-
-You can check if the ad has been loaded, using  ``startAppNativeAd.adIsLoaded;``.
-
-###Using Native Ad delegates
-Set your view controller as a delegate so it is able to receive callbacks from the native ad.
-
-1. Add the STADelegateProtocol to the header file
- ```objectivec
- @interface YourViewController : UIViewController <STADelegateProtocol>
- {
-     STAStartAppNativeAd *startAppNativeAd;    
- } 
- ```
-
-2. Implement the following functions
- ```objectivec
- - (void) didLoadAd:(STAAbstractAd*)ad;
- - (void) failedLoadAd:(STAAbstractAd*)ad withError:(NSError *)error;
- ```
-
-3. Load an ad using ``loadAdWithDelegate``
- ```objectivec
- [startAppNativeAd loadAdWithDelegate:self];
- ```
-
-###Using Native Ad Preferences
-**STANativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the NativeAdPreferences object, please refer to [NativeAdPreferences API](#NativeAdPreferencesAPI).
-
-In order to use the STANativeAdPreferences object, simply use it when loading the ad:
-```
-[startAppNativeAd loadAdWithNativeAdPreferences:pref];
-```
-
-Example: load 4 native ads with 100x100 icons, send lat/lon and register for callbacks:  
-```objectivec
-// YourViewController.m 
-
-- (void)viewDidLoad 
-{
-    [super viewDidLoad];
-    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
-    STANativeAdPreferences *pref = [[STANativeAdPreferences alloc]init];
-    pref.adsNumber = 4; // Select ads number
-    pref.bitmapSize = SIZE_100X100;     //Select image quality
-    pref.autoBitmapDownload = YES;    // When set to NO no images will be downloaded by the SDK
-	
-    // You can pass longitude/latitude if available 
-	pref.userLocation.latitude = 31.776719;
-    pref.userLocation.longitude = 35.234508;
-	
-    [startAppNativeAd loadAdWithDelegate:self withNativeAdPreferences:pref]; 
-}
-```
-
-###Using the Native Ad Object
-After initializing and loading your **STAStartAppNativeAd**  object, use the **STANativeAdDetails** object to get details of all returning ads. The STANativeAdDetails object provides access to each ad's details, such as the ad's title, description, image, etc. This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **STAStartAppNativeAd** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
-
-Example: get some details of the 3rd ad.
-```objectivec
-STANativeAdDetails *adDetails = [startAppNativeAd.adsDetails objectAtIndex:3];
-titleLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:3] title];
-descriptionLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:3] description];
-imageView.image=[[startAppNativeAd.adsDetails objectAtIndex:3] imageBitmap];
-```
-
-> **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
-
-###Showing and Clicking a Native Ad
-Once you decide to actually show a native ad, you must call the ``[adDetails sendImpression]`` method.  
-  
-Once the user clicks on the ad, you must call ``[adDetails sendClick]`` method.  
-
-<a name="NativeAdPreferencesAPI" />
-###NativeAdPreferences API
-Parameter name | Description | Values
---- | --- | ---
-*`adsNumber `* | number of native ads to be retrieved | a number between 1-10
-*`bitmapSize `* | the size of the icon's bitmap to be retrieved | SIZE72X72, SIZE100X100, SIZE150X150, SIZE340X340
-*`autoBitmapDownload `* | Select the method for retrieving the ad's icon. You can get the icon's URL only, or pre-cache it into a bitmap object | "YES"=pre cached, "NO"=URL only
-*`userLocation.latitude`* | the device's latitude  | latitude
-*`userLocation.longitude`* | the device's longitude | longitude
-
-<a name="STANativeAdDetailsAPI" />
-###STANativeAdDetails API
-Parameter name | Description | Return value
---- | --- | ---
-*`title`* | Get the Ad's title | NSString
-*`description`* | Get the Ad's description | NSString
-*`imageBitmap`* | Get the actual icon of the ad, according to the selected size (if autoBitmapDownload="YES") | UIImage
-*`imageUrl`* | Get the icon URL of the ad, according to the selected size (if autoBitmapDownload="NO") | NSString
-*`category`* | Get the category of the ad in the App Store | NSString 
-*`adId`* | Get the ad's package name in the App Store | NSString
-*`rating`* | Get the rating of the ad in the App Store. The rating range is 1-5 | NSNumber 
-
-
-[Back to top](#top)
-
-
-
-
-
 
