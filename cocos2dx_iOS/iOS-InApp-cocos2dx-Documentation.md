@@ -230,3 +230,9 @@ On the "Advertising Identifier" section: <br></br>
 [[/iOS/images/idfa.jpg]]
 
 [Back to top](#top)
+
+<a name="AdvancedUsage" />
+##Advanced Usage
+For advanced usage, please read our ["Advanced Manual"](cocos2dx-ios-advanced-usage)
+
+[Back to top](#top)
