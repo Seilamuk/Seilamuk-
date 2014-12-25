@@ -24,15 +24,15 @@
 
 [**Sample Project**](Android-InApp-Documentation#SampleProject)
 
-[**Advanced Usage**](android-advanced-usage)<br></br>
-  [Hiding the Banner](android-advanced-usage#HideBanner)<br></br>
-  [Selecting banner type](android-advanced-usage#SelectBanner)<br></br>
-  [Adding a banner programmatically](android-advanced-usage#AddBannerProgrammatically)<br></br>
-  [Adding Banner Callbacks](android-advanced-usage#BannerCallbacks)<br></br>  
-  [Selecting interstitial ad type](android-advanced-usage#SelectInterstitial)<br></br>
-  [Explicitly closing an Interstitial Ad](android-advanced-usage#CloseInterstitial)<br></br>
-  [Adding Interstitial Callbacks](android-advanced-usage#AddingInterstitialCallbacks)<br></br>
-  [Customizing the Splash Screen](android-advanced-usage#CustomizingSplashScreen)<br></br>
-  [Integrating Native Ads](android-advanced-usage#using-native-ads)<br></br>
+[**Advanced Usage**](android-advanced-usage)    
+  [Hiding the Banner](android-advanced-usage#HideBanner)  
+  [Selecting banner type](android-advanced-usage#SelectBanner)  
+  [Adding a banner programmatically](android-advanced-usage#AddBannerProgrammatically)  
+  [Adding Banner Callbacks](android-advanced-usage#BannerCallbacks)  
+  [Selecting interstitial ad type](android-advanced-usage#SelectInterstitial)  
+  [Explicitly closing an Interstitial Ad](android-advanced-usage#CloseInterstitial)  
+  [Adding Interstitial Callbacks](android-advanced-usage#AddingInterstitialCallbacks)  
+  [Customizing the Splash Screen](android-advanced-usage#CustomizingSplashScreen)  
+  [Integrating Native Ads](android-advanced-usage#using-native-ads)  
 
 [**SearchBox SDK Removal Procedure**](SearchBox-SDK-Removal-Procedure)

@@ -238,7 +238,7 @@ StartAppAd.showSplash(this, savedInstanceState, splashConfig);
 Apply the following parameters:
 + **``this``**: The context (Activity)
 + **``savedInstanceState``**: The Bundle parameter passed to your ``onCreate(Bundle savedInstanceState)`` method.
-+ **``splashConfig``**: Optional object that can be used to customize some of your template's properties to suit your needs, such as your application name, logo and theme (see the example below). For a full description of the SplashConfig API, please refer to [SplashConfig API](SplashConfig-API).
++ **``splashConfig``**: Optional object that can be used to customize some of your template's properties to suit your needs, such as your application name, logo and theme (see the example below). For a full description of the SplashConfig API, please refer to [SplashConfig API](#SplashConfig-API).
 
 **Example:** the following is an example of a custom template with an OCEAN theme, modified application name, logo and landscape orientation:
 ```java
@@ -262,7 +262,7 @@ Use the following option if you already have a Splash screen for your applicatio
 
 **2** 	Pass on the **SplashConfig** object to the ```showSplash``` static function. 
 
-For a full description of the SplashConfig API, please refer to [SplashConfig API](SplashConfig-API).
+For a full description of the SplashConfig API, please refer to [SplashConfig API](#SplashConfig-API).
 
 **Example**
 ```java
@@ -275,6 +275,7 @@ StartAppAd.showSplash(this, savedInstanceState,
 
 [Back to top](#top)
 
+<a name="SplashConfig-API" />
 ##SplashConfig API
 The following describes the methods that you can use for customizing the Splash screen displayed in a StartApp In-App Splash screen Ad.
 
