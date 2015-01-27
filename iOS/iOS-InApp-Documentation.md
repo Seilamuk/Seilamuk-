@@ -60,8 +60,8 @@ In your application delegate class (_AppDelegate.m_), import the StartApp SDK an
 {
     // initialize the SDK with your appID and devID
     STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-    sdk.appID = @"your app Id";
     sdk.devID = @"your developer id";
+    sdk.appID = @"your app Id";
 
     return YES;
 }
