@@ -159,6 +159,9 @@ public void btnOpenActivity (View view){
 ##Showing a Splash Ad
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
+
+> **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**
+
 StartApp In-Ad provides two modes for displaying Splash screens:
 
 **Splash Screen Mode** | **Description**
