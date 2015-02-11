@@ -81,7 +81,7 @@ To find your application ID, click on the <img src="./iOS/images/dash2.jpg" alig
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
-> ** StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's **
+> **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**
 
 StartApp SDK provides two modes for displaying Splash screens:
 
