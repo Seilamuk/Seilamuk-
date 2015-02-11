@@ -156,7 +156,7 @@ public void btnOpenActivity (View view){
 [Back to top](#top)
 
 <a name="step7" />
-##Showing a Splash Ad
+##Showing a Splash Ad (recommended)
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
