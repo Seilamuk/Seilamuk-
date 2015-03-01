@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Last SDK Version: 2.3.5**
+**Last SDK Version: 2.4.0**
 
 **For Swift documentation, please [click here](https://github.com/StartApp-SDK/Documentation/wiki/iOS-Swift-InApp-Documentation).**
 
@@ -43,6 +43,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StoreKit.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _AdSupport.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _QuartzCore.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _libz.dylib_ 
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
 [Back to top](#top)
