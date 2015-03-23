@@ -67,7 +67,11 @@ StartAppWrapper.init();
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Native:** ``com.mopub.nativeads.StartAppCustomEventNative``    
 
  <img src="./Mopub%20Mediation%20Android/images/mopub-inventory.png" />   
-6. Optional - if you want to show a specific Interstitial ad type, fill in the appropriate *class data* under "CUSTOM EVENT CLASS DATA" of your Interstitial ad unit:  
+
+6. For Banners only - if you want to show banner with a different size rather than the standard 320x50,  fill it in the appropriate class data under "CUSTOM EVENT CLASS DATA" of your Banner ad unit using the following format: {"adWidth":"<width>", "adHeight":"<height>"}. For example, {"adWidth":"480", "adHeight":"50"}  
+ <img src="./Mopub%20Mediation%20Android/images/mopub-custom-event-data-banners.png" />     
+
+7. Optional - if you want to show a specific Interstitial ad type, fill in the appropriate *class data* under "CUSTOM EVENT CLASS DATA" of your Interstitial ad unit:  
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Overlay Ad:** ``{ "adMode" : "AdMode.OVERLAY" }``  
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Full Page:** ``{ "adMode" : "AdMode.FULLPAGE" }``  
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **App Wall:** ``{ "adMode" : "AdMode.OFFERWALL" }``  
@@ -76,8 +80,8 @@ StartAppWrapper.init();
 
  > **NOTE:** we highly recommend leaving this field empty in order to use the automatic mode which selects the best ad to load.    
 
-7. Click "Save and Continue"
-8. Click the "StartApp" network and make sure the "Run" button is active  
+8. Click "Save and Continue"
+9. Click the "StartApp" network and make sure the "Run" button is active  
 <img src="./Mopub%20Mediation%20Android/images/mopub-run-network.png" />    
 
 [Back to top](#top)
