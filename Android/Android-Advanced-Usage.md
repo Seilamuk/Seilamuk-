@@ -245,7 +245,7 @@ Apply the following parameters:
 StartAppAd.showSplash(this, savedInstanceState, 
           new SplashConfig()
                  .setTheme(SplashConfig.Theme.OCEAN)
-                 .setAppName("Yout Application Name")  
+                 .setAppName("Your Application Name")  
                  .setLogo(R.drawable.your_360x360_logo)   // resource ID
                  .setOrientation(SplashConfig.Orientation.LANDSCAPE)
 );
