@@ -47,8 +47,8 @@ You can ignore all the following steps unless you want to use StartApp Ads direc
 
 In step 3 of the integration, call ``[sdk disableReturnAd]`` after initializing your appID and devID:
 ```objectivec
-sdk.appID = @"your app Id";
 sdk.devID = @"your developer id";
+sdk.appID = @"your app Id";
 
 [sdk disableReturnAd];  // Add this line to disable return ads
 ```
