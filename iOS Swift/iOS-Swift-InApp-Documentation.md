@@ -95,18 +95,19 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         // initialize the SDK with your appID and devID
         var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
         sdk.appID = "Your App Id"
-        sdk.devID = "Your Developer Id"
+        sdk.devID = "Your Account Id"
         
         return true
     }
 ```
 
-Replace __"Your Developer Id"__ and  __"Your App Id"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
-After logging in, your developer ID will be at the top right-hand corner of the page:
-<img src="./iOS/images/android-devId.png" />
+Replace __"Your Account Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
+After logging in, your account ID will be displayed at the top right-hand corner of the page:
+<img src="./Android/images/accountId.png" />
 
-To find your application ID, click on the <img src="./iOS/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
-<img src="./iOS/images/android-appId.png" width="350px" />
+To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
+<img src="./Android/images/android-appId.png" />
+
 
 [Back to top](#top)
 

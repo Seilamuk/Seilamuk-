@@ -56,15 +56,16 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 ##Step 3, Updating your StartApp data file
 Update the _StartAppData.txt_ (in the Assets/Resources folders) as follows:
 
-**1.** Add your StartApp Developer ID after ``developerId=`` <br></br>
+**1.** Add your StartApp Account ID after ``developerId=`` <br></br>
 **2.** Add your StartApp Application ID after ``applicationId=`` <br></br>
 
-You can find your Developer and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
-After logging in, your developer ID will be at the top right-hand corner of the page:
-<img src="./Android/images/android-devId.png" />
+You can find your Account and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
+After logging in, your account ID will be displayed at the top right-hand corner of the page:
+<img src="./Android/images/accountId.png" />
 
-To find your application ID, click on the <img src="./Android/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
-<img src="./Android/images/android-appId.png" width="350px" />
+To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
+<img src="./Android/images/android-appId.png" />
+
 
 [Back to top](#top)
 
