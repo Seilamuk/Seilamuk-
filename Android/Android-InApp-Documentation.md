@@ -54,7 +54,7 @@ Replace __"Your Developer Id"__ and  __"Your App ID"__ with your own values prov
 After logging in, your developer ID will be at the top right-hand corner of the page:
 <img src="./Android/images/accountId.png" />
 
-To find your application ID, click on the <img src="./Android/images/dash2.jpg" align="middle"/> at the top of the main screen and then choose the relevant ID from your app list:<br></br>
+To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" width="350px" />
 
 The last ``true`` parameter enables the ["Return Ads"](#step4) feature as explained in the next section. If you want to disable this feature, simply pass ``false`` instead.
