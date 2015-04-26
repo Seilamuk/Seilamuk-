@@ -35,6 +35,11 @@ Under the \<application\> element, add your new activities:
 <activity android:name="com.startapp.android.publish.AppWallActivity"
           android:theme="@android:style/Theme.Translucent"
           android:configChanges="orientation|keyboardHidden|screenSize" />
+
+<activity
+    android:name="com.startapp.android.publish.FullScreenActivity"
+    android:theme="@android:style/Theme"
+    android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
 [Back to top](#top)
