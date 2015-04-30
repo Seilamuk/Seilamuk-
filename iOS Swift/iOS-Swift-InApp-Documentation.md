@@ -91,7 +91,7 @@ In your application delegate class (_AppDelegate.swift_), add the following code
 ```objectivec
 // AppDelegate.swift
 
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // initialize the SDK with your appID and devID
         var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
         sdk.appID = "Your App Id"
@@ -128,7 +128,7 @@ In your application delegate class (_AppDelegate.swift_), after initializing the
 ```objectivec
 // AppDelegate.swift
 
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // initialize the SDK with your appID and devID
         var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
         sdk.appID = "Your App Id"
@@ -184,7 +184,7 @@ Return ads are enabled and activated by default. If you want to disable this fea
 ```objectivec
 // AppDelegate.swift
 
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // initialize the SDK with your appID and devID
         var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
         sdk.appID = "Your App Id"
@@ -278,7 +278,7 @@ sdk.preferences = STASDKPreferences.prefrencesWithAge(<USER_AGE>, andGender: <US
 ```objectivec
 // AppDelegate.swift
 
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {        
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // initialize the SDK with your appID and devID
         var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
         sdk.appID = "Your App Id"
