@@ -120,7 +120,7 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 ##Showing Interstitial Ads
 ######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
-Import the StartApp SDK in your view controller and and call showAd where you want to show the ad
+Import the StartApp SDK in your view controller and call showAd where you want to show the ad
 ```objectivec
 // YourViewController.m
 #import <StartApp/StartApp.h>
