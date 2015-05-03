@@ -123,13 +123,13 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 Import the StartApp SDK in your view controller and and call showAd where you want to show the ad
 ```objectivec
 // YourViewController.m
- #import <StartApp/StartApp.h>
+#import <StartApp/StartApp.h>
 
 [STAStartAppAdBasic showAd];
 ```
 
 > **NOTE**<br></br>
-> If you need to gain more control over your interstitial ad, like using callbacks or multiple ads with different properties, you should implement it as an object. For more info please refer to [Advanced Usage](ios-advanced-usage#UsingInterstitialObjects)
+> If you need to gain more control over your interstitial ad like using callbacks or multiple ads with different properties, you should implement it as an object. For more info please refer to the [Advanced Usage](ios-advanced-usage#UsingInterstitialObjects)
 
 
 [Back to top](#top)

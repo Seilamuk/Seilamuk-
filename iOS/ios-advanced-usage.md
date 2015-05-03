@@ -89,8 +89,8 @@ Example:
 [Back to top](#top)
 
 
-
-##Implementing interstitial ads using objects
+<a name="UsingInterstitialObjects" />
+##Implementing interstitial ads with objects
 ######You can implement interstitial ad as an object if you need to gain more control over your ads, like using callbacks or using multiple ads with different properties. 
 
 First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to show an ad
