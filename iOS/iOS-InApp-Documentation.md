@@ -116,52 +116,21 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 
 [Back to top](#top)
 
-
-
 <a name="step4" />
 ##Showing Interstitial Ads
 ######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
-First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to show an ad
+Import the StartApp SDK in your view controller and and call showAd where you want to show the ad
 ```objectivec
-// YourViewController.h
- 
-#import <StartApp/StartApp.h>
- 
-@interface YourViewController : UIViewController 
-{
-    STAStartAppAd* startAppAd;    // ADD THIS LINE
-} 
+// YourViewController.m
+ #import <StartApp/StartApp.h>
+
+[STAStartAppAdBasic showAd];
 ```
 
-In your view controller init **STAStartAppAd** within the ``viewDidLoad()`` method and load it within the ``viewDidAppear()`` method. Remember to release **STAStatAppAd** object in your ``dealloc()`` method in case you're not using ARC in your project.
-```objectivec
-// YourViewController.m 
+> **NOTE**<br></br>
+> If you need to gain more control over your interstitial ad, like using callbacks or multiple ads with different properties, you should implement it as an object. For more info please refer to [Advanced Usage](ios-advanced-usage#UsingInterstitialObjects)
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    startAppAd = [[STAStartAppAd alloc] init];
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [startAppAd loadAd];  // Add this line
-}
-
-- (void) dealloc {
-    // Don't release startAppAd if you are using ARC in your project
-    [startAppAd release];  // Add this line
-    [super dealloc];
-} 
-```
-
-Finally, add the following lines where you want to show the ad
-```objectivec
-[startAppAd showAd];
-```
-
-> **IMPORTANT**<br></br>
->Loading an ad might take a few seconds so it's important to show the ad as late as you can. In case you call ``showAd()`` while the ad hasn't been successfully loaded yet, nothing will be displayed.  For example, if you'd like to show an ad after completing a game's level, the best practice would be to show the ad upon completing the level (for example in your ``viewDidDisappear()`` function). On the other hand, loading and showing the ad together at the beginning of the next level might result with a failure – as the ad might not have enough time to load.
 
 [Back to top](#top)
 

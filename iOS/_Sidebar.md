@@ -28,6 +28,7 @@
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Using banner delegates](ios-advanced-usage#UsingBannerDelegates)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Using a fixed origin for your banner](ios-advanced-usage#UsingFixedOriginBanner)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Changing the banner size and origin upon rotation](ios-advanced-usage#ChangingBanner)<br></br> 
+<img src="./iOS/images/V-blue.png" width="8px" /> [ Using interstitial objects](ios-advanced-usage#UsingInterstitialObjects)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Using Interstitial delegates](ios-advanced-usage#UsingInterstitialDelegate)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Customizing your Splash Screen](ios-advanced-usage#CustomizingSplashScreen)<br></br> 
 <img src="./iOS/images/V-blue.png" width="8px" /> [ Showing banners in UITableView](ios-advanced-usage#table-view)<br></br> 

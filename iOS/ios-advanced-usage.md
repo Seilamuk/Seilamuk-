@@ -88,9 +88,58 @@ Example:
 
 [Back to top](#top)
 
+
+
+##Implementing interstitial ads using objects
+######You can implement interstitial ad as an object if you need to gain more control over your ads, like using callbacks or using multiple ads with different properties. 
+
+First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to show an ad
+```objectivec
+// YourViewController.h
+ 
+#import <StartApp/StartApp.h>
+ 
+@interface YourViewController : UIViewController 
+{
+    STAStartAppAd* startAppAd;    // ADD THIS LINE
+} 
+```
+
+In your view controller init **STAStartAppAd** within the ``viewDidLoad()`` method and load it within the ``viewDidAppear()`` method. Remember to release **STAStatAppAd** object in your ``dealloc()`` method in case you're not using ARC in your project.
+```objectivec
+// YourViewController.m 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    startAppAd = [[STAStartAppAd alloc] init];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [startAppAd loadAd];  // Add this line
+}
+
+- (void) dealloc {
+    // Don't release startAppAd if you are using ARC in your project
+    [startAppAd release];  // Add this line
+    [super dealloc];
+} 
+```
+
+Finally, add the following lines where you want to show the ad
+```objectivec
+[startAppAd showAd];
+```
+
+> **IMPORTANT**<br></br>
+>Loading an ad might take a few seconds so it's important to show the ad as late as you can. In case you call ``showAd()`` while the ad hasn't been successfully loaded yet, nothing will be displayed.  For example, if you'd like to show an ad after completing a game's level, the best practice would be to show the ad upon completing the level (for example in your ``viewDidDisappear()`` function). On the other hand, loading and showing the ad together at the beginning of the next level might result with a failure – as the ad might not have enough time to load.
+
+[Back to top](#top)
+
+
 <a name="UsingInterstitialDelegate" />
 ###Using Interstitial delegates
-Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad
+Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad.
 
 1. Add the STADelegateProtocol to the header file
  ```objectivec
