@@ -32,7 +32,7 @@ Under the \<application\> element, add your new activities:
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
           android:theme="@android:style/Theme" />
 
-<activity android:name="com.startapp.android.publish.AppWallActivity"
+<activity android:name="com.startapp.android.publish.OverlayActivity"
           android:theme="@android:style/Theme.Translucent"
           android:configChanges="orientation|keyboardHidden|screenSize" />
 
