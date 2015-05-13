@@ -43,7 +43,7 @@ After logging in, your account ID will be displayed at the top right-hand corner
 <img src="./Android/images/accountId.png" />
 
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
-<img src="./Android/images/android-appId.png" />
+<img src="./iOS/images/ios-appId.png" />
 
 [Back to top](#top)
 
