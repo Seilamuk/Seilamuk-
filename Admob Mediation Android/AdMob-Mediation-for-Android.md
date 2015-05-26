@@ -64,14 +64,13 @@ The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's
 5. Click "Custom event", and fill in the following fields:  
   *  Class Name: *com.startapp.android.mediation.admob.StartAppCustomEvent*
   *  Label: *StartApp*
-  *  Parameter: leave empty for automatic mode, or use one of the following options:    
-  <img src="./iOS/images/V.png" width="12px" />  AdMode.OVERLAY  
+  *  Parameter (for Interstitials only): leave empty for automatic mode, or use one of the following options:     
   <img src="./iOS/images/V.png" width="12px" />  AdMode.FULLPAGE  
   <img src="./iOS/images/V.png" width="12px" />  AdMode.OFFERWALL  
 
   <img src="./Admob%20Mediation%20Android/images/admob-add-custom-event.png" />  
 
-  > **NOTE:** we highly recommend leaving this field empty to use the automatic mode which selects the best ad to load. 
+  > **NOTE:** If not a must, we highly recommend leaving this field empty to use the automatic mode which selects the best ad to load. 
 
 6. Click "Continue"
 
