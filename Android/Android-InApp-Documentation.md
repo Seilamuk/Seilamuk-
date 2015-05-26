@@ -67,7 +67,7 @@ The last ``true`` parameter enables the ["Return Ads"](#step4) feature as explai
 
 <a name="step4" />
 ##Return Ads
-The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning). 
+The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 4th parameter of the ``StartAppSDK.init`` method:
  ```java
