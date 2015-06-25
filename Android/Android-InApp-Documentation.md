@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.0**
+**Last version: 3.1.0**
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
 
 > **NOTES:**
@@ -71,7 +71,7 @@ The **Return Ad** is a new ad unit which is displayed once the user returns to y
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 4th parameter of the ``StartAppSDK.init`` method:
  ```java
-StartAppSDK.init(this, "Your Developer Id", "Your App ID", false);
+StartAppSDK.init(this, "Your Account Id", "Your App ID", false);
 ```
 
 [Back to top](#top)
@@ -236,7 +236,7 @@ If you know your user's gender or age, StartApp can use it to serve better-targe
 Upon initialization, after providing your DevId and AppId, pass the **SDKAdPreferences** object with its data:
 ```java
 StartAppSDK.init(this, 
-                 "Your Developer Id", 
+                 "Your Account Id", 
                  "Your App ID", 
                  new SDKAdPreferences()
                       .setAge(35)
