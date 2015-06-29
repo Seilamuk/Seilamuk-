@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.1.0**
+**Last version: 3.1.1**
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
 
 > **NOTES:**
