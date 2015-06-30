@@ -36,7 +36,7 @@ Optional Permissions (allow StartApp to show higher eCPM Geo-targeted ads):
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
-> StartApp SDK doesn't request location updates proactively but only uses the last known location. 
+> StartApp SDK doesn't request for location updates proactively but only uses the last known location. 
 
 ####Activities
 Under the \<application\> element, add the following activities:
