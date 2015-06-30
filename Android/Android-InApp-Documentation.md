@@ -37,7 +37,7 @@ Optional Permissions (allow StartApp to show higher eCPM Geo-targeted ads):
 ```
 
 ####Activities
-Under the \<application\> element, add your new activities:
+Under the \<application\> element, add the following activities:
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
           android:theme="@android:style/Theme" />
