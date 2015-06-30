@@ -20,13 +20,23 @@ Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directo
 ##Step 2, Updating Your AndroidManifest.xml File
 > **IMPORTANT:** This is a mandatory step
 
-Under the main \<manifest\> element, add the following permissions:
+####Permissions
+Under the main \<manifest\> element, add the following permissions.
+
+Mandatory Permissions:
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
 
+Optional Permissions (allow StartApp to show higher eCPM Geo-targeted ads):
+```xml
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+
+####Activities
 Under the \<application\> element, add your new activities:
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
