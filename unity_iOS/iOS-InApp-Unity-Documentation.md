@@ -35,8 +35,10 @@ In order to add StartApp SDK to your application please follow the following ste
 ##Step 2, Updating your StartApp data file
 Update the StartAppDataiOS.txt_ (in the Assets/Resources folders) as follows:
 
-**1.** Add your StartApp Account ID after ``developerId=`` <br></br>
-**2.** Add your StartApp Application ID after ``applicationId=`` <br></br>
+**1.** Add your StartApp Account ID after ``developerId=``  
+For example: ``developerId=103343523``   
+**2.** Add your StartApp Application ID after ``applicationId=``  
+For example: ``applicationId=204346543``   
 
 You can find your Account and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
 After logging in, your account ID will be displayed at the top right-hand corner of the page:
