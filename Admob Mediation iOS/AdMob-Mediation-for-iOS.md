@@ -21,8 +21,8 @@ The following instructions assume you are already familiar with the AdMob Mediat
 
 <br></br>
 <a name="step2" />
-##Step 2, Adding Your Application to Your StartApp Developer's Account
-1. Login into your <a href="https://developers.startapp.com/General/Login.aspx" target="_blank">StartApp developer's account</a>
+##Step 2, Adding Your Application to Your StartApp Publisher's Account
+1. Login into your <a href="https://developers.startapp.com/General/Login.aspx" target="_blank">StartApp Publisher's account</a>
 2. Add your application and get its App ID
 3. Download the StartApp In-App SDK
 
