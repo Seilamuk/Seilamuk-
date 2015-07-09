@@ -124,7 +124,7 @@ For advanced usage, such as showing a specific banner type or hiding the banner,
 You can choose to show the interstitial ad in several locations within your application.
 This could be upon entering (onCreate), between stages, while waiting for an action and more.
 
-We do, however, recommend showing the ad upon exiting the application by using the ‘Back’ button or the ‘Home’ button, as explained in step 4 above.
+We do, however, recommend showing the ad upon exiting the application by using the ‘Back’ button as explained in step 4 above.
 
 Add the following code to the appropriate place or places within your activities in which you would like to show the ad:
 
