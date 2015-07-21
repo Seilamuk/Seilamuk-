@@ -109,9 +109,10 @@ Banner startAppBanner = new Banner(context, new BannerListener() {
 });
 ```
 
+> **IMPORTANT:**
+> Do not call loadAd() from within onFailedToReceiveAd(). The SDK will automatically try to reload an ad upon a failure. 
+
 [Back to top](#top)
-
-
 
 <a name="SelectInterstitial" />
 ##Selecting Interstitial Ad Type
@@ -190,6 +191,10 @@ startAppAd.loadAd (new AdEventListener() {
     }
 });
 ```
+
+> **IMPORTANT:**
+> Do not call loadAd() from within onFailedToReceiveAd(). The SDK will automatically try to reload an ad upon a failure. 
+
 
 ####Adding a Callback when an Interstitial Ad is shown
 ``startAppAd.showAd()`` can get a parameter implementation of ``AdDisplayListener``.
