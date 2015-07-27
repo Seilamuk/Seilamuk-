@@ -66,7 +66,7 @@ In your main activity, go to the ``OnCreate`` method and before calling ``setCon
 StartAppSDK.init(this, "Your Account Id", "Your App ID", true);
 ```
 
-Replace __"Your Account Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](http://developers.startapp.com).<br></br>
+Replace __"Your Account Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
 After logging in, your account ID will be displayed at the top right-hand corner of the page:
 <img src="./Android/images/accountId.png" />
 
