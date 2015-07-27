@@ -6,13 +6,18 @@
 
 [**Step 3, Updating your StartApp data file**](Android-InApp-Unity-Documentation#step3)
 
-[**Showing Exit Ads**](Android-InApp-Unity-Documentation#step4)
+[**Showing a Splash Ad**](Android-InApp-Unity-Documentation#splash)
 
-[**Showing Banners**](Android-InApp-Unity-Documentation#step5)
+[**Showing Return Ads**](Android-InApp-Unity-Documentation#return)
 
-[**Showing Interstitial Ads**](Android-InApp-Unity-Documentation#step6)
+[**Showing Exit Ads**](Android-InApp-Unity-Documentation#exit)
+
+[**Showing Interstitial Ads**](Android-InApp-Unity-Documentation#interstitial)
+
+[**Showing Banners**](Android-InApp-Unity-Documentation#banners)
 
 [**Advanced Usage**](unity-android-advanced-usage)<br></br>
   [Customizing your Banner](unity-android-advanced-usage#banner-type)<br></br> 
   [Adding Callback when Ad has loaded](unity-android-advanced-usage#load-callback)<br></br> 
   [Adding a callback when Ad has been displayed or clicked](unity-android-advanced-usage#close-callback)<br></br> 
+  [Customizing the Splash Screen](unity-android-advanced-usage#CustomizingSplashScreen)<br></br> 
