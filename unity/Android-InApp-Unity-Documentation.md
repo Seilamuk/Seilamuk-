@@ -34,17 +34,17 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
-                        android:hardwareAccelerated="true"
-                        android:theme="@android:style/Theme" />
+          android:hardwareAccelerated="true"
+          android:theme="@android:style/Theme" />
 <activity android:name="com.startapp.android.publish.OverlayActivity"
-                        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-                        android:hardwareAccelerated="true"
-                        android:windowSoftInputMode="stateHidden"
-                        android:configChanges="orientation|keyboardHidden|screenSize" />
+          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+          android:hardwareAccelerated="true"
+          android:windowSoftInputMode="stateHidden"
+          android:configChanges="orientation|keyboardHidden|screenSize" />
 <activity android:name="com.startapp.android.publish.FullScreenActivity"
-                        android:hardwareAccelerated="true"
-                        android:theme="@android:style/Theme"
-                        android:configChanges="orientation|keyboardHidden|screenSize" />
+          android:hardwareAccelerated="true"
+          android:theme="@android:style/Theme"
+          android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
 **2.** Make sure the meta-data parameter named `unityplayer.ForwardNativeEventsToDalvik` is set to `true`:
