@@ -61,7 +61,7 @@ For example: ``developerId=103343523``
 **2.** Add your StartApp Application ID after ``applicationId=``.   
 For example: ``applicationId=204346543``  
 
-You can find your Account and Application IDs in the [developers’ portal](http://developers.startapp.com).<br></br>
+You can find your Account and Application IDs in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
 After logging in, your account ID will be displayed at the top right-hand corner of the page:
 <img src="./Android/images/accountId.png" />
 
