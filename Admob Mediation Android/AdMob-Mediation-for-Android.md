@@ -45,7 +45,7 @@ You can ignore all the following steps unless you want to use StartApp Ads direc
 
 In step 3 of the integration, use the following line to initialize the SDK:
 ```java
-StartAppSDK.init(this, "Your Account Id", "Your App ID", false);
+StartAppSDK.init(this, "Your App ID", false);
 ```
 The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's not an integral part of AdMob mediation. You can still enjoy this attractive ad unit directly by omitting the ``false`` parameter. In this case Return Ads will be activated and display StartApp direct ads, outside of the AdMob Mediation network. 
 
