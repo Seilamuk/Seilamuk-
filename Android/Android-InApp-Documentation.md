@@ -63,12 +63,10 @@ Under the \<application\> element, add the following activities:
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
 ```java
-StartAppSDK.init(this, "Your Account Id", "Your App ID", true);
+StartAppSDK.init(this, "Your App ID", true);
 ```
 
-Replace __"Your Account Id"__ and  __"Your App ID"__ with your own values provided in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
-After logging in, your account ID will be displayed at the top right-hand corner of the page:
-<img src="./Android/images/accountId.png" />
+Replace __"Your App ID"__ with your own value provided in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
 
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" />
