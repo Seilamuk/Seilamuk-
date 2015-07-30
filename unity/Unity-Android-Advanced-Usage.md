@@ -92,7 +92,7 @@ public void adClicked(){
 StartApp In-Ad provides a few pre-defined templates of splash screens in which you can place your own creatives, such as application name, logo and loading animation, as described below.
 
 ####Customizing the Splash Screen
-In the ``Start()`` method of your script, call the following static function:
+In the ``OnGUI()`` method of your script, call the following static function:
 ```csharp
 #if UNITY_ANDROID
 StartAppWrapper.showSplash(splashConfig);

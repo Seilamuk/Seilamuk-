@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.1.1**
+**Latest version: 3.1.2**
 
 <img src="./unity/images/unity-android-intro.png" width="640px" /><br></br>
 
@@ -79,14 +79,9 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 
 ####Updating your StartApp data file
 Update the _StartAppData.txt_ (in the Assets/Resources folders) as follows:
+Add your StartApp Application ID after ``applicationId=``   
 
-**1.** Add your StartApp Account ID after ``accountId=`` <br></br>
-**2.** Add your StartApp Application ID after ``applicationId=`` <br></br>
-
-You can find your Account and Application IDs in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
-After logging in, your account ID will be displayed at the top right-hand corner of the page:
-<img src="./Android/images/accountId.png" />
-
+You can find your Application ID in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" />
 
@@ -171,10 +166,11 @@ Add the following code to the appropriate place or places within your activities
 using StartApp;
 ```
 
-**2.** Load the ad
+**2.** Load the ad (after calling the ``init()`` function)
 ```csharp
 void Start () {
 #if UNITY_ANDROID
+StartAppWrapper.init();
 StartAppWrapper.loadAd();
 #endif
 }
@@ -198,6 +194,7 @@ In order to show a Rewarded Ad, follow the following steps:
 videoListener = new VideoListenerImplementation ();
 StartAppWrapper.setVideoListener (videoListener);
 StartAppWrapper.loadAd(StartAppWrapper.AdMode.REWARDED_VIDEO);
+#endif
 ```
 
 **2.** 
