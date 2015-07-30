@@ -1,8 +1,8 @@
 <a name="top" />
 **Last version: 3.1.2**  
 <br></br>
-<img src="./Android/images/important_note.png" /><br></br>
-<img src="./Android/images/android-intro1.png" width="640px" hspace="20" align="middle"/><br></br>
+<img src="./Android/images/important_note.png" align="middle" /><br></br>
+<img src="./Android/images/android-intro1.png" width="640px" /><br></br>
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
