@@ -4,7 +4,7 @@
 
 [**Step 2, Updating Your Manifest File**](Android-InApp-Unity-Documentation#step2)
 
-[**Step 3, Updating your StartApp data file**](Android-InApp-Unity-Documentation#step3)
+[**Step 3, Initialization**](Android-InApp-Unity-Documentation#step3)
 
 [**Showing a Splash Ad**](Android-InApp-Unity-Documentation#splash)
 

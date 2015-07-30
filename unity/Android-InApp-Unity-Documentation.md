@@ -19,7 +19,8 @@ In order to add StartApp SDK to your application please follow the following ste
 
 <img src="./unity/images/unity-android-import-package.png" />
 
-**3.** Import all the package's items by pressing "All" and then "Import".   
+**3.** Import all the package's items by pressing "All" and then "Import".      
+If you are using a custom AndroidManifest.xml and don't want to override it with the one provided by this package, just uncheck the "AndroidManifest.xml". In this case, you must update the manifest manually as described in the next step. 
 <img src="./unity/images/unity-android-import-all.png" />
 
 [Back to top](#top)
@@ -28,6 +29,10 @@ In order to add StartApp SDK to your application please follow the following ste
 <br></br>
 <a name="step2" />
 ##Step 2, Updating your Manifest File
+> **NOTES:**
+> If you are using a custom AndroidManifest.xml and didn't import it in the previous step, make sure to follow this step.  
+> If you have imported the entire package you can skip this step and move on to step 3.   
+
 Update the _manifest.xml_ (in the _Android_ folders) as follow:
   
 **1.** Make sure the following activities are declared under the \<application\> element:
@@ -70,7 +75,9 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 
 <br></br>
 <a name="step3" />
-##Step 3, Updating your StartApp data file
+##Step 3, Initialization
+
+####Updating your StartApp data file
 Update the _StartAppData.txt_ (in the Assets/Resources folders) as follows:
 
 **1.** Add your StartApp Account ID after ``accountId=`` <br></br>
@@ -83,15 +90,26 @@ After logging in, your account ID will be displayed at the top right-hand corner
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" />
 
+####SDK Initialization
+In the ``Start()`` method of your script, call the following static function:
+```csharp
+void Start() {
+#if UNITY_ANDROID
+StartAppWrapper.init();
+#endif
+}
+```
+ 
 [Back to top](#top)
+
 
 <a name="splash" />
 ##Showing a Splash Ad (recommended)
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
-> **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
-> **supported for Unity v4.2 and above**    
+> - **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
+> - **supported for Unity v4.2 and above**    
 
 ####Adding the Splash Screen 
 First, import the sdk namespace
