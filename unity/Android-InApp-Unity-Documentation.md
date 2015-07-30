@@ -78,7 +78,7 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 ##Step 3, Initialization
 
 ####Updating your StartApp data file
-Update the _StartAppData.txt_ file(in the Assets/Resources folders) by adding your StartApp Application ID after ``applicationId=``   
+Update the _StartAppData.txt_ file (in the Assets/Resources folders) by adding your StartApp Application ID after ``applicationId=``   
 
 You can find your Application ID in the [developers’ portal](https://portal.startapp.com/#/signin) - click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:  
 <img src="./Android/images/android-appId.png" />  
