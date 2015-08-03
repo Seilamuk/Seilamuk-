@@ -81,9 +81,9 @@ The last ``true`` parameter enables the ["Return Ads"](#step4) feature as explai
 ##Return Ads
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
-Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 4th parameter of the ``StartAppSDK.init`` method:
+Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 3th parameter of the ``StartAppSDK.init`` method:
  ```java
-StartAppSDK.init(this, "Your Account Id", "Your App ID", false);
+StartAppSDK.init(this, "Your App ID", false);
 ```
 
 [Back to top](#top)
@@ -265,8 +265,7 @@ If you know your user's gender or age, StartApp can use it to serve better-targe
 ####Set Age and Gender
 Upon initialization, after providing your DevId and AppId, pass the **SDKAdPreferences** object with its data:
 ```java
-StartAppSDK.init(this, 
-                 "Your Account Id", 
+StartAppSDK.init(this,  
                  "Your App ID", 
                  new SDKAdPreferences()
                       .setAge(35)
