@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Last SDK Version: 3.0.0**
+**Last SDK Version: 3.1.0**
 
 **For Swift documentation, please [click here](https://github.com/StartApp-SDK/Documentation/wiki/iOS-Swift-InApp-Documentation).**
 
@@ -61,19 +61,15 @@ In your application delegate class (_AppDelegate.m_), import the StartApp SDK an
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // initialize the SDK with your appID and devID
+    // initialize the SDK with your appID
     STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-    sdk.devID = @"your account id";
     sdk.appID = @"your app Id";
 
     return YES;
 }
 ```
 
-Replace __"your account id"__ and  __"your app id"__ with your own values provided in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
-After logging in, your account ID will be displayed at the top right-hand corner of the page:
-<img src="./Android/images/accountId.png" />
-
+Replace __"your app id"__ with your own value provided in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./iOS/images/ios-appId.png" />
 
@@ -103,12 +99,11 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // initialize the SDK with your appID and devID
+    // initialize the SDK with your appID 
     STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
     sdk.appID = @"your app Id";
-    sdk.devID = @"your developer id";
 	
-	[sdk showSplashAd];  // display the splash screen
+    [sdk showSplashAd];  // display the splash screen
 
     return YES;
 }
@@ -149,12 +144,11 @@ Return ads are enabled and activated by default. If you want to disable this fea
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // initialize the SDK with your appID and devID
+    // initialize the SDK with your appID
     STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
     sdk.appID = @"your app Id";
-    sdk.devID = @"your developer id";
 	
-	[sdk disableReturnAd];  // disable return ads
+    [sdk disableReturnAd];  // disable return ads
 
     return YES;
 }
@@ -257,7 +251,7 @@ Value | Position | Behavior
 If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
 
 ####Set Age and Gender
-Upon initialization, after providing your DevId and AppId, use the following line:
+Upon initialization, after providing your AppId, use the following line:
 ```objectivec
 sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USER_GENDER>];
 ```
@@ -273,10 +267,9 @@ sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USE
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // initialize the SDK with your appID and devID
+    // initialize the SDK with your appID 
     STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
     sdk.appID = @"your app Id";
-    sdk.devID = @"your developer id";
 
     sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
 
