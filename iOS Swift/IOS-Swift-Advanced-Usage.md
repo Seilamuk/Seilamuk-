@@ -104,6 +104,7 @@ class ViewController: UIViewController, STADelegateProtocol
 func didLoadAd(ad: STAAbstractAd) 
 func failedLoadAd(ad: STAAbstractAd, withError error: NSError)
 func didShowAd(ad: STAAbstractAd)
+func didClickAd(ad: STAAbstractAd)
 func failedShowAd(ad: STAAbstractAd, withError error: NSError)
 func didCloseAd(ad: STAAbstractAd)
  ```
