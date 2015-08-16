@@ -216,7 +216,7 @@ var startAppBanner: STABannerView?
 ```objectivec
 override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        if !startAppBanner {
+        if (startAppBanner == nil) {
             startAppBanner = STABannerView(size: STA_AutoAdSize, autoOrigin: STAAdOrigin_Bottom, withView: self.view, withDelegate: nil);
             self.view.addSubview(startAppBanner)
         }
@@ -226,6 +226,8 @@ override func viewDidAppear(animated: Bool) {
 The ``STA_AutoAdSize`` detects the width of the device's screen in its current orientation, and provides the optimal banner for this size.
 
 > **NOTE:** this example shows the banner at the bottom of the root view controller (``self.view``), but you can pass any other view where you want to show the banner
+
+Steps 3 and 4 are required only in case your app supports both orientations.
 
 **3** Implement ``didRotateFromInterfaceOrientation`` in your view controller
 ```objectivec
@@ -242,9 +244,8 @@ override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInte
 // YourViewController.m
 override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         // notify StartApp auto Banner orientation change
-        startAppBannerAuto!.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        startAppBannerFixed!.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        
+        startAppBanner!.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+     
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
     }
 ```
