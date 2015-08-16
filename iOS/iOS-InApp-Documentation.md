@@ -210,6 +210,8 @@ The ``STA_AutoAdSize`` detects the width of the device's screen in its current o
 > - You can find your "developerId" and "appId" the same way as in step 3 above
 > - This example shows the banner at the top of the root view controller (``self.view``), but you can pass any other view where you want to show the banner
 
+Steps 3 and 4 are required only in case your app supports both orientations.
+
 **3** Implement ``didRotateFromInterfaceOrientation`` in your view controller
 ```objectivec
 // YourViewController.m
