@@ -218,7 +218,7 @@ override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if (startAppBanner == nil) {
             startAppBanner = STABannerView(size: STA_AutoAdSize, autoOrigin: STAAdOrigin_Bottom, withView: self.view, withDelegate: nil);
-            self.view.addSubview(startAppBanner)
+            self.view.addSubview(startAppBanner!)
         }
     }
 ```
