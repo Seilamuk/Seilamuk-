@@ -152,12 +152,12 @@ Sets the logo to be displayed in the Template mode.
 **Parameters**<br></br>
 *logo* the logo resource name under the Resources folder (default is the icon resource from the manifest).
 
-> **NOTE:** if you provide a custom logo, please follow these steps:
-> Click on the logo image in the Resources folder  
-> On the menu on the right, under 'Texture Type' choose 'Advanced'  
-> Check 'Read/Write Enabled'  
-> Under 'Format' change to one of the following: "RGB 24 bit"
-> Click "Apply"
+> **NOTE:** if you provide a custom logo, please follow these steps:  
+> 1. Click on the logo image in the Resources folder  
+> 2. On the menu on the right, under 'Texture Type' choose 'Advanced'  
+> 3. Check 'Read/Write Enabled'  
+> 4. Under 'Format' change to one of the following: "RGB 24 bit"  
+> 5. Click "Apply"  
 
 ####► Set the orientation
 > **```public SplashConfig setOrientation(StartAppWrapper.SplashConfig.Orientation orientation)```**<br></br>
