@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.1.2**  
+**Last version: 3.1.3**  
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
@@ -169,6 +169,9 @@ public void btnOpenActivity (View view){
 ####Showing Rewarded Video Ads
 Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
 
+> IMPORTANT
+> 1. Rewarded Video Ads are supported from API level 16 and above
+> 2. Please make sure to update your manifest file with the "FullScreenActivity" as described [here](#Activities). 
 
 In order to show a Rewarded Ad, pass the following AdMode parameter when calling the ``loadAd()`` method:
 ```java
