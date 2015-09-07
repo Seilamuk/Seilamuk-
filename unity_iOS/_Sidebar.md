@@ -4,6 +4,8 @@
 
 [**Step 2, Updating your StartApp data file**](iOS-InApp-Unity-Documentation#step2)
 
+[**Step 3, Provide Your App's Orientation**](iOS-InApp-Unity-Documentation#orientation)
+
 [**Showing Interstitial Ads**](iOS-InApp-Unity-Documentation#step4)
 
 [**Showing the Splash Ad**](iOS-InApp-Unity-Documentation#splash-ads)

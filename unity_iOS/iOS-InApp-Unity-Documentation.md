@@ -49,6 +49,8 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 
 [Back to top](#top)  
 
+
+<br></br>
 <a name="orientation" />
 ##Step 3, Provide Your App's Orientation
 Call the ``unityOrientation()`` method in the ``Start()`` method of your script, and pass your app's orientation:
@@ -64,7 +66,7 @@ Where ``unityOrientation()`` can get one of the following values:
 <img src="./iOS/images/V.png" hspace="15px" width="12px" /> STAUnityOrientation.STAPortrait (portrait only app)  
 <img src="./iOS/images/V.png" hspace="15px" width="12px" /> STAUnityOrientation.STALandscape (landscape only app)  
 <img src="./iOS/images/V.png" hspace="15px" width="12px" /> STAUnityOrientation.STAAutoRotation (app supports auto-rotation)  
-
+  
 
 <br></br>
 <a name="step4" />
