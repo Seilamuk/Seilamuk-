@@ -47,7 +47,23 @@ After logging in, your account ID will be displayed at the top right-hand corner
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./iOS/images/ios-appId.png" />
 
-[Back to top](#top)
+[Back to top](#top)  
+
+<a name="orientation" />
+##Provide Orientation
+Call the ``unityOrientation()`` method in the ``Start()`` method of your script, and pass your app's orientation:
+```csharp
+void Start () {
+        #if UNITY_IPHONE
+        StartAppWrapperiOS.unityOrientation(StartAppWrapperiOS.STAUnityOrientation.STAAutoRotation);
+        #endif    
+    }
+```
+
+Where ``unityOrientation()`` can get one of the following values:  
+<img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapperiOS.STAUnityOrientation.STAPortrait (portrait only app)  
+<img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapperiOS.STAUnityOrientation.STALandscape (landscape only app)  
+<img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapperiOS.STAUnityOrientation.STAAutoRotation (app supports auto-rotation)  
 
 
 <br></br>
@@ -91,7 +107,7 @@ User-Defined Mode (default)    | Using your application's default splash image, 
 Template Mode                  | StartApp SDK provides a set of pre-defined templates in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](unity-iOS-advanced-usage#CustomizingSplashScreen)
 
 ####Adding the Splash Screen 
-Simply call ``showSplashAd()`` in your ``Start()`` method:
+Simply call ``showSplashAd()`` in the ``Start()`` method of your script:
 ```csharp
 void Start () {
         #if UNITY_IPHONE
