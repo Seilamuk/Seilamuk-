@@ -110,6 +110,22 @@ After logging in, your account ID will be displayed at the top right-hand corner
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./iOS/images/ios-appId.png" />
 
+[Back to top](#top)
+
+<a name="ATS" />
+##Step 5, Disable ATS for iOS 9 apps
+iOS 9 includes a new feature called App Transport Security (ATS). If you are using Xcode 7, an exception that allows HTTP requests must be added to your app in order to make sure ads continue to be served on iOS 9 devices. You can read more <a href="https://support.startapp.com/hc/en-us/articles/208639508-IOS-9-and-StartApp-s-iOS-SDK" target="_blank">here</a>.  
+
+Add the following exception to your info.plist:
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
+
+<img src="./iOS/images/ATS.jpg" />
 
 [Back to top](#top)
 

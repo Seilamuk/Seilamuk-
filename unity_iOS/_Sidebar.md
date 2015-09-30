@@ -6,6 +6,8 @@
 
 [**Step 3, Provide Your App's Orientation**](iOS-InApp-Unity-Documentation#orientation)
 
+[**Step 4, Disable ATS for iOS 9 apps**](iOS-InApp-Unity-Documentation#ATS) 
+
 [**Showing Interstitial Ads**](iOS-InApp-Unity-Documentation#step4)
 
 [**Showing the Splash Ad**](iOS-InApp-Unity-Documentation#splash-ads)

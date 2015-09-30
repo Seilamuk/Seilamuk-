@@ -6,7 +6,9 @@
 
 [**Step 3, Adding the Bridging-Header file**](iOS-Swift-InApp-Documentation#step3)
 
-[**Initialization**](iOS-Swift-InApp-Documentation#step4)
+[**Step 4, Initialization**](iOS-Swift-InApp-Documentation#step4)
+
+[**Step 5, Disable ATS for iOS 9 apps**](iOS-Swift-InApp-Documentation#ATS) 
 
 [**Showing the Splash Ad**](iOS-Swift-InApp-Documentation#splash-ads)
 
