@@ -73,8 +73,26 @@ Replace __"your app id"__ with your own value provided in the [developers’ por
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./iOS/images/ios-appId.png" />
 
+[Back to top](#top)
+
+
+<a name="ATS" />
+##Step 4, Disable ATS in Xcode 7 for iOS 9 apps
+iOS 9 includes a new feature meant to help preserve the users privacy called App Transport Security (ATS). To make sure your ads continue to be served on iOS 9 devices, an exception that allows HTTP requests must be added to your app. You can read more [here](https://support.startapp.com/hc/en-us/articles/208639508-IOS-9-and-StartApp-s-iOS-SDK).
+
+Add the following exception to your info.plist to allow any insecure connection:
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
+
+<img src="./iOS/images/ATS.jpg" />
 
 [Back to top](#top)
+
 
 <a name="splash-ads" />
 ##Showing Splash Ad (recommended)
