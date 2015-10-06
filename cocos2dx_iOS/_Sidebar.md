@@ -6,6 +6,8 @@
 
 [**Step 3, Initialization**](iOS-InApp-cocos2dx-Documentation#step3)
 
+[**Step 4, Disable ATS for iOS 9 apps**](iOS-InApp-cocos2dx-Documentation#ATS) 
+
 [**Showing the Splash Ad**](iOS-InApp-cocos2dx-Documentation#splash-ads)
 
 [**Showing Interstitial Ads**](iOS-InApp-cocos2dx-Documentation#step4)
