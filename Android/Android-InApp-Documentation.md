@@ -248,7 +248,6 @@ Obfuscation protects an application from reverse-engineering or modification by 
 LineNumberTable, *Annotation*, EnclosingMethod
 -dontwarn android.webkit.JavascriptInterface
 -dontwarn com.startapp.**
--dontwarn android.media.**
 ```
 
 [Back to top](#top)
