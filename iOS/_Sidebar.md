@@ -6,7 +6,7 @@
 
 [**Step 3, Initialization**](iOS-InApp-Documentation#step3)
 
-[**Step 4, iOS 9 Special Considerations **](iOS-InApp-Documentation#IOS9) 
+[**Step 4, iOS 9 Special Considerations**](iOS-InApp-Documentation#IOS9) 
 
 [**Showing the Splash Ad**](iOS-InApp-Documentation#splash-ads)
 
