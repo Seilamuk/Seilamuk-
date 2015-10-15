@@ -8,7 +8,7 @@
 
 [**Step 4, Initialization**](iOS-Swift-InApp-Documentation#step4)
 
-[**Step 5, Disable ATS for iOS 9 apps**](iOS-Swift-InApp-Documentation#ATS) 
+[**Step 5, iOS 9 Special Considerations**](iOS-Swift-InApp-Documentation#IOS9) 
 
 [**Showing the Splash Ad**](iOS-Swift-InApp-Documentation#splash-ads)
 
