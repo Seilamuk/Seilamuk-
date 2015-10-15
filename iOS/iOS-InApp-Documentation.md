@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Last SDK Version: 3.2.0**
+**Last SDK Version: 3.2.2**
 
 **For Swift documentation, please [click here](https://github.com/StartApp-SDK/Documentation/wiki/iOS-Swift-InApp-Documentation).**
 
