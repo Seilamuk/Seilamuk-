@@ -67,9 +67,13 @@ Where ``unityOrientation()`` can get one of the following values:
 <img src="./iOS/images/V.png" hspace="15px" width="12px" /> STAUnityOrientation.STALandscape (landscape only app)  
 <img src="./iOS/images/V.png" hspace="15px" width="12px" /> STAUnityOrientation.STAAutoRotation (app supports auto-rotation)  
   
-<a name="ATS" />
-##Step 4, Disable ATS for iOS 9 apps
-iOS 9 includes a new feature called App Transport Security (ATS). If you are using Xcode 7, an exception that allows HTTP requests must be added to your app in order to make sure ads continue to be served on iOS 9 devices. You can read more <a href="https://support.startapp.com/hc/en-us/articles/208639508-IOS-9-and-StartApp-s-iOS-SDK" target="_blank">here</a>.  
+<a name="IOS9" />
+##Step 4, iOS 9 Special Considerations 
+
+iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
+
+####App Transport Security (ATS)
+iOS 9 includes a new feature called **App Transport Security (ATS)**. If you are using Xcode 7, an exception that allows HTTP requests should be added to your app. You can read more <a href="https://support.startapp.com/hc/en-us/articles/208639508-IOS-9-and-StartApp-s-iOS-SDK" target="_blank">here</a>.  
 
 Add the following exception to your info.plist:
 ```xml
@@ -82,7 +86,14 @@ Add the following exception to your info.plist:
 
 <img src="./iOS/images/ATS.jpg" />
 
+
+####Bitcode
+iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this feature should be disabled as StartApp SDK does not yet support this feature. Navigate to your target or project **Build Settings**. Under the **Build Options** section, set **Enable Bitcode** to _No_ (for both Debug & Release).
+
+<img src="./iOS/images/bitcode.jpg" />
+
 [Back to top](#top)
+
 
 
 <br></br>
