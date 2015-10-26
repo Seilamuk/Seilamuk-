@@ -25,29 +25,6 @@ StartAppWrapperiOS.bannerIsVisible();
 ##Customizing your Interstitial Ad
 You can choose to show a specific type of interstitial ad, as well as getting callbacks events, using the ``STAInterstitialProperties`` object.
 
-###Selecting Interstitial Ad Type
-When calling an interstitial ad, the ad type with the best performance will be automatically selected. If you would like to explicitly choose the type of ad, use the ``STAInterstitialProperties.type`` object when calling ``loadAd()``. 
-
-The options for this parameter are:
-
-Constant Name | Description
---- | --- 
-*`StartAppWrapperiOS.AdType.STAAdType_Automatic`* **(recommended)** | Automatic selects the most suitable banner of the two listed below
-*`StartAppWrapperiOS.AdType.STAAdType_FullScreen`* | A full-page ad 
-*`StartAppWrapperiOS.AdType.STAAdType_OfferWall`* | A full page offerwall 
-*`StartAppWrapperiOS.AdType.STAAdType_Overlay`* | An overlay Ad is a full page Ad that runs on top of your application
-
-We highly recommend using the *Automatic* type, which automatically selects the best ad type to display. 
-
-**Example - loading an OfferWall ad**  
-```csharp
-#if UNITY_IPHONE
-StartAppWrapperiOS.STAInterstitialProperties adProp = new StartAppWrapperiOS.STAInterstitialProperties();
-adProp.type = StartAppWrapperiOS.AdType.STAAdType_OfferWall;
-StartAppWrapperiOS.loadAd(adProp);
-#endif
-```
-
 ###Using Interstitial Callbacks
 Use one of your GameObjects as a delegate to get callbacks from the interstitial ad. Even an empty GameObject you create for this purpose will do.
 
