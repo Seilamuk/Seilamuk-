@@ -116,7 +116,7 @@ startAppNativeAd.loadAd(this, nativeAdParams, adListener);
 ######Return Value: String
 
 #####► Get the Ad's rating
-> **``public String getRating()``**<br></br>
+> **``public String getRate()``**<br></br>
 
 Get the rating of the ad in the Google Play store. The rating range is 1-5.
 
