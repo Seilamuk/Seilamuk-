@@ -16,6 +16,7 @@ NativeAdParams adRequestParams = new NativeAdParams();
 		adRequestParams.setAdsNum(5);
 ```
 
+**Parameters:**
 + **``setPartner``**: Your Partner/Publisher Id
 + **``setProd``**: Your Product/application Id
 + **``setAdw``**: Your ad width
