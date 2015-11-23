@@ -73,14 +73,16 @@ NativeAdListener adListener = new NativeAdListener() {
 			// Print all ads details to log
 	            Iterator<NativeAdDetails> iterator = nativeAds.iterator();
 	            while(iterator.hasNext()){
-	                  Log.d("MyApplication", iterator.next().getTitle());
-					  Log.d("MyApplication", iterator.next().getDesc());
-					  Log.d("MyApplication", iterator.next().getImg());
-					  Log.d("MyApplication", iterator.next().getIcon());
-					  Log.d("MyApplication", iterator.next().getRate().toString());
-					  Log.d("MyApplication", iterator.next().getInstalls());
-					  Log.d("MyApplication", iterator.next().getCat());
-					  Log.d("MyApplication", iterator.next().getPck());					  					  
+NativeAdDetails nativeAdDetails = iterator.next();
+                     
+                          Log.d("MyApplication", nativeAdDetails.getTitle());
+                          Log.d("MyApplication", nativeAdDetails.getDesc());
+                          Log.d("MyApplication", nativeAdDetails.getImg());
+                          Log.d("MyApplication", nativeAdDetails.getIcon());
+                          Log.d("MyApplication", nativeAdDetails.getRate().toString());
+                          Log.d("MyApplication", nativeAdDetails.getInstalls());
+                          Log.d("MyApplication", nativeAdDetails.getCat());
+                          Log.d("MyApplication", nativeAdDetails.getPck());	                				  					  
 	            }
 			}
 			
