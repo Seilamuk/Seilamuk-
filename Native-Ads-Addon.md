@@ -72,8 +72,8 @@ NativeAdListener adListener = new NativeAdListener() {
 				
 			// Print all ads details to log
 	            Iterator<NativeAdDetails> iterator = nativeAds.iterator();
-	            while(iterator.hasNext()){
-NativeAdDetails nativeAdDetails = iterator.next();
+	            while(iterator.hasNext()) {
+                          NativeAdDetails nativeAdDetails = iterator.next();
                      
                           Log.d("MyApplication", nativeAdDetails.getTitle());
                           Log.d("MyApplication", nativeAdDetails.getDesc());
@@ -84,7 +84,7 @@ NativeAdDetails nativeAdDetails = iterator.next();
                           Log.d("MyApplication", nativeAdDetails.getCat());
                           Log.d("MyApplication", nativeAdDetails.getPck());	                				  					  
 	            }
-			}
+	}
 			
 			@Override
 			public void onFailedToReceiveAd(NativeAdResponse response) {
