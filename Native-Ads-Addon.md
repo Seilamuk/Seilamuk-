@@ -76,7 +76,7 @@ NativeAdListener adListener = new NativeAdListener() {
 					  Log.d("MyApplication", iterator.next().getDesc());
 					  Log.d("MyApplication", iterator.next().getImg());
 					  Log.d("MyApplication", iterator.next().getIcon());
-					  Log.d("MyApplication", iterator.next().getRate());
+					  Log.d("MyApplication", iterator.next().getRate().toString());
 					  Log.d("MyApplication", iterator.next().getInstalls());
 					  Log.d("MyApplication", iterator.next().getCat());
 					  Log.d("MyApplication", iterator.next().getPck());					  					  
