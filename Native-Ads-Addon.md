@@ -8,12 +8,12 @@ private StartAppNativeAd startAppNativeAd = new StartAppNativeAd();
 
 **2.** Prepare your native ad parameters:
 ```java
-NativeAdParams adRequestParams = new NativeAdParams();
-		adRequestParams.setPartner("123456789");
-		adRequestParams.setProd("987654321");
-		adRequestParams.setAdw(1200);
-		adRequestParams.setAdh(628);
-		adRequestParams.setAdsNum(5);
+NativeAdParams nativeAdParams = new NativeAdParams();
+		nativeAdParams.setPartner("123456789");
+		nativeAdParams.setProd("987654321");
+		nativeAdParams.setAdw(1200);
+		nativeAdParams.setAdh(628);
+		nativeAdParams.setAdsNum(5);
 ```
 
 **Parameters:**
@@ -38,9 +38,9 @@ NativeAdListener nativeAdListener = new NativeAdListener() {
 };
 ```
 
-**4.** To load your native ad, call the loadAd() method with the ApplicationContext and adRequestParams object:
+**4.** To load your native ad, call the loadAd() method with the activity context, the NativeAdParams and the NativeAdListener instances:
 ```java
-startAppNativeAd.loadAd(getApplicationContext(), adRequestParams, nativeAdListener);
+startAppNativeAd.loadAd(this, nativeAdParams, nativeAdListener);
 ```
 
 
@@ -54,12 +54,12 @@ After initializing and  loading your  **startAppNativeAd** object, use the ``get
 StartAppNativeAd startAppNativeAd = new StartAppNativeAd();
 
 // Declare Native Ad Preferences
-NativeAdParams adRequestParams = new NativeAdParams();
-		adRequestParams.setPartner("123456789");
-		adRequestParams.setProd("987654321");
-		adRequestParams.setAdw(1200);
-		adRequestParams.setAdh(628);
-		adRequestParams.setAdsNum(5);
+NativeAdParams nativeAdParams = new NativeAdParams();
+		nativeAdParams.setPartner("123456789");
+		nativeAdParams.setProd("987654321");
+		nativeAdParams.setAdw(1200);
+		nativeAdParams.setAdh(628);
+		nativeAdParams.setAdsNum(5);
 
 // Declare Ad Callbacks Listener
 NativeAdListener adListener = new NativeAdListener() {
@@ -93,14 +93,14 @@ NativeAdListener adListener = new NativeAdListener() {
 	}
 };
 
-startAppNativeAd.loadAd(getApplicationContext() ,adRequestParams, adListener);
+startAppNativeAd.loadAd(this, nativeAdParams, adListener);
 ```
 
 > **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
 
 ####Showing and Clicking a Native Ad
-+ Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
-+ Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` method.
++ Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression(Context contex)`` method.
++ Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick(Context contex)`` method.
 
 
 <a name="NativeAdDetailsAPI" />
