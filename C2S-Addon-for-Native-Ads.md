@@ -1,12 +1,12 @@
 <a name="using-native-ads" />
 ##Integrating Native Ads
 ####Initializing and Loading a StartAppNativeAd Object
-**1.** In your activity, create a member variable, as follows:
+1. In your activity, create a member variable, as follows:
 ```java
 private StartAppNativeAd startAppNativeAd = new StartAppNativeAd();
 ```
 
-**2.** Prepare your native ad parameters:
+2. Prepare your native ad parameters:
 ```java
 NativeAdParams adRequestParams = new NativeAdParams();
 		adRequestParams.setPartner("123456789");
@@ -22,14 +22,9 @@ NativeAdParams adRequestParams = new NativeAdParams();
 + **``setAdh``**: Your ad height
 + **``setAdsNum``**: Number of native ads to load
 
-**3.** To load your native ad, call the loadAd() method with the ApplicationContext and adRequestParams object:
+3. Create a **NativeAdListener** object for getting callbacks:
 ```java
-startAppNativeAd.loadAd(getApplicationContext(), adRequestParams);
-```
-
-You can register your **startAppNativeAd** object for callbacks by passing an **NativeAdListener** object to the ``loadAd()`` method:
-```java
-startAppNativeAd.loadAd(getApplicationContext(), adRequestParams, new AdEventListener() {
+NativeAdListener nativeAdListener = new NativeAdListener() {
 	  @Override
 	  public void onReceiveAd(Ad arg0) {
 			// Native Ad Received
@@ -41,6 +36,12 @@ startAppNativeAd.loadAd(getApplicationContext(), adRequestParams, new AdEventLis
 	  }
 });
 ```
+
+4. To load your native ad, call the loadAd() method with the ApplicationContext and adRequestParams object:
+```java
+startAppNativeAd.loadAd(getApplicationContext(), adRequestParams, nativeAdListener);
+```
+
 
 ####Using the Native Ad Object
 After initializing and  loading your  **startAppNativeAd** object, use the ``getAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, image, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
