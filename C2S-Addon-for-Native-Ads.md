@@ -1,12 +1,12 @@
 <a name="using-native-ads" />
 ##Integrating Native Ads
 ####Initializing and Loading a StartAppNativeAd Object
-1. In your activity, create a member variable, as follows:
+**1.** In your activity, create a member variable, as follows:
 ```java
 private StartAppNativeAd startAppNativeAd = new StartAppNativeAd();
 ```
 
-2. Prepare your native ad parameters:
+**2.** Prepare your native ad parameters:
 ```java
 NativeAdParams adRequestParams = new NativeAdParams();
 		adRequestParams.setPartner("123456789");
@@ -22,7 +22,7 @@ NativeAdParams adRequestParams = new NativeAdParams();
 + **``setAdh``**: Your ad height
 + **``setAdsNum``**: Number of native ads to load
 
-3. To load your native ad, call the loadAd() method with the ApplicationContext and adRequestParams object:
+**3.** To load your native ad, call the loadAd() method with the ApplicationContext and adRequestParams object:
 ```java
 startAppNativeAd.loadAd(getApplicationContext(), adRequestParams);
 ```
