@@ -51,7 +51,7 @@ After initializing and  loading your  **startAppNativeAd** object, use the ``get
 
 ```java
 // Create your StartAppNativeAd object
-private StartAppNativeAd startAppNativeAd = new StartAppNativeAd();
+StartAppNativeAd startAppNativeAd = new StartAppNativeAd();
 
 // Declare Native Ad Preferences
 NativeAdParams adRequestParams = new NativeAdParams();
