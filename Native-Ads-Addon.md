@@ -16,7 +16,6 @@ NativeAdParams adRequestParams = new NativeAdParams();
 		adRequestParams.setAdsNum(5);
 ```
 
-**Parameters:**
 + **``setPartner``**: Your Partner/Publisher Id
 + **``setProd``**: Your Product/application Id
 + **``setAdw``**: Your ad width
@@ -72,19 +71,19 @@ NativeAdListener adListener = new NativeAdListener() {
 				
 			// Print all ads details to log
 	            Iterator<NativeAdDetails> iterator = nativeAds.iterator();
-	            while(iterator.hasNext()) {
-                          NativeAdDetails nativeAdDetails = iterator.next();
+	            while(iterator.hasNext()){
+					NativeAdDetails nativeAdDetails = iterator.next();
                      
-                          Log.d("MyApplication", nativeAdDetails.getTitle());
-                          Log.d("MyApplication", nativeAdDetails.getDesc());
-                          Log.d("MyApplication", nativeAdDetails.getImg());
-                          Log.d("MyApplication", nativeAdDetails.getIcon());
-                          Log.d("MyApplication", nativeAdDetails.getRate().toString());
-                          Log.d("MyApplication", nativeAdDetails.getInstalls());
-                          Log.d("MyApplication", nativeAdDetails.getCat());
-                          Log.d("MyApplication", nativeAdDetails.getPck());	                				  					  
+                    Log.d("MyApplication", nativeAdDetails.getTitle());
+                    Log.d("MyApplication", nativeAdDetails.getDesc());
+                    Log.d("MyApplication", nativeAdDetails.getImg());
+                    Log.d("MyApplication", nativeAdDetails.getIcon());
+                    Log.d("MyApplication", nativeAdDetails.getRate().toString());
+                    Log.d("MyApplication", nativeAdDetails.getInstalls());
+                    Log.d("MyApplication", nativeAdDetails.getCat());
+                    Log.d("MyApplication", nativeAdDetails.getPck());				  					  
 	            }
-	}
+			}
 			
 			@Override
 			public void onFailedToReceiveAd(NativeAdResponse response) {
