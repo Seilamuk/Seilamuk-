@@ -26,15 +26,15 @@ NativeAdParams adRequestParams = new NativeAdParams();
 ```java
 NativeAdListener nativeAdListener = new NativeAdListener() {
 	  @Override
-	  public void onReceiveAd(Ad arg0) {
+	  public void onReceiveAd(NativeAdResponse arg0) {
 			// Native Ad Received
 	  }
 	  
 	  @Override
-	  public void onFailedToReceiveAd(Ad arg0) {
+	  public void onFailedToReceiveAd(NativeAdResponse arg0) {
 			// Native Ad failed to receive
 	  }
-});
+};
 ```
 
 **4.** To load your native ad, call the loadAd() method with the ApplicationContext and adRequestParams object:
@@ -90,7 +90,7 @@ NativeAdListener adListener = new NativeAdListener() {
 			}
 		};
 
-new StartAppNativeAd().loadAd(getApplicationContext() ,adRequestParams, adListener);
+startAppNativeAd.loadAd(getApplicationContext() ,adRequestParams, adListener);
 ```
 
 > **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
