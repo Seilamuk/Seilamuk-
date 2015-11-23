@@ -86,12 +86,12 @@ NativeAdListener adListener = new NativeAdListener() {
 	            }
 			}
 			
-			@Override
-			public void onFailedToReceiveAd(NativeAdResponse response) {
-				// Native Ad failed to receive
-	            Log.e("MyApplication", "Error while loading Ad");
-			}
-		};
+	@Override
+	public void onFailedToReceiveAd(NativeAdResponse response) {
+		// Native Ad failed to receive
+		Log.e("MyApplication", "Error while loading Ad");
+	}
+};
 
 startAppNativeAd.loadAd(getApplicationContext() ,adRequestParams, adListener);
 ```
