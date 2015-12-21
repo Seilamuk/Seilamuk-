@@ -14,8 +14,6 @@
 
 [**Showing a Splash Ad**](Android-InApp-Documentation#step7)
 
-[**Integrating the Slider**](Android-InApp-Documentation#step8)
-
 [**Obfuscation**](Android-InApp-Documentation#step9)
 
 [**Native Ads**](Android-InApp-Documentation#Native)

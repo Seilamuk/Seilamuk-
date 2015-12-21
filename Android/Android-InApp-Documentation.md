@@ -220,19 +220,6 @@ Apply the following parameters:
 
 [Back to top](#top)
 
-<a name="step8" />
-##Integrating the Slider
-After calling ```setContentView()```, in the ```OnCreate()``` method of your main activity, call the static function:
-```java
-StartAppAd.showSlider(this);
-```
-
-If you would like the Slider to appear in additional activities, repeat this step in each one of the activities you would like it to show in. The Slider cannot be implemented in activities with a _Dialog Theme_: ```(android:theme="@android:style/Theme.Dialog")```
-
-> **NOTE:**
-> for better user experience, and in order to avoid reload of the Slider when rotating the phone, it is recommended to go back to your manifest file and add the following attribute to any \<activity\> element that you added the Slider to:  ```android:configChanges="orientation|screenSize"```
-
-[Back to top](#top)
 
 <a name="step9" />
 ##Obfuscation (Optional)
