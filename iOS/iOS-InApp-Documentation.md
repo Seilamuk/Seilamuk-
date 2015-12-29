@@ -45,7 +45,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="./iOS/images/V.png" width="12px" /> _QuartzCore.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _CoreMedia.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _AVFoundation.framework_ 
-<br></br><img src="./iOS/images/V.png" width="12px" /> _libz.dylib_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _libz.dylib_ (XCode 6 and below) / _libz.tbd_ (XCode 7)
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
 [Back to top](#top)
