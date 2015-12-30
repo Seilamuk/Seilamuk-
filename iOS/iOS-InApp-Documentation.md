@@ -14,6 +14,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 > - The code samples in this document can be copy/paste into your source code
 > - When submitting your application to the App Store,do not forget to update your ["IDFA Settings"](#IDFA) 
 > - Please notice that steps 1-3 are mandatory
+> - A basic video tutorial is available <a href="https://www.youtube.com/watch?v=QnLNCKNkxT8" target="_blank">here</a>
 > - If you have any questions, contact us via [support@startapp.com](http://support@startapp.com)
 
 <br></br>
