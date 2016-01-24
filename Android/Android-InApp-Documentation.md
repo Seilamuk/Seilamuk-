@@ -269,7 +269,7 @@ StartAppSDK.init(this,
 
 
 ####Set Location
-If you haven't included the ACCESS_COARSE_LOCATION or the ACCESS_FINE_LOCATION optional permissions, you can still pass StartApp the user's location using an explicit API. 
+If you included the ACCESS_COARSE_LOCATION or the ACCESS_FINE_LOCATION optional permissions, you can skip this step. 
 
 The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
 
