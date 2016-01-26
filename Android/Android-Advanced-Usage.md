@@ -377,7 +377,7 @@ After initializing and  loading your  **startAppNativeAd** object, use the ``get
 NativeAdPreferences nativePrefs = new NativeAdPreferences()
 										  .setAdsNumber(3)                // Load 3 Native Ads
 										  .setAutoBitmapDownload(true)    // Retrieve Images object
-										  .setImageSize(NativeAdBitmapSize.SIZE150X150);
+										  .setPrimaryImageSize(2);        // 150x150 image
 
 // Declare Ad Callbacks Listener
 AdEventListener adListener = new AdEventListener() {     // Callback Listener
@@ -443,16 +443,33 @@ You can choose between two options to obtain the ad's image:
 
 
 #####► Set Ad's image size
-> **``public NativeAdPreferences setImageSize(NativeAdBitmapSize bitmapSize)``**<br></br>
+> **``public NativeAdPreferences setPrimaryImageSize(int imageSize)``**<br></br>
 
 Set the image size of the ad to be retrieved.
 
 ######Parameters<br></br>
-*bitmapSize* - NativeAdBitmapSize for selecting image size. The NativeAdBitmapSize can get the following values: <br></br>
-+ SIZE72X72 – for image size 72px X 72px <br></br>
-+ SIZE100X100 – for image size 100px X 100px <br></br>
-+ SIZE150X150 – for image size 150px X 150px <br></br>
-+ SIZE340X340 – for image size 340px X 340px <br></br>
+*imageSize* - imageSize can get the following values: <br></br>
++ 0 – for image size 72px X 72px <br></br>
++ 1 – for image size 100px X 100px <br></br>
++ 2 – for image size 150px X 150px <br></br>
++ 3 – for image size 340px X 340px <br></br>
++ 4 – for image size 1200px X 628px <br></br>
+
+######Return Value<br></br>
+*NatvieAdPreferences* – current object
+
+#####► Set Ad's secondary icon size
+> **``public NativeAdPreferences setSecondaryImageSize(int imageSize)``**<br></br>
+
+Set a secondary icon size of the ad to be retrieved.
+
+######Parameters<br></br>
+*imageSize* - imageSize can get the following values: <br></br>
++ 0 – for image size 72px X 72px <br></br>
++ 1 – for image size 100px X 100px <br></br>
++ 2 – for image size 150px X 150px <br></br>
++ 3 – for image size 340px X 340px <br></br>
++ 4 – for image size 1200px X 628px <br></br>
 
 ######Return Value<br></br>
 *NatvieAdPreferences* – current object
@@ -490,6 +507,23 @@ Get the image URL of the ad, according to the selected size.
 Get the image of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
 
 ######Return Value: Bitmap
+
+
+#####► Get the Ad's secondary icon URL
+> **``public String getSecondaryImageUrl()``**<br></br>
+
+Get the secondary icon URL of the ad, according to the selected size.
+
+######Return Value: String
+
+
+#####► Get the Ad's secondary icon URL
+> **``public Bitmap getSecondaryImageBitmap()``**<br></br>
+
+Get the secondary icon of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
+
+######Return Value: Bitmap
+
 
 #####► Get the Ad's installs numbers
 > **``public String getInstalls()``**<br></br>
