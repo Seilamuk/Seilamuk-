@@ -15,7 +15,7 @@ This document describes the procedure for serving StartApp Ads in your iOS appli
 The following instructions assume you are already familiar with the AdMob Mediation Network and have already integrated the Google Mobile Ads SDK into your application. Otherwise, please start by reading the following articles for a walk-through explanation of what mediation is, how to use the AdMob Mediation UI, and instructions on how to add AdMob mediation code into your app.
 
 - Mediation Overview: <a href="https://support.google.com/admob/answer/2413211" target="_blank">support.google.com/admob/answer/2413211</a>
-- Instructions: <a href="https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#ios" target="_blank">developers.google.com/mobile-ads-sdk/docs/admob/mediation#ios</a>
+- Instructions: <a href="https://developers.google.com/mobile-ads-sdk/docs/admob/mediation#ios" target="_blank">https://developers.google.com/admob/ios/mediation</a>
 
 [Back to top](#top)
 
