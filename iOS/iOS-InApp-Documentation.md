@@ -29,6 +29,8 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartApp.framework_
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StartApp.bundle_
 
+Make sure to check the "Copy items if needed" checkbox.
+
 [Back to top](#top)
 
 <a name="step2" />
