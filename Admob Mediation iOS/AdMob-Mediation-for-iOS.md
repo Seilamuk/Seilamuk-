@@ -37,6 +37,7 @@ Add the required AdMob adapter classes from the zip file to your project:
 <img src="./Admob%20Mediation%20iOS/images/V.png" width="12px" />  STAAdMobCustomEventBanner   
 <img src="./Admob%20Mediation%20iOS/images/V.png" width="12px" />  STAAdMobCustomEventInterstitial  
 
+Make sure to check the "Copy items if needed" checkbox.  
 [Back to top](#top)
 
 <br></br>
