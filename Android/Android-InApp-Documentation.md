@@ -12,7 +12,7 @@
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the SDK JAR to Your Eclipse Project
+##Step 1, Adding the SDK to Your Project
 > **IMPORTANT:** This is a mandatory step
 
 Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directory of your project.
