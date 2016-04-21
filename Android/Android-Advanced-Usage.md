@@ -211,6 +211,10 @@ public void adDisplayed(Ad ad) {
 @Override
 public void adClicked(Ad ad) {
 }
+
+@Override
+public void adNotDisplayed(Ad ad) {
+}
 ```
 
 **Example**
@@ -224,6 +228,9 @@ startAppAd.showAd(new AdDisplayListener() {
     }
     @Override
     public void adClicked(Ad ad) {
+    }
+    @Override
+    public void adNotDisplayed(Ad ad) {
     }
 });
 ```
