@@ -508,7 +508,7 @@ Get the image URL of the ad, according to the selected size.
 ######Return Value: String
 
 
-#####► Get the Ad's image URL
+#####► Get the Ad's image bitmap
 > **``public Bitmap getImageBitmap()``**<br></br>
 
 Get the image of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
@@ -524,7 +524,7 @@ Get the secondary icon URL of the ad, according to the selected size.
 ######Return Value: String
 
 
-#####► Get the Ad's secondary icon URL
+#####► Get the Ad's secondary icon bitmap
 > **``public Bitmap getSecondaryImageBitmap()``**<br></br>
 
 Get the secondary icon of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
