@@ -70,14 +70,14 @@ In your main activity, go to the ``OnCreate`` method and before calling ``setCon
 StartAppSDK.init(this, "Your App ID", true);
 ```
 
-Please notice - if you initialize the SDK in a service, you must do it on the service's main thread.  
-
 Replace __"Your App ID"__ with your own value provided in the [developers’ portal](https://portal.startapp.com/#/signin).<br></br>
 
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" />
 
 The last ``true`` parameter enables the ["Return Ads"](#step4) feature as explained in the next section. If you want to disable this feature, simply pass ``false`` instead.
+
+Please notice - if you initialize the SDK in a service, you must do it on the service's main thread.    
 
 [Back to top](#top)
 
