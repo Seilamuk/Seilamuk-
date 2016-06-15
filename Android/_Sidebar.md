@@ -18,8 +18,6 @@
 
 [**Obfuscation**](Android-InApp-Documentation#obfuscation)
 
-[**Enjoy Higher eCPM with Demographic-Targeted Ads**](Android-InApp-Documentation#Demographic)
-
 [**Sample Project**](Android-InApp-Documentation#SampleProject)
 
 [**Advanced Usage**](android-advanced-usage)    
