@@ -14,9 +14,9 @@
 
 [**Banners**](Android-InApp-Documentation#banners)
 
-[**Obfuscation**](Android-InApp-Documentation#obfuscation)
-
 [**Native Ads**](Android-InApp-Documentation#Native)
+
+[**Obfuscation**](Android-InApp-Documentation#obfuscation)
 
 [**Enjoy Higher eCPM with Demographic-Targeted Ads**](Android-InApp-Documentation#Demographic)
 
