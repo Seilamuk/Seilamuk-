@@ -152,28 +152,6 @@ public void btnOpenActivity (View view){
 }
 ```
 
-####Showing Rewarded Video Ads
-Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
-
-> **IMPORTANT**    
-> 1. Rewarded Video Ads are supported from API level 16 and above  
-> 2. Please make sure to update your manifest file with the "FullScreenActivity" as described [here](#Activities)  
-
-In order to show a Rewarded Ad, pass the following AdMode parameter when calling the ``loadAd()`` method:
-```java
-startAppAd.loadAd(AdMode.REWARDED_VIDEO);
-```
-
-Implement the following listener in order to get a callback when the user completes watching the video and is eligible for getting the reward:  
-```java
-startAppAd.setVideoListener(new VideoListener() {
-     @Override
-     public void onVideoCompleted() {
-          // Grant user with the reward
-     }
-});
-```
-
 > **IMPORTANT:** Loading an ad might take a few seconds especially in the case of a video, so it's important not to show the ad immediately after loading it. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. It is recommended to use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use (see [Adding a Callback when an Interstitial Ad is loaded](android-advanced-usage#adding-a-callback-when-an-interstitial-ad-is-loaded)).
 
 [Back to top](#top)
