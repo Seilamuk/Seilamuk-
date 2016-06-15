@@ -6,15 +6,15 @@
 
 [**Step 3 - Initialization**](Android-InApp-Documentation#step3)
 
-[**Showing Interstitial Ads**](Android-InApp-Documentation#step6)
+[**Interstitial Ads**](Android-InApp-Documentation#interstitial)
 
-[**Showing a Splash Ad**](Android-InApp-Documentation#step7)
+[**Splash Ad**](Android-InApp-Documentation#splash)
 
-[**Return Ads**](Android-InApp-Documentation#return)
+[**Return Ad**](Android-InApp-Documentation#return)
 
-[**Showing Banners**](Android-InApp-Documentation#banners)
+[**Banners**](Android-InApp-Documentation#banners)
 
-[**Obfuscation**](Android-InApp-Documentation#step9)
+[**Obfuscation**](Android-InApp-Documentation#obfuscation)
 
 [**Native Ads**](Android-InApp-Documentation#Native)
 

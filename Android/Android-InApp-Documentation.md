@@ -82,8 +82,8 @@ Please notice - if you initialize the SDK in a service, you must do it on the se
 [Back to top](#top)
 
 
-<a name="step6" />
-##Showing Interstitial Ads
+<a name="interstitial" />
+##Interstitial Ads
 Interstitial Ads are displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. 
 
 ####Initializing the StartApp Ad Object
@@ -128,8 +128,8 @@ public void btnOpenActivity (View view){
 
 [Back to top](#top)
 
-<a name="step7" />
-##Showing a Splash Ad (recommended)
+<a name="splash" />
+##Splash Ad (recommended)
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
@@ -156,7 +156,7 @@ Apply the following parameters:
 [Back to top](#top)
 
 <a name="return" />
-##Return Ads
+##Return Ad
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 3th parameter of the ``StartAppSDK.init`` method:
@@ -168,7 +168,7 @@ StartAppSDK.init(this, "Your App ID", false);
 
 
 <a name="banners" />
-##Showing Banners
+##Banners
 Add the following View inside your Activity layout XML:
 ```java
 <com.startapp.android.publish.banner.Banner 
@@ -186,7 +186,7 @@ Add the following View inside your Activity layout XML:
 [Back to top](#top)
 
 
-<a name="step9" />
+<a name="obfuscation" />
 ##Obfuscation (Optional)
 Obfuscation protects an application from reverse-engineering or modification by making it harder for a third-party to access your source (decompiled) code.
 
