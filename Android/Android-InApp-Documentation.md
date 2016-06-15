@@ -212,44 +212,6 @@ For a full integration guide, please refer to the ["Using Native Ads"](android-a
 
 [Back to top](#top)
 
-<a name="Demographic" />
-##Enjoy Higher eCPM with Demographic-Targeted Ads
-If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
-
-####Set Age and Gender
-Upon initialization, after providing your DevId and AppId, pass the **SDKAdPreferences** object with its data:
-```java
-StartAppSDK.init(this,  
-                 "Your App ID", 
-                 new SDKAdPreferences()
-                      .setAge(35)
-                      .setGender(Gender.FEMALE));
-}
-```
-+ ``setAge`` can take an integer.
-+ ``setGender`` can take one of the following values: Gender.FEMALE or Gender.MALE.
-
-
-####Set Location
-If you included the ACCESS_COARSE_LOCATION or the ACCESS_FINE_LOCATION optional permissions, you can skip this step. 
-
-The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
-
-```java
-@Override
-public void onResume() {
-    super.onResume();
-    startAppAd.loadAd(new AdPreferences()
-                           .setLatitude(31.776719)
-                           .setLongitude(35.234508));
-    startAppAd.onResume();
-}
-```
-
-In your ``onResume()`` method, use the **AdPreferences** object instead of just calling ``startAppAd.onResume()`` as described above. Do the same for each ``loadAd()`` call in your project.
-
-[Back to top](#top)
-
 <a name="SampleProject" />
 ##Sample Project
 StartApp provides a sample integration project available on [GitHub](https://github.com/StartApp-SDK/StartApp_InApp_SDK_Example)

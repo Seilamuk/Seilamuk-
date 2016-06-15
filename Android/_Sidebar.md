@@ -33,5 +33,6 @@
   [Showing Rewarded Video Ads](android-advanced-usage#RewardedVideo)  
   [Customizing the Splash Screen](android-advanced-usage#CustomizingSplashScreen)  
   [Integrating Native Ads](android-advanced-usage#using-native-ads)  
+  [Demographic-Targeted Ads](android-advanced-usage#Demographic)  
 
 [**SearchBox SDK Removal Procedure**](SearchBox-SDK-Removal-Procedure)

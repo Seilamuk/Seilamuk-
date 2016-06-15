@@ -597,3 +597,23 @@ Call this method when the user clicks on the ad.
 *context* – the context of the host activity
 
 [Back to top](#top)
+
+<a name="Demographic" />
+##Enjoy Higher eCPM with Demographic-Targeted Ads
+If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.  
+
+Upon initialization, after providing your DevId and AppId, pass the **SDKAdPreferences** object with its data:  
+```java
+StartAppSDK.init(this,  
+                 "Your App ID", 
+                 new SDKAdPreferences()
+                      .setAge(35)
+                      .setGender(Gender.FEMALE));
+}
+```
++ ``setAge`` can take an integer.
++ ``setGender`` can take one of the following values: Gender.FEMALE or Gender.MALE.
+
+
+[Back to top](#top)
+
