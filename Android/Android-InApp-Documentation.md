@@ -81,34 +81,6 @@ Please notice - if you initialize the SDK in a service, you must do it on the se
 
 [Back to top](#top)
 
-<a name="step4" />
-##Return Ads
-The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
-
-Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 3th parameter of the ``StartAppSDK.init`` method:
- ```java
-StartAppSDK.init(this, "Your App ID", false);
-```
-
-[Back to top](#top)
-
-<a name="step5" />
-##Showing Banners
-Add the following View inside your Activity layout XML:
-```java
-<com.startapp.android.publish.banner.Banner 
-          android:id="@+id/startAppBanner"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_centerHorizontal="true"/>
-```
-
-> **NOTE:**
-> This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
-
-**If you wish to add a specific type of banner, please refer to the [Advanced Usage](android-advanced-usage)**.
-
-[Back to top](#top)
 
 <a name="step6" />
 ##Showing Interstitial Ads
@@ -180,6 +152,36 @@ Apply the following parameters:
 - ***savedInstanceState***: The Bundle parameter passed to your ```onCreate(Bundle savedInstanceState)``` method
 
 **If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).**
+
+[Back to top](#top)
+
+<a name="return" />
+##Return Ads
+The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
+
+Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 3th parameter of the ``StartAppSDK.init`` method:
+ ```java
+StartAppSDK.init(this, "Your App ID", false);
+```
+
+[Back to top](#top)
+
+
+<a name="banners" />
+##Showing Banners
+Add the following View inside your Activity layout XML:
+```java
+<com.startapp.android.publish.banner.Banner 
+          android:id="@+id/startAppBanner"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"/>
+```
+
+> **NOTE:**
+> This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
+
+**If you wish to add a specific type of banner, please refer to the [Advanced Usage](android-advanced-usage)**.
 
 [Back to top](#top)
 
