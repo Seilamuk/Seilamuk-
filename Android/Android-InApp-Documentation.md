@@ -11,18 +11,18 @@
 > - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
 <br></br>
-<a name="step1" />
-##Step 1, Adding the SDK to Your Project
+<a name="gettingStarted" />
+##Getting Started 
 > **IMPORTANT:** This is a mandatory step
 
+<a name="AddingSDK" />
+###Step 1, Adding the SDK to Your Project
 Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directory of your project.
 
-[Back to top](#top)
+<a name="manifest" />
+###Step 2, Updating Your AndroidManifest.xml File
 
-<a name="step2" />
-##Step 2, Updating Your AndroidManifest.xml File
-> **IMPORTANT:** This is a mandatory step
-
+<a name="Activities" />
 ####Permissions
 Under the main \<manifest\> element, add the following permissions.
 
@@ -57,13 +57,9 @@ Under the \<application\> element, add the following activities:
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
-[Back to top](#top)
 
-<a name="step3" />
-##Step 3, Initialization
-> **IMPORTANT:** 
-> - This is a mandatory step
-
+<a name="Initialization" />
+###Step 3, Initialization
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
 
 ```java
