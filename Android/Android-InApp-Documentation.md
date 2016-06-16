@@ -101,14 +101,10 @@ public void onBackPressed() {
 ```
 
 ####Showing Interstitials
-Add the following code to the appropriate place(s) in the activity in which you would like to show the Ad:
+Call showAd() in the appropriate place(s) in the activity where you would like to show the Ad:
 ```java
 startAppAd.showAd(); // show the ad
-startAppAd.loadAd(); // load the next ad
 ```
-
-> **NOTE:**
-> ```loadAd()``` must be called immediately after ```showAd()```. This will load the next Ad.
 
 The following is an example of showing an Interstitial Ad between Activities:
 ```java
@@ -116,11 +112,10 @@ public void btnOpenActivity (View view){
     Intent nextActivity = new Intent(this, NextActivity.class);
     startActivity(nextActivity);
     startAppAd.showAd();
-    startAppAd.loadAd();
 }
 ```
 
-> **IMPORTANT:** Loading an ad might take a few seconds especially in the case of a video, so it's important not to show the ad immediately after loading it. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. It is recommended to use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use (see [Adding a Callback when an Interstitial Ad is loaded](android-advanced-usage#adding-a-callback-when-an-interstitial-ad-is-loaded)).
+> **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. It is recommended to use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use (see [Adding a Callback when an Interstitial Ad is loaded](android-advanced-usage#adding-a-callback-when-an-interstitial-ad-is-loaded)).
 
 [Back to top](#top)
 
