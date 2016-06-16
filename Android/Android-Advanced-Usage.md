@@ -169,7 +169,7 @@ You can explicitly close an interstitial Ad by calling ``startAppAd.close()``. T
 <a name="AddingInterstitialCallbacks" />
 ##Adding Interstitial Callbacks
 ####Adding a Callback when an Interstitial Ad is loaded
-``startAppAd.loadAd()`` can get an implementation of ``AdEventListener`` as a parameter.
+``startAppAd.loadAd()`` can be called before showing the ad, and get an implementation of ``AdEventListener`` as a parameter.
 To get a callback when an Ad is loaded, pass the object that implements ``AdEventListener`` (this may be your Activity) as a parameter to the ``loadAd`` method. This object must implement the following methods:
 ```java
 @Override

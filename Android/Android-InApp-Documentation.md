@@ -101,7 +101,7 @@ public void onBackPressed() {
 ```
 
 ####Showing Interstitials
-Call showAd() in the appropriate place(s) in the activity where you would like to show the Ad:
+Call ```showAd()``` in the appropriate place(s) in the activity where you would like to show the Ad:
 ```java
 startAppAd.showAd(); // show the ad
 ```
