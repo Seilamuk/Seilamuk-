@@ -142,7 +142,7 @@ Apply the following parameters:
 - ***this***: The context (Activity)
 - ***savedInstanceState***: The Bundle parameter passed to your ```onCreate(Bundle savedInstanceState)``` method
 
-**If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).**
+If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).
 
 [Back to top](#top)
 
