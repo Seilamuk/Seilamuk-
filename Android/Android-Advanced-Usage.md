@@ -151,6 +151,7 @@ public void btnOpenActivity (View view){
 }
 ```
 
+<a name="SelectInterstitial" />
 ###Selecting Interstitial Ad Type
 We highly recommend using our Automatic mode, which automatically selects the best Interstitial Ad to display, meaning the type of Ads that will generate the most revenue for you.  
 To add an automatic Interstitial Ad, please refer to [Interstitial Ads](Android-InApp-Documentation#interstitial). 
