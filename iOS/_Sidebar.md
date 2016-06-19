@@ -1,22 +1,16 @@
 [**HOME**](iOS-InApp-Documentation)
 
-[**Step 1, Adding the StartApp SDK to your project**](iOS-InApp-Documentation#step1)
+[**Getting Started**](iOS-InApp-Documentation#gettingStarted)
 
-[**Step 2, Adding frameworks**](iOS-InApp-Documentation#step2)
+[**Splash Ad**](iOS-InApp-Documentation#splash-ads)
 
-[**Step 3, Initialization**](iOS-InApp-Documentation#step3)
+[**Interstitial Ads**](iOS-InApp-Documentation#interstitial)
 
-[**Step 4, iOS 9 Special Considerations**](iOS-InApp-Documentation#IOS9) 
-
-[**Showing the Splash Ad**](iOS-InApp-Documentation#splash-ads)
-
-[**Showing Interstitial Ads**](iOS-InApp-Documentation#step4)
-
-[**Return Ads**](iOS-InApp-Documentation#return-ads)
+[**Return Ad**](iOS-InApp-Documentation#return-ads)
 
 [**Native Ads**](iOS-InApp-Documentation#Native)
 
-[**Showing banners**](iOS-InApp-Documentation#step5)
+[**Banners**](iOS-InApp-Documentation#banners)
 
 [**Enjoy Higher eCPM with Demographic-Targeted Ads**](iOS-InApp-Documentation#Demographic)
 

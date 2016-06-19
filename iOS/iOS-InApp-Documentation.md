@@ -13,13 +13,17 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 > **NOTES:**
 > - The code samples in this document can be copy/paste into your source code
 > - When submitting your application to the App Store,do not forget to update your ["IDFA Settings"](#IDFA) 
-> - Please notice that steps 1-3 are mandatory
 > - A basic video tutorial is available <a href="https://www.youtube.com/watch?v=QnLNCKNkxT8" target="_blank">here</a>
 > - If you have any questions, contact us via [support@startapp.com](http://support@startapp.com)
 
+
 <br></br>
+<a name="gettingStarted" />
+##Getting Started 
+> **IMPORTANT:** This is a mandatory step
+
 <a name="step1" />
-##Step 1, Adding the StartApp SDK to your project
+###Step 1, Adding the StartApp SDK to your project
 
 > **NOTE:** If you're upgrading from an StartApp SDK, please refer to the [Advanced Usage section](ios-advanced-usage#UpgradeSDK) before moving forward with the steps below.
 
@@ -31,10 +35,8 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 Make sure to check the "Copy items if needed" checkbox.
 
-[Back to top](#top)
-
 <a name="step2" />
-##Step 2, Adding frameworks
+###Step 2, Adding frameworks
 ####Add the StartApp SDK files to your application project directory
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
@@ -51,10 +53,8 @@ Make sure to check the "Copy items if needed" checkbox.
 <br></br><img src="./iOS/images/V.png" width="12px" /> _libz.dylib_ in XCode 6 and below / _libz.tbd_  in XCode 7
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
-[Back to top](#top)
-
 <a name="step3" />
-##Step 3, Initialization
+###Step 3, Initialization
 In your application delegate class (_AppDelegate.m_), import the StartApp SDK and add the following line to your application's ``didFinishLaunchingWithOptions`` function:
 
 ```objectivec
@@ -76,11 +76,9 @@ Replace __"your app id"__ with your own value provided in the [developers’ por
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./iOS/images/ios-appId.png" />
 
-[Back to top](#top)
-
 
 <a name="IOS9" />
-##Step 4, iOS 9 Special Considerations 
+###Step 4, iOS 9 Special Considerations 
 
 iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
 
@@ -144,7 +142,7 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 
 [Back to top](#top)
 
-<a name="step4" />
+<a name="interstitial" />
 ##Showing Interstitial Ads
 ######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
@@ -197,7 +195,7 @@ For a full integration guide, please refer to the ["Using Native Ads"](ios-advan
 [Back to top](#top)
 
 
-<a name="step5" />
+<a name="banners" />
 ##Showing Banners
 ######To display banners in your app, add a **STABannerView** to your application according to the following steps:
 
