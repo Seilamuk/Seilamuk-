@@ -103,7 +103,7 @@ public void btnOpenActivity (View view){
 }
 ```
 
-> **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use. See [Adding a Callback when an Interstitial Ad is loaded](android-advanced-usage#adding-a-callback-when-an-interstitial-ad-is-loaded).
+> **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use. See ["Interstitial Ads"](android-advanced-usage#InterstitialAsAnObject) under the "Advanced Usage" section.
 
 [Back to top](#top)
 

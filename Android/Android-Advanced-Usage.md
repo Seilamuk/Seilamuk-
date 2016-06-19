@@ -116,8 +116,8 @@ Banner startAppBanner = new Banner(context, new BannerListener() {
 
 
 <a name="InterstitialAsAnObject" />
-##Implementing Interstitial Ads with Objects
-You can implement interstitial ads with objects if you need to gain more control over your ads, like using callbacks or using multiple ads with different properties.   
+##Interstitial Ads
+Implement interstitial ads with objects for gaining more control over your ads, like using callbacks or using multiple ads with different properties.   
 
 To initialize an interstitial ad object, create a member variable in your activity as follows:
 ```java
