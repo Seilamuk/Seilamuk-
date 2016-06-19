@@ -71,7 +71,7 @@ Replace __"Your App ID"__ with your own value provided in the [developers’ por
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./Android/images/android-appId.png" />
 
-The last ``true`` parameter enables the ["Return Ads"](#step4) feature as explained in the next section. If you want to disable this feature, simply pass ``false`` instead.
+The last ``true`` parameter enables ["Return Ads"](#return). If you want to disable this feature, simply pass ``false`` instead.
 
 Please notice - if you initialize the SDK in a service, you must do it on the service's main thread.    
 
@@ -89,9 +89,7 @@ private StartAppAd startAppAd = new StartAppAd(this);
 ```
 
 ####Showing Exit Ads
-Add the following code to show an ad upon exiting your application.
-
-To show an ad when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```startAppAd.onBackPressed()``` BEFORE the method ```super.onBackPressed()```:
+To show an ad upon exiting your application when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```startAppAd.onBackPressed()``` BEFORE the method ```super.onBackPressed()```:
 ```java
 @Override
 public void onBackPressed() {
