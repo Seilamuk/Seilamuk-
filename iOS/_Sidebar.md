@@ -12,8 +12,6 @@
 
 [**Banners**](iOS-InApp-Documentation#banners)
 
-[**Enjoy Higher eCPM with Demographic-Targeted Ads**](iOS-InApp-Documentation#Demographic)
-
 [**Updating your IDFA Settings**](iOS-InApp-Documentation#IDFA)
 
 [**Sample Project**](iOS-InApp-Documentation#SampleProject)
