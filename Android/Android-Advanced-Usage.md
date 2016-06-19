@@ -116,7 +116,7 @@ Banner startAppBanner = new Banner(context, new BannerListener() {
 
 
 <a name="InterstitialAsAnObject" />
-##Implementing interstitial ads with objects
+##Implementing Interstitial Ads with Objects
 You can implement interstitial ads with objects if you need to gain more control over your ads, like using callbacks or using multiple ads with different properties.   
 
 To initialize an interstitial ad object, create a member variable in your activity as follows:
@@ -291,11 +291,6 @@ startAppAd.setVideoListener(new VideoListener() {
      }
 });
 ```
-
-[Back to top](#top)
-
-
-
 
 [Back to top](#top)
 
