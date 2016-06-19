@@ -122,23 +122,14 @@ public void btnOpenActivity (View view){
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
-> **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**
-
-StartApp In-Ad provides two modes for displaying Splash screens:
-
-**Splash Screen Mode** | **Description**
----------------------- | ---------------
-Template Mode          | StartApp In-Ad provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation.
-User-Defined Mode      | Please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen)
+> **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
 
 ####Adding the Splash Screen 
 In the ```OnCreate``` method of your Activity, after calling ```StartAppAd.init``` and before ```setContentView```, call the following static function:
 ```java
 StartAppAd.showSplash(this, savedInstanceState);
 ```
-Apply the following parameters:
-- ***this***: The context (Activity)
-- ***savedInstanceState***: The Bundle parameter passed to your ```onCreate(Bundle savedInstanceState)``` method
+Where `this` is the context (Activity) and `savedInstanceState` is the Bundle parameter passed to your ```onCreate(Bundle savedInstanceState)``` method.
 
 If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).
 
