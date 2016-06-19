@@ -114,8 +114,44 @@ Banner startAppBanner = new Banner(context, new BannerListener() {
 
 [Back to top](#top)
 
-<a name="SelectInterstitial" />
-##Selecting Interstitial Ad Type
+
+<a name="InterstitialAsAnObject" />
+##Implementing interstitial ads with objects
+You can implement interstitial ads with objects if you need to gain more control over your ads, like using callbacks or using multiple ads with different properties.   
+
+To initialize an interstitial ad object, create a member variable in your activity as follows:
+```java
+private StartAppAd startAppAd = new StartAppAd(this);
+```
+
+You can now use this object to perform the following operations:
+
+###Showing Exit Ads
+To show an ad upon exiting your application when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```startAppAd.onBackPressed()``` BEFORE the method ```super.onBackPressed()```:
+```java
+@Override
+public void onBackPressed() {
+    startAppAd.onBackPressed();
+    super.onBackPressed();
+}
+```
+
+###Showing Interstitials
+Call ```showAd()``` in the appropriate place(s) in the activity where you would like to show the Ad:
+```java
+startAppAd.showAd(); // show the ad
+```
+
+The following is an example of showing an Interstitial Ad between Activities:
+```java
+public void btnOpenActivity (View view){
+    Intent nextActivity = new Intent(this, NextActivity.class);
+    startActivity(nextActivity);
+    startAppAd.showAd();
+}
+```
+
+###Selecting Interstitial Ad Type
 We highly recommend using our Automatic mode, which automatically selects the best Interstitial Ad to display, meaning the type of Ads that will generate the most revenue for you.  
 To add an automatic Interstitial Ad, please refer to [Interstitial Ads](Android-InApp-Documentation#interstitial). 
 If you do not wish to use the automatic mode, ``startAppAd.loadAd()`` can be directed to load specific Ads to be shown later using the AdMode parameter. The options for the AdMode parameter are:
@@ -154,11 +190,9 @@ protected void onRestoreInstanceState (Bundle savedInstanceState){
    super.onRestoreInstanceState(savedInstanceState);
 }
 ```
-
-[Back to top](#top)
 	
 <a name="CloseInterstitial" />
-##Explicitly Closing an Interstitial Ad
+###Explicitly Closing an Interstitial Ad
 You can explicitly close an interstitial Ad by calling ``startAppAd.close()``. This closes the Ad and returns control to the calling Activity. You can use this when implementing a timeout for an Ad.
 
 > **NOTE:** 
@@ -167,7 +201,7 @@ You can explicitly close an interstitial Ad by calling ``startAppAd.close()``. T
 [Back to top](#top)
 
 <a name="AddingInterstitialCallbacks" />
-##Adding Interstitial Callbacks
+###Adding Interstitial Callbacks
 ####Adding a Callback when an Interstitial Ad is loaded
 ``startAppAd.loadAd()`` can be called before showing the ad, and get an implementation of ``AdEventListener`` as a parameter.
 To get a callback when an Ad is loaded, pass the object that implements ``AdEventListener`` (this may be your Activity) as a parameter to the ``loadAd`` method. This object must implement the following methods:
@@ -235,11 +269,8 @@ startAppAd.showAd(new AdDisplayListener() {
 });
 ```
 
-[Back to top](#top)
-
-
 <a name="RewardedVideo" />
-##Showing Rewarded Video Ads
+###Showing Rewarded Video Ads
 Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
 
 > **IMPORTANT**    
@@ -260,6 +291,11 @@ startAppAd.setVideoListener(new VideoListener() {
      }
 });
 ```
+
+[Back to top](#top)
+
+
+
 
 [Back to top](#top)
 

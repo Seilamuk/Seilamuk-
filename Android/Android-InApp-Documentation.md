@@ -57,7 +57,6 @@ Under the \<application\> element, add the following activities:
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
-
 <a name="Initialization" />
 ###Step 3, Initialization
 In your main activity, go to the ``OnCreate`` method and before calling ``setContentView()`` call the static function:
@@ -82,38 +81,34 @@ Please notice - if you initialize the SDK in a service, you must do it on the se
 ##Interstitial Ads
 Interstitial Ads are displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. 
 
-####Initializing the StartApp Ad Object
-In your Activity, create a member variable, as follows:
-```java
-private StartAppAd startAppAd = new StartAppAd(this);
-```
-
-####Showing Exit Ads
-To show an ad upon exiting your application when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```startAppAd.onBackPressed()``` BEFORE the method ```super.onBackPressed()```:
+###Showing Exit Ads
+To show an ad upon exiting your application when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```StartAppAd.onBackPressed(this)``` BEFORE the method ```super.onBackPressed()``` (```this``` is the activity/application context):
 ```java
 @Override
 public void onBackPressed() {
-    startAppAd.onBackPressed();
-    super.onBackPressed();
+	StartAppAd.onBackPressed(this);
+	super.onBackPressed();
 }
 ```
 
-####Showing Interstitials
-Call ```showAd()``` in the appropriate place(s) in the activity where you would like to show the Ad:
+###Showing Interstitials
+Call ```StartAppAd.showAd(this)``` in the appropriate place(s) in the activity where you would like to show the Ad:
 ```java
-startAppAd.showAd(); // show the ad
+StartAppAd.showAd(this); // show the ad
 ```
+
+The ```showAd``` method returns true in case the ad was displayed successfully, or false if not (for example, if an ad isn't ready yet).  
 
 The following is an example of showing an Interstitial Ad between Activities:
 ```java
 public void btnOpenActivity (View view){
     Intent nextActivity = new Intent(this, NextActivity.class);
     startActivity(nextActivity);
-    startAppAd.showAd();
+    StartAppAd.showAd(this);
 }
 ```
 
-> **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. It is recommended to use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use (see [Adding a Callback when an Interstitial Ad is loaded](android-advanced-usage#adding-a-callback-when-an-interstitial-ad-is-loaded)).
+> **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use (see [Adding a Callback when an Interstitial Ad is loaded](android-advanced-usage#adding-a-callback-when-an-interstitial-ad-is-loaded)).
 
 [Back to top](#top)
 
@@ -123,7 +118,7 @@ public void btnOpenActivity (View view){
 
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
 
-####Adding the Splash Screen 
+###Adding the Splash Screen 
 In the ```OnCreate``` method of your Activity, after calling ```StartAppAd.init``` and before ```setContentView```, call the following static function:
 ```java
 StartAppAd.showSplash(this, savedInstanceState);
