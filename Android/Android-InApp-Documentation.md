@@ -119,10 +119,9 @@ public void btnOpenActivity (View view){
 
 <a name="splash" />
 ##Splash Ad (recommended)
-A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
-A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
-
 > **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
+
+A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
 
 ####Adding the Splash Screen 
 In the ```OnCreate``` method of your Activity, after calling ```StartAppAd.init``` and before ```setContentView```, call the following static function:
