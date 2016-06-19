@@ -461,6 +461,54 @@ Parameter name | Description | Return value
 
 [Back to top](#top)
 
+<a name="Demographic" />
+###Enjoy Higher eCPM with Demographic-Targeted Ads
+If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
+
+####Set Age and Gender
+Upon initialization, after providing your AppId, use the following line:
+```objectivec
+sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USER_GENDER>];
+```
+
++ Replace \<USER_AGE\> with the user's real age 
++ Replace \<USER_GENDER\> with the user's real gender, using *STAGender_Male* or *STAGender_Female*.
+
+**Example**
+```objectivec
+// AppDelegate.m
+
+#import <StartApp/StartApp.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // initialize the SDK with your appID 
+    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+    sdk.appID = @"your app Id";
+
+    sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
+
+    return YES;
+}
+```
+
+####Set Location
+The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
+
+```objectivec
+[startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:<Real_Longitude> andLongitude:<Real_Latitude>]];
+```
+
+**Example**
+```objectivec
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+        [startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:37.3190383911 andLongitude:-121.96269989]];
+}
+```
+
+[Back to top](#top)
 
 
 

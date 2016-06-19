@@ -106,18 +106,10 @@ iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this 
 
 
 <a name="splash-ads" />
-##Showing Splash Ad (recommended)
-A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
-A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
-
+##Splash Ad (recommended)
 > **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**
 
-StartApp SDK provides two modes for displaying Splash screens:
-
-**Splash Screen Mode**     |     **Description**
--------------------------- | -------------------
-User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
-Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](ios-advanced-usage#CustomizingSplashScreen)
+A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
 ####Adding the Splash Screen 
 In your application delegate class (_AppDelegate.m_), after initializing the SDK, call the ``sdk showSplashAd`` method:
@@ -143,7 +135,7 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 [Back to top](#top)
 
 <a name="interstitial" />
-##Showing Interstitial Ads
+##Interstitial Ads
 ######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
 Import the StartApp SDK in your view controller and call showAd where you want to show the ad
@@ -162,7 +154,7 @@ Import the StartApp SDK in your view controller and call showAd where you want t
 
 
 <a name="return-ads" />
-##Return Ads
+##Return Ad
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply call ``[sdk disableReturnAd]`` as part of the initialization process, in your _AppDelegate.m_ file:
@@ -196,7 +188,7 @@ For a full integration guide, please refer to the ["Using Native Ads"](ios-advan
 
 
 <a name="banners" />
-##Showing Banners
+##Banners
 ######To display banners in your app, add a **STABannerView** to your application according to the following steps:
 
 **1** In the header file of your view controller, import _STABannerView.h_ and _STABannerSize.h_ and declare an **STABannerView** instance variable
@@ -276,55 +268,6 @@ Value | Position | Behavior
 
 [Back to top](#top)
 
-
-<a name="Demographic" />
-##Enjoy Higher eCPM with Demographic-Targeted Ads
-If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
-
-####Set Age and Gender
-Upon initialization, after providing your AppId, use the following line:
-```objectivec
-sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USER_GENDER>];
-```
-
-+ Replace \<USER_AGE\> with the user's real age 
-+ Replace \<USER_GENDER\> with the user's real gender, using *STAGender_Male* or *STAGender_Female*.
-
-**Example**
-```objectivec
-// AppDelegate.m
-
-#import <StartApp/StartApp.h>
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // initialize the SDK with your appID 
-    STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-    sdk.appID = @"your app Id";
-
-    sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
-
-    return YES;
-}
-```
-
-####Set Location
-The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
-
-```objectivec
-[startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:<Real_Longitude> andLongitude:<Real_Latitude>]];
-```
-
-**Example**
-```objectivec
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-
-        [startAppAd loadAdWithAdPreferences:[STAAdPreferences prefrencesWithLatitude:37.3190383911 andLongitude:-121.96269989]];
-}
-```
-
-[Back to top](#top)
 
 <a name="IDFA" />
 ##Updating your IDFA Settings
