@@ -74,7 +74,7 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
 5. Under "Set Up Your Inventory", select the Ad Units where you want to show StartApp ads, and fill in the appropriate class name under the "CUSTOM EVENT CLASS" box:  
  <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Interstitial:** ``STAMoPubCustomEventInterstitial``   
  <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Banner:** ``STAMoPubCustomEventBanner``    
- <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Banner:** ``STAMoPubCustomEventNative``     
+ <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Native:** ``STAMoPubCustomEventNative``     
 
  <img src="./Mopub%20Mediation%20iOS/images/mopub-inventory.png" />   
 6. Optional, for Native only - you can get a specific ad size by filling it in the appropriate class data under "CUSTOM EVENT CLASS DATA" of your Native ad unit using the following format: 
