@@ -77,10 +77,10 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
  <img src="./Mopub%20Mediation%20iOS/images/mopub-inventory.png" />   
 6. For Native only - you can get a specific ad size, fill it in the appropriate class data under "CUSTOM EVENT CLASS DATA" of your Banner ad unit using the following format: 
  ```JSON
- {"primaryImageSize" : \<primary size\>, 
-  "secondaryImageSize" : \<secondary zise\>}
+ {"primaryImageSize" : primary_size>, 
+  "secondaryImageSize" : secondary_zise}
  ```
-Where primaryImageSize and secondaryImageSize can get onw of the following:
+Where primary_size and secondary_zise can get one of the following values:
  + 0 – for image size of 72px X 72px   
  + 1 – for image size of 100px X 100px   
  + 2 – for image size of 150px X 150px   
