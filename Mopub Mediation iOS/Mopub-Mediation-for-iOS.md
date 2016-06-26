@@ -36,6 +36,8 @@ For any questions or difficulties during this process, please contact us via [su
 Add the required AdMob adapter classes from the zip file to your project:  
 <img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventBanner   
 <img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventInterstitial  
+<img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventNative    
+<img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubNativeAdAdapter    
 
 Make sure to check the "Copy items if needed" checkbox.  
   
