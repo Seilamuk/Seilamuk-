@@ -75,15 +75,19 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
  <img src="./Mopub%20Mediation%20iOS/images/V1.png" width="16px" /> **Banner:** ``STAMoPubCustomEventNative``     
 
  <img src="./Mopub%20Mediation%20iOS/images/mopub-inventory.png" />   
-6. For Native only - you can get a specific ad size, fill it in the appropriate class data under "CUSTOM EVENT CLASS DATA" of your Banner ad unit using the following format: {"primaryImageSize":"<primary size>", "secondaryImageSize":"<secondary zise>"}.  
+6. For Native only - you can get a specific ad size, fill it in the appropriate class data under "CUSTOM EVENT CLASS DATA" of your Banner ad unit using the following format: 
+ ```JSON
+ {"primaryImageSize":"<primary size>", 
+  "secondaryImageSize":"<secondary zise>"}
+ ```
 Where primaryImageSize and secondaryImageSize can get onw of the following:
-+ 0 – for image size of 72px X 72px   
-+ 1 – for image size of 100px X 100px   
-+ 2 – for image size of 150px X 150px   
-+ 3 – for image size of 340px X 340px   
-+ 4 – for image size of 1200px X 628px  
+ + 0 – for image size of 72px X 72px   
+ + 1 – for image size of 100px X 100px   
+ + 2 – for image size of 150px X 150px   
+ + 3 – for image size of 340px X 340px   
+ + 4 – for image size of 1200px X 628px  
 
-For example, {"primaryImageSize":4, "secondaryImageSize":2} will return a primary image of 1200x628 and a secondary icon of 150x150.  
+ For example, {"primaryImageSize":4, "secondaryImageSize":2} will return a primary image of 1200x628 and a secondary icon of 150x150.  
  <img src="./Mopub%20Mediation%20iOS/images/mopub-custom-event-data-native.png" />     
 7. Click "Save and Continue"
 8. Click the "StartApp" network and make sure the "Run" button is active  
