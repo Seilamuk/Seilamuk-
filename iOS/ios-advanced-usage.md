@@ -397,7 +397,7 @@ In order to use the STANativeAdPreferences object, simply use it when loading th
 [startAppNativeAd loadAdWithNativeAdPreferences:pref];
 ```
 
-Example: load 4 native ads with 100x100 icons, send lat/lon and register for callbacks:  
+Example: load a 150x150 ad and register for callbacks:  
 ```objectivec
 // YourViewController.m 
 
@@ -406,14 +406,10 @@ Example: load 4 native ads with 100x100 icons, send lat/lon and register for cal
     [super viewDidLoad];
     startAppNativeAd = [[STAStartAppNativeAd alloc] init];
     STANativeAdPreferences *pref = [[STANativeAdPreferences alloc]init];
-    pref.adsNumber = 4; // Select ads number
-    pref.bitmapSize = SIZE_100X100;     //Select image quality
+    pref.primaryImageSize = 4;     // Select 1200x628 primary image
+	pref.secondaryImageSize = 2;     // Select 150x150 secondary icon	
     pref.autoBitmapDownload = YES;    // When set to NO no images will be downloaded by the SDK
-	
-    // You can pass longitude/latitude if available 
-	pref.userLocation.latitude = 31.776719;
-    pref.userLocation.longitude = 35.234508;
-	
+		
     [startAppNativeAd loadAdWithDelegate:self withNativeAdPreferences:pref]; 
 }
 ```
@@ -421,12 +417,12 @@ Example: load 4 native ads with 100x100 icons, send lat/lon and register for cal
 ###Using the Native Ad Object
 After initializing and loading your **STAStartAppNativeAd**  object, use the **STANativeAdDetails** object to get details of all returning ads. The STANativeAdDetails object provides access to each ad's details, such as the ad's title, description, image, etc. This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **STAStartAppNativeAd** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
 
-Example: get some details of the 3rd ad.
+Example: get some details of the 1st ad.
 ```objectivec
-STANativeAdDetails *adDetails = [startAppNativeAd.adsDetails objectAtIndex:3];
-titleLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:3] title];
-descriptionLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:3] description];
-imageView.image=[[startAppNativeAd.adsDetails objectAtIndex:3] imageBitmap];
+STANativeAdDetails *adDetails = [startAppNativeAd.adsDetails objectAtIndex:1];
+titleLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:1] title];
+descriptionLabel.text=[[startAppNativeAd.adsDetails objectAtIndex:1] description];
+imageView.image=[[startAppNativeAd.adsDetails objectAtIndex:1] imageBitmap];
 ```
 
 > **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
@@ -441,7 +437,8 @@ Once the user clicks on the ad, you must call ``[adDetails sendClick]`` method.
 Parameter name | Description | Values
 --- | --- | ---
 *`adsNumber `* | number of native ads to be retrieved | a number between 1-10
-*`bitmapSize `* | the size of the icon's bitmap to be retrieved | SIZE72X72, SIZE100X100, SIZE150X150, SIZE340X340
+*`primaryImageSize `* | size of the primary image to be retrieved | Can take one of the following: <br>0. image size of 72X72 <br>1. image size of 100X100<br>2. image size of 150X150<br>3. image size of 340X340 <br>4. image size of 1200X628  
+*`secondaryImageSize `* | size of the secondary image to be retrieved | Can take same values as the primary image
 *`autoBitmapDownload `* | Select the method for retrieving the ad's icon. You can get the icon's URL only, or pre-cache it into a bitmap object | "YES"=pre cached, "NO"=URL only
 *`userLocation.latitude`* | the device's latitude  | latitude
 *`userLocation.longitude`* | the device's longitude | longitude
