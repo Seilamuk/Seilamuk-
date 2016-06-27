@@ -83,11 +83,11 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
   "secondaryImageSize" : secondary_size}
  ```
 Where primary_size can get one of the following values:
- + 0 – for image size of 72px X 72px   
- + 1 – for image size of 100px X 100px   
- + 2 – for image size of 150px X 150px   
- + 3 – for image size of 340px X 340px   
- + 4 – for image size of 1200px X 628px  
+ + 0 – for image size of 72x72     
+ + 1 – for image size of 100x100     
+ + 2 – for image size of 150x150     
+ + 3 – for image size of 340x340     
+ + 4 – for image size of 1200x628    
 
  the secondary_size can take the same values except the 1200x628 size.
  
