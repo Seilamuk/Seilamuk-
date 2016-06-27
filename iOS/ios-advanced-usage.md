@@ -438,7 +438,7 @@ Parameter name | Description | Values
 --- | --- | ---
 *`adsNumber `* | number of native ads to be retrieved | a number between 1-10
 *`primaryImageSize `* | size of the primary image to be retrieved | Can take one of the following: <br><br>0 - image size of 72X72 <br>1 - image size of 100X100<br>2 - image size of 150X150<br>3 - image size of 340X340 <br>4 - image size of 1200X628  
-*`secondaryImageSize `* | size of the secondary image to be retrieved | Can take same values as the primary image
+*`secondaryImageSize `* | size of the secondary image to be retrieved | Can take same values as the primary image, except the 1200x628 size
 *`autoBitmapDownload `* | Select the method for retrieving the ad's icon. You can get the icon's URL only, or pre-cache it into a bitmap object | "YES"=pre cached, "NO"=URL only
 *`userLocation.latitude`* | the device's latitude  | latitude
 *`userLocation.longitude`* | the device's longitude | longitude

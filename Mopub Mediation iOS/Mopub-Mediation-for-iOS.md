@@ -82,13 +82,15 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
  {"primaryImageSize" : primary_size, 
   "secondaryImageSize" : secondary_size}
  ```
-Where primary_size and secondary_zise can get one of the following values:
+Where primary_size can get one of the following values:
  + 0 – for image size of 72px X 72px   
  + 1 – for image size of 100px X 100px   
  + 2 – for image size of 150px X 150px   
  + 3 – for image size of 340px X 340px   
  + 4 – for image size of 1200px X 628px  
 
+ the secondary_size can take the same values except the 1200x628 size.
+ 
  For example: ```{"primaryImageSize":4, "secondaryImageSize":2}``` will return a primary image of 1200x628 and a secondary icon of 150x150.  
  <img src="./Mopub%20Mediation%20iOS/images/mopub-custom-event-data-native.png" />     
 7. Click "Save and Continue"
