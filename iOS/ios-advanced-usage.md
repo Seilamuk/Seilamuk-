@@ -450,7 +450,8 @@ Parameter name | Description | Return value
 *`title`* | Get the Ad's title | NSString
 *`description`* | Get the Ad's description | NSString
 *`imageBitmap`* | Get the actual icon of the ad, according to the selected size (if autoBitmapDownload="YES") | UIImage
-*`imageUrl`* | Get the icon URL of the ad, according to the selected size (if autoBitmapDownload="NO") | NSString
+*`imageUrl`* | Get the primary image URL of the ad, according to the selected size (if autoBitmapDownload="NO") | NSString
+*`secondaryImageUrl`* | Get the secondary image URL of the ad, according to the selected size (if autoBitmapDownload="NO") | NSString
 *`category`* | Get the category of the ad in the App Store | NSString 
 *`adId`* | Get the ad's package name in the App Store | NSString
 *`rating`* | Get the rating of the ad in the App Store. The rating range is 1-5 | NSNumber 
