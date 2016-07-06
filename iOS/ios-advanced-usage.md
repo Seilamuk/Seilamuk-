@@ -478,7 +478,8 @@ sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USE
 
 #import <StartApp/StartApp.h>
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application 
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // initialize the SDK with your appID 
     STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
