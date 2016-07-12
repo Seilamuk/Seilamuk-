@@ -41,8 +41,7 @@ Copy the adapter jar file from the zip to the “libs” directory of your proje
 <a name="step4" />
 ##Step 4, Integrating StartApp In-App SDK
 Integrate the StartApp SDK by implementing steps 1-3 <a href="https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Documentation" target="_blank">from the integration manual.</a> 
-If you have obfuscated your application using ProGuard, you should follow the <a href="https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Documentation#obfuscation-optional 
-" target="_blank">Obfuscation</a> section as well.
+If you have obfuscated your application using ProGuard, you should follow the <a href="https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Documentation#obfuscation-optional" target="_blank">Obfuscation</a> section as well.
 You can ignore all other steps unless you want to use StartApp Ads directly instead of via MoPub mediation network.
 
 In step 3 of the integration, use the following line to initialize the SDK:
