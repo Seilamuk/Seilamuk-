@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.4.2**  
+**Last version: 3.4.3**  
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
