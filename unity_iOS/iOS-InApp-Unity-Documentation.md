@@ -208,6 +208,7 @@ The first time you build your unity project with StartApp SDK, make sure to use 
 <br></br><img src="./iOS/images/V.png" width="12px" />  _CoreTelephony.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" />  _StoreKit.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" />  _AdSupport.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" />  _libz.tbd_ 
 
 <img src="./unity_iOS/images/frameworks.png" />
 
