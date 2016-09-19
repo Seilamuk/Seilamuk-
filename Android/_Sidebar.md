@@ -2,11 +2,11 @@
 
 [**Getting Started**](Android-InApp-Documentation#gettingStarted)
 
-[**Interstitial Ads**](Android-InApp-Documentation#interstitial)
-
 [**Splash Ad**](Android-InApp-Documentation#splash)
 
 [**Return Ad**](Android-InApp-Documentation#return)
+
+[**Interstitial Ads**](Android-InApp-Documentation#interstitial)
 
 [**Banners**](Android-InApp-Documentation#banners)
 

@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.4.3**  
+**Last version: 3.5.0**  
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
@@ -76,6 +76,30 @@ Please notice - if you initialize the SDK in a service, you must do it on the se
 
 [Back to top](#top)
 
+<a name="splash" />
+##Splash Ad (recommended)
+> **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
+
+A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
+
+The Splash screen is enabled by default. If you want to disable it simply call ```StartAppAd.disableSplash()``` after calling ```StartAppSDK.init```.
+
+If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).
+
+[Back to top](#top)
+
+<a name="return" />
+##Return Ad
+The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
+
+Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 3th parameter of the ``StartAppSDK.init`` method:
+ ```java
+StartAppSDK.init(this, "Your App ID", false);
+```
+
+[Back to top](#top)
+
+
 
 <a name="interstitial" />
 ##Interstitial Ads
@@ -104,34 +128,6 @@ public void btnOpenActivity (View view){
 ```
 
 > **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use. See ["Interstitial Ads"](android-advanced-usage#InterstitialAsAnObject) under the "Advanced Usage" section.
-
-[Back to top](#top)
-
-<a name="splash" />
-##Splash Ad (recommended)
-> **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
-
-A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
-
-###Adding the Splash Screen 
-In the ```OnCreate``` method of your Activity, after calling ```StartAppAd.init``` and before ```setContentView```, call the following static function:
-```java
-StartAppAd.showSplash(this, savedInstanceState);
-```
-Where `this` is the context (Activity) and `savedInstanceState` is the Bundle parameter passed to your ```onCreate(Bundle savedInstanceState)``` method.
-
-If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).
-
-[Back to top](#top)
-
-<a name="return" />
-##Return Ad
-The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
-
-Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 3th parameter of the ``StartAppSDK.init`` method:
- ```java
-StartAppSDK.init(this, "Your App ID", false);
-```
 
 [Back to top](#top)
 
