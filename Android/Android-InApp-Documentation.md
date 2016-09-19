@@ -82,7 +82,7 @@ Please notice - if you initialize the SDK in a service, you must do it on the se
 
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
 
-The Splash screen is enabled by default. If you want to disable it simply call ```StartAppAd.disableSplash()``` after calling ```StartAppSDK.init```.
+The Splash Ad is enabled by default. If you want to disable it simply call ```StartAppAd.disableSplash()``` after calling ```StartAppSDK.init```.
 
 If you wish to customize or use a different splash screen, please refer to the [Advanced Usage](android-advanced-usage#CustomizingSplashScreen).
 
