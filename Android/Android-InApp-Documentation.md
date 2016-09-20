@@ -105,6 +105,7 @@ StartAppSDK.init(this, "Your App ID", false);
 ##Interstitial Ads
 Interstitial Ads are displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. 
 
+
 ###Showing Exit Ads
 To show an ad upon exiting your application when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```StartAppAd.onBackPressed(this)``` BEFORE the method ```super.onBackPressed()``` (```this``` is the activity/application context):
 ```java
@@ -116,6 +117,33 @@ public void onBackPressed() {
 ```
 
 ###Showing Interstitials
+There are two ways of integrating Interstitial Ads: showing interstitial ad at a specific location, or using our new "Autostitial Ad" to show an interstitial automatically between activities. If the specific location of the Interstitial Ad is less important, use the Autostitial Ad, otherwise use the standard Interstitial integration.
+
+####Showing Autostitials
+"Autostitial" stands for "Auto Interstitial"; use this integration to show an Interstitial Ad each time an activity changed.  
+Simply call ```StartAppAd.enableAutoInterstitial();``` after calling ```StartAppSDK.init```
+You can gain more control over the frequency of Autostitial Ads using two methods: time frequency and activity frequency.
+#####time frequency
+You can set a minimum time interval between consecutive Autostitial Ads.   
+For example, set a 1 minute interval between two consecutive ads (time in seconds):
+```java
+StartAppAd.setAutoInterstitialPreferences(
+                  new AutoInterstitialPreferences()
+                  .setSecondsBetweenAds(60)                  
+           );
+``` 
+#####activity frequency
+You can set a minimum number of activities between consecutive Autostitial Ads.   
+For example, show an Autostitial after each 3 activities:
+```java
+StartAppAd.setAutoInterstitialPreferences(
+                  new AutoInterstitialPreferences()
+                  .setActivitiesBetweenAds(3)                  
+           );
+
+
+####Standard Interstitials
+Use this method to show an Interstitial Ad at a specific location inside your app.    
 Call ```StartAppAd.showAd(this)``` in the appropriate place(s) in the activity where you would like to show the Ad. The ```showAd``` method returns true in case the ad was displayed successfully, or false if not (for example, if an ad isn't ready yet).  
 
 The following is an example of showing an Interstitial Ad between Activities:
@@ -126,6 +154,8 @@ public void btnOpenActivity (View view){
     StartAppAd.showAd(this);
 }
 ```
+
+Please notice - If you want to use Autostitial Ads and yet to show an Interstitial in a specific location, call ```StartAppAd.disbleAutoInterstitial();``` before calling ```StartAppAd.showAd```, otherwise two ads might bi displayed together. Remember to call ```StartAppAd.enableAutoInterstitial();``` afterthat to reanable Autostitial Ads. 
 
 > **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use. See ["Interstitial Ads"](android-advanced-usage#InterstitialAsAnObject) under the "Advanced Usage" section.
 
