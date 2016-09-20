@@ -120,7 +120,7 @@ public void onBackPressed() {
 There are two ways of integrating Interstitial Ads: showing interstitial ad at a specific location, or using our new "Autostitial Ad" to show an interstitial automatically between activities. If the specific location of the Interstitial Ad is less important, use the Autostitial Ad, otherwise use the standard Interstitial integration.
 
 ####Showing Autostitials
-"Autostitial" stands for "Auto Interstitial"; use this integration to show an Interstitial Ad each time an activity changed.  
+"Autostitial" stands for "Auto Interstitial"; use this integration to show an Interstitial Ad each time an activity is changed.  
 Simply call ```StartAppAd.enableAutoInterstitial();``` after calling ```StartAppSDK.init```.    
 You can gain more control over the frequency of Autostitial Ads using two methods: time frequency and activity frequency.  
 #####time frequency
@@ -155,7 +155,7 @@ public void btnOpenActivity (View view){
 }
 ```
 
-Please notice - If you want to use Autostitial Ads and yet to show an Interstitial in a specific location, call ```StartAppAd.disbleAutoInterstitial();``` before calling ```StartAppAd.showAd```, otherwise two ads might bi displayed together. Remember to call ```StartAppAd.enableAutoInterstitial();``` afterthat to reanable Autostitial Ads. 
+Please notice - If you want to use Autostitial Ads and yet to show an Interstitial in a specific location, call ```StartAppAd.disbleAutoInterstitial();``` before calling ```StartAppAd.showAd```, otherwise two ads might be displayed together. Remember to call ```StartAppAd.enableAutoInterstitial();``` afterthat to reanable Autostitial Ads. 
 
 > **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use. See ["Interstitial Ads"](android-advanced-usage#InterstitialAsAnObject) under the "Advanced Usage" section.
 
