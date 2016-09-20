@@ -121,8 +121,8 @@ There are two ways of integrating Interstitial Ads: showing interstitial ad at a
 
 ####Showing Autostitials
 "Autostitial" stands for "Auto Interstitial"; use this integration to show an Interstitial Ad each time an activity changed.  
-Simply call ```StartAppAd.enableAutoInterstitial();``` after calling ```StartAppSDK.init```
-You can gain more control over the frequency of Autostitial Ads using two methods: time frequency and activity frequency.
+Simply call ```StartAppAd.enableAutoInterstitial();``` after calling ```StartAppSDK.init```.    
+You can gain more control over the frequency of Autostitial Ads using two methods: time frequency and activity frequency.  
 #####time frequency
 You can set a minimum time interval between consecutive Autostitial Ads.   
 For example, set a 1 minute interval between two consecutive ads (time in seconds):
@@ -140,7 +140,7 @@ StartAppAd.setAutoInterstitialPreferences(
                   new AutoInterstitialPreferences()
                   .setActivitiesBetweenAds(3)                  
            );
-
+```
 
 ####Standard Interstitials
 Use this method to show an Interstitial Ad at a specific location inside your app.    
