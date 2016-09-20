@@ -103,7 +103,7 @@ StartAppSDK.init(this, "Your App ID", false);
 
 <a name="interstitial" />
 ##Interstitial Ads
-Interstitial Ads are full page ads, displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. There are three ways of integrating Interstitial Ads: Exit Ads, Autostitial Ads and standard Interstitial Ads.   
+Interstitial Ads are full page ads, displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more. There are three ways of integrating Interstitial Ads:    
 **Exit Ads** - show an ad upon exiting your application  
 **Autostitial Ads** - show an ad automatically between activities  
 **Standard Interstitial Ads** - show an ad at a specific location(s) in your application   
