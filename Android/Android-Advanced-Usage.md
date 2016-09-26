@@ -519,6 +519,10 @@ Set the image size of the ad to be retrieved.
 + 2 – for image size 150px X 150px <br></br>
 + 3 – for image size 340px X 340px <br></br>
 + 4 – for image size 1200px X 628px <br></br>
++ 5 – for image size 320px X 480px  <br></br>
++ 6 – for image size 480px X 320px <br></br>
+
+At the moment, sizes 5-6 can't be used together with sizes 0-4.  
 
 ######Return Value<br></br>
 *NatvieAdPreferences* – current object
@@ -535,6 +539,10 @@ Set a secondary icon size of the ad to be retrieved.
 + 2 – for image size 150px X 150px <br></br>
 + 3 – for image size 340px X 340px <br></br>
 + 4 – for image size 1200px X 628px <br></br>
++ 5 – for image size 320px X 480px <br></br>
++ 6 – for image size 480px X 320px <br></br>
+
+At the moment, sizes 5-6 can't be used together with sizes 0-4.  
 
 ######Return Value<br></br>
 *NatvieAdPreferences* – current object
