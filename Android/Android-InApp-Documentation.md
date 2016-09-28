@@ -118,6 +118,24 @@ public void onBackPressed() {
 }
 ```
 
+###Standard Interstitials
+Use this method to show an Interstitial Ad at a specific location inside your app.    
+Call ```StartAppAd.showAd(this)``` in the appropriate place(s) in the activity where you would like to show the Ad. The ```showAd``` method returns true in case the ad was displayed successfully, or false if not (for example, if an ad isn't ready yet).  
+
+The following is an example of showing an Interstitial Ad between Activities:
+```java
+public void btnOpenActivity (View view){
+    Intent nextActivity = new Intent(this, NextActivity.class);
+    startActivity(nextActivity);
+    StartAppAd.showAd(this);
+}
+```
+
+Please notice - If you want to use Autostitial Ads and yet to show an Interstitial in a specific location, call ```StartAppAd.disbleAutoInterstitial();``` before calling ```StartAppAd.showAd```, otherwise two ads might be displayed together. Remember to call ```StartAppAd.enableAutoInterstitial();``` afterthat to reanable Autostitial Ads. 
+
+> **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use. See ["Interstitial Ads"](android-advanced-usage#InterstitialAsAnObject) under the "Advanced Usage" section.
+
+
 ###Showing Autostitials
 "Autostitial" stands for "Auto Interstitial"; use this integration to show an Interstitial Ad each time an activity is changed.  
 Simply call ```StartAppAd.enableAutoInterstitial();``` after calling ```StartAppSDK.init```.    
@@ -140,23 +158,6 @@ StartAppAd.setAutoInterstitialPreferences(
                   .setActivitiesBetweenAds(3)                  
            );
 ```
-
-###Standard Interstitials
-Use this method to show an Interstitial Ad at a specific location inside your app.    
-Call ```StartAppAd.showAd(this)``` in the appropriate place(s) in the activity where you would like to show the Ad. The ```showAd``` method returns true in case the ad was displayed successfully, or false if not (for example, if an ad isn't ready yet).  
-
-The following is an example of showing an Interstitial Ad between Activities:
-```java
-public void btnOpenActivity (View view){
-    Intent nextActivity = new Intent(this, NextActivity.class);
-    startActivity(nextActivity);
-    StartAppAd.showAd(this);
-}
-```
-
-Please notice - If you want to use Autostitial Ads and yet to show an Interstitial in a specific location, call ```StartAppAd.disbleAutoInterstitial();``` before calling ```StartAppAd.showAd```, otherwise two ads might be displayed together. Remember to call ```StartAppAd.enableAutoInterstitial();``` afterthat to reanable Autostitial Ads. 
-
-> **IMPORTANT:** Loading an ad might take a few seconds. In case you call showAd() while the ad hasn't been successfully loaded yet, nothing will be displayed. If you want to show an ad when your application is launched, use our ["Splash Ad"](#splash). You can also implement your interstitial ad as an object and use the "onReceiveAd" callback which is triggered when an ad was loaded and ready to use. See ["Interstitial Ads"](android-advanced-usage#InterstitialAsAnObject) under the "Advanced Usage" section.
 
 [Back to top](#top)
 
