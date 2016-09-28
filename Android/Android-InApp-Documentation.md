@@ -159,6 +159,8 @@ StartAppAd.setAutoInterstitialPreferences(
            );
 ```
 
+Time frequency and activity frequency can be used together.  
+
 [Back to top](#top)
 
 
