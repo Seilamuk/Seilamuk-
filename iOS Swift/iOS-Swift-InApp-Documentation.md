@@ -117,12 +117,10 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 <a name="IOS9" />
 ##Step 5, iOS 9 Special Considerations 
 
-iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
+iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7 and above, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
 
 ####App Transport Security (ATS)
-iOS 9 includes a new feature called **App Transport Security (ATS)**. If you are using Xcode 7, an exception that allows HTTP requests should be added to your app. You can read more <a href="https://support.startapp.com/hc/en-us/articles/208639508-IOS-9-and-StartApp-s-iOS-SDK" target="_blank">here</a>.  
-
-Add the following exception to your info.plist:
+iOS 9 includes a new feature called **App Transport Security (ATS)** that allows only secured HTTPS calls, while blocking insecure HTTP calls. Our SDK is fully compliance with ATS, however if you are upgrading from an old SDK make sure to **REMOVE!** the following exception from your info.plist:
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>
