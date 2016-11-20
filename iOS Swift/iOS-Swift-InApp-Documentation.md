@@ -115,7 +115,7 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 [Back to top](#top)
 
 <a name="IOS9" />
-###Step 5, Special Considerations 
+##Step 5, Special Considerations 
 
 iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7 and above, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
 
