@@ -115,7 +115,7 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 [Back to top](#top)
 
 <a name="IOS9" />
-##Step 5, iOS 9 Special Considerations 
+###Step 5, Special Considerations 
 
 iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7 and above, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
 
@@ -130,7 +130,6 @@ iOS 9 includes a new feature called **App Transport Security (ATS)** that allows
 ```
 
 <img src="./iOS/images/ATS.jpg" />
-
 
 ####Bitcode
 iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this feature should be disabled as StartApp SDK does not yet support this feature. Navigate to your target or project **Build Settings**. Under the **Build Options** section, set **Enable Bitcode** to _No_ (for both Debug & Release).
