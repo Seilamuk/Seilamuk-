@@ -23,7 +23,7 @@ Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directo
 ###Step 2, Updating Your AndroidManifest.xml File
 
 <a name="Activities" />
-Add the following permissions under the main <manifest> element:  
+Add the following permissions under the main _\<manifest\>_ element:  
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -38,7 +38,7 @@ Optional Permissions (allow StartApp to show higher eCPM Geo-targeted ads):
 > StartApp SDK doesn't request location updates proactively but only uses the last known location.   
 
 <a name="Activities & Service" />
-Add the following activites under the <application> element:
+Add the following activites under the _\<application\>_ element:
 ```xml
 <activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
           android:theme="@android:style/Theme" />
@@ -52,7 +52,7 @@ Add the following activites under the <application> element:
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
-Add the following service receiver under the <application> element:
+Add the following service receiver under the _\<application\>_ element:
 ```xml
 <service android:name=".PeriodicMetaDataService"/>
 	<receiver
