@@ -7,7 +7,7 @@ In order to hide an already displayed banner, find the banner's view and use the
 
 **For example:**  
 ```java
-Banner banner = (com.startapp.android.publish.banner.Banner) findViewById(R.id.startAppBanner); 
+Banner banner = (com.startapp.android.publish.ads.banner.Banner) findViewById(R.id.startAppBanner); 
 banner.hideBanner();
 ```
 
@@ -33,9 +33,9 @@ To add the automatic banner, please refer to [Banners](Android-InApp-Documentati
 ####Loading a Standard Banner
 Add the following View inside your Activity layout .XML:
 ```java
-<com.startapp.android.publish.banner.bannerstandard.BannerStandard
-    	android:id="@+id/startAppStandardBanner"
-    	android:layout_width="wrap_content"
+<com.startapp.android.publish.ads.banner.bannerstandard.BannerStandard
+        android:id="@+id/startAppStandardBanner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"/>
 ```
@@ -43,11 +43,11 @@ Add the following View inside your Activity layout .XML:
 ####Loading a 3D Banner
 Add the following View inside your Activity layout .XML:
 ```java
-<com.startapp.android.publish.banner.banner3d.Banner3D 
-    	android:id="@+id/startApp3DBanner"
-    	android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:layout_centerHorizontal="true"/>
+<com.startapp.android.publish.ads.banner.banner3d.Banner3D 
+		android:id="@+id/startApp3DBanner"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_centerHorizontal="true"/>
 ```
 
 > **NOTE:**

@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.5.0**  
+**Last version: 3.5.2**  
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
@@ -23,10 +23,7 @@ Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directo
 ###Step 2, Updating Your AndroidManifest.xml File
 
 <a name="Activities" />
-####Permissions
-Under the main \<manifest\> element, add the following permissions.
-
-Mandatory Permissions:
+Add the following permissions under the main <manifest> element:  
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -38,23 +35,35 @@ Optional Permissions (allow StartApp to show higher eCPM Geo-targeted ads):
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
+> StartApp SDK doesn't request location updates proactively but only uses the last known location.   
 
-> StartApp SDK doesn't request location updates proactively but only uses the last known location. 
-
-<a name="Activities" />
-####Activities
-Under the \<application\> element, add the following activities:
+<a name="Activities & Service" />
+Add the following activites under the <application> element:
 ```xml
-<activity android:name="com.startapp.android.publish.list3d.List3DActivity"
+<activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
           android:theme="@android:style/Theme" />
 
-<activity android:name="com.startapp.android.publish.OverlayActivity"
+<activity android:name="com.startapp.android.publish.adsCommon.activities.OverlayActivity"
           android:theme="@android:style/Theme.Translucent"
           android:configChanges="orientation|keyboardHidden|screenSize" />
 
-<activity android:name="com.startapp.android.publish.FullScreenActivity"
+<activity android:name="com.startapp.android.publish. adsCommon.activities.FullScreenActivity"
           android:theme="@android:style/Theme"
           android:configChanges="orientation|keyboardHidden|screenSize" />
+```
+
+Add the following service receiver under the <application> element:
+```xml
+<service android:name=".PeriodicMetaDataService"/>
+	<receiver
+		 android:name=".BootCompleteListener"
+		 android:enabled="true"
+		 android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+		  <intent-filter>
+			<action android:name="android.intent.action.BOOT_COMPLETED" />    
+			<category android:name="android.intent.category.DEFAULT" />
+		 </intent-filter>
+	</receiver>
 ```
 
 <a name="Initialization" />
@@ -168,7 +177,7 @@ Time frequency and activity frequency can be used together.
 ##Banners
 Add the following View inside your Activity layout XML:
 ```java
-<com.startapp.android.publish.banner.Banner 
+<com.startapp.android.publish.ads.banner.Banner 
           android:id="@+id/startAppBanner"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
