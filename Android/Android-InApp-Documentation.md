@@ -47,7 +47,7 @@ Add the following activites under the _\<application\>_ element:
           android:theme="@android:style/Theme.Translucent"
           android:configChanges="orientation|keyboardHidden|screenSize" />
 
-<activity android:name="com.startapp.android.publish. adsCommon.activities.FullScreenActivity"
+<activity android:name="com.startapp.android.publish.adsCommon.activities.FullScreenActivity"
           android:theme="@android:style/Theme"
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
