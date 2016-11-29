@@ -54,16 +54,16 @@ Add the following activites under the _\<application\>_ element:
 
 Add the following service receiver under the _\<application\>_ element:
 ```xml
-<service android:name=".PeriodicMetaDataService"/>
-	<receiver
-		 android:name=".BootCompleteListener"
-		 android:enabled="true"
-		 android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
-		  <intent-filter>
-			<action android:name="android.intent.action.BOOT_COMPLETED" />    
-			<category android:name="android.intent.category.DEFAULT" />
-		 </intent-filter>
-	</receiver>
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService"/>
+<receiver
+                android:name="com.startapp.android.publish.common.metaData.BootCompleteListener"
+                android:enabled="true"
+                android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+                <intent-filter>
+                                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                                <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+</receiver>
 ```
 
 <a name="Initialization" />
