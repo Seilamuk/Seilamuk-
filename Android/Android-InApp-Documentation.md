@@ -187,7 +187,7 @@ Add the following View inside your Activity layout XML:
 > **NOTE:**
 > This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
 
-For adding a specific type of banner or adding a banner programmatically, please refer to the [Advanced Usage](android-advanced-usage).
+For adding a banner programmatically, please refer to the [Advanced Usage](android-advanced-usage#AddBannerProgrammatically).
 
 [Back to top](#top)
 

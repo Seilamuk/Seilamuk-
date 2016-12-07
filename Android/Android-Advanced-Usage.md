@@ -17,43 +17,6 @@ In order to show the banner again, simply use the showBanner() method.
 
 [Back to top](#top)
 
-<a name="SelectBanner" />
-##Selecting Banner Type
-Three types of banners are provided, as follows:
-
-**Banner Type** | **Description**
----------------------- | ---------------
-Automatic Banner **(Recommended)**  | Automatic selects the most suitable banner of the two listed below
-Standard (2D) Banner  | A standard (two dimensional) banner
-3D Banner   | A three dimensional rotating banner
-
-We highly recommend adding an Automatic banner, which automatically selects whether to display a Standard banner or a 3D banner. The banner remains displayed throughout the entire Activity life-cycle. 
-To add the automatic banner, please refer to [Banners](Android-InApp-Documentation#banners). If you do not wish to add the Automatic Banner, use one of the following options:
-
-####Loading a Standard Banner
-Add the following View inside your Activity layout .XML:
-```java
-<com.startapp.android.publish.ads.banner.bannerstandard.BannerStandard
-        android:id="@+id/startAppStandardBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"/>
-```
-
-####Loading a 3D Banner
-Add the following View inside your Activity layout .XML:
-```java
-<com.startapp.android.publish.ads.banner.banner3d.Banner3D 
-		android:id="@+id/startApp3DBanner"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content" 
-		android:layout_centerHorizontal="true"/>
-```
-
-> **NOTE:**
-> This code replaces a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
-
-[Back to top](#top)
 
 <a name="AddBannerProgrammatically" />
 ##Adding a banner programmatically 

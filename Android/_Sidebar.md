@@ -18,7 +18,6 @@
 
 [**Advanced Usage**](android-advanced-usage)    
   [Hiding the Banner](android-advanced-usage#HideBanner)  
-  [Selecting banner type](android-advanced-usage#SelectBanner)  
   [Adding a banner programmatically](android-advanced-usage#AddBannerProgrammatically)  
   [Adding Banner Callbacks](android-advanced-usage#BannerCallbacks)  
   [Selecting interstitial ad type](android-advanced-usage#SelectInterstitial)  
