@@ -34,6 +34,7 @@ Optional Permissions (allow StartApp to show higher eCPM Geo-targeted ads):
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 ```
 > StartApp SDK doesn't request location updates proactively but only uses the last known location.   
 
@@ -54,15 +55,12 @@ Add the following activites under the _\<application\>_ element:
 
 Add the following service receiver under the _\<application\>_ element:
 ```xml
-<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService"/>
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
 <receiver
-	android:name="com.startapp.android.publish.common.metaData.BootCompleteListener"
-	android:enabled="true"
-	android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
-	<intent-filter>
-		<action android:name="android.intent.action.BOOT_COMPLETED" />
-		<category android:name="android.intent.category.DEFAULT" />
-	</intent-filter>
+		android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
+		<intent-filter>
+						<action android:name="android.intent.action.BOOT_COMPLETED" />
+		</intent-filter>
 </receiver>
 ```
 
