@@ -28,16 +28,14 @@ Add the following permissions under the main _\<manifest\>_ element:
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-```
-
-Optional Permissions (allow StartApp to show higher eCPM Geo-targeted ads):
-```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 ```
-> StartApp SDK doesn't request location updates proactively but only uses the last known location.   
 
+> The last three permissions are optional, but highly recommended for better performance.  
+> StartApp SDK doesn't request location updates proactively but only uses the last known location.  
+ 
 <a name="Activities & Service" />
 Add the following activites under the _\<application\>_ element:
 ```xml
