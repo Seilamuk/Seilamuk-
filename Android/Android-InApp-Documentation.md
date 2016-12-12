@@ -57,10 +57,10 @@ Add the following service receiver under the _\<application\>_ element:
 ```xml
 <service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
 <receiver
-		android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
-		<intent-filter>
-						<action android:name="android.intent.action.BOOT_COMPLETED" />
-		</intent-filter>
+	android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
+	<intent-filter>
+		<action android:name="android.intent.action.BOOT_COMPLETED" />
+	</intent-filter>
 </receiver>
 ```
 
