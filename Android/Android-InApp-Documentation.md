@@ -25,15 +25,16 @@ Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directo
 <a name="Activities" />
 Add the following permissions under the main _\<manifest\>_ element:  
 ```xml
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.BLUETOOTH" />
 ```
 
-> The last three permissions are optional, but highly recommended for better performance.  
+> The last four permissions are optional, but highly recommended for better performance.  
 > StartApp SDK doesn't request location updates proactively but only uses the last known location.  
  
 <a name="Activities & Service" />
