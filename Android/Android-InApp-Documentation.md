@@ -55,6 +55,7 @@ Add the following activites under the _\<application\>_ element:
 Add the following service receiver under the _\<application\>_ element:
 ```xml
 <service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicInfoEventService" />
 <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
 	<intent-filter>
 		<action android:name="android.intent.action.BOOT_COMPLETED" />
