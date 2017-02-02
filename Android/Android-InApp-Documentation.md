@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.5.4**  
+**Last version: 3.5.5**  
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
@@ -32,9 +32,10 @@ Add the following permissions under the main _\<manifest\>_ element:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 <uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 
-> The last four permissions are optional, but highly recommended for better performance.  
+> The last five permissions are optional, but highly recommended for better performance.  
 > StartApp SDK doesn't request location updates proactively but only uses the last known location.  
  
 <a name="Activities & Service" />
