@@ -1,5 +1,5 @@
 <a name="top" />
-**Last version: 3.5.5**  
+**Last version: 3.5.6**  
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
@@ -55,6 +55,7 @@ Add the following activites under the _\<application\>_ element:
 Add the following service receiver under the _\<application\>_ element:
 ```xml
 <service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
+<service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
 <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
 	<intent-filter>
 		<action android:name="android.intent.action.BOOT_COMPLETED" />
