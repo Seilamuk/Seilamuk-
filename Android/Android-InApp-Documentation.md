@@ -32,7 +32,6 @@ Add the following permissions under the main _\<manifest\>_ element:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 <uses-permission android:name="android.permission.BLUETOOTH" />
-<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 
 > The last five permissions are optional, but highly recommended for better performance.  
