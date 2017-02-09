@@ -34,7 +34,7 @@ Add the following permissions under the main _\<manifest\>_ element:
 <uses-permission android:name="android.permission.BLUETOOTH" />
 ```
 
-> The last five permissions are optional, but highly recommended for better performance.  
+> The last four permissions are optional, but highly recommended for better performance.  
 > StartApp SDK doesn't request location updates proactively but only uses the last known location.  
  
 <a name="Activities & Service" />
