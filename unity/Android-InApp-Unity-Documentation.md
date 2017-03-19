@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.1.3**
+**Latest version: 3.5.7**
 
 <img src="./unity/images/unity-android-intro.png" width="640px" /><br></br>
 
@@ -35,7 +35,7 @@ If you are using a custom AndroidManifest.xml and don't want to override it with
 
 Update the _manifest.xml_ (in the _Android_ folders) as follow:
   
-**1.** Make sure the following activities are declared under the \<application\> element:
+**1.** Make sure the following activities and service receiver are declared under the \<application\> element:
 
 ```xml
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
@@ -50,6 +50,16 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
           android:hardwareAccelerated="true"
           android:theme="@android:style/Theme"
           android:configChanges="orientation|keyboardHidden|screenSize" />
+```
+
+```xml
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
+<service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
+<receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
+	<intent-filter>
+		<action android:name="android.intent.action.BOOT_COMPLETED" />
+	</intent-filter>
+</receiver>
 ```
 
 **2.** Make sure the meta-data parameter named `unityplayer.ForwardNativeEventsToDalvik` is set to `true`:
@@ -68,6 +78,8 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.BLUETOOTH" />
 ```
 
 [Back to top](#top)
