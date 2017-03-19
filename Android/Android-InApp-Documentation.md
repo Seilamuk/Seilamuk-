@@ -14,9 +14,7 @@
 
 <br></br>
 <a name="gettingStarted" />
-
 ##Getting Started 
-
 > **IMPORTANT:** This is a mandatory step
 
 <a name="AddingSDK" />
