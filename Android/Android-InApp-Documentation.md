@@ -1,5 +1,7 @@
 <a name="top" />
+
 **Latest version: 3.5.7**  
+
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
