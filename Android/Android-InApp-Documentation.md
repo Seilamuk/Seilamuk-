@@ -25,6 +25,7 @@ Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directo
 ###Step 2, Updating Your AndroidManifest.xml File
 
 <a name="Activities" />
+
 Add the following permissions under the main _\<manifest\>_ element:  
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
