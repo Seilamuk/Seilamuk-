@@ -40,7 +40,8 @@ Add the following permissions under the main _\<manifest\>_ element:
 > StartApp SDK doesn't request location updates proactively but only uses the last known location.  
  
 <a name="Activities & Service" />
-Add the following activites under the _\<application\>_ element:
+
+Add the following activities under the _\<application\>_ element:
 ```xml
 <activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
           android:theme="@android:style/Theme" />
