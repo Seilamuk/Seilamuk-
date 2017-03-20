@@ -35,7 +35,7 @@ If you are using a custom AndroidManifest.xml and don't want to override it with
 
 Update the _manifest.xml_ (in the _Android_ folders) as follow:
   
-**1.** Make sure the following activities and service receiver are declared under the \<application\> element:
+**1.** Make sure the following activities are declared under the \<application\> element:
 
 ```xml
 <activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
@@ -50,6 +50,12 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
 
+**2.** Make sure the meta-data parameter named `unityplayer.ForwardNativeEventsToDalvik` is set to `true`:
+```xml
+<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+```
+
+**3.** Add the following service receiver under the _\<application\>_ element:
 ```xml
 <service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
 <service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
@@ -60,19 +66,14 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 </receiver>
 ```
 
-**2.** Make sure the meta-data parameter named `unityplayer.ForwardNativeEventsToDalvik` is set to `true`:
-```xml
-<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
-```
-
-**3.** Add the following mandatory permissions
+**4.** Add the following mandatory permissions
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 ```
 
-**4.** Optional - add the following permissions (allow StartApp to show higher eCPM Geo-targeted ads):
+**5.** Optional - add the following permissions (allow StartApp to show higher eCPM Geo-targeted ads):
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
