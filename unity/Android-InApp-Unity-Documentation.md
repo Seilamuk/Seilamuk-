@@ -38,16 +38,14 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 **1.** Make sure the following activities and service receiver are declared under the \<application\> element:
 
 ```xml
-<activity android:name="com.startapp.android.publish.list3d.List3DActivity"
-          android:hardwareAccelerated="true"
+<activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"
           android:theme="@android:style/Theme" />
-<activity android:name="com.startapp.android.publish.OverlayActivity"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-          android:hardwareAccelerated="true"
-          android:windowSoftInputMode="stateHidden"
+
+<activity android:name="com.startapp.android.publish.adsCommon.activities.OverlayActivity"
+          android:theme="@android:style/Theme.Translucent"
           android:configChanges="orientation|keyboardHidden|screenSize" />
-<activity android:name="com.startapp.android.publish.FullScreenActivity"
-          android:hardwareAccelerated="true"
+
+<activity android:name="com.startapp.android.publish.adsCommon.activities.FullScreenActivity"
           android:theme="@android:style/Theme"
           android:configChanges="orientation|keyboardHidden|screenSize" />
 ```
