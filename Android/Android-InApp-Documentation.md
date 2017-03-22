@@ -18,11 +18,11 @@
 > **IMPORTANT:** This is a mandatory step
 
 <a name="AddingSDK" />
-###Step 1, Adding the SDK to Your Project
+### Step 1, Adding the SDK to Your Project
 Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directory of your project.
 
 <a name="manifest" />
-###Step 2, Updating Your AndroidManifest.xml File
+### Step 2, Updating Your AndroidManifest.xml File
 
 <a name="Activities" />
 
@@ -87,7 +87,7 @@ Please notice - if you initialize the SDK in a service, you must do it on the se
 [Back to top](#top)
 
 <a name="splash" />
-##Splash Ad (recommended)
+## Splash Ad (recommended)
 > **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
 
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
