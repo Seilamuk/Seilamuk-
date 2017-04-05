@@ -19,11 +19,13 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 <br></br>
 <a name="gettingStarted" />
-##Getting Started 
+
+## Getting Started 
 > **IMPORTANT:** This is a mandatory step
 
 <a name="step1" />
-###Step 1, Adding the StartApp SDK to your project
+
+### Step 1, Adding the StartApp SDK to your project
 
 > **NOTE:** If you're upgrading from an StartApp SDK, please refer to the [Advanced Usage section](ios-advanced-usage#UpgradeSDK) before moving forward with the steps below.
 
@@ -36,8 +38,10 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 Make sure to check the "Copy items if needed" checkbox.
 
 <a name="step2" />
-###Step 2, Adding frameworks
-####Add the StartApp SDK files to your application project directory
+
+### Step 2, Adding frameworks
+
+#### Add the StartApp SDK files to your application project directory
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab and disclose the "Link Binary with Libraries" phase and click the plus button in that phase
@@ -54,7 +58,8 @@ Make sure to check the "Copy items if needed" checkbox.
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
 <a name="step3" />
-###Step 3, Initialization
+
+### Step 3, Initialization
 In your application delegate class (_AppDelegate.m_), import the StartApp SDK and add the following line to your application's ``didFinishLaunchingWithOptions`` function:
 
 ```objectivec
@@ -78,7 +83,8 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 
 
 <a name="IOS9" />
-###Step 4, Special Considerations 
+
+### Step 4, Special Considerations 
 iOS 9 includes a new feature called **App Transport Security (ATS)** that allows only secured HTTPS calls, while blocking insecure HTTP calls. Our SDK is fully compliance with ATS, however if you are upgrading from an old SDK make sure to **REMOVE!** the following exception from your info.plist:
 ```xml
 <key>NSAppTransportSecurity</key>
@@ -94,12 +100,13 @@ iOS 9 includes a new feature called **App Transport Security (ATS)** that allows
 
 
 <a name="splash-ads" />
-##Splash Ad (recommended)
+
+## Splash Ad (recommended)
 > **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**
 
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched. A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
-####Adding the Splash Screen 
+#### Adding the Splash Screen 
 In your application delegate class (_AppDelegate.m_), after initializing the SDK, call the ``sdk showSplashAd`` method:
 ```objectivec
 // AppDelegate.m
@@ -123,8 +130,10 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 [Back to top](#top)
 
 <a name="interstitial" />
-##Interstitial Ads
-######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
+
+## Interstitial Ads
+
+###### You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
 Import the StartApp SDK in your view controller and call showAd where you want to show the ad
 ```objectivec
@@ -142,7 +151,8 @@ Import the StartApp SDK in your view controller and call showAd where you want t
 
 
 <a name="return-ads" />
-##Return Ad
+
+## Return Ad
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply call ``[sdk disableReturnAd]`` as part of the initialization process, in your _AppDelegate.m_ file:
@@ -167,7 +177,8 @@ Return ads are enabled and activated by default. If you want to disable this fea
 
 
 <a name="Native" />
-##Native Ads
+
+## Native Ads
 A "Native Ad" is a raw representation of an ad without any pre-defined wrapping UI, which gives you the freedom to design and control the ad exactly as you want. Using Native Ads, you can design an ad experience that perfectly fits your application's scene, content and functionality.
 
 For a full integration guide, please refer to the ["Using Native Ads"](ios-advanced-usage#using-native-ads) section under the ["Advanced Usage"](ios-advanced-usage#using-native-ads) page.
@@ -176,8 +187,10 @@ For a full integration guide, please refer to the ["Using Native Ads"](ios-advan
 
 
 <a name="banners" />
-##Banners
-######To display banners in your app, add a **STABannerView** to your application according to the following steps:
+
+## Banners
+
+###### To display banners in your app, add a **STABannerView** to your application according to the following steps:
 
 **1** In the header file of your view controller, import _STABannerView.h_ and _STABannerSize.h_ and declare an **STABannerView** instance variable
 ```objectivec
@@ -243,7 +256,8 @@ Steps 3 and 4 are required only in case your app supports both orientations.
 
 
 <a name="PositioningTheBanner" />
-####Positioning the banner
+
+#### Positioning the banner
 The origin of the banner is determined by the "``autoOrigin``" parameter which can receive one of the following values
 
 Value | Position | Behavior
@@ -258,7 +272,8 @@ Value | Position | Behavior
 
 
 <a name="IDFA" />
-##Updating your IDFA Settings
+
+## Updating your IDFA Settings
 When submitting your application to the App Store you need to update its "Advertising Identifier (IDFA)" settings in order to comply with Apple advertising policy.
 
 On the "Advertising Identifier" section: <br></br>
@@ -271,13 +286,15 @@ On the "Advertising Identifier" section: <br></br>
 [Back to top](#top)
 
 <a name="SampleProject" />
-##Sample Project
+
+## Sample Project
 StartApp provides a sample integration project available on [GitHub](https://github.com/StartApp-SDK/StartApp-InApp-iOS-Example-App)
 
 [Back to top](#top)
 
 <a name="AdvancedUsage" />
-##Advanced Usage
+
+## Advanced Usage
 For advanced usage, please read our ["Advanced Manual"](ios-advanced-usage)
 
 [Back to top](#top)
