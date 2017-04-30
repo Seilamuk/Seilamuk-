@@ -25,12 +25,13 @@ In order to add StartApp SDK for B4A to your application please follow the follo
 [Back to top](#top)
 
 <a name="step2" />  
-##Step 2, Updating Your Manifest File  
+
+## Step 2, Updating Your Manifest File  
 > **IMPORTANT:** This is a mandatory step
 
 Open the "Manifest Editor" ("Project->Manifest Editor") and add the following permissions and activities at the end of your manifest file. 
 
-####Permissions
+#### Permissions
 Mandatory Permissions:
 ```vb
 AddPermission(android.permission.INTERNET)
@@ -46,7 +47,7 @@ AddPermission(android.permission.ACCESS_FINE_LOCATION)
 
 > StartApp SDK doesn't request location updates proactively but only uses the last known location. 
 
-####Activities
+#### Activities
 ```vb
 AddApplicationText(
 <activity android:name="com.startapp.android.publish.list3d.List3DActivity"
@@ -66,7 +67,8 @@ AddApplicationText(
 [Back to top](#top)
 
 <a name="step3" />
-##Step 3, Initialization
+
+## Step 3, Initialization
 > **IMPORTANT:** 
 > - This is a mandatory step
 
@@ -90,7 +92,8 @@ The last ``True`` parameter enables the ["Return Ads"](#return) feature as expla
 [Back to top](#top)
 
 <a name="return" />
-##Showing Return Ads
+
+## Showing Return Ads
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning). 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply pass "False" as the 2th parameter of the ``sdk.init`` method:
@@ -101,13 +104,14 @@ sdk.init("Your App ID", False)
 [Back to top](#top)
 
 <a name="splash" />
-##Showing a Splash Ad (recommended)
+
+## Showing a Splash Ad (recommended)
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
 > **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**   
 
-####Adding the Splash Screen 
+#### Adding the Splash Screen 
 **1.** Add the following line to the ``Sub Globals`` section
 ```vb
 Dim startAppSplash As StartAppAd
@@ -125,10 +129,11 @@ startAppSplash.showSplash(FirstTime)
 
 
 <a name="exit" />
-##Showing Exit Ads
+
+## Showing Exit Ads
 StartApp Exit ad is displayed when the user leaves your application (usually by pressing the BACK button on the app's main activity).  
 
-####Adding an exit ad to your project
+#### Adding an exit ad to your project
 **1.** Add the following line to the ``Sub Globals`` section
 ```vb
 Dim startAppInterstitial As StartAppAd
@@ -146,7 +151,8 @@ End Sub
 [Back to top](#top)
 
 <a name="interstitial" />
-##Showing Interstitial Ads
+
+## Showing Interstitial Ads
 
 You can choose to show the interstitial ad in several locations within your application.
 This could be upon entering the app, between stages, when pressing a button, while waiting for an action and more.
@@ -183,7 +189,7 @@ startAppInterstitial.showAd
 [Back to top](#top)
 
 
-####Showing Rewarded Video Ads
+#### Showing Rewarded Video Ads
 Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
 
 In order to show a Rewarded Ad, follow the following steps:  
@@ -218,7 +224,7 @@ startAppRewardedVideo.showAd
 
 
 <a name="banners" />
-##Showing Banners
+## Showing Banners
 **1.** Add the following line to the ``Sub Globals`` section
 ```vb
 Dim autoBanner As Banner
@@ -242,10 +248,11 @@ For advanced usage, such as showing a specific banner type or hiding the banner,
 [Back to top](#top)
 
 <a name="Demographic" />
-##Enjoy Higher eCPM with Demographic-Targeted Ads
+
+## Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
 
-####Set Age and Gender
+#### Set Age and Gender
 **1.** Add the following line to the ``Sub Globals`` section
 ```vb
 Dim sdkPrefs As SDKAdPreferences
@@ -264,7 +271,7 @@ sdk.initWithSDKPreferences("Your App ID", sdkPrefs, True)
 + ``setGender`` can take one of the following values: *genderToSet.FEMALE* or *genderToSet.MALE*
 
 
-####Set Location
+#### Set Location
 If you included the ACCESS_COARSE_LOCATION or the ACCESS_FINE_LOCATION optional permissions, you can skip this step. 
 
 The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
@@ -280,13 +287,15 @@ startAppInterstitial.loadAdWithAdPreferences(adPrefs)
 [Back to top](#top)
 
 <a name="SampleProject" />
-##Sample Project
+
+## Sample Project
 StartApp provides a sample integration project available on [GitHub](https://github.com/StartApp-SDK/StartApp_InApp_SDK_B4A_Example)
 
 [Back to top](#top)
 
 <a name="AdvancedUsage" />
-##Advanced Usage
+
+## Advanced Usage
 For advanced usage, please refer to the ["Advanced Usage"](B4A-android-advanced-usage)
 
 [Back to top](#top)
