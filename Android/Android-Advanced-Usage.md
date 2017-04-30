@@ -1,8 +1,10 @@
 <a name="top" />
-######This section describes advanced usage and personal customization options and is not mandatory for the integration.
+
+###### This section describes advanced usage and personal customization options and is not mandatory for the integration.
 
 <a name="HideBanner" />
-##Hiding the Banner
+
+## Hiding the Banner
 In order to hide an already displayed banner, find the banner's view and use the ``hideBanner()`` method. 
 
 **For example:**  
@@ -19,7 +21,8 @@ In order to show the banner again, simply use the showBanner() method.
 
 
 <a name="AddBannerProgrammatically" />
-##Adding a banner programmatically 
+
+## Adding a banner programmatically 
 You can add a banner programmatically, instead of using the layout XML.
 
 For example, this is a basic example of adding a center-aligned banner to the bottom of the layout:
@@ -42,7 +45,8 @@ mainLayout.addView(startAppBanner, bannerParameters);
 
 
 <a name="BannerCallbacks" />
-##Adding Banner Callbacks
+
+## Adding Banner Callbacks
 If you implemented the banner via the Activity Layout XML, obtain the banner's view (using ``findViewById()``, for example) and pass an implementation of a ``BannerListener`` to its ``setBannerListener()`` method. The ``BannerListener`` must implement the following methods:
 
 ```java
@@ -79,7 +83,8 @@ Banner startAppBanner = new Banner(context, new BannerListener() {
 
 
 <a name="InterstitialAsAnObject" />
-##Interstitial Ads
+
+## Interstitial Ads
 Implement interstitial ads with objects for gaining more control over your ads, like using callbacks or using multiple ads with different properties.   
 
 To initialize an interstitial ad object, create a member variable in your activity as follows:
@@ -89,7 +94,7 @@ private StartAppAd startAppAd = new StartAppAd(this);
 
 You can now use this object to perform the following operations:
 
-###Showing Exit Ads
+### Showing Exit Ads
 To show an ad upon exiting your application when pressing the 'Back' button, override the ```onBackPressed()``` method and add the method ```startAppAd.onBackPressed()``` BEFORE the method ```super.onBackPressed()```:
 ```java
 @Override
@@ -99,7 +104,7 @@ public void onBackPressed() {
 }
 ```
 
-###Showing Interstitials
+### Showing Interstitials
 Call ```showAd()``` in the appropriate place(s) in the activity where you would like to show the Ad:
 ```java
 startAppAd.showAd(); // show the ad
@@ -115,7 +120,8 @@ public void btnOpenActivity (View view){
 ```
 
 <a name="SelectInterstitial" />
-###Selecting Interstitial Ad Type
+
+### Selecting Interstitial Ad Type
 We highly recommend using our Automatic mode, which automatically selects the best Interstitial Ad to display, meaning the type of Ads that will generate the most revenue for you.  
 To add an automatic Interstitial Ad, please refer to [Interstitial Ads](Android-InApp-Documentation#interstitial). 
 If you do not wish to use the automatic mode, ``startAppAd.loadAd()`` can be directed to load specific Ads to be shown later using the AdMode parameter. The options for the AdMode parameter are:
@@ -156,7 +162,8 @@ protected void onRestoreInstanceState (Bundle savedInstanceState){
 ```
 	
 <a name="CloseInterstitial" />
-###Explicitly Closing an Interstitial Ad
+
+### Explicitly Closing an Interstitial Ad
 You can explicitly close an interstitial Ad by calling ``startAppAd.close()``. This closes the Ad and returns control to the calling Activity. You can use this when implementing a timeout for an Ad.
 
 > **NOTE:** 
@@ -165,8 +172,10 @@ You can explicitly close an interstitial Ad by calling ``startAppAd.close()``. T
 [Back to top](#top)
 
 <a name="AddingInterstitialCallbacks" />
-###Adding Interstitial Callbacks
-####Adding a Callback when an Interstitial Ad is loaded
+
+### Adding Interstitial Callbacks
+
+#### Adding a Callback when an Interstitial Ad is loaded
 ``startAppAd.loadAd()`` can be called before showing the ad, and get an implementation of ``AdEventListener`` as a parameter.
 To get a callback when an Ad is loaded, pass the object that implements ``AdEventListener`` (this may be your Activity) as a parameter to the ``loadAd`` method. This object must implement the following methods:
 ```java
@@ -194,7 +203,7 @@ startAppAd.loadAd (new AdEventListener() {
 > Do not call loadAd() from within onFailedToReceiveAd(). The SDK will automatically try to reload an ad upon a failure. 
 
 
-####Adding a Callback when an Interstitial Ad is shown
+#### Adding a Callback when an Interstitial Ad is shown
 ``startAppAd.showAd()`` can get a parameter implementation of ``AdDisplayListener``.
 To get a callback when an Ad is shown, pass the object that implements ``AdDisplayListener`` (this may be your Activity) as a parameter of the method. This object must implement the following methods:
 ```java
@@ -234,7 +243,8 @@ startAppAd.showAd(new AdDisplayListener() {
 ```
 
 <a name="RewardedVideo" />
-###Showing Rewarded Video Ads
+
+### Showing Rewarded Video Ads
 Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
 
 > **IMPORTANT**    
@@ -259,10 +269,11 @@ startAppAd.setVideoListener(new VideoListener() {
 [Back to top](#top)
 
 <a name="CustomizingSplashScreen" />
-##Customizing the Splash Screen
+
+## Customizing the Splash Screen
 StartApp In-Ad provides two modes for displaying splash screens - Template and User-defined. The template splash screen is a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation, as described below. If you want to use your own splash screen, you can provide it as a layout, using the user-defined mode.
 
-####Customizing the Template Splash Screen
+#### Customizing the Template Splash Screen
 In the ``OnCreate`` method of your Activity, after calling ``StartAppAd.init`` and before ``setContentView``, call the following static function:
 ```java
 StartAppAd.showSplash(this, savedInstanceState, splashConfig);
@@ -288,7 +299,7 @@ StartAppAd.showSplash(this, savedInstanceState,
 > <img src="./Android/images/drawable.png" /><br></br>
 > If you do not provide a logo, then StartApp In-App uses the default application icon (as declared in the Manifest) and stretches it to 360x360px.
 
-####Adding a User-Defined Splash Screen 
+#### Adding a User-Defined Splash Screen 
 Use the following option if you already have a Splash screen for your application or if you want to design your own custom layout for your Splash screen.
 
 **1** 	Set a **SplashConfig** object with a specific layout resource ID.
@@ -309,10 +320,11 @@ StartAppAd.showSplash(this, savedInstanceState,
 [Back to top](#top)
 
 <a name="SplashConfig-API" />
-##SplashConfig API
+
+## SplashConfig API
 The following describes the methods that you can use for customizing the Splash screen displayed in a StartApp In-App Splash screen Ad.
 
-####► Set the Splash screen mode
+#### ► Set the Splash screen mode
 > **```public SplashConfig setTheme(SplashConfig.Theme theme)```**
 
 Sets the Splash theme to Template mode or User-defined mode. 
@@ -327,7 +339,7 @@ Use one of the first five options below to specify a design theme for the Templa
 *SplashConfig.Theme.OCEAN* <br></br>
 *SplashConfig.Theme.USER_DEFINED* – user-defined mode<br></br>
 
-####► Set a Custom screen
+#### ► Set a Custom screen
 > **```public SplashConfig setCustomScreen(int resource)```**<br></br>
 
 Sets the splash layout to Custom mode. This is mandatory if you are using SplashConfig.Theme.USER_DEFINED.
@@ -335,7 +347,7 @@ Sets the splash layout to Custom mode. This is mandatory if you are using Splash
 **Parameters**<br></br>
 *Layout Resource ID*
 
-####► Set the application name
+#### ► Set the application name
 > **```public SplashConfig setAppName(String appName)```**<br></br>
 
 Sets the application name to be used in the Template mode.
@@ -343,7 +355,7 @@ Sets the application name to be used in the Template mode.
 **Parameters**<br></br>
 *String* (default is the application name from the manifest).
 
-####► Set the logo
+#### ► Set the logo
 > **```public SplashConfig setLogo(int resource)```**<br></br>
 
 Sets the logo to be displayed in the Template mode.
@@ -351,7 +363,7 @@ Sets the logo to be displayed in the Template mode.
 **Parameters**<br></br>
 *Drawable resource ID* (default is the icon resource from the manifest).
 
-####► Set the orientation
+#### ► Set the orientation
 > **```public SplashConfig setOrientation(SplashConfig.Orientation orientation)```**<br></br>
 
 Sets the orientation to be used in the Template or User-defined mode.
@@ -365,8 +377,10 @@ Sets the orientation to be used in the Template or User-defined mode.
 
 
 <a name="using-native-ads" />
-##Integrating Native Ads
-####Initializing and Loading a StartAppNativeAd Object
+
+## Integrating Native Ads
+
+#### Initializing and Loading a StartAppNativeAd Object
 In your Activity, create a member variable, as follows:
 ```java
 private StartAppNativeAd startAppNativeAd = new StartAppNativeAd(this);
@@ -395,7 +409,7 @@ startAppNativeAd.loadAd(new NativeAdPreferences(), new AdEventListener() {
 });
 ```
 
-####Using the Native Ad Object
+#### Using the Native Ad Object
 After initializing and  loading your  **startAppNativeAd** object, use the ``getNativeAds()`` method to obtain an array of **NativeAdDetails** objects for all returning ads. The **NativeAdDetails** object provides access to each ad's details, such as the ad's title, description, image, etc.  This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **NativeAdDetails** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
 
 **Example:** the following is an example of how to load 3 native ads with a pre-cached images of 150x150 pixels size, and logging their details once ready (using callbacks)
@@ -434,26 +448,28 @@ startAppNativeAd.loadAd(nativePrefs, adListener);
 
 > **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
 
-####Showing and Clicking a Native Ad
+#### Showing and Clicking a Native Ad
 + Once you decide to actually show a native ad, you must call the ``NativeAdDetails.sendImpression()`` method.
 + Once the user clicks on the ad, you must call ``NativeAdDetails.sendClick()`` method.
 
 <a name="NativeAdPreferencesAPI" />
-####NativeAdPreferences API:
 
-#####► Set the number of Native ads to retrieve
+#### NativeAdPreferences API:
+
+##### ► Set the number of Native ads to retrieve
 > **```public NativeAdPreferences setAdsNumber(int adsNumber)```**<br></br>
 
 set number of native ads to be received from the server.
 
-######Parameters<br></br>
+###### Parameters<br></br>
 *adsNumber* - integer of the ads number<br></br>
 
-######Return Value<br></br>
+###### Return Value<br></br>
 *NatvieAdPreferences* – current object
 
 <a name="image-conf" />
-#####► Ad's image configuration
+
+##### ► Ad's image configuration
 > **``public NativeAdPreferences setAutoBitmapDownload(boolean autoBitmapDownload)``**<br></br>
 
 You can choose between two options to obtain the ad's image: 
@@ -461,21 +477,21 @@ You can choose between two options to obtain the ad's image:
 1. get the image pre-cached as a BITMAP. <br></br>
 2. get the image URL only.<br></br>
 
-######Parameters<br></br>
+###### Parameters<br></br>
 *autoBitmapDownload* - Boolean:
 + true – native ad object will be loaded automatically with bitmap object
 + false – native ad wont load the image automatically
 
-######Return Value<br></br>
+###### Return Value<br></br>
 *NatvieAdPreferences* – current object
 
 
-#####► Set Ad's image size
+##### ► Set Ad's image size
 > **``public NativeAdPreferences setPrimaryImageSize(int imageSize)``**<br></br>
 
 Set the image size of the ad to be retrieved.
 
-######Parameters<br></br>
+###### Parameters<br></br>
 *imageSize* - imageSize can get the following values: <br></br>
 + 0 – for image size 72px X 72px <br></br>
 + 1 – for image size 100px X 100px <br></br>
@@ -487,15 +503,15 @@ Set the image size of the ad to be retrieved.
 
 At the moment, sizes 5-6 can't be used together with sizes 0-4.  
 
-######Return Value<br></br>
+###### Return Value<br></br>
 *NatvieAdPreferences* – current object
 
-#####► Set Ad's secondary icon size
+##### ► Set Ad's secondary icon size
 > **``public NativeAdPreferences setSecondaryImageSize(int imageSize)``**<br></br>
 
 Set a secondary icon size of the ad to be retrieved.
 
-######Parameters<br></br>
+###### Parameters<br></br>
 *imageSize* - imageSize can get the following values: <br></br>
 + 0 – for image size 72px X 72px <br></br>
 + 1 – for image size 100px X 100px <br></br>
@@ -507,102 +523,105 @@ Set a secondary icon size of the ad to be retrieved.
 
 At the moment, sizes 5-6 can't be used together with sizes 0-4.  
 
-######Return Value<br></br>
+###### Return Value<br></br>
 *NatvieAdPreferences* – current object
 
 <a name="NativeAdDetailsAPI" />
-####NativeAdDetails API:
-#####► Get the Ad's title
+
+#### NativeAdDetails API:
+
+##### ► Get the Ad's title
 > **``public String getTitle()``**<br></br>
 
-######Return Value: String
+###### Return Value: String
 
-#####► Get the Ad's description
+##### ► Get the Ad's description
 > **``public String getDescription()``**<br></br>
 
-######Return Value: String
+###### Return Value: String
 
-#####► Get the Ad's rating
+##### ► Get the Ad's rating
 > **``public String getRating()``**<br></br>
 
 Get the rating of the ad in the Google Play store. The rating range is 1-5.
 
-######Return Value: Float
+###### Return Value: Float
 
-#####► Get the Ad's image URL
+##### ► Get the Ad's image URL
 > **``public String getImageUrl()``**<br></br>
 
 Get the image URL of the ad, according to the selected size.
 
-######Return Value: String
+###### Return Value: String
 
 
-#####► Get the Ad's image bitmap
+##### ► Get the Ad's image bitmap
 > **``public Bitmap getImageBitmap()``**<br></br>
 
 Get the image of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
 
-######Return Value: Bitmap
+###### Return Value: Bitmap
 
 
-#####► Get the Ad's secondary icon URL
+##### ► Get the Ad's secondary icon URL
 > **``public String getSecondaryImageUrl()``**<br></br>
 
 Get the secondary icon URL of the ad, according to the selected size.
 
-######Return Value: String
+###### Return Value: String
 
 
-#####► Get the Ad's secondary icon bitmap
+##### ► Get the Ad's secondary icon bitmap
 > **``public Bitmap getSecondaryImageBitmap()``**<br></br>
 
 Get the secondary icon of the ad as a pre-cached bitmap, if requested using the NativeAdPreferences.setAutoBitmapDownload() method.
 
-######Return Value: Bitmap
+###### Return Value: Bitmap
 
 
-#####► Get the Ad's installs numbers
+##### ► Get the Ad's installs numbers
 > **``public String getInstalls()``**<br></br>
 
 Get the amount of installs in Google Play store.
 
-######Return Value: String
+###### Return Value: String
 
 
-#####► Get the Ad's category
+##### ► Get the Ad's category
 > **``public String getCategory()``**<br></br>
 
 Get the category of the ad in the Google Play store.
 
-######Return Value: String
+###### Return Value: String
 
-#####► Get the Ad's package name
+##### ► Get the Ad's package name
 > **``public String getPackacgeName()``**<br></br>
 
 Get the ad's package name in the Google Play store (for example, "com.startapp.quicksearchbox").
 
-######Return Value: String
+###### Return Value: String
 
-#####► To be called when you actually show the ad 
+##### ► To be called when you actually show the ad 
 > **``public void sendImpression(Context context)``**<br></br>
 
 Call this method when you show the ad in your application. 
 
-######Parameters<br></br>
+###### Parameters<br></br>
 *context* – the context of the host activity
 
-#####► To be called when the user clicks on the ad
+##### ► To be called when the user clicks on the ad
 > **``public void sendClick(Context context)``**<br></br>
 
 Call this method when the user clicks on the ad.  
 
-######Parameters<br></br>
+###### Parameters<br></br>
 *context* – the context of the host activity
 
 [Back to top](#top)
 
 <a name="Demographic" />
-##Enjoy Higher eCPM with Demographic-Targeted Ads
+
+## Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender or age, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.  
 
 Upon initialization, after providing your DevId and AppId, pass the **SDKAdPreferences** object with its data:  
