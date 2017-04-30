@@ -9,7 +9,8 @@
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the B4A Wrapper JAR to Your Project
+
+## Step 1, Adding the B4A Wrapper JAR to Your Project
 > **IMPORTANT:** This is a mandatory step
 
 In order to add StartApp SDK for B4A to your application please follow the following steps:
