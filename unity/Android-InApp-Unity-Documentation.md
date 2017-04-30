@@ -11,7 +11,8 @@
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the SDK package to your Unity project
+
+## Step 1, Adding the SDK package to your Unity project
 In order to add StartApp SDK to your application please follow the following steps:
 
 **1.** Unzip the SDK files to a temporary folder<br></br>
@@ -28,7 +29,8 @@ If you are using a custom AndroidManifest.xml and don't want to override it with
 
 <br></br>
 <a name="step2" />
-##Step 2, Updating your Manifest File
+
+## Step 2, Updating your Manifest File
 > **NOTES:**
 > If you are using a custom AndroidManifest.xml and didn't import it in the previous step, make sure to follow this step.  
 > If you have imported the entire package you can skip this step and move on to step 3.   
@@ -86,15 +88,15 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 
 <br></br>
 <a name="step3" />
-##Step 3, Initialization
+## Step 3, Initialization
 
-####Updating your StartApp data file
+#### Updating your StartApp data file
 Update the _StartAppData.txt_ file (in the Assets/Resources folders) by adding your StartApp Application ID after ``applicationId=``   
 
 You can find your Application ID in the [developers’ portal](https://portal.startapp.com/#/signin) - click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:  
 <img src="./Android/images/android-appId.png" />  
 
-####SDK Initialization
+#### SDK Initialization
 In the ``Start()`` method of your script, call the following static function:
 ```csharp
 void Start() {
@@ -108,14 +110,15 @@ StartAppWrapper.init();
 
 
 <a name="splash" />
-##Showing a Splash Ad (recommended)
+
+## Showing a Splash Ad (recommended)
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad. 
 
 > - **StartApp Splash Ad is a top performing ad unit, presenting the industry's highest CPM's**  
 > - **supported for Unity v4.2 and above**    
 
-####Adding the Splash Screen 
+#### Adding the Splash Screen 
 First, import the sdk namespace
 ```csharp
 using StartApp;
@@ -136,7 +139,8 @@ StartAppWrapper.showSplash();
 
 
 <a name="return" />
-##Showing Return Ads
+
+## Showing Return Ads
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply change "returnAds" value to "false" in your StartApp data file (see "Step 3" above):
@@ -149,8 +153,9 @@ returnAds=false;
 
 <br></br>
 <a name="exit" />
-##Adding an exit ad to your project
 
+## Adding an exit ad to your project
+ 
 Use the *StartAppBackPlugin* in components where you would like the user to press 'back' to exit the application. The plugin will show an ad and then exit the application.
 
 **1.** Drag the StartAppBackPlugin.cs to the components which you would like pressing 'back' to exit the application <br></br>
@@ -161,7 +166,8 @@ Use the *StartAppBackPlugin* in components where you would like the user to pres
 [Back to top](#top)
 
 <a name="interstitial" />
-##Showing Interstitial Ads
+
+## Showing Interstitial Ads
 
 You can choose to show the interstitial ad in several locations within your application.
 This could be upon entering (``Start()``), between stages, while waiting for an action and more.
@@ -193,7 +199,7 @@ StartAppWrapper.loadAd();
 #endif
 ```
 
-####Showing Rewarded Video Ads
+#### Showing Rewarded Video Ads
 Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
 
 In order to show a Rewarded Ad, follow the following steps:  
@@ -231,7 +237,8 @@ StartAppWrapper.loadAd(StartAppWrapper.AdMode.REWARDED_VIDEO);
 [Back to top](#top)
 
 <a name="banners" />
-##Showing Banners
+
+## Showing Banners
 To add a banner to your application add the following code in the appropriate place:
 
 **1.** Import the SDK namespace
@@ -261,7 +268,8 @@ For advanced usage, such as showing a specific banner type or hiding the banner,
 
 
 <a name="AdvancedUsage" />
-##Advanced Usage
+
+## Advanced Usage
 For advanced usage, please refer to the ["Advanced Usage"](unity-android-advanced-usage) section.
 
 [Back to top](#top)
