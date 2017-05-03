@@ -21,8 +21,7 @@
 
 ### Step 1, Adding the SDK to Your Project
 
-The simplest way to integrate our SDK into your project is by using Gradle's Dependency Management.     
-Add the following _repositories_ and _dependencies_ to your app-level _build.gradle_ file:
+The simplest way to integrate our SDK into your project is by using Gradle's Dependency Management. Add the following _repositories_ and _dependencies_ to your app-level _build.gradle_ file:
  
 ```
 repositories {
