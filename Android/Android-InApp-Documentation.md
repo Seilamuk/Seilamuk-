@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.5.7**  
+**Latest version: 3.6.1**  
 
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
@@ -20,7 +20,21 @@
 <a name="AddingSDK" />
 
 ### Step 1, Adding the SDK to Your Project
-Copy the StartAppInApp-x.x.x.jar file from the SDK zip to the “libs” directory of your project.
+
+The simplest way to integrate our SDK into your project is by using Gradle's Dependency Management.     
+Add the following _repositories_ and _dependencies_ to your app-level _build.gradle_ file:
+ 
+```
+repositories {
+    jcenter()
+}
+ 
+dependencies {
+    compile 'com.startapp:inapp-sdk:3.6.1'
+}
+```
+
+If you are not using Gradle, download the SDK zip file from our portal (<a href="https://portal.startapp.com/#/pub/resource-center" target="_blank">here</a>) and add the StartAppInApp-x.x.x.jar file to the “libs” directory of your project.
 
 <a name="manifest" />
 
