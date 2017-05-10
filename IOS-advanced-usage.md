@@ -1,7 +1,8 @@
 <a name="top">
 
 <a name="hide-banner" />
-###Hiding your banner
+
+### Hiding your banner
 You can hide and show your banner in run time, using ``showBanner`` and ``hideBanner`` methods:
 ```objectivec
 [bannerView showBanner];
@@ -11,7 +12,8 @@ You can hide and show your banner in run time, using ``showBanner`` and ``hideBa
 [Back to top](#top)
 
 <a name="ControllingBannerSize" />
-###Controlling the size of your banner
+
+### Controlling the size of your banner
 The size of the banner is determined by the "size" parameter which can receive one of the following values
 
 Value | Size | Best fits for
@@ -25,7 +27,8 @@ Value | Size | Best fits for
 [Back to top](#top)
 
 <a name="UsingBannerDelegates" />
-###Using banner delegates
+
+### Using banner delegates
 Set your view controller as a delegate so it is able to receive callbacks from the banner ad.
 
 1. Add the STABannerDelegateProtocol to the header file
@@ -54,7 +57,8 @@ Set your view controller as a delegate so it is able to receive callbacks from t
 [Back to top](#top)
 
 <a name="UsingFixedOriginBanner" />
-###Using a fixed origin for your banner
+
+### Using a fixed origin for your banner
 If you choose to locate the banner in a fixed origin rather than the view's top or bottom, simply pass the required origin point (x,y) upon initialization as explain in the following example
 
 Locating your banner 100 pixels above the view's bottom:
@@ -69,7 +73,8 @@ To use a different banner origin in a specific layout, call the "setOrigin"/"set
 [Back to top](#top)
 
 <a name="ChangingBanner" />
-###Changing the banner size and origin upon rotation
+
+### Changing the banner size and origin upon rotation
 If you choose to manually control the banner's size & origin upon rotation, you can do it in the didRotateFromInterfaceOrientation function. 
 
 Example:
@@ -90,8 +95,10 @@ Example:
 
 
 <a name="UsingInterstitialObjects" />
-##Implementing interstitial ads with objects
-######You can implement interstitial ad as an object if you need to gain more control over your ads, like using callbacks or using multiple ads with different properties. 
+
+## Implementing interstitial ads with objects
+
+###### You can implement interstitial ad as an object if you need to gain more control over your ads, like using callbacks or using multiple ads with different properties. 
 
 First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to show an ad
 ```objectivec
@@ -138,7 +145,8 @@ Finally, add the following lines where you want to show the ad
 
 
 <a name="UsingInterstitialDelegate" />
-###Using Interstitial delegates
+
+### Using Interstitial delegates
 Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad.
 
 1. Add the STADelegateProtocol to the header file
@@ -175,10 +183,10 @@ splashPreferences.splashMode = STASplashModeTemplate;
 [sdk showSplashAdWithPreferences:splashPreferences];
 ```
 
-###Splash Preferences API
+### Splash Preferences API
 The following API describes all customization options available for the splash screen.
 
-####►Splash screen mode
+#### ►Splash screen mode
 Decide whether to use user-defined or template mode.
 
 **Parameter:** _splashMode_
@@ -190,7 +198,7 @@ _STASplashModeTemplate_
 **Usage:**  
 ``splashPreferences.splashMode = STASplashModeTemplate;``
 
-####►Change splash image (for user-defined mode)
+#### ►Change splash image (for user-defined mode)
 Change the splash screen image, instead of using the default one. 
 
 **Parameter:** _splashUserDefinedImageName_  
@@ -198,7 +206,7 @@ Change the splash screen image, instead of using the default one.
 **Usage:**  
 ``splashPreferences.splashUserDefinedImageName = @"MyImage";``  
 
-####►Choosing splash template (for template mode)
+#### ►Choosing splash template (for template mode)
 Choose of of 6 pre-designed templates.
 
 **Parameter:** _splashTemplateTheme_  
@@ -214,7 +222,7 @@ _STASplashTemplateThemeOcean_
 **Usage:**  
 ``splashPreferences.splashTemplateTheme = STASplashTemplateThemeBlaze;``  
 
-####►Changing template's icon and title (for template mode)
+#### ►Changing template's icon and title (for template mode)
 The SDK uses your default application's name and icon. You can choose however to use your own assets.
 
 **Parameters:**   
@@ -228,7 +236,7 @@ splashPreferences.splashTemplateAppName = @"MyAppName";
 ```
 
 
-####►Enable/Disable loading indicator (for user-defined mode)
+#### ►Enable/Disable loading indicator (for user-defined mode)
 Choose whether to display a loading indicator on the splash screen.
 
 **Parameter:** _isSplashLoadingIndicatorEnabled_  
@@ -240,7 +248,7 @@ _NO_
 **Usage:**  
 ``splashPreferences.isSplashLoadingIndicatorEnabled = YES;``  
 
-####►Choose loading indicator's type (for user-defined and template modes)
+#### ►Choose loading indicator's type (for user-defined and template modes)
 Choose which loading indicator type to display: iOS default activity indicator or a "dots" loading indicator
 
 **Parameter:** _splashLoadingIndicatorType_  
@@ -252,7 +260,7 @@ _STASplashLoadingIndicatorTypeDots_
 **Usage:**  
 ``splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeDots;``  
 
-####►Change loading indicator's position (for user-defined mode)
+#### ►Change loading indicator's position (for user-defined mode)
 The loading indicator is displayed by default on the center of the screen. You can choose however to set a custom position.
 
 **Parameter:** _splashLoadingIndicatorCenterPoint_  
@@ -264,7 +272,7 @@ _CGPointMake(x, y)_
 ``splashPreferences.splashLoadingIndicatorCenterPoint = CGPointMake(100, 100);``  
 
 
-####►Force landscape orientation (for user-defined and template modes)
+#### ►Force landscape orientation (for user-defined and template modes)
 The SDK display the splash screen using the orientation supported by the application and the device real orientation. You can choose however to force landscape orientation.
 
 **Parameter:** _isLandscape_  
@@ -281,7 +289,8 @@ _NO_
 
 
 <a name="table-view" />
-###Showing banners in UITableView
+
+### Showing banners in UITableView
 If you would like to load a banner into a UITableView instead of a general UIView, follow these instructions:
 
 1. Declare an **STABannerView** instance variable in your UITableView class
@@ -328,7 +337,8 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 [Back to top](#top)
 
 <a name="UpgradeSDK" />
-###Upgrading from an old SDK
+
+### Upgrading from an old SDK
 1. Remove all old StartApp files (including all .h and .m files, StartApp.bundle and StartApp.framework).  
 2. Clean your project  
 
@@ -339,8 +349,10 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 [Back to top](#top)
 
 <a name="using-native-ads" />
-##Integrating Native Ads
-###Initializing and Loading Native Ads  
+
+## Integrating Native Ads
+
+### Initializing and Loading Native Ads  
 First, import the StartApp SDK in your view controller and add the following lines to the header file for each view in which you would like to use StartApp Native ad.
 ```objectivec
 // YourViewController.h
@@ -367,7 +379,7 @@ In your view controller, initialize **STAStartAppNativeAd** within the ``viewDid
 
 You can check if the ad has been loaded, using  ``startAppNativeAd.adIsLoaded;``.
 
-###Using Native Ad delegates
+### Using Native Ad delegates
 Set your view controller as a delegate so it is able to receive callbacks from the native ad.
 
 1. Add the STADelegateProtocol to the header file
@@ -389,7 +401,7 @@ Set your view controller as a delegate so it is able to receive callbacks from t
  [startAppNativeAd loadAdWithDelegate:self];
  ```
 
-###Using Native Ad Preferences
+### Using Native Ad Preferences
 **STANativeAdPreferences** can be used to customize some of the native ad properties to suit your needs, such as the number of ads to load, the image size of the ad, or whether the image should be pre-cached or not. For a full description of the NativeAdPreferences object, please refer to [NativeAdPreferences API](#NativeAdPreferencesAPI).
 
 In order to use the STANativeAdPreferences object, simply use it when loading the ad:
@@ -414,7 +426,7 @@ Example: load a 150x150 ad and register for callbacks:
 }
 ```
 
-###Using the Native Ad Object
+### Using the Native Ad Object
 After initializing and loading your **STAStartAppNativeAd**  object, use the **STANativeAdDetails** object to get details of all returning ads. The STANativeAdDetails object provides access to each ad's details, such as the ad's title, description, image, etc. This object also provides methods for firing an impression once the ad is displayed, and for executing the user's click on the ad. For a full description of the **STAStartAppNativeAd** object, please refer to [NativeAdDetails API](#NativeAdDetailsAPI).
 
 Example: get some details of the 1st ad.
@@ -427,13 +439,14 @@ imageView.image=[[startAppNativeAd.adsDetails objectAtIndex:1] imageBitmap];
 
 > **Note:** It is possible to get less ads than you requested. It is also possible that no ad will be returned. In this case you will receive an empty array.
 
-###Showing and Clicking a Native Ad
+### Showing and Clicking a Native Ad
 Once you decide to actually show a native ad, you must call the ``[adDetails sendImpression]`` method.  
   
 Once the user clicks on the ad, you must call ``[adDetails sendClick]`` method.  
 
 <a name="NativeAdPreferencesAPI" />
-###NativeAdPreferences API
+
+### NativeAdPreferences API
 Parameter name | Description | Values
 --- | --- | ---
 *`adsNumber `* | number of native ads to be retrieved | a number between 1-10
@@ -446,7 +459,8 @@ Parameter name | Description | Values
 At the moment, sizes 5-6 can't be used together with sizes 0-4.
 
 <a name="STANativeAdDetailsAPI" />
-###STANativeAdDetails API
+
+### STANativeAdDetails API
 Parameter name | Description | Return value
 --- | --- | ---
 *`title`* | Get the Ad's title | NSString
@@ -462,10 +476,11 @@ Parameter name | Description | Return value
 [Back to top](#top)
 
 <a name="Demographic" />
-###Enjoy Higher eCPM with Demographic-Targeted Ads
+
+### Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
 
-####Set Age and Gender
+#### Set Age and Gender
 Upon initialization, after providing your AppId, use the following line:
 ```objectivec
 sdk.preferences = [STASDKPreferences prefrencesWithAge:<USER_AGE> andGender:<USER_GENDER>];
@@ -493,7 +508,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 }
 ```
 
-####Set Location
+#### Set Location
 The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
 
 ```objectivec
