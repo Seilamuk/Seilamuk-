@@ -33,7 +33,7 @@ dependencies {
 }
 ```
 
-If you are not using Gradle, download the SDK zip file from our portal (<a href="https://portal.startapp.com/#/pub/resource-center" target="_blank">here</a>) and add the StartAppInApp-x.x.x.jar file to the “libs” directory of your project.
+If you are not using Gradle, download the SDK zip file and add the StartAppInApp-x.x.x.jar file to the “libs” directory of your project.
 
 <a name="manifest" />
 
