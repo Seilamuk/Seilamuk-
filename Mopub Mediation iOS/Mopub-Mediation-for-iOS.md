@@ -11,17 +11,19 @@ This document describes the procedure for serving StartApp Ads in your iOS appli
 
 <br></br>
 <a name="step1" />
-##Step 1, Getting Started
+
+## Step 1, Getting Started
 The following instructions assume you are already familiar with the MoPub mediation network and have already integrated the MoPub iOS SDK into your application. Otherwise, please start by visiting MoPub site and reading the instructions on how to add MoPub mediation code into your app.
 
-- MoPub site: <a href="http://www.mopub.com/products/ad-network-mediation" target="_blank">mopub.com/products/ad-network-mediation</a>
+- MoPub site: <a href="http://www.mopub.com/resources/supported-mediation-partners" target="_blank">mopub.com/products/ad-network-mediation</a>
 - MoPub instructions: <a href="https://github.com/mopub/mopub-ios-sdk/wiki" target="_blank">github.com/mopub/mopub-ios-sdk/wiki</a>
 
 [Back to top](#top)
 
 <br></br>
 <a name="step2" />
-##Step 2, Adding Your Application to Your StartApp Developer's Account
+
+## Step 2, Adding Your Application to Your StartApp Developer's Account
 1. Login into your <a href="https://portal.startapp.com/#/signin" target="_blank">StartApp developer's account</a>
 2. Add your application and get its App ID
 3. Download the StartApp In-App SDK
@@ -32,7 +34,8 @@ For any questions or difficulties during this process, please contact us via [su
 
 <br></br>
 <a name="step3" />
-##Step 3, Integrating the MoPub Mediation Adapter
+
+## Step 3, Integrating the MoPub Mediation Adapter
 Add the required AdMob adapter classes from the zip file to your project:  
 <img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventBanner   
 <img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventInterstitial  
@@ -45,7 +48,8 @@ Make sure to check the "Copy items if needed" checkbox.
 
 <br></br>
 <a name="step4" />
-##Step 4, Integrating StartApp In-App SDK
+
+## Step 4, Integrating StartApp In-App SDK
 Integrate the StartApp SDK by implementing steps 1-3 <a href="https://github.com/StartApp-SDK/Documentation/wiki/iOS-InApp-Documentation" target="_blank">from the integration manual.</a> 
 You can ignore all the following steps unless you want to use StartApp Ads directly instead of via AdMob mediation network.
 
@@ -62,7 +66,8 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
 
 <br></br>
 <a name="step5" />
-##Step 5, Adding a Custom Event
+
+## Step 5, Adding a Custom Event
 
 1. Login into your MoPub account  
 2. Navigate to "Networks" tab and click "Add a Network"  
@@ -101,7 +106,8 @@ Where primary_size can get one of the following values:
 
 <br></br>
 <a name="step6" />
-##Step 6, Testing Your Application
+
+## Step 6, Testing Your Application
 Congratulation - that's it! You may now run your app and see StartApp ads in action.  
 
 [Back to top](#top)
