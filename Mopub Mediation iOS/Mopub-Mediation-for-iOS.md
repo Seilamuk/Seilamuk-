@@ -15,7 +15,7 @@ This document describes the procedure for serving StartApp Ads in your iOS appli
 ## Step 1, Getting Started
 The following instructions assume you are already familiar with the MoPub mediation network and have already integrated the MoPub iOS SDK into your application. Otherwise, please start by visiting MoPub site and reading the instructions on how to add MoPub mediation code into your app.
 
-- MoPub site: <a href="http://www.mopub.com/resources/supported-mediation-partners" target="_blank">mopub.com/products/ad-network-mediation</a>
+- MoPub site: <a href="http://www.mopub.com/resources/supported-mediation-partners" target="_blank">www.mopub.com/resources/supported-mediation-partners</a>
 - MoPub instructions: <a href="https://github.com/mopub/mopub-ios-sdk/wiki" target="_blank">github.com/mopub/mopub-ios-sdk/wiki</a>
 
 [Back to top](#top)
