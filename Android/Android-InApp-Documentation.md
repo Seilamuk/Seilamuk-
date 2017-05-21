@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.6.1**  
+**Latest version: 3.6.2**  
 
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
@@ -29,7 +29,7 @@ repositories {
 }
  
 dependencies {
-    compile 'com.startapp:inapp-sdk:3.6.1'
+    compile 'com.startapp:inapp-sdk:3.6.2'
 }
 ```
 
