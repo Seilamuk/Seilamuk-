@@ -36,7 +36,7 @@ For any questions or difficulties during this process, please contact us via [su
 <a name="step3" />
 
 ## Step 3, Integrating the AdMob Mediation Adapter
-Copy the adapter jar file from the zip to the “libs” directory of your project.
+Copy the java source files from the zip to your project's source code.
 
 [Back to top](#top)
 
