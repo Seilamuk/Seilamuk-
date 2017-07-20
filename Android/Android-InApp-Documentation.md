@@ -36,7 +36,7 @@ dependencies {
 If you are not using Gradle, you can download the SDK zip file and add the StartAppInApp-x.x.x.jar file to the “libs” directory of your project (you can find the latest version in our <a href="https://portal.startapp.com/#/pub/resource-center" target="_blank">portal</a>).
 
 > **NOTE:**
-> NOTE: We support a smaller SDK size. You can choose which flavor (partial version) you’re interested in integrating. If you need a leaner SDK, please contact us [support@startapp.com](mailto:support@startapp.com).
+> We support a smaller SDK size. You can choose which flavor (partial version) you’re interested in integrating. If you need a leaner SDK, please contact us [support@startapp.com](mailto:support@startapp.com).
 
 <a name="manifest" />
 
