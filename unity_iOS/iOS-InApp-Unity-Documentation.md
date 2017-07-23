@@ -16,7 +16,8 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the SDK package to your Unity project
+
+## Step 1, Adding the SDK package to your Unity project
 In order to add StartApp SDK to your application please follow the following steps:
 
 **1.** Unzip the SDK files to a temporary folder<br></br>
@@ -32,7 +33,8 @@ In order to add StartApp SDK to your application please follow the following ste
 
 <br></br>
 <a name="step2" />
-##Step 2, Updating your StartApp data file
+
+## Step 2, Updating your StartApp data file
 Update the StartAppDataiOS.txt_ (in the Assets/Resources folders) as follows:
 
 **1.** Add your StartApp Account ID after ``developerId=``  
@@ -52,7 +54,8 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 
 <br></br>
 <a name="orientation" />
-##Step 3, Provide Your App's Orientation
+
+## Step 3, Provide Your App's Orientation
 Call the ``unityOrientation()`` method in the ``Start()`` method of your script, and pass your app's orientation:
 ```csharp
 void Start () {
@@ -68,11 +71,12 @@ Where ``unityOrientation()`` can get one of the following values:
 <img src="./iOS/images/V.png" hspace="15px" width="12px" /> STAUnityOrientation.STAAutoRotation (app supports auto-rotation)  
   
 <a name="IOS9" />
-##Step 4, iOS 9 Special Considerations 
+
+## Step 4, iOS 9 Special Considerations 
 
 iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
 
-####App Transport Security (ATS)
+#### App Transport Security (ATS)
 iOS 9 includes a new feature called **App Transport Security (ATS)**. If you are using Xcode 7, an exception that allows HTTP requests should be added to your app. You can read more <a href="https://support.startapp.com/hc/en-us/articles/208639508-IOS-9-and-StartApp-s-iOS-SDK" target="_blank">here</a>.  
 
 Add the following exception to your info.plist:
@@ -87,7 +91,7 @@ Add the following exception to your info.plist:
 <img src="./iOS/images/ATS.jpg" />
 
 
-####Bitcode
+#### Bitcode
 iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this feature should be disabled as StartApp SDK does not yet support this feature. Navigate to your target or project **Build Settings**. Under the **Build Options** section, set **Enable Bitcode** to _No_ (for both Debug & Release).
 
 <img src="./iOS/images/bitcode.jpg" />
@@ -98,7 +102,8 @@ iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this 
 
 <br></br>
 <a name="step4" />
-##Showing Interstitial Ads
+
+## Showing Interstitial Ads
 
 You can choose to show an interstitial ad in several locations within your application.
 This could be upon entering (onCreate), between stages, while waiting for an action and more.
@@ -125,7 +130,8 @@ You can show a specific type of interstitial ad, as well as getting callbacks ev
 
 
 <a name="splash-ads" />
-##Showing the Splash Ad
+
+## Showing the Splash Ad
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
 
@@ -136,7 +142,7 @@ StartApp SDK provides two modes for displaying Splash screens:
 User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
 Template Mode                  | StartApp SDK provides a set of pre-defined templates in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](unity-iOS-advanced-usage#CustomizingSplashScreen)
 
-####Adding the Splash Screen 
+#### Adding the Splash Screen 
 Simply call ``showSplashAd()`` in the ``Start()`` method of your script:
 ```csharp
 void Start () {
@@ -154,7 +160,8 @@ Please note that you should attach the script to an object which is being alloca
 
 
 <a name="return-ads" />
-##Return Ads
+
+## Return Ads
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply call ``disableReturnAd()`` in your ``Start()`` method:
@@ -173,7 +180,8 @@ Please note that you should attach the script to an object which is being alloca
 
 <br></br>
 <a name="step3" />
-##Showing Banners
+
+## Showing Banners
 To add a banner to your application add the following code to your `Start()` method:
 
 ```csharp
@@ -197,7 +205,8 @@ You can change the banner position and size, as well as getting callbacks events
 
 <br></br>
 <a name="step5" />
-##Step 5, Build Your Unity Project
+
+## Step 5, Build Your Unity Project
 
 The first time you build your unity project with StartApp SDK, make sure to use "Build and Run" (instead of "Build"). Once completed, Unity will create and load an XCode project. You will notice a few errors. That's ok. Please follow the following steps to include additional necessary frameworks, then re-build your project.
 
@@ -216,13 +225,15 @@ The first time you build your unity project with StartApp SDK, make sure to use 
 > <br></br> <img src="./unity_iOS/images/build_append.png" />
 
 <a name="AdvancedUsage" />
-##Advanced Usage
+
+## Advanced Usage
 For advanced usage, please refer to the ["Advanced Usage"](unity-iOS-advanced-usage) section.
 
 [Back to top](#top)
 
 <a name="IDFA" />
-##Updating your IDFA Settings
+
+## Updating your IDFA Settings
 When submitting your application to the App Store you need to update its "Advertising Identifier (IDFA)" settings in order to comply with Apple advertising policy.
 
 On the "Advertising Identifier" section: <br></br>
