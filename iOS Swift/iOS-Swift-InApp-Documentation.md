@@ -17,8 +17,10 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the StartApp SDK to your project
-####Add the StartApp SDK files to your application project directory
+
+## Step 1, Adding the StartApp SDK to your project
+
+#### Add the StartApp SDK files to your application project directory
 1. Right-click on you project and choose "Add Files to…"
 <br></br>[[/iOS/images/AddFilesTo.png]]
 2. Add the StartApp SDK files:
@@ -27,7 +29,7 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 Make sure to check the "Copy items if needed" checkbox.  
 
-####Add the StartApp.framework to the Build Phases of the desired target
+#### Add the StartApp.framework to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab
@@ -35,7 +37,7 @@ Make sure to check the "Copy items if needed" checkbox.
 5.	Make sure "_StartApp.framework_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_StartApp.framework_" file 
 <br></br><br></br>[[/iOS/images/libStartAppAdSDK.png]]
 
-####Add the Bundle to the Build Phases of the desired target
+#### Add the Bundle to the Build Phases of the desired target
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab
@@ -46,8 +48,10 @@ Make sure to check the "Copy items if needed" checkbox.
 [Back to top](#top)
 
 <a name="step2" />
-##Step 2, Adding frameworks
-####Add necessary frameworks to your target project 
+
+## Step 2, Adding frameworks
+
+#### Add necessary frameworks to your target project 
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab and disclose the "Link Binary with Libraries" phase and click the plus button in that phase
@@ -67,8 +71,10 @@ Make sure to check the "Copy items if needed" checkbox.
 
 
 <a name="step3" />
-##Step 3, Adding the Bridging-Header file
-####Create or edit your application's Bridging-Header file 
+
+## Step 3, Adding the Bridging-Header file
+
+#### Create or edit your application's Bridging-Header file 
 1. Right-click your project and choose “New File…”
 <img src="./iOS%20Swift/images/swift-new-file.png" />
 2. Choose iOS->Source->Header File->Next	
@@ -89,7 +95,8 @@ Make sure to check the "Copy items if needed" checkbox.
 
 
 <a name="step4" />
-##Step 4, Initialization
+
+## Step 4, Initialization
 In your application delegate class (_AppDelegate.swift_), add the following code to your _application_ method:
 
 ```objectivec
@@ -115,11 +122,12 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 [Back to top](#top)
 
 <a name="IOS9" />
-##Step 5, Special Considerations 
+
+## Step 5, Special Considerations 
 
 iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7 and above, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
 
-####App Transport Security (ATS)
+#### App Transport Security (ATS)
 iOS 9 includes a new feature called **App Transport Security (ATS)** that allows only secured HTTPS calls, while blocking insecure HTTP calls. Our SDK is fully compliance with ATS, however if you are upgrading from an old SDK make sure to **REMOVE!** the following exception from your info.plist:
 ```xml
 <key>NSAppTransportSecurity</key>
@@ -131,7 +139,7 @@ iOS 9 includes a new feature called **App Transport Security (ATS)** that allows
 
 <img src="./iOS/images/ATS.jpg" />
 
-####Bitcode
+#### Bitcode
 iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this feature should be disabled as StartApp SDK does not yet support this feature. Navigate to your target or project **Build Settings**. Under the **Build Options** section, set **Enable Bitcode** to _No_ (for both Debug & Release).
 
 <img src="./iOS/images/bitcode.jpg" />
@@ -141,7 +149,8 @@ iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this 
 
 
 <a name="splash-ads" />
-##Showing the Splash Ad
+
+## Showing the Splash Ad
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
 
@@ -152,7 +161,7 @@ StartApp SDK provides two modes for displaying Splash screens:
 User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
 Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](ios-advanced-usage#CustomizingSplashScreen)
 
-####Adding the Splash Screen 
+#### Adding the Splash Screen 
 In your application delegate class (_AppDelegate.swift_), after initializing the SDK, call the ``sdk.showSplashAd()`` method:
 ```objectivec
 // AppDelegate.swift
@@ -175,8 +184,10 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 
 <a name="step5" />
-##Step 5, Show Interstitial Ad
-######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
+
+## Step 5, Show Interstitial Ad
+
+###### You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
 In your view controller declare STAStartAppAd at the begin of the class. Init STAStartAppAd within the viewDidLoad() method and load it within the viewDidAppear() method.
 ```objectivec
@@ -206,7 +217,8 @@ startAppAd!.showAd()
 
 
 <a name="return-ads" />
-##Return Ads
+
+## Return Ads
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply call ``sdk.disableReturnAd()`` as part of the initialization process, in your _AppDelegate.swift_ file:
@@ -229,8 +241,10 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 
 <a name="step6" />
-##Step 6, Show banners
-######To display banners in your app, follow the following steps:
+
+## Step 6, Show banners
+
+###### To display banners in your app, follow the following steps:
 
 **1** In your view controller declare ``STABannerView`` at the begin of the class.
 ```objectivec
@@ -278,7 +292,8 @@ override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator c
 ```
 
 <a name="PositioningTheBanner" />
-####Positioning the banner
+
+#### Positioning the banner
 The origin of the banner is determined by the "``autoOrigin``" parameter which can receive one of the following values
 
 Value | Position | Behavior
@@ -292,10 +307,11 @@ Value | Position | Behavior
 [Back to top](#top)
 
 <a name="Demographic" />
-##Enjoy Higher eCPM with Demographic-Targeted Ads
+
+## Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
 
-####Set Age and Gender
+#### Set Age and Gender
 Upon initialization, after providing your DevId and AppId, use the following line:
 ```objectivec
 sdk.preferences = STASDKPreferences.prefrencesWithAge(<USER_AGE>, andGender: <USER_GENDER>)
@@ -320,7 +336,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
     }
 ```
 
-####Set Location
+#### Set Location
 The location of the user is a dynamic property which is changed constantly. Hence, you should provide it every time you load a new Ad:
 
 ```objectivec
@@ -339,7 +355,8 @@ override func viewDidAppear(animated: Bool) {
 [Back to top](#top)
 
 <a name="IDFA" />
-##Updating your IDFA Settings
+
+## Updating your IDFA Settings
 When submitting your application to the App Store you need to update its "Advertising Identifier (IDFA)" settings in order to comply with Apple advertising policy.
 
 On the "Advertising Identifier" section: <br></br>
@@ -352,13 +369,15 @@ On the "Advertising Identifier" section: <br></br>
 [Back to top](#top)
 
 <a name="SampleProject" />
-##Sample Project
+
+## Sample Project
 StartApp provides a sample integration project available on [GitHub](https://github.com/StartApp-SDK/StartApp-InApp-iOS-Swift-Example-App)
 
 [Back to top](#top)
 
 <a name="AdvancedUsage" />
-##Advanced Usage
+
+## Advanced Usage
 For advanced usage, please read our ["Advanced Manual"](ios-swift-advanced-usage)
 
 [Back to top](#top)
