@@ -15,7 +15,8 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 <br></br>
 <a name="step1" />
-##Step 1, Adding the StartApp SDK and StartApp Cocos2d-x plugin to your project
+
+## Step 1, Adding the StartApp SDK and StartApp Cocos2d-x plugin to your project
 In order to add StartApp SDK to your application please follow the following steps:
 
 **1.** Unzip the SDK files to a temporary folder  
@@ -24,8 +25,10 @@ In order to add StartApp SDK to your application please follow the following ste
 [Back to top](#top)
 
 <a name="step2" />
-##Step 2, Adding frameworks
-####Add frameworks to your application project directory
+
+## Step 2, Adding frameworks
+
+#### Add frameworks to your application project directory
 1.	Select your application project to bring up the project editor
 2.	Select your application target to bring up the target editor
 3.	Select the Build Phases tab and disclose the "Link Binary with Libraries" phase and click the plus button in that phase
@@ -42,7 +45,8 @@ In order to add StartApp SDK to your application please follow the following ste
 
 
 <a name="step3" />
-##Step 3, Initialization
+
+## Step 3, Initialization
 In your application delegate class (_AppDelegate.cpp_), include the StartApp SDK and add the following lines to your application's ``didFinishLaunchingWithOptions`` function:
 
 ```cpp
@@ -67,11 +71,12 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 [Back to top](#top)
 
 <a name="IOS9" />
-##Step 4, Special Considerations 
+
+## Step 4, Special Considerations 
 
 iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7 and above, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
 
-####App Transport Security (ATS)
+#### App Transport Security (ATS)
 iOS 9 includes a new feature called **App Transport Security (ATS)** that allows only secured HTTPS calls, while blocking insecure HTTP calls. Our SDK is fully compliance with ATS, however if you are upgrading from an old SDK make sure to **REMOVE!** the following exception from your info.plist:
 ```xml
 <key>NSAppTransportSecurity</key>
@@ -83,7 +88,7 @@ iOS 9 includes a new feature called **App Transport Security (ATS)** that allows
 
 <img src="./iOS/images/ATS.jpg" />
 
-####Bitcode
+#### Bitcode
 iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this feature should be disabled as StartApp SDK does not yet support this feature. Navigate to your target or project **Build Settings**. Under the **Build Options** section, set **Enable Bitcode** to _No_ (for both Debug & Release).
 
 <img src="./iOS/images/bitcode.jpg" />
@@ -102,7 +107,7 @@ StartApp SDK provides two modes for displaying Splash screens:
 User-Defined Mode (default)    | Using your application's default splash image, with a loading animation
 Template Mode                  | StartApp SDK provides a pre-defined template in which you can place your own creatives, such as application name, logo and loading animation. for more details, please refer to the ["Advanced Manual"](cocos2dx-ios-advanced-usage#CustomizingSplashScreen)
 
-####Adding the Splash Screen 
+#### Adding the Splash Screen 
 In your application delegate class (_AppDelegate.cpp_), after initializing the SDK, call the ``showSplashAd`` method:
 ```cpp
 // AppDelegate.cpp
@@ -123,8 +128,10 @@ bool AppDelegate::applicationDidFinishLaunching()
 
 
 <a name="step4" />
-##Showing Interstitial Ads
-######You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
+
+## Showing Interstitial Ads
+
+###### You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
 First, import the StartApp SDK in your view controller and add the following lines to the cpp file for each view in which you would like to show an ad
 ```cpp
@@ -152,7 +159,8 @@ startAppBridge->showAd();
 
 
 <a name="return-ads" />
-##Return Ads
+
+## Return Ads
 The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply call ``startAppBridge->disableReturnAd()`` as part of the initialization process, in your _AppDelegate.cpp_ file:
@@ -172,7 +180,8 @@ bool AppDelegate::applicationDidFinishLaunching()
 
 
 <a name="step5" />
-##Showing Banners
+
+## Showing Banners
 First, include _StartAppPlugin.h_ in the header file of your view controller
 ```cpp
 #include "StartAppPlugin.h"
@@ -185,7 +194,8 @@ startAppBridge->loadBanner(startappiOS::STAAdOrigin_Bottom,
 ```
 
 <a name="PositioningTheBanner" />
-####Positioning the banner
+
+#### Positioning the banner
 The origin of the banner is determined by the first parameter which can receive one of the following values
 
 Value | Position | Behaviour
@@ -200,10 +210,11 @@ Value | Position | Behaviour
 
 
 <a name="Demographic" />
-##Enjoy Higher eCPM with Demographic-Targeted Ads
+
+## Enjoy Higher eCPM with Demographic-Targeted Ads
 If you know your user's gender, age or location, StartApp can use it to serve better-targeted ads which can increase your eCPM and revenue significantly.
 
-####Set Age and Gender
+#### Set Age and Gender
 Upon initialization, after providing your DevId and AppId, add the age and gender:
 ```cpp
 startAppBridge->STAInit("your app Id", "your developer id", "user age", "user gender");
@@ -242,7 +253,8 @@ startAppBridge->loadAd(pref, STACallbacks);
 [Back to top](#top)
 
 <a name="IDFA" />
-##Updating your IDFA Settings
+
+## Updating your IDFA Settings
 When submitting your application to the App Store you need to update its "Advertising Identifier (IDFA)" settings in order to comply with Apple advertising policy.
 
 On the "Advertising Identifier" section: <br></br>
@@ -255,7 +267,8 @@ On the "Advertising Identifier" section: <br></br>
 [Back to top](#top)
 
 <a name="AdvancedUsage" />
-##Advanced Usage
+
+## Advanced Usage
 For advanced usage, please read our ["Advanced Manual"](cocos2dx-ios-advanced-usage)
 
 [Back to top](#top)
