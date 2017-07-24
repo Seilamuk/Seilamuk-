@@ -67,8 +67,8 @@ Make sure to check the "Copy items if needed" checkbox.
 
 3. Name the file "\<YourProduct\>-Bridging-Header.h”   
 <img src="./iOS%20Swift/images/swift-name-file.png" />  
-   where \<YourProduct\> should be identical to the one being used in your build's settings  
 
+   where \<YourProduct\> should be identical to the one being used in your build's settings  
    <img src="./iOS%20Swift/images/swift-product-name.png" />  
 
 4. Make sure the *Bridging Header* is declared in "Build Settings" with the right path  
