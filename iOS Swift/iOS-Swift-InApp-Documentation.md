@@ -95,7 +95,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         // initialize the SDK with your appID and devID
         var sdk: STAStartAppSDK = STAStartAppSDK.sharedInstance()
         sdk.appID = "Your App Id"
-        sdk.devID = "Your Account Id"
         
         return true
     }
@@ -220,7 +219,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         sdk.appID = "Your App Id"
         sdk.devID = "Your Developer Id"
         
-		sdk.disableReturnAd()
+	sdk.disableReturnAd()
 		
         return true
     }
