@@ -160,7 +160,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         sdk.appID = "Your App Id"
         sdk.devID = "Your Developer Id"
         
-		sdk.showSplashAd()
+	sdk.showSplashAd()
 		
         return true
     }
