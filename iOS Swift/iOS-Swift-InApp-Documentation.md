@@ -59,16 +59,16 @@ Make sure to check the "Copy items if needed" checkbox.
 ## Step 3, Adding the Bridging-Header file
 
 #### Create or edit your application's Bridging-Header file 
-1. Right-click your project and choose “New File…”
-<img src="./iOS%20Swift/images/swift-new-file.png" />
-2. Choose iOS->Source->Header File->Next	
-<img src="./iOS%20Swift/images/swift-choose-header.png" />
-3. Name the file "\<YourProduct\>-Bridging-Header.h” 
-<img src="./iOS%20Swift/images/swift-name-file.png" />
-   where \<YourProduct\> should be identical to the one being used in your build's settings
-   <img src="./iOS%20Swift/images/swift-product-name.png" />
-4. Make sure the *Bridging Header* is declared in "Build Settings" with the right path
-   <img src="./iOS%20Swift/images/swift-bridging-header.png" />  
+1. Right-click your project and choose “New File…”  
+<img src="./iOS%20Swift/images/swift-new-file.png" />  
+2. Choose iOS->Source->Header File->Next  	
+<img src="./iOS%20Swift/images/swift-choose-header.png" />  
+3. Name the file "\<YourProduct\>-Bridging-Header.h”   
+<img src="./iOS%20Swift/images/swift-name-file.png" />  
+   where \<YourProduct\> should be identical to the one being used in your build's settings  
+   <img src="./iOS%20Swift/images/swift-product-name.png" />  
+4. Make sure the *Bridging Header* is declared in "Build Settings" with the right path  
+   <img src="./iOS%20Swift/images/swift-bridging-header.png" />    
 5. Import the following header file:    
 
  ```objectivec  
