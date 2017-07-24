@@ -29,22 +29,6 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 Make sure to check the "Copy items if needed" checkbox.  
 
-#### Add the StartApp.framework to the Build Phases of the desired target
-1.	Select your application project to bring up the project editor
-2.	Select your application target to bring up the target editor
-3.	Select the Build Phases tab
-4.	Disclose the "Link Binary With Libraries" phase
-5.	Make sure "_StartApp.framework_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_StartApp.framework_" file 
-<br></br><br></br>[[/iOS/images/libStartAppAdSDK.png]]
-
-#### Add the Bundle to the Build Phases of the desired target
-1.	Select your application project to bring up the project editor
-2.	Select your application target to bring up the target editor
-3.	Select the Build Phases tab
-4.	Disclose the "Copy Bundle Resources" phase 
-5.	Make sure "_StartApp.bundle_" exists. if not, click the plus button in that phase, then click "Add Other…" and select the "_StartApp.bundle_" file 
-<br></br><br></br>[[/iOS/images/StartAppAdSDK-resources.bundle.png]]
-
 [Back to top](#top)
 
 <a name="step2" />
