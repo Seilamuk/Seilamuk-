@@ -417,9 +417,9 @@ After initializing and  loading your  **startAppNativeAd** object, use the ``get
 ```java
 // Declare Native Ad Preferences
 NativeAdPreferences nativePrefs = new NativeAdPreferences()
-										  .setAdsNumber(3)                // Load 3 Native Ads
-										  .setAutoBitmapDownload(true)    // Retrieve Images object
-										  .setPrimaryImageSize(2);        // 150x150 image
+	 .setAdsNumber(3)                // Load 3 Native Ads
+	 .setAutoBitmapDownload(true)    // Retrieve Images object
+         .setPrimaryImageSize(2);        // 150x150 image
 
 // Declare Ad Callbacks Listener
 AdEventListener adListener = new AdEventListener() {     // Callback Listener
