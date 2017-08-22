@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.6.3**  
+**Latest version: 3.6.5**  
 
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
