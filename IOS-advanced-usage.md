@@ -173,7 +173,8 @@ Set your view controller as a delegate so it is able to receive callbacks from t
 [Back to top](#top)
 
 <a name="CustomizingSplashScreen" />
-##Customizing your Splash Screen
+
+## Customizing your Splash Screen
 You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAdWithPreferences`` method when initializing the splash screen in your _AppDelegate_ class.
 
 For example - using splash preferences to choose template mode:
