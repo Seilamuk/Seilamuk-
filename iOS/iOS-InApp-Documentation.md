@@ -175,6 +175,14 @@ Return ads are enabled and activated by default. If you want to disable this fea
 
 [Back to top](#top)
 
+<a name="Rewarded" />
+
+## Rewarded Video Ads
+Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
+
+For a full integration guide, please refer to the ["Integrating Rewarded Video Ads"](ios-advanced-usage#integrating-rewarded-video-ads) section under the ["Advanced Usage"](ios-advanced-usage#integrating-rewarded-video-ads) page.
+
+[Back to top](#top)
 
 <a name="Native" />
 
