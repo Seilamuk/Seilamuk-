@@ -349,6 +349,45 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 
 [Back to top](#top)
 
+<a name="using-rewarded-video-ads" />
+
+## Integrating Rewarded Video Ads
+
+First, Declare STAStartAppAd instance:
+```objectivec
+// YourViewController.h
+
+#import <StartApp/StartApp.h>
+ 
+@interface YourViewController : UIViewController <STADelegateProtocol>
+{
+    STAStartAppAd* startAppRewardedVideoAd;    // ADD THIS LINE
+} 
+```
+
+Use the "loadRewardedVideoAdWithDelegate" method:
+```objectivec
+// YourViewController.m 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    startAppRewardedVideoAd = [[STAStartAppAd alloc] init];
+    [startAppRewardedVideoAd loadRewardedVideoAdWithDelegate:self];
+}
+```
+
+Then, you can implement the following method in order to get a callback when the user completes watching the video and is eligible for getting the reward:
+```objectivec
+- (void) didCompleteVideo:(STAAbstractAd*)ad;
+```
+
+Finally, add the following lines where you want to show the ad
+```objectivec
+[startAppRewardedVideoAd showAd];
+```
+
+[Back to top](#top)
+
 <a name="using-native-ads" />
 
 ## Integrating Native Ads
