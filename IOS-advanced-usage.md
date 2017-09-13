@@ -353,7 +353,7 @@ If you would like to load a banner into a UITableView instead of a general UIVie
 
 ## Integrating Rewarded Video Ads
 
-First, Declare STAStartAppAd instance:
+First, declare STAStartAppAd instance:
 ```objectivec
 // YourViewController.h
 
