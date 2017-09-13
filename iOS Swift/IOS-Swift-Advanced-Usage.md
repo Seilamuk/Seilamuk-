@@ -3,7 +3,8 @@
 **Last SDK Version: 2.2.0**
 
 <a name="hide-banner" />
-###Hiding your banner
+
+### Hiding your banner
 You can hide and show your banner in run time, using ``showBanner()`` and ``hideBanner()`` methods:
 ```objectivec
 startAppBanner!.showBanner()
@@ -13,7 +14,8 @@ startAppBanner!.hideBanner()
 [Back to top](#top)
 
 <a name="ControllingBannerSize" />
-###Controlling the size of your banner
+
+### Controlling the size of your banner
 The size of the banner is determined by the "size" parameter which can receive one of the following values
 
 Value | Size | Best fits for
@@ -27,7 +29,8 @@ Value | Size | Best fits for
 [Back to top](#top)
 
 <a name="UsingBannerDelegates" />
-###Using banner delegates
+
+### Using banner delegates
 Set your view controller as a delegate so it is able to receive callbacks from the banner ad.
 
 1. Add the *STABannerDelegagteProtocol* to the class declaration
@@ -53,7 +56,8 @@ func didClickBannerAd(banner: STABannerView)
 [Back to top](#top)
 
 <a name="UsingFixedOriginBanner" />
-###Using a fixed origin for your banner
+
+### Using a fixed origin for your banner
 If you choose to locate the banner in a fixed origin rather than the view's top or bottom, simply pass the required origin point (x,y) upon initialization as explain in the following example
 
 Locating your banner 100 pixels above the view's bottom:
@@ -68,7 +72,8 @@ To use a different banner origin in a specific layout, call the "setOrigin"/"set
 [Back to top](#top)
 
 <a name="ChangingBanner" />
-###Changing the banner size and origin upon rotation
+
+### Changing the banner size and origin upon rotation
 If you choose to manually control the banner's size & origin upon rotation, you can do it in the didRotateFromInterfaceOrientation method. 
 
 Example:
@@ -88,7 +93,8 @@ override func didRotateFromInterfaceOrientation(fromInterfaceOrientation:UIInter
 [Back to top](#top)
 
 <a name="UsingInterstitialDelegate" />
-###Using Interstitial delegates
+
+### Using Interstitial delegates
 Set your view controller as a delegate so it is able to receive callbacks from the interstitial ad
 
 1. Add the *STADelegateProtocol* to the class declaration
@@ -112,7 +118,8 @@ func didCloseAd(ad: STAAbstractAd)
 [Back to top](#top)
 
 <a name="CustomizingSplashScreen" />
-##Customizing your Splash Screen
+
+## Customizing your Splash Screen
 You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAdWithPreferences`` method when initializing the splash screen in your _AppDelegate_ class.
 
 For example - using splash preferences to choose template mode:
@@ -122,10 +129,10 @@ splashPreferences.splashMode = STASplashModeTemplate
 sdk.showSplashAdWithPreferences(splashPreferences)
 ```
 
-###Splash Preferences API
+### Splash Preferences API
 The following API describes all customization options available for the splash screen.
 
-####►Splash screen mode
+#### ►Splash screen mode
 Decide whether to use user-defined or template mode.
 
 **Parameter:** _splashMode_
@@ -137,7 +144,7 @@ _STASplashModeTemplate_
 **Usage:**  
 ``splashPreferences.splashMode = STASplashModeTemplate``
 
-####►Change splash image (for user-defined mode)
+#### ►Change splash image (for user-defined mode)
 Change the splash screen image, instead of using the default one. 
 
 **Parameter:** _splashUserDefinedImageName_  
@@ -145,7 +152,7 @@ Change the splash screen image, instead of using the default one.
 **Usage:**  
 ``splashPreferences.splashUserDefinedImageName = "MyImage"``  
 
-####►Choosing splash template (for template mode)
+#### ►Choosing splash template (for template mode)
 Choose of of 6 pre-designed templates.
 
 **Parameter:** _splashTemplateTheme_  
@@ -161,7 +168,7 @@ _STASplashTemplateThemeOcean_
 **Usage:**  
 ``splashPreferences.splashTemplateTheme = STASplashTemplateThemeBlaze``  
 
-####►Changing template's icon and title (for template mode)
+#### ►Changing template's icon and title (for template mode)
 The SDK uses your default application's name and icon. You can choose however to use your own assets.
 
 **Parameters:**   
@@ -175,7 +182,7 @@ splashPreferences.splashTemplateAppName = "MyAppName"
 ```
 
 
-####►Enable/Disable loading indicator (for user-defined mode)
+#### ►Enable/Disable loading indicator (for user-defined mode)
 Choose whether to display a loading indicator on the splash screen.
 
 **Parameter:** _isSplashLoadingIndicatorEnabled_  
@@ -187,7 +194,7 @@ _NO_
 **Usage:**  
 ``splashPreferences.isSplashLoadingIndicatorEnabled = true``  
 
-####►Choose loading indicator's type (for user-defined and template modes)
+#### ►Choose loading indicator's type (for user-defined and template modes)
 Choose which loading indicator type to display: iOS default activity indicator or a "dots" loading indicator
 
 **Parameter:** _splashLoadingIndicatorType_  
@@ -199,7 +206,7 @@ _STASplashLoadingIndicatorTypeDots_
 **Usage:**  
 ``splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeDots``  
 
-####►Change loading indicator's position (for user-defined mode)
+#### ►Change loading indicator's position (for user-defined mode)
 The loading indicator is displayed by default on the center of the screen. You can choose however to set a custom position.
 
 **Parameter:** _splashLoadingIndicatorCenterPoint_  
@@ -211,7 +218,7 @@ _CGPointMake(x, y)_
 ``splashPreferences.splashLoadingIndicatorCenterPoint = CGPointMake(100, 100)``  
 
 
-####►Force landscape orientation (for user-defined and template modes)
+#### ►Force landscape orientation (for user-defined and template modes)
 The SDK display the splash screen using the orientation supported by the application and the device real orientation. If you choose however to force landscape orientation.
 
 **Parameter:** _isLandscape_  
@@ -227,7 +234,8 @@ _NO_
 
 
 <a name="table-view" />
-###Showing banners in UITableView
+
+### Showing banners in UITableView
 If you would like to load a banner into a UITableView instead of a general UIView, follow these instructions:
 
 1. Make sure that the size of your cell is at least as the size of the banner you would like to show
