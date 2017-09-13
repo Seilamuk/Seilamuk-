@@ -109,33 +109,6 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 
 [Back to top](#top)
 
-<a name="IOS9" />
-
-## Step 5, Special Considerations 
-
-iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7 and above, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
-
-#### App Transport Security (ATS)
-iOS 9 includes a new feature called **App Transport Security (ATS)** that allows only secured HTTPS calls, while blocking insecure HTTP calls. Our SDK is fully compliance with ATS, however if you are upgrading from an old SDK make sure to **REMOVE!** the following exception from your info.plist:
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
-
-<img src="./iOS/images/ATS.jpg" />
-
-#### Bitcode
-iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this feature should be disabled as StartApp SDK does not yet support this feature. Navigate to your target or project **Build Settings**. Under the **Build Options** section, set **Enable Bitcode** to _No_ (for both Debug & Release).
-
-<img src="./iOS/images/bitcode.jpg" />
-
-[Back to top](#top)
-
-
-
 <a name="splash-ads" />
 
 ## Showing the Splash Ad
@@ -173,7 +146,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 <a name="step5" />
 
-## Step 5, Show Interstitial Ad
+## Show Interstitial Ad
 
 ###### You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
 
@@ -230,7 +203,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 <a name="Rewarded" />
 
-## Step 6, Show Rewarded Video Ad
+## Show Rewarded Video Ad
 Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
 
 #### In order to integrate rewarded videos in your app do the following:
@@ -244,7 +217,7 @@ class ViewController: UIViewController, STADelegateProtocol {
 } 
 ```
 
-**2** Use the "loadRewardedVideoAdWithDelegate" method:
+**2** Use the "loadRewardedVideoAd" method:
 ```objectivec
 override func viewDidLoad() {
     super.viewDidLoad()
@@ -271,7 +244,7 @@ startAppRewarded!.show()
 
 <a name="step6" />
 
-## Step 7, Show Banner Ad
+## Show Banner Ad
 
 ###### To display banners in your app, follow the following steps:
 
