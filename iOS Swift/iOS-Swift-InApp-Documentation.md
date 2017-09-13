@@ -228,9 +228,50 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 [Back to top](#top)
 
 
+<a name="Rewarded" />
+
+## Step 6, Show Rewarded Video Ad
+Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
+
+#### In order to integrate rewarded videos in your app do the following:
+
+**1** Declare STAStartAppAd instance:
+```objectivec
+class ViewController: UIViewController, STADelegateProtocol {
+
+    // Declaration of StartApp Rewarded ad
+    var startAppRewarded: STAStartAppAd?
+} 
+```
+
+**2** Use the "loadRewardedVideoAdWithDelegate" method:
+```objectivec
+override func viewDidLoad() {
+    super.viewDidLoad()
+    startAppRewarded = STAStartAppAd()
+
+    // Loading the ad
+    startAppRewarded!.loadRewardedVideoAd(withDelegate: self);
+}
+```
+
+**3** Implement the following method in order to get a callback when the user completes watching the video and is eligible for getting the reward:
+```objectivec
+func didCompleteVideo(_ad: STAAbstractAd) {
+   print("StartApp rewarded video had been completed", terminator: "")
+}
+```
+
+**4** Finally, add the following lines where you want to show the ad
+```objectivec
+startAppRewarded!.show()
+```
+
+[Back to top](#top)
+
 <a name="step6" />
 
-## Step 6, Show banners
+## Step 7, Show Banner Ad
 
 ###### To display banners in your app, follow the following steps:
 
