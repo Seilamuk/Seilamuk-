@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Last SDK Version: 3.4.2**
+**Last SDK Version: 3.5.1**
 
 **For Swift documentation, please [click here](https://github.com/StartApp-SDK/Documentation/wiki/iOS-Swift-InApp-Documentation).**
 
@@ -54,6 +54,7 @@ Make sure to check the "Copy items if needed" checkbox.
 <br></br><img src="./iOS/images/V.png" width="12px" /> _QuartzCore.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _CoreMedia.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _AVFoundation.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _WebKit.framework_  
 <br></br><img src="./iOS/images/V.png" width="12px" /> _libz.dylib_ in XCode 6 and below / _libz.tbd_  in XCode 7
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
