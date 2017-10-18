@@ -619,6 +619,63 @@ Call this method when the user clicks on the ad.
 
 [Back to top](#top)
 
+<a name="AddAdTags" />
+
+## Adding Ad Tags
+
+You can add tags to your ad placements. A tag is simply a free style string identifier that can be attached to any ad. Ad Tags will help you optimize your monetization by finding the right balance between ads and the perfect ad-viewing experience for your users. 
+
+For example, if you implement couple of interstitial ads in different places in your application, you can give each of them a different tag, one of them could be "Level1Complete", the other "AfterScoresBoard", then, you can monitor which placement convert better and get more engagement from your users.
+
+In order to add tags, you simply need to add them to the right places in your code: 
+
+**Banner** – using the activity layout XML
+```java
+    <com.startapp.android.publish.banner.Banner
+    android:id="@+id/bannerBottom" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_alignParentTop="true" 
+    android:background="@android:color/transparent" 
+    android:layout_centerHorizontal="true" 
+
+   <!-- Setting the tag-->
+    android:tag="top_banner" >
+```
+
+**Banner** – Programmatically
+```java
+ Banner banner = new Banner(this); 
+
+// Setting the tag
+ banner.setTag("top_banner");
+```
+
+**Interstitials**
+```java
+ StartAppAd startAppAd = new StartAppAd(this); 
+ startAppAd.loadAd(); 
+
+// Setting the tag
+startAppAd.showAd("game_over"); 
+```
+
+**Native ads**
+```java
+ StartAppNativeAd startAppNativeAd = new StartAppNativeAd(this); 
+ startAppNativeAd.loadAd();
+
+// Setting the tag
+ startAppNativeAd.getNativeAds("level_failed");
+```
+
+> **NOTE:** 
+> Ad Tags can only be named using English letters and no more than 200 characters
+
+After getting some traffic, you could see those tags in the portal reports automatically, without extra setup.
+
+[Back to top](#top)
+
 <a name="Demographic" />
 
 ## Enjoy Higher eCPM with Demographic-Targeted Ads
