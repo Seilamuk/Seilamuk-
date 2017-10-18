@@ -36,7 +36,7 @@ For any questions or difficulties during this process, please contact us via [su
 <a name="step3" />
 
 ## Step 3, Integrating the MoPub Mediation Adapter
-Add the required AdMob adapter classes from the zip file to your project:  
+Add the required MoPub adapter classes from the zip file to your project:  
 <img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventBanner   
 <img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventInterstitial  
 <img src="./Mopub%20Mediation%20iOS/images/V.png" width="12px" />  STAMoPubCustomEventNative    
@@ -51,7 +51,7 @@ Make sure to check the "Copy items if needed" checkbox.
 
 ## Step 4, Integrating StartApp In-App SDK
 Integrate the StartApp SDK by implementing steps 1-3 <a href="https://github.com/StartApp-SDK/Documentation/wiki/iOS-InApp-Documentation" target="_blank">from the integration manual.</a> 
-You can ignore all the following steps unless you want to use StartApp Ads directly instead of via AdMob mediation network.
+You can ignore all the following steps unless you want to use StartApp Ads directly instead of via MoPub mediation network.
 
 In step 3 of the integration, call ``[sdk disableReturnAd]`` after initializing your appID and devID:
 ```objectivec
@@ -60,7 +60,7 @@ sdk.appID = @"your app Id";
 
 [sdk disableReturnAd];  // Add this line to disable return ads
 ```
-This extra line will disable StartApp "Return Ads" feature as it's not an integral part of AdMob mediation. You can still enjoy this attractive ad unit directly by omitting this line. In this case Return Ads will be activated and display StartApp direct ads, outside of the AdMob Mediation network. 
+This extra line will disable StartApp "Return Ads" feature as it's not an integral part of MoPub mediation. You can still enjoy this attractive ad unit directly by omitting this line. In this case Return Ads will be activated and display StartApp direct ads, outside of the MoPub Mediation network. 
 
 [Back to top](#top)
 
