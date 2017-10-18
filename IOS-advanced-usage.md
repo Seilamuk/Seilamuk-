@@ -519,6 +519,37 @@ Parameter name | Description | Return value
 
 [Back to top](#top)
 
+## Using Ad Tags
+
+You can add tags to your ad placements. A tag is simply a free style string identifier that can be attached to any ad. Ad Tags will help you optimize your monetization by finding the right balance between ads and the perfect ad-viewing experience for your users. 
+
+For example, if you implement couple of interstitial ads in different places in your application, you can give each of them a different tag, one of them could be "Level1Complete", the other "AfterScoresBoard", then, you can monitor which placement convert better and get more engagement from your users.
+
+In order to add tags, you simply need to add them to the right places in your code: 
+
+**Banner** – use one of the following methods and pass the tag on the last parameter
+```objectivec
+    - (id) initWithSize:(STABannerSize) size origin:(CGPoint) origin withView: (UIView*) view withDelegate:(id <STABannerDelegateProtocol> ) bannerDelegate withAdTag:(NSString*)adTag;
+    - (id) initWithSize:(STABannerSize) size autoOrigin:(STAAdOrigin) origin withView: (UIView*) view withDelegate:(id <STABannerDelegateProtocol> ) bannerDelegate withAdTag:(NSString*)adTag;
+```
+
+**Interstitials** - Show your ad using the following method
+``` objectivec
+ - (void) showAdWithAdTag:(NSString *)adTag;
+```
+
+**Native ads** - Call the following method before showing your ad and before calling the sendClick method
+``` objectivec
+ - (void)setAdTag:(NSString *)adTag;
+```
+
+> **NOTE:** 
+> Ad Tags can only be named using English letters and no more than 200 characters
+
+After getting traffic, you could see those tags in the portal reports automatically, without extra setup. For more information visit <Knowledge base>
+
+[Back to top](#top)
+
 <a name="Demographic" />
 
 ### Enjoy Higher eCPM with Demographic-Targeted Ads
