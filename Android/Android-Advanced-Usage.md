@@ -631,16 +631,14 @@ In order to add tags, you simply need to add them to the right places in your co
 
 **Banner** – using the activity layout XML
 ```java
-    <com.startapp.android.publish.banner.Banner
-    android:id="@+id/bannerBottom" 
-    android:layout_width="wrap_content" 
-    android:layout_height="wrap_content" 
-    android:layout_alignParentTop="true" 
-    android:background="@android:color/transparent" 
-    android:layout_centerHorizontal="true" 
+   <com.startapp.android.publish.ads.banner.Banner 
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
 
-   <!-- Setting the tag-->
-    android:tag="top_banner" >
+        <!-- Setting the tag-->
+        android:tag="top_banner" />
 ```
 
 **Banner** – Programmatically
