@@ -638,7 +638,7 @@ In order to add tags, you simply need to add them to the right places in your co
         android:layout_centerHorizontal="true"
 
         <!-- Setting the tag-->
-        android:tag="top_banner" />
+        adtag="top_banner" />
 ```
 
 **Banner** – Programmatically
@@ -646,7 +646,7 @@ In order to add tags, you simply need to add them to the right places in your co
  Banner banner = new Banner(this); 
 
 // Setting the tag
- banner.setTag("top_banner");
+ banner.setAdTag("top_banner");
 ```
 
 **Interstitials**
