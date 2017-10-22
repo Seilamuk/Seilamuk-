@@ -638,7 +638,7 @@ In order to add tags, you simply need to add them to the right places in your co
         android:layout_centerHorizontal="true"
 
         <!-- Setting the tag-->
-        adtag="top_banner" />
+        adTag="top_banner" />
 ```
 
 **Banner** – Programmatically
