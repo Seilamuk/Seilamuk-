@@ -26,5 +26,7 @@
 [Using Interstitial delegates](ios-advanced-usage#UsingInterstitialDelegate)<br></br> 
 [Customizing your Splash Screen](ios-advanced-usage#CustomizingSplashScreen)<br></br> 
 [Showing banners in UITableView](ios-advanced-usage#table-view)<br></br> 
+[Integrating Rewarded Video Ads](ios-advanced-usage#integrating-rewarded-video-ads)<br></br> 
 [Integrating Native Ads](ios-advanced-usage#using-native-ads)<br></br> 
+[Using Ad Tags](ios-advanced-usage#using-ad-tags)<br></br> 
 [Demographic-Targeted Ads](ios-advanced-usage#Demographic)<br></br> 
