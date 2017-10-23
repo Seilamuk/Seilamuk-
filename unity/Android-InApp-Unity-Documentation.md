@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.5.7**
+**Latest version: 3.6.7**
 
 <img src="./unity/images/unity-android-intro.png" width="640px" /><br></br>
 
