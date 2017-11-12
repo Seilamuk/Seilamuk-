@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.6.7**  
+**Latest version: 3.6.8**  
 
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
@@ -78,6 +78,8 @@ Add the following service receiver under the _\<application\>_ element:
 ```xml
 <service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
 <service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicJobService"
+         android:permission="android.permission.BIND_JOB_SERVICE" />
 <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
 	<intent-filter>
 		<action android:name="android.intent.action.BOOT_COMPLETED" />
