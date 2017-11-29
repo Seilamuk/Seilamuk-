@@ -105,6 +105,24 @@ The last ``true`` parameter enables ["Return Ads"](#return). If you want to disa
 
 Please notice - if you initialize the SDK in a service, you must do it on the service's main thread.    
 
+<a name="Obfuscation" />
+
+### Step 4, Obfuscation (Mandatory for Proguard users)
+
+Obfuscation protects an application from reverse-engineering or modification by making it harder for a third-party to access your source (decompiled) code.
+
+**StartApp In-Ad is already obfuscated!** Therefore, if you did not obfuscate your application using ProGuard™, then you can skip this step. If you have obfuscated your application using ProGuard, then use the following in the ProGuard configuration file:
+```
+-keep class com.startapp.** {
+      *;
+}
+
+-keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile,
+LineNumberTable, *Annotation*, EnclosingMethod
+-dontwarn android.webkit.JavascriptInterface
+-dontwarn com.startapp.**
+```
+
 [Back to top](#top)
 
 <a name="splash" />
@@ -227,28 +245,7 @@ A "Native Ad" is a raw representation of an ad without any pre-defined wrapping 
 For a full integration guide, please refer to the ["Using Native Ads"](android-advanced-usage#using-native-ads) section under the ["Advanced Usage"](android-advanced-usage#using-native-ads) page.
 
 <img src="./Android/images/native.jpg" width="640px" /><br></br>
-
 [Back to top](#top)
-
-<a name="obfuscation" />
-
-## Obfuscation (Optional)
-Obfuscation protects an application from reverse-engineering or modification by making it harder for a third-party to access your source (decompiled) code.
-
-**StartApp In-Ad is already obfuscated!** Therefore, if you did not obfuscate your application using ProGuard™, then you can skip this step. If you have obfuscated your application using ProGuard, then use the following in the ProGuard configuration file:
-```
--keep class com.startapp.** {
-      *;
-}
-
--keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile,
-LineNumberTable, *Annotation*, EnclosingMethod
--dontwarn android.webkit.JavascriptInterface
--dontwarn com.startapp.**
-```
-
-[Back to top](#top)
-
 
 <a name="SampleProject" />
 
