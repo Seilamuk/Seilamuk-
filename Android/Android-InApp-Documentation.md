@@ -8,7 +8,7 @@
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
-> - Please notice that steps 1-3 are mandatory
+> - Please notice that steps 1-4 are mandatory
 > - A basic video tutorial is available <a href="https://www.youtube.com/watch?v=PNpJdfB8mUQ" target="_blank">here</a>
 > - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
@@ -141,7 +141,7 @@ By default, your application will be using a pre-defined splash screen designed 
 <a name="return" />
 
 ## Return Ad
-The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. For example, the Return Ad won't be displayed if the user leaves your application to take a short phone call before returning. 
+The **Return Ad** is a new ad unit which is displayed once the user returns to your application after a certain period of time.  To minimize the intrusiveness, short time periods are ignored. 
 
 Return ads are enabled and activated by default. If you want to disable this feature, simply pass "false" as the 3th parameter of the ``StartAppSDK.init`` method:
  ```java
