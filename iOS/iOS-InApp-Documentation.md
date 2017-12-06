@@ -83,20 +83,6 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 <img src="./iOS/images/ios-appId.png" />
 
 
-<a name="IOS9" />
-
-### Step 4, Special Considerations 
-iOS 9 includes a new feature called **App Transport Security (ATS)** that allows only secured HTTPS calls, while blocking insecure HTTP calls. Our SDK is fully compliance with ATS, however if you are upgrading from an old SDK make sure to **REMOVE!** the following exception from your info.plist:
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
-
-<img src="./iOS/images/ATS.jpg" />
-
 [Back to top](#top)
 
 
