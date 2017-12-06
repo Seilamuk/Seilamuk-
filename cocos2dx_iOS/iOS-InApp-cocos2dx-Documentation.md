@@ -39,6 +39,8 @@ In order to add StartApp SDK to your application please follow the following ste
 <br></br><img src="./iOS/images/V.png" width="12px" /> _StoreKit.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _AdSupport.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" /> _QuartzCore.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" /> _CoreMedia.framework_
+<br></br><img src="./iOS/images/V.png" width="12px" /> _WebKit.framework_
 <br></br><br></br>[[/iOS/images/frameworks.png]]
 
 [Back to top](#top)
@@ -70,33 +72,11 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 
 [Back to top](#top)
 
-<a name="IOS9" />
-
-## Step 4, Special Considerations 
-
-iOS 9 introduces two new features that may affect your integration with StartApp SDK. These features are the **App Transport Security (ATS)** and **Bitcode**. If you are using Xcode 7 and above, please apply the following changes to make sure ads continue to be served on iOS 9 devices.
-
-#### App Transport Security (ATS)
-iOS 9 includes a new feature called **App Transport Security (ATS)** that allows only secured HTTPS calls, while blocking insecure HTTP calls. Our SDK is fully compliance with ATS, however if you are upgrading from an old SDK make sure to **REMOVE!** the following exception from your info.plist:
-```xml
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
-
-<img src="./iOS/images/ATS.jpg" />
-
-#### Bitcode
-iOS 9 includes a new feature called **Bitcode**. If you are using Xcode 7, this feature should be disabled as StartApp SDK does not yet support this feature. Navigate to your target or project **Build Settings**. Under the **Build Options** section, set **Enable Bitcode** to _No_ (for both Debug & Release).
-
-<img src="./iOS/images/bitcode.jpg" />
-
-[Back to top](#top)
-
 <a name="splash-ads" />
-##Showing the Splash Ad
+
+## Showing the Splash Ad
+
+
 A Splash Ad is a full-page ad that is displayed immediately after the application is launched.
 A Splash Ad first displays a full page splash screen that you define (as described below) followed by a full page ad.   
 
