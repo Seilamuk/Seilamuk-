@@ -59,7 +59,7 @@ To find your application ID, click on the "Apps and Sites" tab on the left pane 
 Call the ``unityOrientation()`` method in the ``Start()`` method of your script, and pass your app's orientation:
 ```csharp
 void Start () {
-        #if UNITY_IPHONE
+        #if UNITY_IOS
         StartAppWrapperiOS.unityOrientation(StartAppWrapperiOS.STAUnityOrientation.STAAutoRotation);
         #endif    
     }
@@ -86,7 +86,7 @@ Add the following code to the appropriate place or places in which you would lik
 **1.** Load the ad
 ```csharp
  void Start () {
-        #if UNITY_IPHONE
+        #if UNITY_IOS
         StartAppWrapperiOS.loadAd();
         #endif    
     }
@@ -119,7 +119,7 @@ Template Mode                  | StartApp SDK provides a set of pre-defined temp
 Simply call ``showSplashAd()`` in the ``Start()`` method of your script:
 ```csharp
 void Start () {
-        #if UNITY_IPHONE
+        #if UNITY_IOS
         StartAppWrapperiOS.showSplashAd();  // show splash ad
         #endif    
     }
@@ -140,7 +140,7 @@ The **Return Ad** is a new ad unit which is displayed once the user returns to y
 Return ads are enabled and activated by default. If you want to disable this feature, simply call ``disableReturnAd()`` in your ``Start()`` method:
 ```csharp
 void Start () {
-        #if UNITY_IPHONE
+        #if UNITY_IOS
         StartAppWrapperiOS.disableReturnAd();  // disable return ads
         #endif    
     }
@@ -159,7 +159,7 @@ To add a banner to your application add the following code to your `Start()` met
 
 ```csharp
 void Start () {
-        #if UNITY_IPHONE
+        #if UNITY_IOS
         StartAppWrapperiOS.addBanner(StartAppWrapperiOS.BannerPosition.BOTTOM);
         #endif    
     }
@@ -190,6 +190,7 @@ The first time you build your unity project with StartApp SDK, make sure to use 
 <br></br><img src="./iOS/images/V.png" width="12px" />  _CoreTelephony.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" />  _StoreKit.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" />  _AdSupport.framework_ 
+<br></br><img src="./iOS/images/V.png" width="12px" />  _WebKit.framework_ 
 <br></br><img src="./iOS/images/V.png" width="12px" />  _libz.tbd_ 
 
 <img src="./unity_iOS/images/frameworks.png" />
