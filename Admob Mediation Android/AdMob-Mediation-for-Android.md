@@ -53,6 +53,9 @@ StartAppSDK.init(this, "Your App ID", false);
 ```
 The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's not an integral part of AdMob mediation. You can still enjoy this attractive ad unit directly by omitting the ``false`` parameter. In this case Return Ads will be activated and display StartApp direct ads, outside of the AdMob Mediation network. 
 
+Note: [Splash Ad](https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Documentation#splash-ad-recommended) isn't enabled by default for AdMob mediation. 
+If you want to enable it, simply call ```StartAppAd.showSplash(this, savedInstanceState);```.
+
 [Back to top](#top)
 
 <br></br>
