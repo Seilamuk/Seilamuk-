@@ -175,6 +175,40 @@ You can change the banner position and size, as well as getting callbacks events
 
 [Back to top](#top)
 
+<br></br>
+
+## Showing Rewarded Video Ad
+
+Rewarded Ads are interstitial video ads that provide a reward to the user in exchange for watching an entire video ad. The reward might be in-app goods, virtual currency or any premium content provided by the application. Because users actually opt-in to watch a rewarded video and are granted with something valuable in return, Rewarded Ads are an effective and clean monetization solution for stronger user retention and keeping users engaged in your application for a longer amount of time.
+
+In order to show rewarded video ad in your app, follow the following steps:
+
+**1.** Pass the GameObject name to the loadRewardedVideoAd() method (for example, "Main Camera")
+
+```csharp
+ void Start () {
+           #if UNITY_IOS
+           StartAppWrapperiOS.loadRewardedVideoAd("Main Camera");
+           #endif  
+     }
+```
+**2.** Call showAd() in the place you want the ad to be shown:
+
+```csharp
+void didLoadAd () {
+           StartAppWrapperiOS.showAd ();
+     }
+```
+
+**3.** Then, you can implement the following method in order to get a callback when the user completes watching the video and is eligible for getting the reward:
+
+```csharp                
+void didCompleteVideo () {
+           //give some reward to user
+     }
+```
+
+[Back to top](#top)
 
 <br></br>
 <a name="step5" />
