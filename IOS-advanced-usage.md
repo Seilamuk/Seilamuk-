@@ -19,7 +19,6 @@ The size of the banner is determined by the "size" parameter which can receive o
 Value | Size | Best fits for
 --- | --- | ---
 *`STA_AutoAdSize`* | Auto-size (recommended) | detects the width of the device's screen in its current orientation, and provides the optimal banner for this size
-*`STA_PortraitAdSize_300x50`* | 300x50 | iPhone/iPod touch in portrait mode
 *`STA_PortraitAdSize_320x50`* | 320x50 | iPhone/iPod touch in portrait mode
 *`STA_LandscapeAdSize_480x50`* | 480x50 | iPhone/iPod touch in landscape mode
 *`STA_PortraitAdSize_768x90`* | 768x90 | iPad in portrait mode
