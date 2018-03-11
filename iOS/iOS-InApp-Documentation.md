@@ -120,7 +120,8 @@ In your application delegate class (_AppDelegate.m_), after initializing the SDK
 
 ## Interstitial Ads
 
-###### You can choose to show the interstitial ad in several locations within your application. This could be between stages, while waiting for an action, when pressing a button and more.
+Interstitial Ads are full page ads, displayed before or after a certain content page or action, such as upon entering a stage, between stages, while waiting for an action, upon exiting the application and more.
+When integrating this ad type you are open to get both Display or Video ads. Our optimization will auto-select the ad type that will generate the most revenue for you.
 
 Import the StartApp SDK in your view controller and call showAd where you want to show the ad
 ```objectivec
