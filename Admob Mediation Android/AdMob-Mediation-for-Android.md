@@ -70,9 +70,13 @@ If you want to enable it, simply call ```StartAppAd.showSplash(this, savedInstan
 4. Choose "New Ad Network" 
 <img src="./Admob%20Mediation%20Android/images/admob-add-ad-network.png" />  
 5. Click "Custom event", and fill in the following fields:  
+
   *  Class Name: *com.startapp.android.mediation.admob.StartAppCustomEvent*
+
   *  Label: *StartApp*
+
   *  Parameter (for Interstitials only): leave empty for automatic mode, or use one of the following options:     
+
   <img src="./iOS/images/V.png" width="12px" />  AdMode.FULLPAGE  
   <img src="./iOS/images/V.png" width="12px" />  AdMode.OFFERWALL  
 
