@@ -25,7 +25,20 @@ After this simple integration process, StartApp In-App Ads enables you to reap t
 
 <a name="step1" />
 
-### Step 1, Adding the StartApp SDK to your project
+## Step 1, Downloading the latest StartApp SDK
+
+### CocoaPods
+Open your project's Podfile and add this line to your app's target:
+```objectivec
+pod 'StartAppSDK'
+```
+Run pod install from command line:
+```objectivec
+$ pod install
+```
+If you're new to CocoaPods, see their official documentation(https://guides.cocoapods.org/using/using-cocoapods) for info on how to create and use Podfiles.
+
+### Manual download
 
 > **NOTE:** If you're upgrading from an StartApp SDK, please refer to the [Advanced Usage section](ios-advanced-usage#UpgradeSDK) before moving forward with the steps below.
 
