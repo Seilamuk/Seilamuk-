@@ -74,10 +74,13 @@ This extra line will disable StartApp "Return Ads" feature as it's not an integr
 4. Choose "New Ad Network" 
 <img src="./Admob%20Mediation%20iOS/images/admob-add-ad-network.png" />  
 5. Click "Custom event", and fill in the following fields:  
+  
   *  **Class Name:**  
+
   <img src="./iOS/images/V.png" width="12px" />  *STAAdMobCustomEventBanner* (for banner ads)  
   <img src="./iOS/images/V.png" width="12px" />  *STAAdMobCustomEventInterstitial* (for interstitial ads)  
   *  **Label:**    
+
   <img src="./iOS/images/V.png" width="12px" />  *"StartApp Banner"*  (for banner ads)  
   <img src="./iOS/images/V.png" width="12px" />  *"StartApp Interstitial"*  (for interstitial ads)  
 
