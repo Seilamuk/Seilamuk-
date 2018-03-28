@@ -1,12 +1,13 @@
 <a name="top" />
 
-######This section describes advanced usage and personal customization options and is not mandatory for the integration.
+###### This section describes advanced usage and personal customization options and is not mandatory for the integration.
 
 <a name="banner-type" />
-##Customizing your Banner
+
+## Customizing your Banner
 You can show a specific banner type, or hide the banner in a specific screen or during a specific scene.
 
-###Selecting Banner Type
+### Selecting Banner Type
 There are 3 different types of banners:
 
 **Banner Type** | **Description**
@@ -46,7 +47,7 @@ _BannerPosition_ - position of the banner. Can receive one of the following:
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.BOTTOM
 <br></br><img src="./iOS/images/V.png" hspace="15px" width="12px" /> StartAppWrapper.BannerPosition.TOP
 
-###Hiding the Banner
+### Hiding the Banner
 In order to hide an already displayed banner, use the ``removeBanner()`` method. Simply pass the position of the banner you want to hide. 
 
 **For example:**  
@@ -61,7 +62,8 @@ In order to show the banner again, simply use the addBanner() method as describe
 [Back to top](#top)
 
 <a name="load-callback" />
-##Adding a callback when Ad has been loaded
+
+## Adding a callback when Ad has been loaded
 
 ``StartAppWrapper.loadAd()`` can get an implementation of *AdEventListener* as a parameter. In case you want to get a callback for the ad load, pass the object which implements *StartAppWrapper.AdEventListener* as a parameter to the method. This object should implement the following methods:
 ```csharp
@@ -72,7 +74,8 @@ public void onFailedToReceiveAd(){
 ```
 
 <a name="show-callback" />
-##Adding a callback when Ad has been displayed or clicked
+
+## Adding a callback when Ad has been displayed or clicked
 
 ``StartAppWrapper.showAd()`` can get an implementation of *AdDisplayListener* as a parameter. In case you want to get a callback for the ad show, pass the object which implements *StartAppWrapper.AdDisplayListener* as a parameter of the method. This object should implement the following methods:
 ```csharp
@@ -88,10 +91,11 @@ public void adClicked(){
 
 
 <a name="CustomizingSplashScreen" />
-##Customizing the Splash Screen
+
+## Customizing the Splash Screen
 StartApp In-Ad provides a few pre-defined templates of splash screens in which you can place your own creatives, such as application name, logo and loading animation, as described below.
 
-####Customizing the Splash Screen
+#### Customizing the Splash Screen
 In the ``OnGUI()`` method of your script, call the following static function:
 ```csharp
 #if UNITY_ANDROID
@@ -119,10 +123,11 @@ StartAppWrapper.showSplash(new StartAppWrapper.SplashConfig()
 [Back to top](#top)
 
 <a name="SplashConfig-API" />
-##SplashConfig API
+
+## SplashConfig API
 The following describes the methods that you can use for customizing the Splash screen displayed in a StartApp In-App Splash screen Ad.
 
-####► Set the Splash screen mode
+#### ► Set the Splash screen mode
 > **```public SplashConfig setTheme(StartAppWrapper.SplashConfig.Theme theme)```**
 
 Sets the Splash theme.
@@ -136,7 +141,7 @@ Use one of the options below to select a design theme for your splash screen.
 *SplashConfig.Theme.GLOOMY*<br></br>
 *SplashConfig.Theme.OCEAN* <br></br>
 
-####► Set the application name
+#### ► Set the application name
 > **```public SplashConfig setAppName(String appName)```**<br></br>
 
 Sets the application name to be used in the Template mode.
@@ -144,7 +149,7 @@ Sets the application name to be used in the Template mode.
 **Parameters**<br></br>
 *String* (default is the application name from the manifest).
 
-####► Set the logo
+#### ► Set the logo
 > **```public SplashConfig setLogo(String logo)```**<br></br>
 
 Sets the logo to be displayed in the Template mode.
@@ -159,7 +164,7 @@ Sets the logo to be displayed in the Template mode.
 > 4. Under 'Format' choose "RGB 24 bit"  
 > 5. Click "Apply"  
 
-####► Set the orientation
+#### ► Set the orientation
 > **```public SplashConfig setOrientation(StartAppWrapper.SplashConfig.Orientation orientation)```**<br></br>
 
 Sets the orientation to be used.
