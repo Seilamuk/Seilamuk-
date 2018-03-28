@@ -69,9 +69,8 @@ The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's
 4. Under "Setup Custom Native Network", fill in "StartApp" in the "Title" field
 <img src="./Mopub%20Mediation%20Android/images/mopub-network-title.png" />   
 5. Under "Set Up Your Inventory", select the Ad Units where you want to show StartApp ads, and fill in the appropriate class name under the "CUSTOM EVENT CLASS" box:  
- <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> 
 
-**Interstitial:** ``com.mopub.mobileads.StartAppCustomEventInterstitial``   
+ <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Interstitial:** ``com.mopub.mobileads.StartAppCustomEventInterstitial``   
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Banner:** ``com.mopub.mobileads.StartAppCustomEventBanner``    
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Native:** ``com.mopub.nativeads.StartAppCustomEventNative``    
 
@@ -80,9 +79,8 @@ The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's
 6. For Banners only - if you want to show banner with a different size rather than the standard 320x50,  fill it in the appropriate class data under "CUSTOM EVENT CLASS DATA" of your Banner ad unit using the following format: {"adWidth":"<width>", "adHeight":"<height>"}. For example, {"adWidth":"480", "adHeight":"50"}  
  <img src="./Mopub%20Mediation%20Android/images/mopub-custom-event-data-banners.png" />     
 7. Optional - if you want to show a specific Interstitial ad type, fill in the appropriate *class data* under "CUSTOM EVENT CLASS DATA" of your Interstitial ad unit:  
- <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> 
 
-**Overlay Ad:** ``{ "adMode" : "AdMode.OVERLAY" }``  
+ <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Overlay Ad:** ``{ "adMode" : "AdMode.OVERLAY" }``  
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Full Page:** ``{ "adMode" : "AdMode.FULLPAGE" }``  
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **App Wall:** ``{ "adMode" : "AdMode.OFFERWALL" }``  
  
