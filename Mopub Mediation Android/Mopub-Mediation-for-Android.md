@@ -78,6 +78,7 @@ The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's
  
 6. For Banners only - if you want to show banner with a different size rather than the standard 320x50,  fill it in the appropriate class data under "CUSTOM EVENT CLASS DATA" of your Banner ad unit using the following format: {"adWidth":"<width>", "adHeight":"<height>"}. For example, {"adWidth":"480", "adHeight":"50"}  
  <img src="./Mopub%20Mediation%20Android/images/mopub-custom-event-data-banners.png" />     
+
 7. Optional - if you want to show a specific Interstitial ad type, fill in the appropriate *class data* under "CUSTOM EVENT CLASS DATA" of your Interstitial ad unit:  
 
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Overlay Ad:** ``{ "adMode" : "AdMode.OVERLAY" }``  
