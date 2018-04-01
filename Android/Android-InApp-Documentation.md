@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.7.1**  
+**Latest version: 3.8.1**  
 
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
@@ -234,6 +234,80 @@ Add the following View inside your Activity layout XML:
 > This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
 
 For adding a banner programmatically, please refer to the [Advanced Usage](android-advanced-usage#AddBannerProgrammatically).
+
+[Back to top](#top)
+
+<a name="mrec" />
+
+## MRec Ads
+MRec is a 300X250 rectangular ad integrated within an app's layout. The ad will be refreshed automatically.
+
+Add the following View inside your Activity layout XML:
+```java
+<com.startapp.android.publish.ads.banner.Mrec
+        android:id="@+id/startAppMrec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+```
+
+> **NOTE:**
+> This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
+
+For adding MRec programmatically, instead of using the layout XML:
+```java
+// Get the Main relative layout of the entire activity
+RelativeLayout mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);   
+
+// Define StartApp Mrec
+Mrec startAppMrec = new Mrec(this);
+RelativeLayout.LayoutParams mrecParameters =
+            new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+mrecParameters.addRule(RelativeLayout.CENTER_HORIZONTAL);
+mrecParameters.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);    
+
+// Add to main Layout
+mainLayout.addView(startAppMrec, mrecParameters);
+```
+
+[Back to top](#top)
+
+<a name="cover" />
+
+## Cover Ads
+Cover is a 1200X628 rectangular ad integrated within an app's layout. The ad will be refreshed automatically.
+
+Add the following View inside your Activity layout XML:
+```java
+<com.startapp.android.publish.ads.banner.Cover
+        android:id="@+id/startAppCover"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+```
+
+> **NOTE:**
+> This code places a View inside your Activity. You also have the option to add additional attributes for placing it in the desired location in your Activity.
+
+For adding Cover programmatically, instead of using the layout XML:
+```java
+// Get the Main relative layout of the entire activity
+RelativeLayout mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);   
+
+// Define StartApp Cover
+Cover startAppCover = new Cover(this);
+RelativeLayout.LayoutParams coverParameters =
+            new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT);
+coverParameters.addRule(RelativeLayout.CENTER_HORIZONTAL);
+coverParameters.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);    
+
+// Add to main Layout
+mainLayout.addView(startAppCover, coverParameters);
+```
 
 [Back to top](#top)
 
