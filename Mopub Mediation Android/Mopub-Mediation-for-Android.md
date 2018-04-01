@@ -72,6 +72,7 @@ The extra ``false`` parameter will disable StartApp "Return Ads" feature as it's
 
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Interstitial:** ``com.mopub.mobileads.StartAppCustomEventInterstitial``   
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Banner:** ``com.mopub.mobileads.StartAppCustomEventBanner``    
+<img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Medium:** ``com.mopub.mobileads.StartAppCustomEventMedium``    
  <img src="./Mopub%20Mediation%20Android/images/V1.png" width="16px" /> **Native:** ``com.mopub.nativeads.StartAppCustomEventNative``    
 
  <img src="./Mopub%20Mediation%20Android/images/mopub-inventory.png" />   
