@@ -29,7 +29,7 @@ repositories {
 }
  
 dependencies {
-    compile 'com.startapp:inapp-sdk:3.7.1'
+    compile 'com.startapp:inapp-sdk:3.8.1'
 }
 ```
 
