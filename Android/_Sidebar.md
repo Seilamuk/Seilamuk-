@@ -10,6 +10,10 @@
 
 [**Banners**](Android-InApp-Documentation#banners)
 
+[**MRec Ads**](Android-InApp-Documentation#mrec)
+
+[**Cover Ads**](Android-InApp-Documentation#cover)
+ 
 [**Native Ads**](Android-InApp-Documentation#Native)
 
 [**Obfuscation**](Android-InApp-Documentation#obfuscation)
