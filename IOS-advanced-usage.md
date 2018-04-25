@@ -21,6 +21,8 @@ Value | Size | Best fits for
 *`STA_AutoAdSize`* | Auto-size (recommended) | detects the width of the device's screen in its current orientation, and provides the optimal banner for this size
 *`STA_PortraitAdSize_320x50`* | 320x50 | iPhone/iPod touch in portrait mode
 *`STA_LandscapeAdSize_480x50`* | 480x50 | iPhone/iPod touch in landscape mode
+*`STA_MRecAdSize_300x250`* | 300x250 | iPhone/iPod touch, Medium Rectangle
+*`STA_CoverAdSize`* | 1200X628 | iPhone/iPod touch, Cover
 *`STA_PortraitAdSize_768x90`* | 768x90 | iPad in portrait mode
 *`STA_LandscapeAdSize_1024x90`* | 1024x90 | iPad in landscape mode
 
