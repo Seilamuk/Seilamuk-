@@ -279,6 +279,24 @@ Value | Position | Behavior
 
 [Back to top](#top)
 
+<a name="mrec" />
+
+## MRec Ads
+MRec is a 300X250 rectangular ad integrated within an app's layout. The ad will be refreshed automatically.
+
+In order to integrate MRec ad inside your app, you should use the ["Banner implementation"](https://github.com/StartApp-SDK/Documentation/wiki/iOS-InApp-Documentation#banners) and initiate it with the specific size: STA_MRecAdSize_300x250.
+
+[Back to top](#top)
+
+<a name="cover" />
+
+## Cover Ads
+Cover is a 1200X628 rectangular ad integrated within an app's layout. The ad will be refreshed automatically.
+
+In order to integrate Cover ad inside your app, you should use the ["Banner implementation"](https://github.com/StartApp-SDK/Documentation/wiki/iOS-InApp-Documentation#banners) and initiate it with the specific size:
+STA_CoverAdSize.
+
+[Back to top](#top)
 
 <a name="IDFA" />
 
