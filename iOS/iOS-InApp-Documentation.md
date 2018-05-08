@@ -36,7 +36,7 @@ Run pod install from command line:
 ```objectivec
 $ pod install
 ```
-If you're new to CocoaPods, see their official documentation(https://guides.cocoapods.org/using/using-cocoapods) for info on how to create and use Podfiles.
+If you're new to CocoaPods, see their official documentation (https://guides.cocoapods.org/using/using-cocoapods) for info on how to create and use Podfiles.
 
 ### Manual download
 
@@ -95,6 +95,39 @@ Replace __"your app id"__ with your own value provided in the [developers’ por
 To find your application ID, click on the "Apps and Sites" tab on the left pane and choose the relevant ID from your app list:<br></br>
 <img src="./iOS/images/ios-appId.png" />
 
+<a name="step4" />
+
+### Step 4, User Consent (GDPR)
+
+Data protection and privacy regulations may require you and your company to obtain consent from users before processing personal data and to honor users' requests for how you use their personal data. StartApp is required to record these consent logs and thus we have provided you with an API which enables you to send this consent from your user to StartApp. Based on consent signals that you send, StartApp uses the data to target the most relevant campaigns to your users. Without receiving this consent we will not be able to send targeted ads (but rather non-targeted ads). 
+ 
+Use this method to indicate specific type of consent from a given user:
+
+```objectivec
+(void)setUserConsent:(BOOL)consent forConsentType:(NSString *)consentType withTimestamp:(long)ts;
+```
+
+**Parameters**<br></br>
+► *consent* - flag <br></br>
+
+**Value** | **Definition** 
+---------------------- | ---------------------- 
+true | indicates consumer consent
+false | false indicates consumer dissent
+
+► *consentType* - type of consent. Can take one of the following values: <br></br>
+
+**Value** | **Definition** 
+---------------------- | ---------------------- 
+Location | Access current location
+EULA | End-User License Agreement
+
+► *ts* - the specific time a consent / dissent was given by the user <br></br>
+
+Example: The following is an example of passing a user consent given for accessing location:
+``` objectivec
+[[STAStartAppSDK sharedInstance] setUserConsent:YES forConsentType:@"Location" withTimestamp:[[NSDate date] timeIntervalSince1970]];
+```
 
 [Back to top](#top)
 
