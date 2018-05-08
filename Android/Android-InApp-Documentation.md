@@ -8,7 +8,7 @@
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
-> - Please notice that steps 1-4 are mandatory
+> - Please notice that steps 1-6 are mandatory
 > - A basic video tutorial is available <a href="https://www.youtube.com/watch?v=PNpJdfB8mUQ" target="_blank">here</a>
 > - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
@@ -121,6 +121,55 @@ Obfuscation protects an application from reverse-engineering or modification by 
 LineNumberTable, *Annotation*, EnclosingMethod
 -dontwarn android.webkit.JavascriptInterface
 -dontwarn com.startapp.**
+```
+
+<a name="UserConsent" />
+
+### Step 5, User Consent (GDPR)
+
+Data protection and privacy regulations may require you and your company to obtain consent from users before processing personal data and to honor users' requests for how you use their personal data. StartApp is required to record these consent logs and thus we have provided you with an API which enables you to send this consent from your user to StartApp. Based on consent signals that you send, StartApp uses the data to target the most relevant campaigns to your users. Without receiving this consent we will not be able to send targeted ads (but rather non-targeted ads). 
+ 
+Use this method to indicate specific type of consent from a given user:
+
+```java
+public static void setUserConsent(Context context, String consentType, long timestamp, boolean enabled)
+```
+
+**Parameters**<br></br>
+► *consentType* - type of consent. Can take one of the following values: <br></br>
+
+**Value** | **Definition** 
+---------------------- | ---------------------- 
+ACCESS_FINE_LOCATION | ACCESS_FINE_LOCATION permission
+ACCESS_COARSE_LOCATION | ACCESS_COARSE_LOCATION permission
+EULA | End-User License Agreement
+
+► *timestamp* - the specific time a consent / dissent was given by the user <br></br>
+► *enabled* - flag <br></br>
+
+**Value** | **Definition** 
+---------------------- | ---------------------- 
+true | indicates consumer consent
+false | false indicates consumer dissent
+
+Example: The following is an example of passing a user consent given for "ACCESS_FINE_LOCATION" permission:
+```java
+StartAppSDK.setUserConsent (this, 
+                            "ACCESS_FINE_LOCATION",
+                            System.currentTimeMillis(), 
+                            true);
+}
+```
+<a name=" COPPA" />
+
+### Step 6, App Permissions (COPPA Compliant)
+
+In case your app target children (as defined under applicable laws, such as 13 in the US and 16 in the EU) and you integrated the SDK version through Gradle's Dependency Management, you need to remove the WIFI permission from your manifest merger. In order to do so, follow these steps:
+
+1. Add “xmlns:tools="http://schemas.android.com/tools"” to the manifest element
+2. Add this line to your permission list: 
+```java
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" tools:node="remove"/>
 ```
 
 [Back to top](#top)
