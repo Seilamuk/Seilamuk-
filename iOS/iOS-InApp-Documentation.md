@@ -112,8 +112,8 @@ Use this method to indicate specific type of consent from a given user:
 
 **Value** | **Definition** 
 ---------------------- | ---------------------- 
-true | indicates consumer consent
-false | false indicates consumer dissent
+YES | indicates consumer consent
+NO | false indicates consumer dissent
 
 ► *consentType* - type of consent. Can take one of the following values: <br></br>
 
