@@ -1,5 +1,7 @@
 <a name="top" />
 
+** This SDK is not fully compliance with GDPR – please don't use it till further notice. **
+
 **Last version: 3.3.0**
 
 <img src="./Android/images/android-intro1.png" width="640px" /><br></br>
