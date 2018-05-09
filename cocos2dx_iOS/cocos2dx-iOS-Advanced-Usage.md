@@ -1,5 +1,8 @@
 <a name="top">
 
+** This SDK is not fully compliance with GDPR – please don't use it till further notice. **
+
+
 <a name="hide-banner" />
 ###Hiding your banner
 You can hide and show your banner in run time, using ``showBanner`` and ``hideBanner`` methods:
