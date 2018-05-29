@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.6.7**
+**Latest version: 3.8.4**
 
 <img src="./unity/images/unity-android-intro.png" width="640px" /><br></br>
 
@@ -61,6 +61,8 @@ Update the _manifest.xml_ (in the _Android_ folders) as follow:
 ```xml
 <service android:name="com.startapp.android.publish.common.metaData.PeriodicMetaDataService" />
 <service android:name="com.startapp.android.publish.common.metaData.InfoEventService" />
+<service android:name="com.startapp.android.publish.common.metaData.PeriodicJobService"
+         android:permission="android.permission.BIND_JOB_SERVICE" />
 <receiver android:name="com.startapp.android.publish.common.metaData.BootCompleteListener" >
 	<intent-filter>
 		<action android:name="android.intent.action.BOOT_COMPLETED" />
