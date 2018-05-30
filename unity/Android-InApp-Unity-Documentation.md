@@ -6,7 +6,7 @@
 
 > **NOTES:**
 > - The code samples in this document can be copy/pasted into your source code
-> - Please notice that steps 1-3 are mandatory
+> - Please notice that steps 1-4 are mandatory
 > - If you have any questions, contact us via [support@startapp.com](mailto:support@startapp.com)
 
 <br></br>
@@ -108,6 +108,42 @@ StartAppWrapper.init();
 }
 ```
  
+[Back to top](#top)
+
+<br></br>
+<a name="step4" />
+## Step 4, User Consent (GDPR)
+
+Data protection and privacy regulations may require you and your company to obtain consent from users before processing personal data and to honor users' requests for how you use their personal data. StartApp is required to record these consent logs and thus we have provided you with an API which enables you to send this consent from your user to StartApp. Based on consent signals that you send, StartApp uses the data to target the most relevant campaigns to your users. Without receiving this consent we will not be able to send targeted ads (but rather non-targeted ads). 
+ 
+Use this method to indicate specific type of consent from a given user:
+
+```csharp
+public static void setUserConsent(string consentType, long timestamp, bool enabled)
+```
+
+**Parameters**<br></br>
+*consentType* - type of consent. Can take one of the following values: <br></br>
+
+**Value** | **Definition** 
+---------------------- | ---------------------- 
+ACCESS_FINE_LOCATION | ACCESS_FINE_LOCATION permission
+ACCESS_COARSE_LOCATION | ACCESS_COARSE_LOCATION permission
+EULA | End-User License Agreement
+
+*timestamp* - the specific time a consent / dissent was given by the user <br></br>
+*enabled* - flag <br></br>
+
+**Value** | **Definition** 
+---------------------- | ---------------------- 
+true | indicates consumer consent
+false | false indicates consumer dissent
+
+Example: The following is an example of passing a user consent given for "ACCESS_FINE_LOCATION" permission:
+```csharp
+StartAppWrapper.setUserConsent("ACCESS_FINE_LOCATION", 1527682908025 , true);
+```
+
 [Back to top](#top)
 
 
