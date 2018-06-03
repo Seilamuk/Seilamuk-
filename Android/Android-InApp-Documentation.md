@@ -117,10 +117,16 @@ Obfuscation protects an application from reverse-engineering or modification by 
       *;
 }
 
+-keep class com.truenet.** {
+      *;
+}
+
 -keepattributes Exceptions, InnerClasses, Signature, Deprecated, SourceFile,
 LineNumberTable, *Annotation*, EnclosingMethod
 -dontwarn android.webkit.JavascriptInterface
 -dontwarn com.startapp.**
+
+-dontwarn org.jetbrains.annotations.**
 ```
 
 <a name="UserConsent" />
