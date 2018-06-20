@@ -50,7 +50,7 @@ Make sure to check the "Copy items if needed" checkbox.
 <a name="step4" />
 
 ## Step 4, Integrating StartApp In-App SDK
-Integrate the StartApp SDK by implementing steps 1-3 <a href="https://github.com/StartApp-SDK/Documentation/wiki/iOS-InApp-Documentation" target="_blank">from the integration manual.</a> 
+Integrate the StartApp SDK by implementing steps 1-4 <a href="https://github.com/StartApp-SDK/Documentation/wiki/iOS-InApp-Documentation" target="_blank">from the integration manual.</a> 
 You can ignore all the following steps unless you want to use StartApp Ads directly instead of via MoPub mediation network.
 
 In step 3 of the integration, call ``[sdk disableReturnAd]`` after initializing your appID and devID:
