@@ -129,7 +129,6 @@ public static void setUserConsent(string consentType, long timestamp, bool enabl
 ---------------------- | ---------------------- 
 ACCESS_FINE_LOCATION | ACCESS_FINE_LOCATION permission
 ACCESS_COARSE_LOCATION | ACCESS_COARSE_LOCATION permission
-EULA | End-User License Agreement
 
 *timestamp* - the specific time a consent / dissent was given by the user <br></br>
 *enabled* - flag <br></br>
