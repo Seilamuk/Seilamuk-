@@ -44,7 +44,7 @@ Copy the java source files from the zip to your project's source code.
 <a name="step4" />
 
 ## Step 4, Integrating StartApp In-App SDK
-Integrate the StartApp SDK by implementing steps 1-3 <a href="https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Documentation" target="_blank">from the integration manual.</a> 
+Integrate the StartApp SDK by implementing steps 1-5 <a href="https://github.com/StartApp-SDK/Documentation/wiki/Android-InApp-Documentation" target="_blank">from the integration manual.</a> 
 You can ignore all the following steps unless you want to use StartApp Ads directly instead of via AdMob mediation network.
 
 In step 3 of the integration, use the following line to initialize the SDK:
