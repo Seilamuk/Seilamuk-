@@ -120,7 +120,6 @@ NO | false indicates consumer dissent
 **Value** | **Definition** 
 ---------------------- | ---------------------- 
 Location | Access current location
-EULA | End-User License Agreement
 
 ► *ts* - the specific time a consent / dissent was given by the user <br></br>
 
