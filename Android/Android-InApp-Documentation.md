@@ -1,6 +1,6 @@
 <a name="top" />
 
-**Latest version: 3.9.0**  
+**Latest version: 3.9.3**  
 
 <br></br>
 <img src="./Android/images/important_note.png" hspace="18" /><br></br>
@@ -29,7 +29,7 @@ repositories {
 }
  
 dependencies {
-    compile 'com.startapp:inapp-sdk:3.8.4'
+    compile 'com.startapp:inapp-sdk:3.9.3'
 }
 ```
 
@@ -133,38 +133,33 @@ LineNumberTable, *Annotation*, EnclosingMethod
 
 ### Step 5, User Consent (GDPR)
 
-Data protection and privacy regulations may require you and your company to obtain consent from users before processing personal data and to honor users' requests for how you use their personal data. StartApp is required to record these consent logs and thus we have provided you with an API which enables you to send this consent from your user to StartApp. Based on consent signals that you send, StartApp uses the data to target the most relevant campaigns to your users. Without receiving this consent we will not be able to send targeted ads (but rather non-targeted ads). 
+StartApp requires you to pass user consent flag via the API as detailed herein below. The user consent flag indicates whether a user based in the EU has provided consent for ads personalization, collection and use of personal data. Based on this consent flag, StartApp will be able to use the data to target the most relevant ads to your users. If a user has not consented, we will not show personalized ads to this user.
  
-Use this method to indicate specific type of consent from a given user:
+> **IMPORTANT NOTES:** 
+> - Collection of consent is only required in countries covered by GDPR (EU member states). Consent is not required for users that are based outside those countries. 
+> - We recommend you to pass the consent flag to StartApp right after initializing the SDK. 
+> - In case of any consent change during the lifetime of the user activity, you are required to re-submit the relevant consent flag to StartApp.
+> - Older SDK versions (before 3.9.3): We'll continue to support them with showing ads. It’s important to know that in case you cannot update the SDK version and the user consent is false for GDPR users, do not initialize StartApp SDK for such users. 
+
+Use this method in case the user has consented: 
 
 ```java
-public static void setUserConsent(Context context, String consentType, long timestamp, boolean enabled)
-```
-
-**Parameters**<br></br>
-► *consentType* - type of consent. Can take one of the following values: <br></br>
-
-**Value** | **Definition** 
----------------------- | ---------------------- 
-ACCESS_FINE_LOCATION | ACCESS_FINE_LOCATION permission
-ACCESS_COARSE_LOCATION | ACCESS_COARSE_LOCATION permission
-
-► *timestamp* - the specific time a consent / dissent was given by the user <br></br>
-► *enabled* - flag <br></br>
-
-**Value** | **Definition** 
----------------------- | ---------------------- 
-true | indicates consumer consent
-false | false indicates consumer dissent
-
-Example: The following is an example of passing a user consent given for "ACCESS_FINE_LOCATION" permission:
-```java
-StartAppSDK.setUserConsent (this, 
-                            "ACCESS_FINE_LOCATION",
-                            System.currentTimeMillis(), 
+StartAppSDK.setUserConsent (this,  
+                            "pas",
+                            System.currentTimeMillis(),                        
                             true);
-}
 ```
+
+Use this method in case the user has not consented: 
+
+```java
+StartAppSDK.setUserConsent (this,  
+                            "pas",
+                            System.currentTimeMillis(),                        
+                            false);
+```
+**NOTE:** _timestamp_ parameter should represent the specific time a consent was given by the user. 
+
 <a name=" COPPA" />
 
 ### Step 6, App Permissions (COPPA Compliant)
