@@ -23,6 +23,8 @@ Value | Size | Best fits for
 *`STA_AutoAdSize`* | Auto-size (recommended) | detects the width of the device's screen in its current orientation, and provides the optimal banner for this size
 *`STA_PortraitAdSize_320x50`* | 320x50 | iPhone/iPod touch in portrait mode
 *`STA_LandscapeAdSize_480x50`* | 480x50 | iPhone/iPod touch in landscape mode
+*`STA_MRecAdSize_300x250`* | 300x250 | iPhone/iPod touch, Medium Rectangle
+*`STA_CoverAdSize`* | 1200X628 | iPhone/iPod touch, Cover
 *`STA_PortraitAdSize_768x90`* | 768x90 | iPad in portrait mode
 *`STA_LandscapeAdSize_1024x90`* | 1024x90 | iPad in landscape mode
 
@@ -107,12 +109,12 @@ class ViewController: UIViewController, STADelegateProtocol
 
 3. Implement the following functions:
  ```objectivec
-func didLoadAd(ad: STAAbstractAd) 
-func failedLoadAd(ad: STAAbstractAd, withError error: NSError)
-func didShowAd(ad: STAAbstractAd)
-func didClickAd(ad: STAAbstractAd)
-func failedShowAd(ad: STAAbstractAd, withError error: NSError)
-func didCloseAd(ad: STAAbstractAd)
+func didLoad(_ ad: STAAbstractAd) 
+func failedLoad(_ ad: STAAbstractAd, withError error: NSError)
+func didShow(_ ad: STAAbstractAd)
+func didClick(_ ad: STAAbstractAd)
+func failedShow(_ ad: STAAbstractAd, withError error: NSError)
+func didClose(_ ad: STAAbstractAd)
  ```
 
 [Back to top](#top)
@@ -120,13 +122,13 @@ func didCloseAd(ad: STAAbstractAd)
 <a name="CustomizingSplashScreen" />
 
 ## Customizing your Splash Screen
-You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAdWithPreferences`` method when initializing the splash screen in your _AppDelegate_ class.
+You can customize the appearance of your splash screen using the ``STASplashPreferences`` object, as describes below. In order to use splash preferences, use the ``showSplashAd`` method when initializing the splash screen in your _AppDelegate_ class.
 
 For example - using splash preferences to choose template mode:
 ```objectivec
 var splashPreferences: STASplashPreferences = STASplashPreferences()
 splashPreferences.splashMode = STASplashModeTemplate
-sdk.showSplashAdWithPreferences(splashPreferences)
+sdk.showSplashAd(with: splashPreferences)
 ```
 
 ### Splash Preferences API
